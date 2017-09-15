@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+  
+  
+  
+
+<head>
+  <meta charset="utf-8">
+  
+    <title>Binding an existing identity to a participant | Hyperledger Composer</title>
+  
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/x-icon" href="/composer/unstable/favicon.ico">
+  <meta name="google-site-verification" content="fBQRJ6h7MV7_TJ7grbgq4P-d-07NRfDWPe4pqEEoH5w">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  
+    <!-- Google Analytics -->
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-91314349-2', 'auto');
+ga('require', 'outboundLinkTracker');
+ga('require', 'eventTracker');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script async src="/composer/unstable/assets/js/autotrack.js"></script>
+<!-- End Google Analytics -->
+
+  
+
+  
+    <link href="/composer/unstable/assets/css/normalize.css" rel="stylesheet">
+    <link href="/composer/unstable/assets/css/new-style.min.css" rel="stylesheet">
+    <link href="/composer/unstable/assets/css/grid-layout.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min.js"></script>
+  
+</head>
+
+
+<body class="">
+
+  
+  <!-- % include navbar.html % -->
+  
+
+  <div class="SiteWrapper">
+    
+      <div class="content">
+    <article class="docs-container">
+        <!-- If there's a sidebar, divide into 2 columns -->
+        
+        <div class="page-sidebar-grid" id="off-canvas">
+          <!-- <a class="toggle close" href="#">close</a> -->
+          <div class="docs-pagenav-grid">
+            <!-- Navigation -->
+  <nav class="navbar-docs" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+            <a class="navbar-brand" href="/composer/unstable/index.html"><b>Hyperledger</b> Composer</a>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="top-nav-docs">
+                <!-- <li>
+                    <a href="services.html">Composer</a>
+                </li> -->
+                <!-- <li>
+                    <a href="https://composer-playground.mybluemix.net/">Playground</a>
+                </li> -->
+                    <a href="../tutorials/tutorials.html">Tutorials</a>
+                    <a href="../introduction/introduction.html">Docs</a>
+                    <a href="../support/support-index.html">Community</a>
+            </div>
+        </div>
+</nav>
+
+          </div>
+
+          <div class="docs-current-page-grid">
+          <p>Binding an existing identity to a participant</p>
+          </div>
+
+          <nav class="context-nav">
+            
+            
+              <ul>
+<li><p><a href="../introduction/introduction.html">Introduction</a></p>
+
+<ul>
+<li><a href="../introduction/key-concepts.html">Key Concepts</a></li>
+<li><a href="../introduction/solution-architecture.html">Typical Solution Architecture</a></li>
+</ul></li>
+<li><p><a href="../installing/installing-index.html">Installing Hyperledger Composer</a></p>
+
+<ul>
+<li><a href="../installing/getting-started-with-playground.html">Using the Playground online</a></li>
+<li><a href="../installing/using-playground-locally.html">Installing the Playground locally</a></li>
+<li><a href="../installing/development-tools.html">Installing a development environment</a></li>
+</ul></li>
+<li><p><a href="../tutorials/tutorials.html">Tutorials</a></p>
+
+<ul>
+<li><a href="../tutorials/playground-guide.html">Playground Tutorial</a></li>
+<li><a href="../tutorials/developer-guide.html">Developer Guide</a></li>
+<li><a href="../tutorials/queries.html">Queries Guide</a></li>
+</ul></li>
+<li><p><a href="../playground/playground-index.html">Using Playground</a></p>
+
+<ul>
+<li><a href="../playground/id-cards-playground.html">ID Cards</a></li>
+</ul></li>
+<li><p><a href="../business-network/business-network-index.html">Developing Business Networks</a></p>
+
+<ul>
+<li><a href="../business-network/businessnetworkdefinition.html">Business Network Definitions</a></li>
+<li><a href="../business-network/bnd-create.html">Create a Business Network Definition</a></li>
+<li><a href="../business-network/bnd-deploy.html">Deploying and Updating Business Networks</a></li>
+<li><a href="../business-network/publishing-events.html">Emitting Events</a></li>
+<li><a href="../business-network/testing.html">Testing Business Networks</a></li>
+<li><a href="../business-network/bnd-publish.html">Publish Models or Business Network Definitions</a></li>
+<li><a href="../business-network/query.html">Querying Business Network Data</a></li>
+<li><a href="../business-network/programmatic-access-control.html">Programmatic access control</a></li>
+</ul></li>
+<li><p><a href="../applications/applications-index.html">Developing Applications</a></p>
+
+<ul>
+<li><a href="../applications/node.html">Writing a Node.js application</a></li>
+<li><a href="../applications/web.html">Writing Web or mobile applications</a></li>
+<li><a href="../applications/subscribing-to-events.html">Subscribing to events</a></li>
+</ul></li>
+<li><p><a href="../integrating/integrating-index.html">Integrating Existing Systems</a></p>
+
+<ul>
+<li><a href="../integrating/getting-started-rest-api.html">Generating a REST API</a></li>
+<li><a href="../integrating/publishing-events.html">Publishing events from the REST server</a></li>
+<li><a href="../integrating/enabling-rest-authentication.html">Enabling authentication for the REST server</a></li>
+<li><a href="../integrating/enabling-multiuser.html">Enabling multiple user mode for the REST server</a></li>
+<li><a href="../integrating/securing-the-rest-server.html">Securing the REST server using HTTPS and TLS</a></li>
+<li><a href="../integrating/deploying-the-rest-server.html">Deploying the REST server for a business network</a></li>
+<li><a href="../integrating/node-red.html">Integrating with Node-RED</a></li>
+<li><a href="../integrating/call-out.html">Calling external REST services</a></li>
+</ul></li>
+<li><p><a href="../managing/managingindex.html">Managing a Deployed Business Network</a></p>
+
+<ul>
+<li><a href="../managing/participantsandidentities.html">Participants and identities</a></li>
+<li><a href="../managing/participant-add.html">Adding participants</a></li>
+<li><a href="../managing/id-cards-playground.html">Creating, Exporting, and Importing ID Cards</a></li>
+<li><a href="../managing/identity-issue.html">Issuing a new identity to a participant</a></li>
+<li><a href="../managing/identity-bind.html">Binding an existing identity to a participant</a></li>
+<li><a href="../managing/identity-list.html">Listing all identities in a business network</a></li>
+<li><a href="../managing/identity-revoke.html">Revoking an identity from a participant</a></li>
+<li><a href="../managing/updating-composer.html">Updating the Hyperledger Composer Runtime</a></li>
+</ul></li>
+<li><p><a href="../problems/diagnostics.html">Diagnosing Problems</a></p>
+
+<ul>
+<li><a href="../problems/deployment-local-playground.html">Error using the local Playground</a></li>
+</ul></li>
+<li><p><a href="../reference/reference-index.html">Reference</a></p>
+
+<ul>
+<li><a href="../reference/MeetTheModules.html">Hyperledger Composer npm Modules</a></li>
+<li><a href="../reference/cto_language.html">Modeling Language</a></li>
+<li><a href="../reference/acl_language.html">Access Control Language</a></li>
+<li><a href="../reference/query-language.html">Query Language</a></li>
+<li><a href="../reference/model-compatibility.html">Model Compatibility</a></li>
+<li><a href="../reference/connectionprofile.html">Connection Profiles</a></li>
+<li><a href="../reference/js_scripts.html">Transaction Processor Functions</a></li>
+<li><a href="../reference/commands.html">Hyperledger Composer CLI Commands</a></li>
+<li><a href="../reference/glossary.html">Hyperledger Composer Glossary of Terms</a></li>
+<li><a href="../reference/historian.html">Historian</a></li>
+</ul></li>
+<li><p><a href="../support/support-index.html">Support</a></p></li>
+<li><p><a href="../api-doc/api-doc-index.html">API Reference</a></p>
+
+<ul>
+<li><a href="../api-doc/businessnetworkconnection.js.html">Client businessnetworkconnection.js</a></li>
+<li><a href="../api-doc/historian.js.html">Client historian.js</a></li>
+<li><a href="../api-doc/identityregistry.js.html">Client identityregistry.js</a></li>
+<li><a href="../api-doc/registry.js.html">Client registry.js</a></li>
+<li><a href="../api-doc/transactionregistry.js.html">Client transactionregistry.js</a></li>
+<li><a href="../api-doc/adminconnection.js.html">Admin adminconnection.js</a></li>
+<li><a href="../api-doc/assetregistry.js.html">Runtime assetregistry.js</a></li>
+<li><a href="../api-doc/factory.js.html">Runtime factory.js</a></li>
+<li><a href="../api-doc/participantregistry.js.html">Runtime participantregistry.js</a></li>
+<li><a href="../api-doc/query.js.html">Runtime query.js</a></li>
+<li><a href="../api-doc/serializer.js.html">Runtime serializer.js</a></li>
+</ul></li>
+</ul>
+
+            
+                <div class="docs-footer-grid">
+                <div class="footer-bg-break docs-footer-break">
+<div class="footer-container-break">
+    <div class="footer-left-break">
+      <p>Released under the Apache License v2.0</p>
+    </div>
+  <div class="footer-right-break">
+    <ul>
+      <li><a href="https://github.com/hyperledger/composer">GitHub</a></li>
+      <!-- <li><a href="https://github.com/hyperledger/composer/LICENSE.txt">Legal</a></li> -->
+      <li><a href="/composer/unstable/jsdoc/index.html">APIs</a></li>
+      <li><a href="http://stackoverflow.com/questions/tagged/fabric-composer">Stack Overflow</a></li>
+      <li><a href="https://goo.gl/forms/7YPMLP2LTN2hjIRk2">Feedback?</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+
+                </div>
+          </nav>
+        </div>
+        <div class="page-content-grid">
+          <section class="content-chunk">
+            <!-- <a class="toggle open" href="#nav">open</a> -->
+            
+              <h1 id="binding-an-existing-identity-to-a-participant">Binding an existing identity to a participant</h1>
+
+<p>An existing identity can be issued to a participant using either the API or the command line.
+Once the existing identity has been bound, the identity can then be used by the participant
+to interact with the business network in the context of that participant.</p>
+
+<p>When using Hyperledger Fabric, you can bind existing certificates that have been created
+by using the Hyperledger Fabric certificate authority (CA) or by using other tooling such
+as <code>cryptogen</code>. The existing certificates must be valid for use for submitting transactions
+on the Hyperledger Fabric network.</p>
+
+<h2 id="before-you-start">Before you start</h2>
+
+<p>Before you follow these steps, you must have added a participant to a participant
+registry. You must have an existing certificate in the PEM format to bind to the
+participant. The <strong>binder</strong> of the existing identity (whether using command line or
+using the Javascript APIs below) must have ACLs that permit them to bind the identity
+(to be associated with the participant) in Hyperledger Composer.</p>
+
+<p>The procedure below shows an example using the following model of a participant
+from the Digital Property sample Business Network Definition: <a href="https://www.npmjs.com/package/digitalproperty-network">digitalproperty-network</a></p>
+<div class="highlight"><pre><code class="language-" data-lang="">namespace net.biz.digitalPropertyNetwork
+
+participant Person identified by personId {
+  o String personId
+  o String firstName
+  o String lastName
+}
+</code></pre></div>
+<p>The example assumes that an instance, <code>net.biz.digitalPropertyNetwork#mae@biznet.org</code>,
+of that participant has been created and placed into a participant registry.</p>
+
+<h2 id="procedure">Procedure</h2>
+
+<ol>
+<li>Connect to the business network and bind an existing identity to a participant
+
+<ul>
+<li>JavaScript API</li>
+</ul></li>
+</ol>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript">  <span class="kr">const</span> <span class="nx">BusinessNetworkConnection</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'composer-client'</span><span class="p">).</span><span class="nx">BusinessNetworkConnection</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">businessNetworkConnection</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+  <span class="kd">let</span> <span class="nx">certificate</span> <span class="o">=</span> <span class="err">`</span><span class="o">-----</span><span class="nx">BEGIN</span> <span class="nx">CERTIFICATE</span><span class="o">-----</span>
+    <span class="nx">MIIB8DCCAZegAwIBAgIURanHh55fqrUecvHNHtcMKiHJRkwwCgYIKoZIzj0EAwIw</span>
+    <span class="nx">czELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNh</span>
+    <span class="nx">biBGcmFuY2lzY28xGTAXBgNVBAoTEG9yZzEuZXhhbXBsZS5jb20xHDAaBgNVBAMT</span>
+    <span class="nx">E2NhLm9yZzEuZXhhbXBsZS5jb20wHhcNMTcwNzI3MTc0MzAwWhcNMTgwNzI3MTc0</span>
+    <span class="nx">MzAwWjAQMQ4wDAYDVQQDEwVhZG1pbjBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IA</span>
+    <span class="nx">BAANIGFIrXXr5</span><span class="o">+</span><span class="nx">h0NfUNJhx5YFQ4w6r182eZYRhc9KvYQhYo5D0ZbecfR9sGX2b6</span>
+    <span class="mi">0</span><span class="nx">aW</span><span class="o">+</span><span class="nx">C7bUaXc6DU3pJSD4fNijbDBqMA4GA1UdDwEB</span><span class="o">/</span><span class="nx">wQEAwIHgDAMBgNVHRMBAf8E</span>
+    <span class="nx">AjAAMB0GA1UdDgQWBBRwuAyWrGlzVQFqRf0OqoTNuoq7QDArBgNVHSMEJDAigCAZ</span>
+    <span class="nx">q2WruwSAfa0S5MCpqqZknnCGjjq9AhejItieR</span><span class="o">+</span><span class="nx">GmrjAKBggqhkjOPQQDAgNHADBE</span>
+    <span class="nx">AiBcj</span><span class="o">/</span><span class="nx">JvxmKHel4zQ3EmjITEFhdYku5ijIZEDuR5v9HK3gIgTUbVEfq3MuasVZKx</span>
+    <span class="nx">rkM5DH3e5ECM7T</span><span class="o">+</span><span class="nx">T1Ovr</span><span class="o">+</span><span class="mi">1</span><span class="nx">AK6bs</span><span class="o">=</span>
+    <span class="o">-----</span><span class="nx">END</span> <span class="nx">CERTIFICATE</span><span class="o">-----</span><span class="err">`</span>
+  <span class="k">return</span> <span class="nx">businessNetworkConnection</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'hlfv1'</span><span class="p">,</span> <span class="s1">'digitalproperty-network'</span><span class="p">,</span> <span class="s1">'admin'</span><span class="p">,</span> <span class="s1">'adminpw'</span><span class="p">)</span>
+      <span class="p">.</span><span class="nx">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+          <span class="k">return</span> <span class="nx">businessNetworkConnection</span><span class="p">.</span><span class="nx">bindIdentity</span><span class="p">(</span><span class="s1">'net.biz.digitalPropertyNetwork.Person#mae@biznet.org'</span><span class="p">,</span> <span class="nx">certificate</span><span class="p">)</span>
+      <span class="p">})</span>
+      <span class="p">.</span><span class="nx">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+          <span class="k">return</span> <span class="nx">businessNetworkConnection</span><span class="p">.</span><span class="nx">disconnect</span><span class="p">();</span>
+      <span class="p">})</span>
+      <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+          <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+          <span class="nx">process</span><span class="p">.</span><span class="nx">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+      <span class="p">});</span>
+</code></pre></div>
+<ul>
+<li>Command line</li>
+</ul>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">  composer identity <span class="nb">bind</span> -p hlfv1 -n <span class="s1">'digitalproperty-network'</span> -i admin -s adminpw -c /tmp/cert.pem -a <span class="s2">"resource:net.biz.digitalPropertyNetwork.Person#mae@biznet.org"</span>
+</code></pre></div>
+<ol>
+<li>As the participant, test the connection to the business network
+
+<ul>
+<li>JavaScript API</li>
+</ul></li>
+</ol>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript">  <span class="kr">const</span> <span class="nx">BusinessNetworkConnection</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'composer-client'</span><span class="p">).</span><span class="nx">BusinessNetworkConnection</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">businessNetworkConnection</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+  <span class="k">return</span> <span class="nx">businessNetworkConnection</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'hlfv1'</span><span class="p">,</span> <span class="s1">'digitalproperty-network'</span><span class="p">,</span> <span class="s1">'maeid1'</span><span class="p">,</span> <span class="s1">'RJJmlOpvNVRV'</span><span class="p">)</span>
+      <span class="p">.</span><span class="nx">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+          <span class="k">return</span> <span class="nx">businessNetworkConnection</span><span class="p">.</span><span class="nx">ping</span><span class="p">();</span>
+      <span class="p">})</span>
+      <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">result</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="err">`</span><span class="nx">participant</span> <span class="o">=</span> <span class="nx">$</span><span class="p">{</span><span class="nx">result</span><span class="p">.</span><span class="nx">participant</span> <span class="p">?</span> <span class="nx">result</span><span class="p">.</span><span class="nx">participant</span> <span class="p">:</span> <span class="s1">'&lt;no participant found&gt;'</span><span class="p">}</span><span class="err">`</span><span class="p">);</span>
+          <span class="k">return</span> <span class="nx">businessNetworkConnection</span><span class="p">.</span><span class="nx">disconnect</span><span class="p">();</span>
+      <span class="p">})</span>
+      <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+          <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+          <span class="nx">process</span><span class="p">.</span><span class="nx">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+      <span class="p">});</span>
+</code></pre></div>
+<ul>
+<li>Command line</li>
+</ul>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">  composer network ping -p hlfv1 -n <span class="s1">'digitalproperty-network'</span> -i maeid1 -s RJJmlOpvNVRV
+</code></pre></div>
+<p>The participant ID will be printed to the console, and should match the participant
+  ID that was specified in the <code>composer identity bind</code> command.</p>
+
+            
+          </section>
+        </div>
+        <!-- Otherwise, have the main content fill all 12 columns... -->
+        
+      <div class="PageNavigation">
+    
+    
+  </div>
+    </article>
+</div>
+<script>
+(function (document) {
+    function clipboard_init() {
+        var charts = document.querySelectorAll("div.highlight"),
+            arr = [],
+            i, j, maxItem, pre, btn, el;
+
+        // Make sure we are dealing with an array
+        for(i = 0, maxItem = charts.length; i < maxItem; i++) arr.push(charts[i]);
+
+        // Find the UML source element and get the text
+        for (i = 0, maxItem = arr.length; i < maxItem; i++) {
+            el = arr[i];
+            pre = el.childNodes[0];
+
+            pre.id = "hl_code" + i.toString();
+            btn = document.createElement('copy-button');
+            btn.appendChild(document.createTextNode('Copy'));
+            btn.setAttribute("class", "copy-btn");
+            btn.setAttribute("data-clipboard-target", "#hl_code" + i.toString());
+            el.insertBefore(btn, pre);
+        }
+        new Clipboard('.copy-btn');
+    };
+
+    function onReady(fn) {
+        if (document.addEventListener) {
+            document.addEventListener('DOMContentLoaded', fn);
+        } else {
+            document.attachEvent('onreadystatechange', function() {
+                if (document.readyState === 'interactive')
+                    fn();
+            });
+        }
+    }
+
+    onReady(function(){
+        clipboard_init();
+    });
+})(document);
+</script>
+<script src="/composer/unstable/assets/js/nav.js"></script>
+
+    
+
+    
+
+
+  </div>
+</body>
+</html>
