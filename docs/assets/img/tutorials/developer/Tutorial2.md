@@ -12,7 +12,7 @@ You should first make sure you have installed Hyperledger Composer and can run t
 
 Install the [VSCode editor](https://code.visualstudio.com/) (an Open Source code editor). After installation launch VSCode and select `View > Command Palette...` then type `extensions` and select the `Extensions: Install Extensions` option. In the "Search Extensions in Marketplace" text field type `Fabric Composer` and install the extension. You may have to reload the extension to active it.
 
-![VSCode extensions](https://github.com/hyperledger/composer/blob/master/packages/composer-website/jekylldocs/tutorials/tutorial2/vscode_extensions.png)
+![VSCode extensions](https://github.com/hyperledger/api-doc/composer/blob/master/packages/composer-website/jekylldocs/tutorials/tutorial2/vscode_extensions.png)
 
 ## Create Business Network Definition
 
@@ -25,7 +25,7 @@ cp -r ./composer-sample-networks/packages/basic-sample-network/ ./my-network
 
 You should now have a folder called `my-network` that we can start to modify. Using VSCode open the `my-network` folder. You should see the file layout in the explorer.
 
-![VSCode project](https://github.com/hyperledger/composer/blob/master/packages/composer-website/jekylldocs/tutorials/tutorial2/vscode_project.png)
+![VSCode project](https://github.com/hyperledger/api-doc/composer/blob/master/packages/composer-website/jekylldocs/tutorials/tutorial2/vscode_project.png)
 
 ### Update package.json
 
@@ -354,37 +354,37 @@ npm install
 
 You can then navigate to [https://composer-playground.mybluemix.net](https://composer-playground.mybluemix.net) and import the BNA file into the Playground using the "Import/Replace" button at the bottom left of the screen. Navigate to the `dist/my-network.bna` file and upload it, then press the "Deploy" button.
 
-![Import/Replace business network archive](https://github.com/hyperledger/composer/blob/master/packages/composer-website/jekylldocs/tutorials/tutorial2/import_replace.png)
+![Import/Replace business network archive](https://github.com/hyperledger/api-doc/composer/blob/master/packages/composer-website/jekylldocs/tutorials/tutorial2/import_replace.png)
 
 You can browse the structure of the business network by pressing the link on the left, check the contents of the model, script files and access control.
 
 You can then press the "Test" tab at the top and create a TRADER1 and TRADER2 instances of Trader by pressing the Trader link on the left and then the "Create New Participant" button.
 
-![Create Trader](https://github.com/hyperledger/composer/blob/master/packages/composer-website/jekylldocs/tutorials/tutorial2/create_trader.png)
+![Create Trader](https://github.com/hyperledger/api-doc/composer/blob/master/packages/composer-website/jekylldocs/tutorials/tutorial2/create_trader.png)
 
 The trader registry should look like this:
 
-![Trader Registry](https://github.com/hyperledger/composer/blob/master/packages/composer-website/jekylldocs/tutorials/tutorial2/trader_registry.png)
+![Trader Registry](https://github.com/hyperledger/api-doc/composer/blob/master/packages/composer-website/jekylldocs/tutorials/tutorial2/trader_registry.png)
 
 You can then create a new instance of a Commodity by pressing the Commodity link to the left and then the "Create New Asset" button. Create the commodity and assign the owner to be TRADER1.
 
-![Create Commodity](https://github.com/hyperledger/composer/blob/master/packages/composer-website/jekylldocs/tutorials/tutorial2/create_commodity.png)
+![Create Commodity](https://github.com/hyperledger/api-doc/composer/blob/master/packages/composer-website/jekylldocs/tutorials/tutorial2/create_commodity.png)
 
 The commodity registry should look like this:
 
-![Commodity Registry](https://github.com/hyperledger/composer/blob/master/packages/composer-website/jekylldocs/tutorials/tutorial2/commodity_registry.png)
+![Commodity Registry](https://github.com/hyperledger/api-doc/composer/blob/master/packages/composer-website/jekylldocs/tutorials/tutorial2/commodity_registry.png)
 
 You can then submit a `Trade` transaction to move the commodity from TRADER1 to TRADER2.
 
-![Submit transaction](https://github.com/hyperledger/composer/blob/master/packages/composer-website/jekylldocs/tutorials/tutorial2/submit_tx.png)
+![Submit transaction](https://github.com/hyperledger/api-doc/composer/blob/master/packages/composer-website/jekylldocs/tutorials/tutorial2/submit_tx.png)
 
 After processing you should see the transaction in the transaction registry.
 
-![Transaction registry](https://github.com/hyperledger/composer/blob/master/packages/composer-website/jekylldocs/tutorials/tutorial2/tx_registry.png)
+![Transaction registry](https://github.com/hyperledger/api-doc/composer/blob/master/packages/composer-website/jekylldocs/tutorials/tutorial2/tx_registry.png)
 
 The owner of the ABC commodity should now be TRADER2.
 
-![Commodity registry](https://github.com/hyperledger/composer/blob/master/packages/composer-website/jekylldocs/tutorials/tutorial2/commodity_registry_after.png)
+![Commodity registry](https://github.com/hyperledger/api-doc/composer/blob/master/packages/composer-website/jekylldocs/tutorials/tutorial2/commodity_registry_after.png)
 
 ## Deploy to Hyperledger Fabric
 
@@ -446,7 +446,7 @@ composer-rest-server
 
 Answer the questions posed at startup. These allow the composer-rest-server to connect to Hyperledger Fabric and configure how the REST API is generated.
 
-![Composer REST Server](https://github.com/hyperledger/composer/blob/master/packages/composer-website/jekylldocs/tutorials/tutorial2/composer-rest-server.png)
+![Composer REST Server](https://github.com/hyperledger/api-doc/composer/blob/master/packages/composer-website/jekylldocs/tutorials/tutorial2/composer-rest-server.png)
 
 ## Test REST API
 
@@ -459,17 +459,17 @@ Open a web browser and navigate to [http://localhost:3000/explorer]()
 
 You should see the LoopBack API Explorer, allowing you to inspect and test the generated REST API.
 
-![LoopBack Explorer](https://github.com/hyperledger/composer/blob/master/packages/composer-website/jekylldocs/tutorials/tutorial2/lb_explorer.png)
+![LoopBack Explorer](https://github.com/hyperledger/api-doc/composer/blob/master/packages/composer-website/jekylldocs/tutorials/tutorial2/lb_explorer.png)
 
 First use the `POST` method on `Trader` to create a new instance of a Trader.
 
-![Create trader](https://github.com/hyperledger/composer/blob/master/packages/composer-website/jekylldocs/tutorials/tutorial2/lb_create_trader.png)
+![Create trader](https://github.com/hyperledger/api-doc/composer/blob/master/packages/composer-website/jekylldocs/tutorials/tutorial2/lb_create_trader.png)
 
 Enter the values and then press the "Try it Out" button to submit. You should see an HTTP 200 response indicating that the Trader was successfully created and stored on the blockchain.
 
 Use the `GET` method on `Trader` (leave the filter parameter blank) and press the "Try it Out" button. You should see your Trader returned.
 
-![Get trader](https://github.com/hyperledger/composer/blob/master/packages/composer-website/jekylldocs/tutorials/tutorial2/lb_get_trader.png)
+![Get trader](https://github.com/hyperledger/api-doc/composer/blob/master/packages/composer-website/jekylldocs/tutorials/tutorial2/lb_get_trader.png)
 
 Similarly you can create/read/update/delete Commodities by using the appropriate HTTP request methods. You can submit a `Trade` transaction using an HTTP POST to the `/Trade` API endpoint.
 
@@ -520,7 +520,7 @@ You should see the `composer-rest-server` start, and then Angular webpacks the w
 
 If you navigate to the page and press the "Assets" drop down at the top-right of the page you can see the instances of Commodity stored on the Hyperledger Fabric in the table. You can create new instances using the "Add Asset" button. Note that the Angular skeleton does not yet allow you to create Participants, so you will need to create a test Trader instance to act as the owner of the Commodity using the Loopback Swagger UI before you can create a Commodity.
 
-![Add commodity](https://github.com/hyperledger/composer/blob/master/packages/composer-website/jekylldocs/tutorials/tutorial2/skeleton_add_asset.png)
+![Add commodity](https://github.com/hyperledger/api-doc/composer/blob/master/packages/composer-website/jekylldocs/tutorials/tutorial2/skeleton_add_asset.png)
 
 ## Congratulations!
 
