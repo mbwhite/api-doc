@@ -1,0 +1,1443 @@
+<!doctype html>
+<html lang="en">
+  
+  
+  
+
+<head>
+  <meta charset="utf-8">
+  
+    <title>Client businessnetworkconnection.js | Hyperledger Composer</title>
+  
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/x-icon" href="/api-doc/composer/unstable/favicon.ico">
+  <meta name="google-site-verification" content="fBQRJ6h7MV7_TJ7grbgq4P-d-07NRfDWPe4pqEEoH5w">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  
+    <!-- Google Analytics -->
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-91314349-2', 'auto');
+ga('require', 'outboundLinkTracker');
+ga('require', 'eventTracker');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script async src="/api-doc/composer/unstable/assets/js/autotrack.js"></script>
+<!-- End Google Analytics -->
+
+  
+
+  
+    <link href="/api-doc/composer/unstable/assets/css/normalize.css" rel="stylesheet">
+    <link href="/api-doc/composer/unstable/assets/css/new-style.min.css" rel="stylesheet">
+    <link href="/api-doc/composer/unstable/assets/css/grid-layout.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min.js"></script>
+  
+</head>
+
+
+<body class="">
+
+  
+  <!-- % include navbar.html % -->
+  
+
+  <div class="SiteWrapper">
+    
+      <div class="content">
+    <article class="docs-container">
+        <!-- If there's a sidebar, divide into 2 columns -->
+        
+        <div class="page-sidebar-grid" id="off-canvas">
+          <!-- <a class="toggle close" href="#">close</a> -->
+          <div class="docs-pagenav-grid">
+            <!-- Navigation -->
+  <nav class="navbar-docs" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+            <a class="navbar-brand" href="/api-doc/composer/unstable/index.html"><b>Hyperledger</b> Composer</a>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="top-nav-docs">
+                <!-- <li>
+                    <a href="services.html">Composer</a>
+                </li> -->
+                <!-- <li>
+                    <a href="https://composer-playground.mybluemix.net/">Playground</a>
+                </li> -->
+                    <a href="../tutorials/tutorials.html">Tutorials</a>
+                    <a href="../introduction/introduction.html">Docs</a>
+                    <a href="../support/support-index.html">Community</a>
+            </div>
+        </div>
+</nav>
+
+          </div>
+
+          <div class="docs-current-page-grid">
+          <p>Client businessnetworkconnection.js</p>
+          </div>
+
+          <nav class="context-nav">
+            
+            
+              <ul>
+<li><p><a href="../introduction/introduction.html">Introduction</a></p>
+
+<ul>
+<li><a href="../introduction/key-concepts.html">Key Concepts</a></li>
+<li><a href="../introduction/solution-architecture.html">Typical Solution Architecture</a></li>
+</ul></li>
+<li><p><a href="../installing/installing-index.html">Installing Hyperledger Composer</a></p>
+
+<ul>
+<li><a href="../installing/getting-started-with-playground.html">Using the Playground online</a></li>
+<li><a href="../installing/using-playground-locally.html">Installing the Playground locally</a></li>
+<li><a href="../installing/development-tools.html">Installing a development environment</a></li>
+</ul></li>
+<li><p><a href="../tutorials/tutorials.html">Tutorials</a></p>
+
+<ul>
+<li><a href="../tutorials/playground-guide.html">Playground Tutorial</a></li>
+<li><a href="../tutorials/developer-guide.html">Developer Guide</a></li>
+<li><a href="../tutorials/queries.html">Queries Guide</a></li>
+</ul></li>
+<li><p><a href="../playground/playground-index.html">Using Playground</a></p>
+
+<ul>
+<li><a href="../playground/id-cards-playground.html">ID Cards</a></li>
+</ul></li>
+<li><p><a href="../business-network/business-network-index.html">Developing Business Networks</a></p>
+
+<ul>
+<li><a href="../business-network/businessnetworkdefinition.html">Business Network Definitions</a></li>
+<li><a href="../business-network/bnd-create.html">Create a Business Network Definition</a></li>
+<li><a href="../business-network/bnd-deploy.html">Deploying and Updating Business Networks</a></li>
+<li><a href="../business-network/publishing-events.html">Emitting Events</a></li>
+<li><a href="../business-network/testing.html">Testing Business Networks</a></li>
+<li><a href="../business-network/bnd-publish.html">Publish Models or Business Network Definitions</a></li>
+<li><a href="../business-network/query.html">Querying Business Network Data</a></li>
+<li><a href="../business-network/programmatic-access-control.html">Programmatic access control</a></li>
+</ul></li>
+<li><p><a href="../applications/applications-index.html">Developing Applications</a></p>
+
+<ul>
+<li><a href="../applications/node.html">Writing a Node.js application</a></li>
+<li><a href="../applications/web.html">Writing Web or mobile applications</a></li>
+<li><a href="../applications/subscribing-to-events.html">Subscribing to events</a></li>
+</ul></li>
+<li><p><a href="../integrating/integrating-index.html">Integrating Existing Systems</a></p>
+
+<ul>
+<li><a href="../integrating/getting-started-rest-api.html">Generating a REST API</a></li>
+<li><a href="../integrating/publishing-events.html">Publishing events from the REST server</a></li>
+<li><a href="../integrating/enabling-rest-authentication.html">Enabling authentication for the REST server</a></li>
+<li><a href="../integrating/enabling-multiuser.html">Enabling multiple user mode for the REST server</a></li>
+<li><a href="../integrating/securing-the-rest-server.html">Securing the REST server using HTTPS and TLS</a></li>
+<li><a href="../integrating/deploying-the-rest-server.html">Deploying the REST server for a business network</a></li>
+<li><a href="../integrating/node-red.html">Integrating with Node-RED</a></li>
+<li><a href="../integrating/call-out.html">Calling external REST services</a></li>
+</ul></li>
+<li><p><a href="../managing/managingindex.html">Managing a Deployed Business Network</a></p>
+
+<ul>
+<li><a href="../managing/participantsandidentities.html">Participants and identities</a></li>
+<li><a href="../managing/participant-add.html">Adding participants</a></li>
+<li><a href="../managing/id-cards-playground.html">Creating, Exporting, and Importing ID Cards</a></li>
+<li><a href="../managing/identity-issue.html">Issuing a new identity to a participant</a></li>
+<li><a href="../managing/identity-bind.html">Binding an existing identity to a participant</a></li>
+<li><a href="../managing/identity-list.html">Listing all identities in a business network</a></li>
+<li><a href="../managing/identity-revoke.html">Revoking an identity from a participant</a></li>
+<li><a href="../managing/updating-composer.html">Updating the Hyperledger Composer Runtime</a></li>
+</ul></li>
+<li><p><a href="../problems/diagnostics.html">Diagnosing Problems</a></p>
+
+<ul>
+<li><a href="../problems/deployment-local-playground.html">Error using the local Playground</a></li>
+</ul></li>
+<li><p><a href="../reference/reference-index.html">Reference</a></p>
+
+<ul>
+<li><a href="../reference/MeetTheModules.html">Hyperledger Composer npm Modules</a></li>
+<li><a href="../reference/cto_language.html">Modeling Language</a></li>
+<li><a href="../reference/acl_language.html">Access Control Language</a></li>
+<li><a href="../reference/query-language.html">Query Language</a></li>
+<li><a href="../reference/model-compatibility.html">Model Compatibility</a></li>
+<li><a href="../reference/connectionprofile.html">Connection Profiles</a></li>
+<li><a href="../reference/js_scripts.html">Transaction Processor Functions</a></li>
+<li><a href="../reference/commands.html">Hyperledger Composer CLI Commands</a></li>
+<li><a href="../reference/glossary.html">Hyperledger Composer Glossary of Terms</a></li>
+<li><a href="../reference/historian.html">Historian</a></li>
+</ul></li>
+<li><p><a href="../support/support-index.html">Support</a></p></li>
+<li><p><a href="../api-doc/api-doc-index.html">API Reference</a></p>
+
+<ul>
+<li><a href="../api-doc/businessnetworkconnection.js.html">Client businessnetworkconnection.js</a></li>
+<li><a href="../api-doc/historian.js.html">Client historian.js</a></li>
+<li><a href="../api-doc/identityregistry.js.html">Client identityregistry.js</a></li>
+<li><a href="../api-doc/registry.js.html">Client registry.js</a></li>
+<li><a href="../api-doc/transactionregistry.js.html">Client transactionregistry.js</a></li>
+<li><a href="../api-doc/adminconnection.js.html">Admin adminconnection.js</a></li>
+<li><a href="../api-doc/assetregistry.js.html">Runtime assetregistry.js</a></li>
+<li><a href="../api-doc/factory.js.html">Runtime factory.js</a></li>
+<li><a href="../api-doc/participantregistry.js.html">Runtime participantregistry.js</a></li>
+<li><a href="../api-doc/query.js.html">Runtime query.js</a></li>
+<li><a href="../api-doc/serializer.js.html">Runtime serializer.js</a></li>
+</ul></li>
+</ul>
+
+            
+                <div class="docs-footer-grid">
+                <div class="footer-bg-break docs-footer-break">
+<div class="footer-container-break">
+    <div class="footer-left-break">
+      <p>Released under the Apache License v2.0</p>
+    </div>
+  <div class="footer-right-break">
+    <ul>
+      <li><a href="https://github.com/hyperledger/composer">GitHub</a></li>
+      <!-- <li><a href="https://github.com/hyperledger/api-doc/composer/LICENSE.txt">Legal</a></li> -->
+      <li><a href="/api-doc/composer/unstable/jsdoc/index.html">APIs</a></li>
+      <li><a href="http://stackoverflow.com/questions/tagged/fabric-composer">Stack Overflow</a></li>
+      <li><a href="https://goo.gl/forms/7YPMLP2LTN2hjIRk2">Feedback?</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+
+                </div>
+          </nav>
+        </div>
+        <div class="page-content-grid">
+          <section class="content-chunk">
+            <!-- <a class="toggle open" href="#nav">open</a> -->
+            
+              <!-- Generated by documentation.js. Update this documentation by updating the source code. -->
+
+<h3 id="table-of-contents">Table of Contents</h3>
+
+<ul>
+<li>  <a href="#businessnetworkconnection">BusinessNetworkConnection</a></li>
+<li>  <a href="#assetregistry">AssetRegistry</a></li>
+<li>  <a href="#registry">Registry</a></li>
+<li>  <a href="#historian">Historian</a></li>
+<li>  <a href="#identityregistry">IdentityRegistry</a></li>
+<li>  <a href="#participantregistry">ParticipantRegistry</a></li>
+<li>  <a href="#query">Query</a></li>
+<li>  <a href="#query-1">Query</a></li>
+<li>  <a href="#transactionregistry">TransactionRegistry</a></li>
+<li>  <a href="#getbusinessnetwork">getBusinessNetwork</a></li>
+<li>  <a href="#getallassetregistries">getAllAssetRegistries</a></li>
+<li>  <a href="#getassetregistry">getAssetRegistry</a></li>
+<li>  <a href="#assetregistryexists">assetRegistryExists</a></li>
+<li>  <a href="#addassetregistry">addAssetRegistry</a></li>
+<li>  <a href="#getallparticipantregistries">getAllParticipantRegistries</a></li>
+<li>  <a href="#getparticipantregistry">getParticipantRegistry</a></li>
+<li>  <a href="#participantregistryexists">participantRegistryExists</a></li>
+<li>  <a href="#addparticipantregistry">addParticipantRegistry</a></li>
+<li>  <a href="#gettransactionregistry">getTransactionRegistry</a></li>
+<li>  <a href="#gethistorian">getHistorian</a></li>
+<li>  <a href="#getidentityregistry">getIdentityRegistry</a></li>
+<li>  <a href="#connect">connect</a></li>
+<li>  <a href="#disconnect">disconnect</a></li>
+<li>  <a href="#submittransaction">submitTransaction</a></li>
+<li>  <a href="#buildquery">buildQuery</a></li>
+<li>  <a href="#query-2">query</a></li>
+<li>  <a href="#ping">ping</a></li>
+<li>  <a href="#issueidentity">issueIdentity</a></li>
+<li>  <a href="#bindidentity">bindIdentity</a></li>
+<li>  <a href="#revokeidentity">revokeIdentity</a></li>
+<li>  <a href="#getallassetregistries-1">getAllAssetRegistries</a></li>
+<li>  <a href="#getassetregistry-1">getAssetRegistry</a></li>
+<li>  <a href="#assetregistryexists-1">assetRegistryExists</a></li>
+<li>  <a href="#addassetregistry-1">addAssetRegistry</a></li>
+<li>  <a href="#addall">addAll</a></li>
+<li>  <a href="#add">add</a></li>
+<li>  <a href="#updateall">updateAll</a></li>
+<li>  <a href="#update">update</a></li>
+<li>  <a href="#removeall">removeAll</a></li>
+<li>  <a href="#remove">remove</a></li>
+<li>  <a href="#getall">getAll</a></li>
+<li>  <a href="#get">get</a></li>
+<li>  <a href="#exists">exists</a></li>
+<li>  <a href="#find">find</a></li>
+<li>  <a href="#query-3">query</a></li>
+<li>  <a href="#resolveall">resolveAll</a></li>
+<li>  <a href="#resolve">resolve</a></li>
+<li>  <a href="#getallregistries">getAllRegistries</a></li>
+<li>  <a href="#getregistry">getRegistry</a></li>
+<li>  <a href="#existsregistry">existsRegistry</a></li>
+<li>  <a href="#addregistry">addRegistry</a></li>
+<li>  <a href="#gethistorian-1">getHistorian</a></li>
+<li>  <a href="#getidentityregistry-1">getIdentityRegistry</a></li>
+<li>  <a href="#getallparticipantregistries-1">getAllParticipantRegistries</a></li>
+<li>  <a href="#getparticipantregistry-1">getParticipantRegistry</a></li>
+<li>  <a href="#participantregistryexists-1">participantRegistryExists</a></li>
+<li>  <a href="#addparticipantregistry-1">addParticipantRegistry</a></li>
+<li>  <a href="#getalltransactionregistries">getAllTransactionRegistries</a></li>
+<li>  <a href="#gettransactionregistry-1">getTransactionRegistry</a></li>
+<li>  <a href="#addtransactionregistry">addTransactionRegistry</a></li>
+</ul>
+
+<h2 id="businessnetworkconnection">BusinessNetworkConnection</h2>
+
+<p><strong>Extends EventEmitter</strong></p>
+
+<ul>
+<li>  <strong>See: See [EventEmitter]<a href="module:composer-client.EventEmitter">module:composer-client.EventEmitter</a></strong></li>
+</ul>
+
+<p>Use this class to connect to and then interact with a deployed BusinessNetworkDefinition.
+Use the AdminConnection class in the composer-admin module to deploy BusinessNetworksDefinitions.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>options</code><br></li>
+</ul>
+
+<h2 id="assetregistry">AssetRegistry</h2>
+
+<p><strong>Extends Registry</strong></p>
+
+<ul>
+<li>  <strong>See: See [Registry]<a href="module:composer-client.Registry">module:composer-client.Registry</a></strong></li>
+</ul>
+
+<p>The AssetRegistry is used to manage a set of assets stored on the blockchain.</p>
+
+<p><a href="./diagrams/assetregistry.svg"><img src="./diagrams/assetregistry.svg" style="height:100%;"/></a></p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>id</code><br></li>
+<li>  <code>name</code><br></li>
+<li>  <code>securityContext</code><br></li>
+<li>  <code>modelManager</code><br></li>
+<li>  <code>factory</code><br></li>
+<li>  <code>serializer</code><br></li>
+<li>  <code>bnc</code><br></li>
+</ul>
+
+<h2 id="registry">Registry</h2>
+
+<p>Class representing an Abstract Registry.</p>
+
+<p><a href="./diagrams/registry.svg"><img src="./diagrams/registry.svg" style="height:100%;"/></a></p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>registryType</code><br></li>
+<li>  <code>id</code><br></li>
+<li>  <code>name</code><br></li>
+<li>  <code>securityContext</code><br></li>
+<li>  <code>modelManager</code><br></li>
+<li>  <code>factory</code><br></li>
+<li>  <code>serializer</code><br></li>
+<li>  <code>bnc</code><br></li>
+</ul>
+
+<h2 id="historian">Historian</h2>
+
+<p><strong>Extends Registry</strong></p>
+
+<ul>
+<li>  <strong>See: See [Registry]<a href="module:composer-client.Registry">module:composer-client.Registry</a></strong></li>
+</ul>
+
+<p>The historian records the history of all business events on the blockchain.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>id</code><br></li>
+<li>  <code>name</code><br></li>
+<li>  <code>securityContext</code><br></li>
+<li>  <code>modelManager</code><br></li>
+<li>  <code>factory</code><br></li>
+<li>  <code>serializer</code><br></li>
+</ul>
+
+<h2 id="identityregistry">IdentityRegistry</h2>
+
+<p><strong>Extends Registry</strong></p>
+
+<ul>
+<li>  <strong>See: See [Registry]<a href="module:composer-client.Registry">module:composer-client.Registry</a></strong></li>
+</ul>
+
+<p>The IdentityRegistry is used to store a set of identities on the blockchain.</p>
+
+<p><a href="./diagrams/identityregistry.svg"><img src="./diagrams/identityregistry.svg" style="height:100%;"/></a></p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>id</code><br></li>
+<li>  <code>name</code><br></li>
+<li>  <code>securityContext</code><br></li>
+<li>  <code>modelManager</code><br></li>
+<li>  <code>factory</code><br></li>
+<li>  <code>serializer</code><br></li>
+</ul>
+
+<h2 id="participantregistry">ParticipantRegistry</h2>
+
+<p><strong>Extends Registry</strong></p>
+
+<ul>
+<li>  <strong>See: See [Registry]<a href="module:composer-client.Registry">module:composer-client.Registry</a></strong></li>
+</ul>
+
+<p>The ParticipantRegistry is used to manage a set of participants stored on the blockchain.</p>
+
+<p><a href="./diagrams/participantregistry.svg"><img src="./diagrams/participantregistry.svg" style="height:100%;"/></a></p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>id</code><br></li>
+<li>  <code>name</code><br></li>
+<li>  <code>securityContext</code><br></li>
+<li>  <code>modelManager</code><br></li>
+<li>  <code>factory</code><br></li>
+<li>  <code>serializer</code><br></li>
+<li>  <code>bnc</code><br></li>
+</ul>
+
+<h2 id="query">Query</h2>
+
+<p>The Query class represents a built query. A built query has been parsed and validated.
+Do not attempt to create an instance of this class.
+You must use the <a href="module:composer-client#BusinessNetworkConnection.buildQuery">buildQuery</a>
+method instead.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>identifier</code><br></li>
+</ul>
+
+<h2 id="query">Query</h2>
+
+<p>Do not attempt to create an instance of this class.<br>
+You must use the <a href="module:composer-client#BusinessNetworkConnection.buildQuery">buildQuery</a>
+method instead.</p>
+
+<h2 id="transactionregistry">TransactionRegistry</h2>
+
+<p><strong>Extends Registry</strong></p>
+
+<ul>
+<li>  <strong>See: See [Registry]<a href="module:composer-client.Registry">module:composer-client.Registry</a></strong></li>
+</ul>
+
+<p>The TransactionRegistry is used to store a set of transactions on the blockchain.</p>
+
+<p><a href="./diagrams/transactionregistry.svg"><img src="./diagrams/transactionregistry.svg" style="height:100%;"/></a></p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>id</code><br></li>
+<li>  <code>name</code><br></li>
+<li>  <code>securityContext</code><br></li>
+<li>  <code>modelManager</code><br></li>
+<li>  <code>factory</code><br></li>
+<li>  <code>serializer</code><br></li>
+</ul>
+
+<h2 id="getbusinessnetwork">getBusinessNetwork</h2>
+
+<p>Returns the currently connected BusinessNetworkDefinition</p>
+
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the Business Network Definition</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">getBusinessNetwork</span><span class="p">();</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">BusinessNetworkDefinition</span><span class="p">){</span>
+    <span class="c1">// Retrieved Business Network Definition</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Returns <strong>BusinessNetworkDefinition</strong> the business network</p>
+
+<h2 id="getallassetregistries">getAllAssetRegistries</h2>
+
+<p>Get a list of all existing asset registries.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>securityContext</code> <strong>SecurityContext</strong> The user&#39;s security context</li>
+</ul>
+
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get all asset registries</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">getAllAssetRegistries</span><span class="p">();</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">assetRegistries</span><span class="p">){</span>
+    <span class="c1">// Retrieved Asset Registries</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with a list of existing
+asset registries</p>
+
+<h2 id="getassetregistry">getAssetRegistry</h2>
+
+<p>Get an existing asset registry.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>id</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The unique identifier of the asset registry</li>
+</ul>
+
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get a asset registry</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">getAssetRegistry</span><span class="p">(</span><span class="s1">'businessNetworkIdentifier.registryId'</span><span class="p">);</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">assetRegistry</span><span class="p">){</span>
+    <span class="c1">// Retrieved Asset Registry</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with the existing asset
+registry, or rejected if the asset registry does not exist.</p>
+
+<h2 id="assetregistryexists">assetRegistryExists</h2>
+
+<p>Determine whether a asset registry exists.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>id</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The unique identifier of the asset registry</li>
+</ul>
+
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Determine whether an asset registry exists</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">assetRegistryExists</span><span class="p">(</span><span class="s1">'businessNetworkIdentifier.registryId'</span><span class="p">);</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">exists</span><span class="p">){</span>
+    <span class="c1">// if (exists === true) {</span>
+    <span class="c1">// logic here...</span>
+    <span class="c1">//}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with a boolean indicating whether the asset
+registry exists.</p>
+
+<h2 id="addassetregistry">addAssetRegistry</h2>
+
+<p>Add a new asset registry.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>id</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The unique identifier of the asset registry</li>
+<li>  <code>name</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The name of the asset registry</li>
+</ul>
+
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Add a new asset registry</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">addAssetRegistry</span><span class="p">(</span><span class="s1">'registryId'</span><span class="p">,</span><span class="s1">'registryName'</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with the new asset
+registry after it has been added.</p>
+
+<h2 id="getallparticipantregistries">getAllParticipantRegistries</h2>
+
+<p>Get a list of all existing participant registries.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>securityContext</code> <strong>SecurityContext</strong> The user&#39;s security context</li>
+</ul>
+
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get all participant registries</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">getAllParticipantRegistries</span><span class="p">();</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">participantRegistries</span><span class="p">){</span>
+    <span class="c1">// Retrieved Participant Registries</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with a list of existing
+participant registries</p>
+
+<h2 id="getparticipantregistry">getParticipantRegistry</h2>
+
+<p>Get an existing participant registry.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>id</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The unique identifier of the participant registry</li>
+</ul>
+
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get a participant registry</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">getParticipantRegistry</span><span class="p">(</span><span class="s1">'businessNetworkIdentifier.registryId'</span><span class="p">);</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">participantRegistry</span><span class="p">){</span>
+    <span class="c1">// Retrieved Participant Registry</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with the existing participant
+registry, or rejected if the participant registry does not exist.</p>
+
+<h2 id="participantregistryexists">participantRegistryExists</h2>
+
+<p>Determine whether a participant registry exists.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>id</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The unique identifier of the participant registry</li>
+</ul>
+
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Determine whether an asset registry exists</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">participantRegistryExists</span><span class="p">(</span><span class="s1">'businessNetworkIdentifier.registryId'</span><span class="p">);</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">exists</span><span class="p">){</span>
+    <span class="c1">// if (exists === true) {</span>
+    <span class="c1">// logic here...</span>
+    <span class="c1">//}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with a boolean indicating whether the participant
+registry exists.</p>
+
+<h2 id="addparticipantregistry">addParticipantRegistry</h2>
+
+<p>Add a new participant registry.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>id</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The unique identifier of the participant registry</li>
+<li>  <code>name</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The name of the participant registry</li>
+</ul>
+
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Add a new participant registry</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">addParticipantRegistry</span><span class="p">(</span><span class="s1">'registryId'</span><span class="p">,</span><span class="s1">'registryName'</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with the new participant
+registry after it has been added.</p>
+
+<h2 id="gettransactionregistry">getTransactionRegistry</h2>
+
+<p>Get the transaction registry.</p>
+
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the transaction registry</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">getTransactionRegistry</span><span class="p">();</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">transactionRegistry</span><span class="p">){</span>
+    <span class="c1">// Retrieved transaction registry.</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved to the <a href="#transactionregistry">TransactionRegistry</a></p>
+
+<h2 id="gethistorian">getHistorian</h2>
+
+<p>Get the historian</p>
+
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the historian</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">getHistorian</span><span class="p">();</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">historian</span><span class="p">){</span>
+    <span class="c1">// Retrieved historian</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved to the <a href="#historian">Historian</a></p>
+
+<h2 id="getidentityregistry">getIdentityRegistry</h2>
+
+<p>Get the identity registry.</p>
+
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the identity registry</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">getIdentityRegistry</span><span class="p">();</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">identityRegistry</span><span class="p">){</span>
+    <span class="c1">// Retrieved identity registry</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved to the <a href="#identityregistry">IdentityRegistry</a></p>
+
+<h2 id="connect">connect</h2>
+
+<p>Connects to a business network using a connection profile, and authenticates to the Hyperledger Fabric.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>connectionProfile</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The name of the connection profile</li>
+<li>  <code>businessNetwork</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The identifier of the business network</li>
+<li>  <code>enrollmentID</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the enrollment ID of the user</li>
+<li>  <code>enrollmentSecret</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the enrollment secret of the user</li>
+<li>  <code>additionalConnectOptions</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?</strong> Additional configuration options supplied
+at runtime that override options set in the connection profile.
+which will override those in the specified connection profile.</li>
+</ul>
+
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Connect and log in to HLF</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="c1">// Connected</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise to a BusinessNetworkDefinition that indicates the connection is complete</p>
+
+<h2 id="disconnect">disconnect</h2>
+
+<p>Disconnects from the Hyperledger Fabric.</p>
+
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Disconnects from HLF</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">disconnect</span><span class="p">();</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="c1">// Disconnected.</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved when the connection is
+terminated.</p>
+
+<h2 id="submittransaction">submitTransaction</h2>
+
+<p>Submit a transaction for processing by the currently connected business network.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>transaction</code> <strong>Resource</strong> The transaction to submit. Use <a href="Factory#newTransaction">newTransaction</a> to create this object.</li>
+</ul>
+
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Submits a transaction</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="nx">factory</span> <span class="o">=</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">getBusinessNetwork</span><span class="p">().</span><span class="nx">getFactory</span><span class="p">();</span>
+    <span class="kd">var</span> <span class="nx">transaction</span> <span class="o">=</span> <span class="nx">factory</span><span class="p">.</span><span class="nx">newTransaction</span><span class="p">(</span><span class="s1">'network.transactions'</span><span class="p">,</span> <span class="s1">'TransactionType'</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">submitTransaction</span><span class="p">(</span><span class="nx">transaction</span><span class="p">);</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="c1">// Submitted a transaction.</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be fulfilled when the transaction has
+been processed.</p>
+
+<h2 id="buildquery">buildQuery</h2>
+
+<p>Build a query ready for later execution. The specified query string must be written
+in the Composer query language.</p>
+
+<p>This functionality is Blockchain platform dependent. For example, when a Composer
+business network is deployed to Hyperledger Fabric v1.0, Hyperledger Fabric must be
+configured with the CouchDB database for the world state.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>query</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The query string, written using the Composer query language.</li>
+</ul>
+
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Build and execute a query.</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">query</span> <span class="o">=</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">buildQuery</span><span class="p">(</span><span class="s1">'SELECT org.acme.sample.SampleAsset WHERE (value == _$inputValue)'</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">query</span><span class="p">(</span><span class="nx">query</span><span class="p">,</span> <span class="p">{</span> <span class="na">inputValue</span><span class="p">:</span> <span class="s1">'blue'</span> <span class="p">})</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">assets</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">assets</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">asset</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// Process each asset.</span>
+    <span class="p">});</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Add optional error handling here.</span>
+  <span class="p">});</span>
+</code></pre></div>
+<p>Returns <strong><a href="#query">Query</a></strong> The built query, which can be passed in a call to query.</p>
+
+<h2 id="query">query</h2>
+
+<p>Execute a query defined in a Composer query file, or execute a query built with buildQuery.</p>
+
+<p>This functionality is Blockchain platform dependent. For example, when a Composer
+business network is deployed to Hyperledger Fabric v1.0, Hyperledger Fabric must be
+configured with the CouchDB database for the world state.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>query</code> <strong>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="#query">Query</a>)</strong> The name of the query, or a built query.</li>
+<li>  <code>parameters</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?</strong> The parameters for the query.</li>
+</ul>
+
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Execute the query.</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">query</span><span class="p">(</span><span class="s1">'Q1'</span><span class="p">,</span> <span class="p">{</span> <span class="na">inputValue</span><span class="p">:</span> <span class="s1">'blue'</span> <span class="p">})</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">assets</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">assets</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">asset</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// Process each asset.</span>
+    <span class="p">});</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Add optional error handling here.</span>
+  <span class="p">});</span>
+</code></pre></div>
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with an array of
+<a href="module:composer-common.Resource">Resource</a> representing the
+resources returned by the query.</p>
+
+<h2 id="ping">ping</h2>
+
+<p>Test the connection to the runtime and verify that the version of the
+runtime is compatible with this level of the client node.js module.</p>
+
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Test the connection to the runtime</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">ping</span><span class="p">();</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="c1">// Connection tested.</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be fufilled when the connection has
+been tested. The promise will be rejected if the version is incompatible.</p>
+
+<h2 id="issueidentity">issueIdentity</h2>
+
+<p>Issue an identity with the specified name and map it to the specified
+participant.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>participant</code> <strong>(Resource | Relationship | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</strong> The participant, a
+relationship to the participant, or the fully qualified identifier of
+the participant. The participant must already exist.</li>
+<li>  <code>identityName</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The name for the new identity.</li>
+<li>  <code>options</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>?</strong> Options for the new identity.
+
+<ul>
+<li>  <code>options.issuer</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?</strong> Whether or not the new identity should have
+permissions to create additional new identities. False by default.</li>
+</ul></li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be fulfilled when the identity has
+been added to the specified participant. The promise will be rejected if
+the participant does not exist, or if the identity is already mapped to
+another participant.</p>
+
+<h2 id="bindidentity">bindIdentity</h2>
+
+<p>Bind an existing identity to the specified participant.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>participant</code> <strong>(Resource | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</strong> The participant, or the fully qualified
+identifier of the participant. The participant must already exist.</li>
+<li>  <code>certificate</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The certificate for the existing identity.</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be fulfilled when the identity has
+been added to the specified participant. The promise will be rejected if
+the participant does not exist, or if the identity is already mapped to
+another participant.</p>
+
+<h2 id="revokeidentity">revokeIdentity</h2>
+
+<p>Revoke the specified identity by removing any existing mapping to a participant.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>identity</code> <strong>(Resource | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</strong> The identity, or the identifier of the identity.</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be fulfilled when the identity has
+been removed from the specified participant. The promise will be rejected if
+the participant does not exist, or if the identity is not mapped to the
+participant.</p>
+
+<h2 id="getallassetregistries">getAllAssetRegistries</h2>
+
+<p>Get a list of all existing asset registries.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>securityContext</code> <strong>SecurityContext</strong> The user&#39;s security context.</li>
+<li>  <code>modelManager</code> <strong>ModelManager</strong> The ModelManager to use for this asset registry.</li>
+<li>  <code>factory</code> <strong>Factory</strong> The factory to use for this asset registry.</li>
+<li>  <code>serializer</code> <strong>Serializer</strong> The Serializer to use for this asset registry.</li>
+<li>  <code>bnc</code> <strong><a href="#businessnetworkconnection">BusinessNetworkConnection</a></strong> Instance of the BuinsssNetworkConnection</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with a list of <a href="#assetregistry">AssetRegistry</a>
+instances representing the asset registries.</p>
+
+<h2 id="getassetregistry">getAssetRegistry</h2>
+
+<p>Get an existing asset registry.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>securityContext</code> <strong>SecurityContext</strong> The user&#39;s security context.</li>
+<li>  <code>id</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The unique identifier of the asset registry.</li>
+<li>  <code>modelManager</code> <strong>ModelManager</strong> The ModelManager to use for this asset registry.</li>
+<li>  <code>factory</code> <strong>Factory</strong> The factory to use for this asset registry.</li>
+<li>  <code>serializer</code> <strong>Serializer</strong> The Serializer to use for this asset registry.</li>
+<li>  <code>bnc</code> <strong><a href="#businessnetworkconnection">BusinessNetworkConnection</a></strong> Instance of the BuinsssNetworkConnection</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with a <a href="#assetregistry">AssetRegistry</a>
+instance representing the asset registry.</p>
+
+<h2 id="assetregistryexists">assetRegistryExists</h2>
+
+<p>Determine whether an registry exists.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>securityContext</code> <strong>SecurityContext</strong> The user&#39;s security context.</li>
+<li>  <code>id</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The unique identifier of the asset registry.</li>
+<li>  <code>modelManager</code> <strong>ModelManager</strong> The ModelManager to use for this asset registry.</li>
+<li>  <code>factory</code> <strong>Factory</strong> The factory to use for this asset registry.</li>
+<li>  <code>serializer</code> <strong>Serializer</strong> The Serializer to use for this asset registry.</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with a boolean indicating whether the asset registry exists</p>
+
+<h2 id="addassetregistry">addAssetRegistry</h2>
+
+<p>Add a new asset registry.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>securityContext</code> <strong>SecurityContext</strong> The user&#39;s security context.</li>
+<li>  <code>id</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The unique identifier of the asset registry.</li>
+<li>  <code>name</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The name of the asset registry.</li>
+<li>  <code>modelManager</code> <strong>ModelManager</strong> The ModelManager to use for this asset registry.</li>
+<li>  <code>factory</code> <strong>Factory</strong> The factory to use for this asset registry.</li>
+<li>  <code>serializer</code> <strong>Serializer</strong> The Serializer to use for this asset registry.</li>
+<li>  <code>bnc</code> <strong><a href="#businessnetworkconnection">BusinessNetworkConnection</a></strong> Instance of the BuinsssNetworkConnection</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with a <a href="#assetregistry">AssetRegistry</a>
+instance representing the new asset registry.</p>
+
+<h2 id="addall">addAll</h2>
+
+<p>Adds a list of new resources to the registry.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>resources</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;Resource&gt;</strong> The resources to be added to the registry.</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved when the resource is
+added to the registry.</p>
+
+<h2 id="add">add</h2>
+
+<p>Adds a new resource to the registry.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>resource</code> <strong>Resource</strong> The resource to be added to the registry.</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved when the resource is
+added to the registry.</p>
+
+<h2 id="updateall">updateAll</h2>
+
+<p>Updates a list of resources in the registry.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>resources</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;Resource&gt;</strong> The resources to be updated in the asset registry.</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved when the resource is
+added to the registry.</p>
+
+<h2 id="update">update</h2>
+
+<p>Updates a resource in the registry.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>resource</code> <strong>Resource</strong> The resource to be updated in the registry.</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved when the resource is
+updated in the registry.</p>
+
+<h2 id="removeall">removeAll</h2>
+
+<p>Removes a list of resources from the registry.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>resources</code> <strong>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;Resource&gt; | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>&gt;)</strong> The resources, or the unique identifiers of the resources.</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved when the resource is
+added to the registry.</p>
+
+<h2 id="remove">remove</h2>
+
+<p>Remove an asset with a given type and id from the registry.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>resource</code> <strong>(Resource | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</strong> The resource, or the unique identifier of the resource.</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved when the resource is
+removed from the registry.</p>
+
+<h2 id="getall">getAll</h2>
+
+<p>Get all of the resources in the registry.</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with an array of JSON
+objects representing the resources.</p>
+
+<h2 id="get">get</h2>
+
+<p>Get a specific resource in the registry.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>id</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The unique identifier of the resource.</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with a JSON object
+representing the resource.</p>
+
+<h2 id="exists">exists</h2>
+
+<p>Determines whether a specific resource exists in the registry.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>id</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The unique identifier of the resource.</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with true/false depending on whether the resource exists.</p>
+
+<h2 id="find">find</h2>
+
+<p>Find resources in the registry that match the specified JSONata expression.
+The JSONata expression is applied to each resource in the registry, and
+resources are returned if the JSONata expression returns a truthy value for that
+resource.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>expression</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The JSONata expression.</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with an array of <a href="Resource">Resource</a> instances representing the assets that match the query.</p>
+
+<h2 id="query">query</h2>
+
+<p>Execute a query against all resources in the registry. The JSONata
+expression is applied to each resource in the registry, and the result
+of the JSONata expression is returned if the result is truthy. The result
+is a JavaScript object, and should only be used for visualization
+purposes. You cannot use the <a href="add">add</a> or <a href="update">update</a> functions with
+data returned by this function.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>expression</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The JSONata expression.</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with an array of JavaScript
+objects representing the resources and all of their resolved relationships.</p>
+
+<h2 id="resolveall">resolveAll</h2>
+
+<p>Get all of the resources in the registry, and resolve all of their relationships
+to other assets, participants, and transactions. The result is a JavaScript
+object, and should only be used for visualization purposes. You cannot use
+the <a href="add">add</a> or <a href="update">update</a> functions with a resolved resource.</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with an array of JavaScript
+objects representing the resources and all of their resolved relationships.</p>
+
+<h2 id="resolve">resolve</h2>
+
+<p>Get a specific resource in the registry, and resolve all of its relationships
+to other assets, participants, and transactions. The result is a JavaScript
+object, and should only be used for visualization purposes. You cannot use
+the <a href="add">add</a> or <a href="update">update</a> functions with a resolved resource.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>id</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The unique identifier of the asset.</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with a JavaScript object
+representing the resource and all of its resolved relationships.</p>
+
+<h2 id="getallregistries">getAllRegistries</h2>
+
+<p>Get a list of all existing registries.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>securityContext</code> <strong>SecurityContext</strong> The user&#39;s security context.</li>
+<li>  <code>registryType</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The type of this registry.</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with an array of JSON
+objects representing the registries.</p>
+
+<h2 id="getregistry">getRegistry</h2>
+
+<p>Get an existing registry.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>securityContext</code> <strong>SecurityContext</strong> The user&#39;s security context.</li>
+<li>  <code>registryType</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The type of this registry.</li>
+<li>  <code>id</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The unique identifier of the registry.</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with a JSON object
+representing the registry.</p>
+
+<h2 id="existsregistry">existsRegistry</h2>
+
+<p>Determines whether a registry exists.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>securityContext</code> <strong>SecurityContext</strong> The user&#39;s security context.</li>
+<li>  <code>registryType</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The type of this registry.</li>
+<li>  <code>id</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The unique identifier of the registry.</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with true/false depending on whether the registry exists</p>
+
+<h2 id="addregistry">addRegistry</h2>
+
+<p>Add a new asset registry.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>securityContext</code> <strong>SecurityContext</strong> The user&#39;s security context.</li>
+<li>  <code>registryType</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The type of this registry.</li>
+<li>  <code>id</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The unique identifier of the registry.</li>
+<li>  <code>name</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The name of the registry.</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with a JSON object
+representing the registry.</p>
+
+<h2 id="gethistorian">getHistorian</h2>
+
+<p>Get an existing historian.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>securityContext</code> <strong>SecurityContext</strong> The user&#39;s security context.</li>
+<li>  <code>modelManager</code> <strong>ModelManager</strong> The ModelManager to use for this historian.</li>
+<li>  <code>factory</code> <strong>Factory</strong> The factory to use for this historian.</li>
+<li>  <code>serializer</code> <strong>Serializer</strong> The Serializer to use for this historian.</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with a <a href="#identityregistry">IdentityRegistry</a>
+instance representing the historian.</p>
+
+<h2 id="getidentityregistry">getIdentityRegistry</h2>
+
+<p>Get an existing identity registry.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>securityContext</code> <strong>SecurityContext</strong> The user&#39;s security context.</li>
+<li>  <code>modelManager</code> <strong>ModelManager</strong> The ModelManager to use for this identity registry.</li>
+<li>  <code>factory</code> <strong>Factory</strong> The factory to use for this identity registry.</li>
+<li>  <code>serializer</code> <strong>Serializer</strong> The Serializer to use for this identity registry.</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with a <a href="#identityregistry">IdentityRegistry</a>
+instance representing the identity registry.</p>
+
+<h2 id="getallparticipantregistries">getAllParticipantRegistries</h2>
+
+<p>Get a list of all existing participant registries.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>securityContext</code> <strong>SecurityContext</strong> The user&#39;s security context.</li>
+<li>  <code>modelManager</code> <strong>ModelManager</strong> The ModelManager to use for this participant registry.</li>
+<li>  <code>factory</code> <strong>Factory</strong> The factory to use for this participant registry.</li>
+<li>  <code>serializer</code> <strong>Serializer</strong> The Serializer to use for this participant registry.</li>
+<li>  <code>bnc</code> <strong><a href="#businessnetworkconnection">BusinessNetworkConnection</a></strong> BusinessNetworkConnection to use</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with a list of <a href="#participantregistry">ParticipantRegistry</a>
+instances representing the participant registries.</p>
+
+<h2 id="getparticipantregistry">getParticipantRegistry</h2>
+
+<p>Get an existing participant registry.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>securityContext</code> <strong>SecurityContext</strong> The user&#39;s security context.</li>
+<li>  <code>id</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The unique identifier of the participant registry.</li>
+<li>  <code>modelManager</code> <strong>ModelManager</strong> The ModelManager to use for this participant registry.</li>
+<li>  <code>factory</code> <strong>Factory</strong> The factory to use for this participant registry.</li>
+<li>  <code>serializer</code> <strong>Serializer</strong> The Serializer to use for this participant registry.</li>
+<li>  <code>bnc</code> <strong><a href="#businessnetworkconnection">BusinessNetworkConnection</a></strong> BusinessNetworkConnection to use</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with a <a href="#participantregistry">ParticipantRegistry</a>
+instance representing the participant registry.</p>
+
+<h2 id="participantregistryexists">participantRegistryExists</h2>
+
+<p>Determine whether a participant registry exists.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>securityContext</code> <strong>SecurityContext</strong> The user&#39;s security context.</li>
+<li>  <code>id</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The unique identifier of the asset registry.</li>
+<li>  <code>modelManager</code> <strong>ModelManager</strong> The ModelManager to use for this asset registry.</li>
+<li>  <code>factory</code> <strong>Factory</strong> The factory to use for this asset registry.</li>
+<li>  <code>serializer</code> <strong>Serializer</strong> The Serializer to use for this asset registry.</li>
+<li>  <code>bnc</code> <strong><a href="#businessnetworkconnection">BusinessNetworkConnection</a></strong> BusinessNetworkConnection to use</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with a boolean indicating whether the asset registry exists</p>
+
+<h2 id="addparticipantregistry">addParticipantRegistry</h2>
+
+<p>Add a new participant registry.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>securityContext</code> <strong>SecurityContext</strong> The user&#39;s security context.</li>
+<li>  <code>id</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The unique identifier of the participant registry.</li>
+<li>  <code>name</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The name of the participant registry.</li>
+<li>  <code>modelManager</code> <strong>ModelManager</strong> The ModelManager to use for this participant registry.</li>
+<li>  <code>factory</code> <strong>Factory</strong> The factory to use for this participant registry.</li>
+<li>  <code>serializer</code> <strong>Serializer</strong> The Serializer to use for this participant registry.</li>
+<li>  <code>bnc</code> <strong><a href="#businessnetworkconnection">BusinessNetworkConnection</a></strong> BusinessNetworkConnection to use</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with a <a href="#participantregistry">ParticipantRegistry</a>
+instance representing the new participant registry.</p>
+
+<h2 id="getalltransactionregistries">getAllTransactionRegistries</h2>
+
+<p>Get a list of all existing transaction registries.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>securityContext</code> <strong>SecurityContext</strong> The user&#39;s security context.</li>
+<li>  <code>modelManager</code> <strong>ModelManager</strong> The ModelManager to use for this transaction registry.</li>
+<li>  <code>factory</code> <strong>Factory</strong> The factory to use for this transaction registry.</li>
+<li>  <code>serializer</code> <strong>Serializer</strong> The Serializer to use for this transaction registry.</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with a list of <a href="#transactionregistry">TransactionRegistry</a>
+instances representing the transaction registries.</p>
+
+<h2 id="gettransactionregistry">getTransactionRegistry</h2>
+
+<p>Get an existing transaction registry.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>securityContext</code> <strong>SecurityContext</strong> The user&#39;s security context.</li>
+<li>  <code>id</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The unique identifier of the transaction registry.</li>
+<li>  <code>modelManager</code> <strong>ModelManager</strong> The ModelManager to use for this transaction registry.</li>
+<li>  <code>factory</code> <strong>Factory</strong> The factory to use for this transaction registry.</li>
+<li>  <code>serializer</code> <strong>Serializer</strong> The Serializer to use for this transaction registry.</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with a <a href="#transactionregistry">TransactionRegistry</a>
+instance representing the transaction registry.</p>
+
+<h2 id="addtransactionregistry">addTransactionRegistry</h2>
+
+<p>Add a new transaction registry.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>securityContext</code> <strong>SecurityContext</strong> The user&#39;s security context.</li>
+<li>  <code>id</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The unique identifier of the transaction registry.</li>
+<li>  <code>name</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The name of the transaction registry.</li>
+<li>  <code>modelManager</code> <strong>ModelManager</strong> The ModelManager to use for this transaction registry.</li>
+<li>  <code>factory</code> <strong>Factory</strong> The factory to use for this transaction registry.</li>
+<li>  <code>serializer</code> <strong>Serializer</strong> The Serializer to use for this transaction registry.</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with a <a href="#transactionregistry">TransactionRegistry</a>
+instance representing the new transaction registry.</p>
+
+            
+          </section>
+        </div>
+        <!-- Otherwise, have the main content fill all 12 columns... -->
+        
+      <div class="PageNavigation">
+    
+    
+  </div>
+    </article>
+</div>
+<script>
+(function (document) {
+    function clipboard_init() {
+        var charts = document.querySelectorAll("div.highlight"),
+            arr = [],
+            i, j, maxItem, pre, btn, el;
+
+        // Make sure we are dealing with an array
+        for(i = 0, maxItem = charts.length; i < maxItem; i++) arr.push(charts[i]);
+
+        // Find the UML source element and get the text
+        for (i = 0, maxItem = arr.length; i < maxItem; i++) {
+            el = arr[i];
+            pre = el.childNodes[0];
+
+            pre.id = "hl_code" + i.toString();
+            btn = document.createElement('copy-button');
+            btn.appendChild(document.createTextNode('Copy'));
+            btn.setAttribute("class", "copy-btn");
+            btn.setAttribute("data-clipboard-target", "#hl_code" + i.toString());
+            el.insertBefore(btn, pre);
+        }
+        new Clipboard('.copy-btn');
+    };
+
+    function onReady(fn) {
+        if (document.addEventListener) {
+            document.addEventListener('DOMContentLoaded', fn);
+        } else {
+            document.attachEvent('onreadystatechange', function() {
+                if (document.readyState === 'interactive')
+                    fn();
+            });
+        }
+    }
+
+    onReady(function(){
+        clipboard_init();
+    });
+})(document);
+</script>
+<script src="/api-doc/composer/unstable/assets/js/nav.js"></script>
+
+    
+
+    
+
+
+  </div>
+</body>
+</html>
