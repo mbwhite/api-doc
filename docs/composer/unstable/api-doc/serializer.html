@@ -1,0 +1,1514 @@
+<!doctype html>
+<html lang="en">
+  
+  
+  
+
+<head>
+  <meta charset="utf-8">
+  
+    <title>Common serializer | Hyperledger Composer</title>
+  
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/x-icon" href="/api-doc/composer/unstable/favicon.ico">
+  <meta name="google-site-verification" content="fBQRJ6h7MV7_TJ7grbgq4P-d-07NRfDWPe4pqEEoH5w">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  
+    <!-- Google Analytics -->
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-91314349-2', 'auto');
+ga('require', 'outboundLinkTracker');
+ga('require', 'eventTracker');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script async src="/api-doc/composer/unstable/assets/js/autotrack.js"></script>
+<!-- End Google Analytics -->
+
+  
+
+  
+    <link href="/api-doc/composer/unstable/assets/css/normalize.css" rel="stylesheet">
+    <link href="/api-doc/composer/unstable/assets/css/new-style.min.css" rel="stylesheet">
+    <link href="/api-doc/composer/unstable/assets/css/grid-layout.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min.js"></script>
+  
+</head>
+
+
+<body class="">
+
+  
+  <!-- % include navbar.html % -->
+  
+
+  <div class="SiteWrapper">
+    
+      <div class="content">
+    <article class="docs-container">
+        <!-- If there's a sidebar, divide into 2 columns -->
+        
+        <div class="page-sidebar-grid" id="off-canvas">
+          <!-- <a class="toggle close" href="#">close</a> -->
+          <div class="docs-pagenav-grid">
+            <!-- Navigation -->
+  <nav class="navbar-docs" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+            <a class="navbar-brand" href="/api-doc/composer/unstable/index.html"><b>Hyperledger</b> Composer</a>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="top-nav-docs">
+                <!-- <li>
+                    <a href="services.html">Composer</a>
+                </li> -->
+                <!-- <li>
+                    <a href="https://composer-playground.mybluemix.net/">Playground</a>
+                </li> -->
+                    <a href="../tutorials/tutorials.html">Tutorials</a>
+                    <a href="../introduction/introduction.html">Docs</a>
+                    <a href="../support/support-index.html">Community</a>
+            </div>
+        </div>
+</nav>
+
+          </div>
+
+          <div class="docs-current-page-grid">
+          <p>Common serializer</p>
+          </div>
+
+          <nav class="context-nav">
+            
+            
+              <ul>
+<li><p><a href="../introduction/introduction.html">Introduction</a></p>
+
+<ul>
+<li><a href="../introduction/key-concepts.html">Key Concepts</a></li>
+<li><a href="../introduction/solution-architecture.html">Typical Solution Architecture</a></li>
+</ul></li>
+<li><p><a href="../installing/installing-index.html">Installing</a></p>
+
+<ul>
+<li><a href="../installing/getting-started-with-playground.html">Using the Playground online</a></li>
+<li><a href="../installing/prereqs-mac.html">Installing pre-requisites on Mac OS</a></li>
+<li><a href="../installing/using-playground-locally.html">Installing the Playground locally</a></li>
+<li><a href="../installing/development-tools.html">Installing a development environment</a></li>
+</ul></li>
+<li><p><a href="../tutorials/tutorials.html">Tutorials</a></p>
+
+<ul>
+<li><a href="../tutorials/playground-guide.html">Playground Tutorial</a></li>
+<li><a href="../tutorials/developer-guide.html">Developer Guide</a></li>
+<li><a href="../tutorials/queries.html">Queries Guide</a></li>
+</ul></li>
+<li><p><a href="../playground/playground-index.html">Using Playground</a></p>
+
+<ul>
+<li><a href="../playground/id-cards-playground.html">ID Cards</a></li>
+</ul></li>
+<li><p><a href="../business-network/business-network-index.html">Developing Business Networks</a></p>
+
+<ul>
+<li><a href="../business-network/businessnetworkdefinition.html">Business Network Definitions</a></li>
+<li><a href="../business-network/bnd-create.html">Create a Business Network Definition</a></li>
+<li><a href="../business-network/bnd-deploy.html">Deploying and Updating Business Networks</a></li>
+<li><a href="../business-network/publishing-events.html">Emitting Events</a></li>
+<li><a href="../business-network/testing.html">Testing Business Networks</a></li>
+<li><a href="../business-network/bnd-publish.html">Publish Models or Business Network Definitions</a></li>
+<li><a href="../business-network/query.html">Querying Business Network Data</a></li>
+<li><a href="../business-network/programmatic-access-control.html">Programmatic access control</a></li>
+<li><a href="../business-network/historian.html">Hyperledger Composer Historian</a></li>
+</ul></li>
+<li><p><a href="../applications/applications-index.html">Developing Applications</a></p>
+
+<ul>
+<li><a href="../applications/node.html">Writing a Node.js application</a></li>
+<li><a href="../applications/web.html">Writing Web or mobile applications</a></li>
+<li><a href="../applications/subscribing-to-events.html">Subscribing to events</a></li>
+</ul></li>
+<li><p><a href="../integrating/integrating-index.html">Integrating Existing Systems</a></p>
+
+<ul>
+<li><a href="../integrating/getting-started-rest-api.html">Generating a REST API</a></li>
+<li><a href="../integrating/publishing-events.html">Publishing events from the REST server</a></li>
+<li><a href="../integrating/enabling-rest-authentication.html">Enabling authentication for the REST server</a></li>
+<li><a href="../integrating/enabling-multiuser.html">Enabling multiple user mode for the REST server</a></li>
+<li><a href="../integrating/securing-the-rest-server.html">Securing the REST server using HTTPS and TLS</a></li>
+<li><a href="../integrating/deploying-the-rest-server.html">Deploying the REST server for a business network</a></li>
+<li><a href="../integrating/node-red.html">Integrating with Node-RED</a></li>
+<li><a href="../integrating/call-out.html">Calling external REST services</a></li>
+</ul></li>
+<li><p><a href="../managing/managingindex.html">Managing a Deployed Business Network</a></p>
+
+<ul>
+<li><a href="../managing/participantsandidentities.html">Participants and identities</a></li>
+<li><a href="../managing/participant-add.html">Adding participants</a></li>
+<li><a href="../managing/id-cards-playground.html">Creating, Exporting, and Importing ID Cards</a></li>
+<li><a href="../managing/identity-issue.html">Issuing a new identity to a participant</a></li>
+<li><a href="../managing/identity-bind.html">Binding an existing identity to a participant</a></li>
+<li><a href="../managing/identity-list.html">Listing all identities in a business network</a></li>
+<li><a href="../managing/identity-revoke.html">Revoking an identity from a participant</a></li>
+<li><a href="../managing/updating-composer.html">Updating the Hyperledger Composer Runtime</a></li>
+</ul></li>
+<li><p><a href="../problems/diagnostics.html">Diagnosing Problems</a></p>
+
+<ul>
+<li><a href="../problems/deployment-local-playground.html">Error using the local Playground</a></li>
+</ul></li>
+<li><p><a href="../reference/reference-index.html">Reference</a></p>
+
+<ul>
+<li><a href="../reference/MeetTheModules.html">Hyperledger Composer npm Modules</a></li>
+<li><a href="../reference/cto_language.html">Modeling Language</a></li>
+<li><a href="../reference/acl_language.html">Access Control Language</a></li>
+<li><a href="../reference/query-language.html">Query Language</a></li>
+<li><a href="../reference/model-compatibility.html">Model Compatibility</a></li>
+<li><a href="../reference/connectionprofile.html">Connection Profiles</a></li>
+<li><a href="../reference/js_scripts.html">Transaction Processor Functions</a></li>
+<li><a href="../reference/commands.html">Hyperledger Composer CLI Commands</a></li>
+<li><a href="../reference/glossary.html">Hyperledger Composer Glossary of Terms</a></li>
+</ul></li>
+<li><p><a href="../support/support-index.html">Support</a></p></li>
+<li><p><a href="../api-doc/api-doc-index.html">API Reference</a></p>
+
+<ul>
+<li><a href="../api-doc/businessnetworkconnection.js.html">Client businessnetworkconnection.js</a></li>
+<li><a href="../api-doc/historian.js.html">Client historian.js</a></li>
+<li><a href="../api-doc/identityregistry.js.html">Client identityregistry.js</a></li>
+<li><a href="../api-doc/registry.js.html">Client registry.js</a></li>
+<li><a href="../api-doc/transactionregistry.js.html">Client transactionregistry.js</a></li>
+<li><a href="../api-doc/adminconnection.js.html">Admin adminconnection.js</a></li>
+<li><a href="../api-doc/assetregistry.js.html">Runtime assetregistry.js</a></li>
+<li><a href="../api-doc/factory.js.html">Runtime factory.js</a></li>
+<li><a href="../api-doc/participantregistry.js.html">Runtime participantregistry.js</a></li>
+<li><a href="../api-doc/query.js.html">Runtime query.js</a></li>
+<li><a href="../api-doc/serializer.js.html">Runtime serializer.js</a></li>
+<li><a href="../api-doc/businessnetworkdefinition.html">Common businessnetworkdefinition</a></li>
+<li><a href="../api-doc/businessnetworkmetadata.html">Common businessnetworkmetadata</a></li>
+<li><a href="../api-doc/concept.html">Common concept</a></li>
+<li><a href="../api-doc/factory.html">Common factory</a></li>
+<li><a href="../api-doc/idcard.html">Common idcard</a></li>
+<li><a href="../api-doc/identifiable.html">Common identifiable</a></li>
+<li><a href="../api-doc/illegalmodelexception.html">Common illegalmodelexception</a></li>
+<li><a href="../api-doc/introspector.html">Common introspector</a></li>
+<li><a href="../api-doc/invalidqueryexception.html">Common invalidqueryexception</a></li>
+<li><a href="../api-doc/parseexception.html">Common parseexception</a></li>
+<li><a href="../api-doc/relationship.html">Common relationship</a></li>
+<li><a href="../api-doc/resource.html">Common resource</a></li>
+<li><a href="../api-doc/securitycontext.html">Common securitycontext</a></li>
+<li><a href="../api-doc/securityexception.html">Common securityexception</a></li>
+<li><a href="../api-doc/serializer.html">Common serializer</a></li>
+<li><a href="../api-doc/typed.html">Common typed</a></li>
+<li><a href="../api-doc/typenotfoundexception.html">Common typenotfoundexception</a></li>
+<li><a href="../api-doc/validatedconcept.html">Common validatedconcept</a></li>
+<li><a href="../api-doc/validatedresource.html">Common validatedresource</a></li>
+<li><a href="../api-doc/validationexception.html">Common validationexception</a></li>
+</ul></li>
+</ul>
+
+            
+                <div class="docs-footer-grid">
+                <div class="footer-bg-break docs-footer-break">
+<div class="footer-container-break">
+    <div class="footer-left-break">
+      <p>Released under the Apache License v2.0</p>
+    </div>
+  <div class="footer-right-break">
+    <ul>
+      <li><a href="https://github.com/hyperledger/composer">GitHub</a></li>
+      <!-- <li><a href="https://github.com/hyperledger/composer/LICENSE.txt">Legal</a></li> -->
+      <li><a href="/api-doc/composer/unstable/jsdoc/index.html">APIs</a></li>
+      <li><a href="http://stackoverflow.com/questions/tagged/fabric-composer">Stack Overflow</a></li>
+      <li><a href="https://goo.gl/forms/7YPMLP2LTN2hjIRk2">Feedback?</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+
+                </div>
+          </nav>
+        </div>
+        <div class="page-content-grid">
+          <section class="content-chunk">
+            <!-- <a class="toggle open" href="#nav">open</a> -->
+            
+              <!-- Generated by documentation.js. Update this documentation by updating the source code. -->
+
+<h2 id="serializer">Serializer</h2>
+
+<p>Serialize Resources instances to/from various formats for long-term storage
+(e.g. on the blockchain).</p>
+
+<p><a href="./diagrams/serializer.svg"><img src="./diagrams/serializer.svg" style="height:100%;"/></a></p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>factory</code><br></li>
+<li>  <code>modelManager</code><br></li>
+</ul>
+
+<h2 id="introspector">Introspector</h2>
+
+<p>
+Provides access to the structure of transactions, assets and participants.
+</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>modelManager</code><br></li>
+</ul>
+
+<h2 id="illegalmodelexception">IllegalModelException</h2>
+
+<p><strong>Extends BaseFileException</strong></p>
+
+<ul>
+<li>  <strong>See: See [BaseFileException]<a href="module:composer-common.BaseFileException">module:composer-common.BaseFileException</a></strong></li>
+</ul>
+
+<p>Exception throws when a composer file is semantically invalid</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>message</code><br></li>
+<li>  <code>modelFile</code><br></li>
+<li>  <code>fileLocation</code><br></li>
+</ul>
+
+<h2 id="basefileexception">BaseFileException</h2>
+
+<p><strong>Extends BaseException</strong></p>
+
+<ul>
+<li>  <strong>See: See [BaseException]<a href="module:composer-common.BaseException">module:composer-common.BaseException</a></strong></li>
+</ul>
+
+<p>Exception throws when a composer file is semantically invalid</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>message</code><br></li>
+<li>  <code>fileLocation</code><br></li>
+<li>  <code>fullMessage</code><br></li>
+</ul>
+
+<h2 id="identifiable">Identifiable</h2>
+
+<p><strong>Extends Typed</strong></p>
+
+<p>Identifiable is an entity with a namespace, type and an identifier.</p>
+
+<p>This class is abstract.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>modelManager</code><br></li>
+<li>  <code>ns</code><br></li>
+<li>  <code>type</code><br></li>
+<li>  <code>id</code><br></li>
+</ul>
+
+<h2 id="typed">Typed</h2>
+
+<p>Object is an instance with a namespace and a type.</p>
+
+<p>This class is abstract.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>modelManager</code><br></li>
+<li>  <code>ns</code><br></li>
+<li>  <code>type</code><br></li>
+</ul>
+
+<h2 id="concept">Concept</h2>
+
+<p><strong>Extends Identifiable</strong></p>
+
+<ul>
+<li>  <strong>See: See [Resource]<a href="module:composer-common.Resource">module:composer-common.Resource</a></strong></li>
+</ul>
+
+<p>
+Resource is an instance that has a type. The type of the resource
+specifies a set of properites (which themselves have types).
+</p>
+
+<p>
+Type information in Composer is used to validate the structure of
+Resource instances and for serialization.
+</p>
+
+<p>
+Resources are used in Composer to represent Assets, Participants, Transactions and
+other domain classes that can be serialized for long-term persistent storage.
+</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>modelManager</code><br></li>
+<li>  <code>ns</code><br></li>
+<li>  <code>type</code><br></li>
+</ul>
+
+<h2 id="securitycontext">SecurityContext</h2>
+
+<p>SecurityContext is used to authenticate and manage
+user credentials to the underlying blockchain fabric.</p>
+
+<p><a href="./diagrams/securitycontext.svg"><img src="./diagrams/securitycontext.svg" style="height:100%;"/></a></p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>connection</code><br></li>
+</ul>
+
+<h2 id="securityexception">SecurityException</h2>
+
+<p><strong>Extends BaseException</strong></p>
+
+<ul>
+<li>  <strong>See: See [BaseException]<a href="module:composer-common.BaseException">module:composer-common.BaseException</a></strong></li>
+</ul>
+
+<p>Class representing a security exception</p>
+
+<p><a href="./diagrams/securityexception.svg"><img src="./diagrams/securityexception.svg" style="height:100%;"/></a></p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>message</code><br></li>
+</ul>
+
+<h2 id="relationship">Relationship</h2>
+
+<p><strong>Extends Identifiable</strong></p>
+
+<ul>
+<li>  <strong>See: See [Identifiable]<a href="module:composer-common.Identifiable">module:composer-common.Identifiable</a></strong></li>
+</ul>
+
+<p>A Relationship is a typed pointer to an instance. I.e the relationship
+with namespace = &#39;org.acme&#39;, type = &#39;Vehicle&#39; and id = &#39;ABC&#39; creates
+a pointer that points at an instance of org.acme.Vehicle with the id
+ABC.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>modelManager</code><br></li>
+<li>  <code>ns</code><br></li>
+<li>  <code>type</code><br></li>
+<li>  <code>id</code><br></li>
+</ul>
+
+<h2 id="resource">Resource</h2>
+
+<p><strong>Extends Identifiable</strong></p>
+
+<ul>
+<li>  <strong>See: See [Resource]<a href="module:composer-common.Resource">module:composer-common.Resource</a></strong></li>
+</ul>
+
+<p>
+Resource is an instance that has a type. The type of the resource
+specifies a set of properites (which themselves have types).
+</p>
+
+<p>
+Type information in Composer is used to validate the structure of
+Resource instances and for serialization.
+</p>
+
+<p>
+Resources are used in Composer to represent Assets, Participants, Transactions and
+other domain classes that can be serialized for long-term persistent storage.
+</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>modelManager</code><br></li>
+<li>  <code>ns</code><br></li>
+<li>  <code>type</code><br></li>
+<li>  <code>id</code><br></li>
+</ul>
+
+<h2 id="validationexception">ValidationException</h2>
+
+<p><strong>Extends BaseException</strong></p>
+
+<ul>
+<li>  <strong>See: See [BaseException]<a href="module:composer-common.BaseException">module:composer-common.BaseException</a></strong></li>
+</ul>
+
+<p>Exception thrown when a resource fails to model against the model</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>message</code><br></li>
+</ul>
+
+<h2 id="baseexception">BaseException</h2>
+
+<p><strong>Extends Error</strong></p>
+
+<p>A base class for all Composer exceptions</p>
+
+<p><a href="./diagrams/baseexception.svg"><img src="./diagrams/baseexception.svg" style="height:100%;"/></a></p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>message</code><br></li>
+</ul>
+
+<h2 id="tojson">toJSON</h2>
+
+<p>
+Convert a {@link Resource} to a JavaScript object suitable for long-term
+peristent storage.
+</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>resource</code> <strong><a href="#resource">Resource</a></strong> The instance to convert to JSON</li>
+<li><p><code>options</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></strong> the optional serialization options.</p>
+
+<ul>
+<li>  <code>options.validate</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></strong> validate the structure of the Resource
+with its model prior to serialization (default to true)</li>
+<li>  <code>options.convertResourcesToRelationships</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></strong> Convert resources that
+are specified for relationship fields into relationships, false by default.</li>
+<li>  <code>options.permitResourcesForRelationships</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></strong> Permit resources in the
+place of relationships (serializing them as resources), false by default.</li>
+<li>  <code>options.deduplicateResources</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></strong> Generate $id for resources and
+if a resources appears multiple times in the object graph only the first instance is
+serialized in full, subsequent instances are replaced with a reference to the $id</li>
+</ul></li>
+<li><p>Throws <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a></strong> throws an exception if resource is not an instance of
+Resource or fails validation.</p></li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></strong> The Javascript Object that represents the resource</p>
+
+<h2 id="fromjson">fromJSON</h2>
+
+<p>Create a <a href="#resource">Resource</a> from a JavaScript Object representation.
+The JavaScript Object should have been created by calling the
+<a href="Serializer#toJSON">toJSON</a> API.</p>
+
+<p>The Resource is populated based on the JavaScript object.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>jsonObject</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></strong> The JavaScript Object for a Resource</li>
+<li>  <code>options</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></strong> the optional serialization options
+
+<ul>
+<li>  <code>options.acceptResourcesForRelationships</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></strong> handle JSON objects
+in the place of strings for relationships, defaults to false.</li>
+</ul></li>
+</ul>
+
+<p>Returns <strong><a href="#resource">Resource</a></strong> The new populated resource</p>
+
+<h2 id="getsystemtype">getSystemType</h2>
+
+<p>Returns the base system type for Events from the system namespace</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the short name of the base system type</p>
+
+<h2 id="isevent">isEvent</h2>
+
+<p>Returns true if this class is the definition of an event</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></strong> true if the class is an event</p>
+
+<h2 id="getmodelfile">getModelFile</h2>
+
+<p>Returns the ModelFile that defines this class.</p>
+
+<p>Returns <strong>ModelFile</strong> the owning ModelFile</p>
+
+<h2 id="getsystemtype">getSystemType</h2>
+
+<p>Returns the base system type for this type of class declaration. Override
+this method in derived classes to specify a base system type.</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the short name of the base system type or null</p>
+
+<h2 id="isabstract">isAbstract</h2>
+
+<p>Returns true if this class is declared as abstract in the model file</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></strong> true if the class is abstract</p>
+
+<h2 id="isenum">isEnum</h2>
+
+<p>Returns true if this class is an enumeration.</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></strong> true if the class is an enumerated type</p>
+
+<h2 id="isconcept">isConcept</h2>
+
+<p>Returns true if this class is the definition of a concept.</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></strong> true if the class is a concept</p>
+
+<h2 id="isevent">isEvent</h2>
+
+<p>Returns true if this class is the definition of an event.</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></strong> true if the class is an event</p>
+
+<h2 id="isrelationshiptarget">isRelationshipTarget</h2>
+
+<p>Returns true if this class can be pointed to by a relationship</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></strong> true if the class may be pointed to by a relationship</p>
+
+<h2 id="issystemrelationshiptarget">isSystemRelationshipTarget</h2>
+
+<p>Returns true if this class can be pointed to by a relationship in a
+system model</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></strong> true if the class may be pointed to by a relationship</p>
+
+<h2 id="issystemtype">isSystemType</h2>
+
+<p>Returns true is this type is in the system namespace</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></strong> true if the class may be pointed to by a relationship</p>
+
+<h2 id="issystemcoretype">isSystemCoreType</h2>
+
+<p>Returns true if this class is a system core type - both in the system
+namespace, and also one of the system core types (Asset, Participant, etc).</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></strong> true if the class may be pointed to by a relationship</p>
+
+<h2 id="getname">getName</h2>
+
+<p>Returns the short name of a class. This name does not include the
+namespace from the owning ModelFile.</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the short name of this class</p>
+
+<h2 id="getnamespace">getNamespace</h2>
+
+<p>Return the namespace of this class.</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></strong> namespace - a namespace.</p>
+
+<h2 id="getfullyqualifiedname">getFullyQualifiedName</h2>
+
+<p>Returns the fully qualified name of this class.
+The name will include the namespace if present.</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the fully-qualified name of this class</p>
+
+<h2 id="getidentifierfieldname">getIdentifierFieldName</h2>
+
+<p>Returns the name of the identifying field for this class. Note
+that the identifying field may come from a super type.</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the name of the id field for this class</p>
+
+<h2 id="getownproperty">getOwnProperty</h2>
+
+<p>Returns the field with a given name or null if it does not exist.
+The field must be directly owned by this class -- the super-type is
+not introspected.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>name</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the name of the field</li>
+</ul>
+
+<p>Returns <strong>Property</strong> the field definition or null if it does not exist.</p>
+
+<h2 id="getownproperties">getOwnProperties</h2>
+
+<p>Returns the fields directly defined by this class.</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;Property&gt;</strong> the array of fields</p>
+
+<h2 id="getsupertype">getSuperType</h2>
+
+<p>Returns the FQN of the super type for this class or null if this
+class does not have a super type.</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the FQN name of the super type or null</p>
+
+<h2 id="getsupertypedeclaration">getSuperTypeDeclaration</h2>
+
+<p>Get the super type class declaration for this class.</p>
+
+<p>Returns <strong>ClassDeclaration</strong> the super type declaration, or null if there is no super type.</p>
+
+<h2 id="getassignableclassdeclarations">getAssignableClassDeclarations</h2>
+
+<p>Get the class declarations for all subclasses of this class, including this class.</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;ClassDeclaration&gt;</strong> subclass declarations.</p>
+
+<h2 id="getallsupertypedeclarations">getAllSuperTypeDeclarations</h2>
+
+<p>Get all the super-type declarations for this type.</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;ClassDeclaration&gt;</strong> super-type declarations.</p>
+
+<h2 id="getproperty">getProperty</h2>
+
+<p>Returns the property with a given name or null if it does not exist.
+Fields defined in super-types are also introspected.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>name</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the name of the field</li>
+</ul>
+
+<p>Returns <strong>Property</strong> the field, or null if it does not exist</p>
+
+<h2 id="getproperties">getProperties</h2>
+
+<p>Returns the properties defined in this class and all super classes.</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;Property&gt;</strong> the array of fields</p>
+
+<h2 id="getnestedproperty">getNestedProperty</h2>
+
+<p>Get a nested property using a dotted property path</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li><p><code>propertyPath</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The property name or name with nested structure e.g a.b.c</p></li>
+<li><p>Throws <strong><a href="#illegalmodelexception">IllegalModelException</a></strong> if the property path is invalid or the property does not exist</p></li>
+</ul>
+
+<p>Returns <strong>Property</strong> the property</p>
+
+<h2 id="tostring">toString</h2>
+
+<p>Returns the string representation of this class</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></strong> the string representation of the class</p>
+
+<h2 id="getdecorators">getDecorators</h2>
+
+<p>Returns the decorators for this class.</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;Decorator&gt;</strong> the decorators for the class</p>
+
+<h2 id="getdecorator">getDecorator</h2>
+
+<p>Returns the decorator for this class with a given name.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>name</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the name of the decorator</li>
+</ul>
+
+<p>Returns <strong>Decorator</strong> the decorator attached to this class with the given name, or null if it does not exist.</p>
+
+<h2 id="getparent">getParent</h2>
+
+<p>Returns the owner of this property</p>
+
+<p>Returns <strong>(ClassDeclaration | Property)</strong> the parent class or property declaration</p>
+
+<h2 id="getname">getName</h2>
+
+<p>Returns the name of a decorator</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the name of this decorator</p>
+
+<h2 id="getarguments">getArguments</h2>
+
+<p>Returns the arguments for this decorator</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>&gt;</strong> the arguments for this decorator or null if it does not have any arguments</p>
+
+<h2 id="getclassdeclarations">getClassDeclarations</h2>
+
+<p>Returns all the class declarations for the business network.</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;ClassDeclaration&gt;</strong> the array of class declarations</p>
+
+<h2 id="getclassdeclaration">getClassDeclaration</h2>
+
+<p>Returns the class declaration with the given fully qualified name.
+Throws an error if the class declaration does not exist.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li><p><code>fullyQualifiedTypeName</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></strong> the fully qualified name of the type</p></li>
+<li><p>Throws <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a></strong> if the class declaration does not exist</p></li>
+</ul>
+
+<p>Returns <strong>ClassDeclaration</strong> the class declaration</p>
+
+<h2 id="getmodelfile">getModelFile</h2>
+
+<p>Returns the modelfile associated with the exception or null</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the optional filename associated with the model</p>
+
+<h2 id="getfilelocation">getFileLocation</h2>
+
+<p>Returns the file location associated with the exception or null</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the optional location associated with the exception</p>
+
+<h2 id="getshortmessage">getShortMessage</h2>
+
+<p>Returns the error message without the location of the error</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the error message</p>
+
+<h2 id="getfullyqualifiedname">getFullyQualifiedName</h2>
+
+<p>Get the fully qualified name of a type.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>namespace</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> namespace of the type.</li>
+<li>  <code>type</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> short name of the type.</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the fully qualified type name.</p>
+
+<h2 id="converttojson">convertToJSON</h2>
+
+<p>Converts a primtive object to JSON text.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>field</code> <strong>Field</strong> the field declaration of the object</li>
+<li>  <code>obj</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></strong> the object to convert to text</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the text representation</p>
+
+<h2 id="getrelationshiptext">getRelationshipText</h2>
+
+<p>Returns the persistent format for a relationship.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>relationshipDeclaration</code> <strong>RelationshipDeclaration</strong> the relationship being persisted</li>
+<li>  <code>relationshipOrResource</code> <strong><a href="#identifiable">Identifiable</a></strong> the relationship or the resource</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the text to use to persist the relationship</p>
+
+<h2 id="getvalidator">getValidator</h2>
+
+<p>Returns the validator string for this field</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the validator for the field or null</p>
+
+<h2 id="getdefaultvalue">getDefaultValue</h2>
+
+<p>Returns the default value for the field or null</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the default value for the field or null</p>
+
+<h2 id="tostring">toString</h2>
+
+<p>Returns a string representation of this property§</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></strong> the string version of the property.</p>
+
+<h2 id="getparent">getParent</h2>
+
+<p>Returns the owner of this property</p>
+
+<p>Returns <strong>ClassDeclaration</strong> the parent class declaration</p>
+
+<h2 id="getname">getName</h2>
+
+<p>Returns the name of a property</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the name of this field</p>
+
+<h2 id="gettype">getType</h2>
+
+<p>Returns the type of a property</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the type of this field</p>
+
+<h2 id="isoptional">isOptional</h2>
+
+<p>Returns true if the field is optional</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></strong> true if the field is optional</p>
+
+<h2 id="getfullyqualifiedtypename">getFullyQualifiedTypeName</h2>
+
+<p>Returns the fully qualified type name of a property</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the fully qualified type of this property</p>
+
+<h2 id="getfullyqualifiedname">getFullyQualifiedName</h2>
+
+<p>Returns the fully name of a property (ns + class name + property name)</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the fully qualified name of this property</p>
+
+<h2 id="getnamespace">getNamespace</h2>
+
+<p>Returns the namespace of the parent of this property</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the namespace of the parent of this property</p>
+
+<h2 id="isarray">isArray</h2>
+
+<p>Returns true if the field is declared as an array type</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></strong> true if the property is an array type</p>
+
+<h2 id="istypeenum">isTypeEnum</h2>
+
+<p>Returns true if the field is declared as an enumerated value</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></strong> true if the property is an enumerated value</p>
+
+<h2 id="isprimitive">isPrimitive</h2>
+
+<p>Returns true if this property is a primitive type.</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></strong> true if the property is a primitive type.</p>
+
+<h2 id="reporterror">reportError</h2>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>id</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the identifier of the instance</li>
+<li><p><code>msg</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the exception message</p></li>
+<li><p>Throws <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a></strong> throws an error to report the message</p></li>
+</ul>
+
+<h2 id="getfield">getField</h2>
+
+<p>Returns the field that this validator applies to</p>
+
+<p>Returns <strong>Field</strong> the field</p>
+
+<h2 id="tostring">toString</h2>
+
+<p>Returns a string representation of this property</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></strong> the string version of the property.</p>
+
+<h2 id="getidentifier">getIdentifier</h2>
+
+<p>Get the identifier of this instance</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The identifier for this object</p>
+
+<h2 id="setidentifier">setIdentifier</h2>
+
+<p>Set the identifier of this instance</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>id</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the new identifier for this object</li>
+</ul>
+
+<h2 id="getfullyqualifiedidentifier">getFullyQualifiedIdentifier</h2>
+
+<p>Get the fully qualified identifier of this instance.
+(namespace &#39;.&#39; type &#39;#&#39; identifier).</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the fully qualified identifier of this instance</p>
+
+<h2 id="tostring">toString</h2>
+
+<p>Returns the string representation of this class</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></strong> the string representation of the class</p>
+
+<h2 id="isrelationship">isRelationship</h2>
+
+<p>Determine if this identifiable is a relationship.</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></strong> True if this identifiable is a relationship,
+false if not.</p>
+
+<h2 id="isresource">isResource</h2>
+
+<p>Determine if this identifiable is a resource.</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></strong> True if this identifiable is a resource,
+false if not.</p>
+
+<h2 id="touri">toURI</h2>
+
+<p>Returns a URI representation of a reference to this identifiable</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></strong> the URI for the identifiable</p>
+
+<h2 id="touri">toURI</h2>
+
+<p>URI representation of this identifier.</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></strong> A URI.</p>
+
+<h2 id="fromuri">fromURI</h2>
+
+<p>Parse a URI into an identifier.</p>
+
+<p><p>
+Three formats are allowable:
+<ol>
+  <li>Valid resource URI argument: <em>resource:qualifiedTypeName#ID</em></li>
+  <li>Valid resource URI argument with missing URI scheme: <em>qualifiedTypeName#ID</em></li>
+  <li>URI argument containing only an ID, with legacy namespace and type arguments supplied.</li>
+</ol></p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>uri</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></strong> Resource URI.</li>
+<li>  <code>legacyNamespace</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>?</strong> Namespace to use for legacy resource identifiers.</li>
+<li><p><code>legacyType</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>?</strong> Type to use for legacy resource identifiers.</p></li>
+<li><p>Throws <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a></strong> On an invalid resource URI.</p></li>
+</ul>
+
+<p>Returns <strong>Identifier</strong> An identifier.</p>
+
+<h2 id="gettype">getType</h2>
+
+<p>Get the type of the instance (a short name, not including namespace).</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The type of this object</p>
+
+<h2 id="getfullyqualifiedtype">getFullyQualifiedType</h2>
+
+<p>Get the fully-qualified type name of the instance (including namespace).</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The fully-qualified type name of this object</p>
+
+<h2 id="getnamespace">getNamespace</h2>
+
+<p>Get the namespace of the instance.</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The namespace of this object</p>
+
+<h2 id="setpropertyvalue">setPropertyValue</h2>
+
+<p>Sets a property on this Resource</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>propName</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the name of the field</li>
+<li>  <code>value</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the value of the property</li>
+</ul>
+
+<h2 id="addarrayvalue">addArrayValue</h2>
+
+<p>Adds a value to an array property on this Resource</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>propName</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the name of the field</li>
+<li>  <code>value</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the value of the property</li>
+</ul>
+
+<h2 id="instanceof">instanceOf</h2>
+
+<p>Check to see if this instance is an instance of the specified fully qualified
+type name.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>fqt</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></strong> The fully qualified type name.</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></strong> True if this instance is an instance of the specified fully
+qualified type name, false otherwise.</p>
+
+<h2 id="isconcept">isConcept</h2>
+
+<p>Determine if this typed is a concept.</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></strong> True if this typed is a concept,
+false if not.</p>
+
+<h2 id="securitycheck">securityCheck</h2>
+
+<p>Internal method to check the security context</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li><p><code>securityContext</code> <strong><a href="#securitycontext">SecurityContext</a></strong> The user&#39;s security context</p></li>
+<li><p>Throws <strong><a href="#securityexception">SecurityException</a></strong> if the user context is invalid</p></li>
+</ul>
+
+<h2 id="querychaincode">queryChainCode</h2>
+
+<p>Submit a query request to the chain-code</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>securityContext</code> <strong><a href="#securitycontext">SecurityContext</a></strong> The user&#39;s security context</li>
+<li>  <code>functionName</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The name of the function to call.</li>
+<li>  <code>args</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>&gt;</strong> The arguments to pass to the function being called.</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with the value returned
+by the chain-code function.</p>
+
+<h2 id="invokechaincode">invokeChainCode</h2>
+
+<p>Submit an invoke request to the chain-code</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>securityContext</code> <strong><a href="#securitycontext">SecurityContext</a></strong> The user&#39;s security context</li>
+<li>  <code>functionName</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The name of the function to call.</li>
+<li>  <code>args</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>&gt;</strong> The arguments to pass to the function being called.</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> A promise that will be resolved with the value returned
+by the chain-code function.</p>
+
+<h2 id="isnull">isNull</h2>
+
+<p>Returns true if the typeof the object === &#39;undefined&#39; or
+the object === null.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>obj</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></strong> the object to be tested</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></strong> true if the object is null or undefined</p>
+
+<h2 id="createtransactionid">createTransactionId</h2>
+
+<p>Obtain a UUID for use as a TransactionId</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>securityContext</code> <strong><a href="#securitycontext">SecurityContext</a></strong> The user&#39;s security context</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> resolved with a string representing the transaction Id to be used later when invoking chain code</p>
+
+<h2 id="getconnection">getConnection</h2>
+
+<p>Get the owning connection.</p>
+
+<p>Returns <strong>Connection</strong> The owning connection.</p>
+
+<h2 id="getuser">getUser</h2>
+
+<p>Get the current username.</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> The username</p>
+
+<h2 id="convertitem">convertItem</h2>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>field</code> <strong>Field</strong> the field of the item being converted</li>
+<li>  <code>jsonItem</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></strong> the JSON object of the item being converted</li>
+<li>  <code>parameters</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></strong> the parameters</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></strong> the populated object.</p>
+
+<h2 id="converttoobject">convertToObject</h2>
+
+<p>Converts a primtive object to JSON text.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>field</code> <strong>Field</strong> the field declaration of the object</li>
+<li>  <code>json</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></strong> the JSON object to convert to a Composer Object</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the text representation</p>
+
+<h2 id="tostring">toString</h2>
+
+<p>Returns the string representation of this class</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></strong> the string representation of the class</p>
+
+<h2 id="isrelationship">isRelationship</h2>
+
+<p>Determine if this identifiable is a relationship.</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></strong> True if this identifiable is a relationship,
+false if not.</p>
+
+<h2 id="fromuri">fromURI</h2>
+
+<p>Contructs a Relationship instance from a URI representation (created using toURI).</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>modelManager</code> <strong>ModelManager</strong> the model manager to bind the relationship to</li>
+<li>  <code>uriAsString</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></strong> the URI as a string, generated using Identifiable.toURI()</li>
+<li>  <code>defaultNamespace</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>?</strong> default namespace to use for backwards compatability (optional)</li>
+<li>  <code>defaultType</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>?</strong> default type to use for backwards compatability (optional)</li>
+</ul>
+
+<p>Returns <strong><a href="#relationship">Relationship</a></strong> the relationship</p>
+
+<h2 id="tostring">toString</h2>
+
+<p>Returns the string representation of this class</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></strong> the string representation of the class</p>
+
+<h2 id="isresource">isResource</h2>
+
+<p>Determine if this identifiable is a resource.</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></strong> True if this identifiable is a resource,
+false if not.</p>
+
+<h2 id="isenum">isEnum</h2>
+
+<p>Returns true if this class is an enumeration.</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></strong> true if the class is an enumerated type</p>
+
+<h2 id="tostring">toString</h2>
+
+<p>Returns the string representation of this class</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></strong> the string representation of the class</p>
+
+<h2 id="getsystemtype">getSystemType</h2>
+
+<p>Returns the base system type for Transactions from the system namespace</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the short name of the base system type</p>
+
+<h2 id="push">push</h2>
+
+<p>Push a new object.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>obj</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></strong> the object being visited</li>
+<li>  <code>expectedType</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></strong> the expected type of the object being pushed</li>
+</ul>
+
+<h2 id="pop">pop</h2>
+
+<p>Push a new object.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>expectedType</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></strong> the type that should be the result of pop</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></strong> the result of pop</p>
+
+<h2 id="peek">peek</h2>
+
+<p>Peek the top of the stack</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>expectedType</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></strong> the type that should be the result of pop</li>
+</ul>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></strong> the result of peek</p>
+
+<h2 id="clear">clear</h2>
+
+<p>Clears the stack</p>
+
+<h2 id="openobject">openObject</h2>
+
+<p>Opens an object declaration</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>key</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the key</li>
+</ul>
+
+<h2 id="closeobject">closeObject</h2>
+
+<p>Close the current object declaration.</p>
+
+<h2 id="writekey">writeKey</h2>
+
+<p>Writes a key, in the format
+&#39;&quot;key&quot; : &#39;</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>key</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the key</li>
+</ul>
+
+<h2 id="writecomma">writeComma</h2>
+
+<p>Writes a comma when this.firstItem === false</p>
+
+<h2 id="writestringvalue">writeStringValue</h2>
+
+<p>Writes a value, in the format:
+&#39;&quot;value&quot;&#39;</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>value</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the value</li>
+</ul>
+
+<h2 id="writevalue">writeValue</h2>
+
+<p>Writes a value, in the format:
+&#39;value&#39;</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>value</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the value</li>
+</ul>
+
+<h2 id="writekeystringvalue">writeKeyStringValue</h2>
+
+<p>Writes a key/value, in the format:
+&#39;&quot;key&quot; : &quot;value&quot;&#39;</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>key</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the key</li>
+<li>  <code>value</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the value</li>
+</ul>
+
+<h2 id="writekeyvalue">writeKeyValue</h2>
+
+<p>Writes a key/value, in the format:
+&#39;&quot;key&quot; : value&#39;</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>key</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the key</li>
+<li>  <code>value</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the value</li>
+</ul>
+
+<h2 id="writearraystringvalue">writeArrayStringValue</h2>
+
+<p>Writes an array value, in the format
+&#39;&quot;value&quot;&#39;</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>value</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the value</li>
+</ul>
+
+<h2 id="writearrayvalue">writeArrayValue</h2>
+
+<p>Writes an array value, in the format
+&#39;value&#39;</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>value</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the value</li>
+</ul>
+
+<h2 id="openarray">openArray</h2>
+
+<p>Opens a new array</p>
+
+<h2 id="closearray">closeArray</h2>
+
+<p>Closes the current array</p>
+
+<h2 id="tostring">toString</h2>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></strong> a string represention of this class</p>
+
+<h2 id="log">log</h2>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>callSite</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></strong> the location</li>
+<li>  <code>message</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></strong> the message to log.</li>
+</ul>
+
+<h2 id="clearbuffer">clearBuffer</h2>
+
+<p>Empties the underyling buffer and resets the line count.</p>
+
+<h2 id="writebeforeline">writeBeforeLine</h2>
+
+<p>Writes text to the start of the buffer</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>tabs</code> <strong>int</strong> the number of tabs to use</li>
+<li>  <code>text</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the text to write</li>
+</ul>
+
+<h2 id="writeline">writeLine</h2>
+
+<p>Append text to the buffer</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>tabs</code> <strong>int</strong> the number of tabs to use</li>
+<li>  <code>text</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the text to write</li>
+</ul>
+
+<h2 id="getlinecount">getLineCount</h2>
+
+<p>Returns the number of lines that have been written to the buffer.</p>
+
+<p>Returns <strong>int</strong> the number of lines written to the buffer.</p>
+
+<h2 id="writeindented">writeIndented</h2>
+
+<p>Append text to the buffer, prepending tabs</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>tabs</code> <strong>int</strong> the number of tabs to use</li>
+<li>  <code>text</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the text to write</li>
+</ul>
+
+<h2 id="write">write</h2>
+
+<p>Append text to the buffer (no automatic newline). The
+text may contain newline, and these will increment the linesWritten
+counter.</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li>  <code>msg</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the text to write</li>
+</ul>
+
+<h2 id="getbuffer">getBuffer</h2>
+
+<p>Returns the text that has been buffered in this Writer.</p>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> the buffered text.</p>
+
+<h2 id="clearbuffer">clearBuffer</h2>
+
+<p>Empties the underyling buffer and resets the line count.</p>
+
+            
+          </section>
+        </div>
+        <!-- Otherwise, have the main content fill all 12 columns... -->
+        
+      <div class="PageNavigation">
+    
+    
+  </div>
+    </article>
+</div>
+<script>
+(function (document) {
+    function clipboard_init() {
+        var charts = document.querySelectorAll("div.highlight"),
+            arr = [],
+            i, j, maxItem, pre, btn, el;
+
+        // Make sure we are dealing with an array
+        for(i = 0, maxItem = charts.length; i < maxItem; i++) arr.push(charts[i]);
+
+        // Find the UML source element and get the text
+        for (i = 0, maxItem = arr.length; i < maxItem; i++) {
+            el = arr[i];
+            pre = el.childNodes[0];
+
+            pre.id = "hl_code" + i.toString();
+            btn = document.createElement('copy-button');
+            btn.appendChild(document.createTextNode('Copy'));
+            btn.setAttribute("class", "copy-btn");
+            btn.setAttribute("data-clipboard-target", "#hl_code" + i.toString());
+            el.insertBefore(btn, pre);
+        }
+        new Clipboard('.copy-btn');
+    };
+
+    function onReady(fn) {
+        if (document.addEventListener) {
+            document.addEventListener('DOMContentLoaded', fn);
+        } else {
+            document.attachEvent('onreadystatechange', function() {
+                if (document.readyState === 'interactive')
+                    fn();
+            });
+        }
+    }
+
+    onReady(function(){
+        clipboard_init();
+    });
+})(document);
+</script>
+<script src="/api-doc/composer/unstable/assets/js/nav.js"></script>
+
+    
+
+    
+
+
+  </div>
+</body>
+</html>

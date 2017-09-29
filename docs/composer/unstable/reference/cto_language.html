@@ -90,10 +90,11 @@ ga('send', 'pageview');
 <li><a href="../introduction/key-concepts.html">Key Concepts</a></li>
 <li><a href="../introduction/solution-architecture.html">Typical Solution Architecture</a></li>
 </ul></li>
-<li><p><a href="../installing/installing-index.html">Installing Hyperledger Composer</a></p>
+<li><p><a href="../installing/installing-index.html">Installing</a></p>
 
 <ul>
 <li><a href="../installing/getting-started-with-playground.html">Using the Playground online</a></li>
+<li><a href="../installing/prereqs-mac.html">Installing pre-requisites on Mac OS</a></li>
 <li><a href="../installing/using-playground-locally.html">Installing the Playground locally</a></li>
 <li><a href="../installing/development-tools.html">Installing a development environment</a></li>
 </ul></li>
@@ -120,6 +121,7 @@ ga('send', 'pageview');
 <li><a href="../business-network/bnd-publish.html">Publish Models or Business Network Definitions</a></li>
 <li><a href="../business-network/query.html">Querying Business Network Data</a></li>
 <li><a href="../business-network/programmatic-access-control.html">Programmatic access control</a></li>
+<li><a href="../business-network/historian.html">Hyperledger Composer Historian</a></li>
 </ul></li>
 <li><p><a href="../applications/applications-index.html">Developing Applications</a></p>
 
@@ -169,7 +171,6 @@ ga('send', 'pageview');
 <li><a href="../reference/js_scripts.html">Transaction Processor Functions</a></li>
 <li><a href="../reference/commands.html">Hyperledger Composer CLI Commands</a></li>
 <li><a href="../reference/glossary.html">Hyperledger Composer Glossary of Terms</a></li>
-<li><a href="../reference/historian.html">Historian</a></li>
 </ul></li>
 <li><p><a href="../support/support-index.html">Support</a></p></li>
 <li><p><a href="../api-doc/api-doc-index.html">API Reference</a></p>
@@ -186,6 +187,26 @@ ga('send', 'pageview');
 <li><a href="../api-doc/participantregistry.js.html">Runtime participantregistry.js</a></li>
 <li><a href="../api-doc/query.js.html">Runtime query.js</a></li>
 <li><a href="../api-doc/serializer.js.html">Runtime serializer.js</a></li>
+<li><a href="../api-doc/businessnetworkdefinition.html">Common businessnetworkdefinition</a></li>
+<li><a href="../api-doc/businessnetworkmetadata.html">Common businessnetworkmetadata</a></li>
+<li><a href="../api-doc/concept.html">Common concept</a></li>
+<li><a href="../api-doc/factory.html">Common factory</a></li>
+<li><a href="../api-doc/idcard.html">Common idcard</a></li>
+<li><a href="../api-doc/identifiable.html">Common identifiable</a></li>
+<li><a href="../api-doc/illegalmodelexception.html">Common illegalmodelexception</a></li>
+<li><a href="../api-doc/introspector.html">Common introspector</a></li>
+<li><a href="../api-doc/invalidqueryexception.html">Common invalidqueryexception</a></li>
+<li><a href="../api-doc/parseexception.html">Common parseexception</a></li>
+<li><a href="../api-doc/relationship.html">Common relationship</a></li>
+<li><a href="../api-doc/resource.html">Common resource</a></li>
+<li><a href="../api-doc/securitycontext.html">Common securitycontext</a></li>
+<li><a href="../api-doc/securityexception.html">Common securityexception</a></li>
+<li><a href="../api-doc/serializer.html">Common serializer</a></li>
+<li><a href="../api-doc/typed.html">Common typed</a></li>
+<li><a href="../api-doc/typenotfoundexception.html">Common typenotfoundexception</a></li>
+<li><a href="../api-doc/validatedconcept.html">Common validatedconcept</a></li>
+<li><a href="../api-doc/validatedresource.html">Common validatedresource</a></li>
+<li><a href="../api-doc/validationexception.html">Common validationexception</a></li>
 </ul></li>
 </ul>
 
@@ -199,7 +220,7 @@ ga('send', 'pageview');
   <div class="footer-right-break">
     <ul>
       <li><a href="https://github.com/hyperledger/composer">GitHub</a></li>
-      <!-- <li><a href="https://github.com/hyperledger/api-doc/composer/LICENSE.txt">Legal</a></li> -->
+      <!-- <li><a href="https://github.com/hyperledger/composer/LICENSE.txt">Legal</a></li> -->
       <li><a href="/api-doc/composer/unstable/jsdoc/index.html">APIs</a></li>
       <li><a href="http://stackoverflow.com/questions/tagged/fabric-composer">Stack Overflow</a></li>
       <li><a href="https://goo.gl/forms/7YPMLP2LTN2hjIRk2">Feedback?</a></li>
@@ -233,20 +254,9 @@ ga('send', 'pageview');
 
 <p>Your organization namespace is defined in the namespace line of your model (<code>.cto</code>) file, and all resources created are implicitly part of this namespace.</p>
 
-<p>As well as defining new classes of asset, participant, event, and transaction, there is a system namespace which contains the base definitions of asset, event, participant, and transaction. These base definitions are abstracts which are implicitly extended by all assets, events, participants, and transactions.</p>
+<p>As well as defining new classes of asset, participant, event, and transaction, there is a <a href="https://github.com/hyperledger/composer/blob/master/packages/composer-common/lib/system/org.hyperledger.composer.system.cto">system namespace</a> which contains the base definitions of asset, event, participant, and transaction. These base definitions are abstract types which are implicitly extended by all assets, events, participants, and transactions.</p>
 
-<p>Represented as a <code>.cto</code> model file, the system namespace is as follows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    namespace org.hyperledger.composer.system
-    abstract asset Asset {  }
-    abstract participant Participant {   }
-    abstract transaction Transaction {
-      o DateTime timestamp
-    }
-    abstract event Event {
-      o DateTime timestamp
-    }
-</code></pre></div>
-<p>In the system namespace definitions, asset and participant have no required values. Events and transactions are defined by an eventId or transactionId and a timestamp.</p>
+<p>In the system namespace definitions, asset and participant have no required values. Events and transactions are defined by an eventId or transactionId and a timestamp. The system namespace also includes definitions of registries, historian records, identities, and a number of system transactions.</p>
 
 <blockquote>
 <p>If you have defined an event or transaction including an eventId, transactionId, or timestamp, you must delete the eventId, transactionId, or timestamp properties.</p>
@@ -316,20 +326,20 @@ asset Field identified by fieldId {
 
 <h3 id="declarations-of-enumerated-types">Declarations of enumerated types</h3>
 
-<p>Enumerated types are to define the potential content of properties of other resources. By using enumerated types, the expected content in a field can be restricted and controlled, reducing unexpected data. The following enumerated type declaration contains a list of roles.</p>
+<p>Enumerated types are used to specify a type that may have 1 or N possible values. The example below defines the ProductType enumeration, which may have the value <code>DAIRY</code> or <code>BEEF</code> or <code>VEGETABLES</code>.</p>
 <div class="highlight"><pre><code class="language-" data-lang="">/**
 * An enumerated type
 */
-enum product {
+enum ProductType {
 o DAIRY
 o BEEF
 o VEGETABLES
 }
 </code></pre></div>
-<p>When another resource is created, for example, a participant, a property of that resource can be defined to expect one of the enumerated types.</p>
+<p>When another resource is created, for example, a participant, a property of that resource can be defined in terms of an enumerated type.</p>
 <div class="highlight"><pre><code class="language-" data-lang="">participant Farmer identified by farmerId {
     o String farmerId
-    o product primaryProduct
+    o ProductType primaryProduct
 </code></pre></div>
 <h3 id="concepts">Concepts</h3>
 
@@ -435,6 +445,28 @@ exists or the information in the relationship is invalid.</p>
 <p>Use the <code>import</code> keyword with a fully-qualified type name to import a type from another namespace. Alternatively use the <code>.*</code> notation to import all the types from another namespace.</p>
 <div class="highlight"><pre><code class="language-" data-lang="">import org.example.MyAsset
 import org.example2.*
+</code></pre></div>
+<h2 id="decorators">Decorators</h2>
+
+<p>Resources and properties of resources may have decorators attached. Decorators are used to annotate a model with metadata. The example below adds the <code>foo</code> decorator to the Buyer participant, with &quot;arg1&#39; and 2 passed as arguments to the decorator.</p>
+
+<p>Similarly decorators can be attached to properties, relationships and enumerated values.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">@foo("arg1", 2)
+participant Buyer extends Person {
+}
+</code></pre></div>
+<p>Resource definitions and properties may be decorated with 0 or more decorations. Note that only a single instance of a decorator is allowed on each element type. I.e. it is invalid to have the <code>@bar</code> decorator listed twice on the same element.</p>
+
+<h2 id="decorator-arguments">Decorator Arguments</h2>
+
+<p>Decorators may have an arbitrary list of arguments (0 or more items). Argument values must be strings, numbers or booleans.</p>
+
+<h2 id="decorator-apis">Decorator APIs</h2>
+
+<p>Decorators are accessible at runtime via the ModelManager introspect APIs. This allows external tools and utilities to use the Composer Modelling Language (CTO) file format to describe a core model, while decorating it with sufficient metadata for their own purposes.</p>
+
+<p>The example below retrieves the 3rd argument to the foo decorator attached to the myField property of a class declaration:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">const val = myField.getDecorator('foo').getArguments()[2];
 </code></pre></div>
             
           </section>

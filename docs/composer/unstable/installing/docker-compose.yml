@@ -43,7 +43,7 @@ services:
           "connectionProfiles": {
             "hlfabric": {
               "type": "hlf",
-              "keyValStore": "/home/api-doc/composer/.composer-credentials",
+              "keyValStore": "/home/composer/.composer-credentials",
               "membershipServicesURL": "grpc://membersrvc:7054",
               "peerURL": "grpc://vp0:7051",
               "eventHubURL": "grpc://vp0:7053",

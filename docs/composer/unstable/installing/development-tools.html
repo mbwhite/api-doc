@@ -90,10 +90,11 @@ ga('send', 'pageview');
 <li><a href="../introduction/key-concepts.html">Key Concepts</a></li>
 <li><a href="../introduction/solution-architecture.html">Typical Solution Architecture</a></li>
 </ul></li>
-<li><p><a href="../installing/installing-index.html">Installing Hyperledger Composer</a></p>
+<li><p><a href="../installing/installing-index.html">Installing</a></p>
 
 <ul>
 <li><a href="../installing/getting-started-with-playground.html">Using the Playground online</a></li>
+<li><a href="../installing/prereqs-mac.html">Installing pre-requisites on Mac OS</a></li>
 <li><a href="../installing/using-playground-locally.html">Installing the Playground locally</a></li>
 <li><a href="../installing/development-tools.html">Installing a development environment</a></li>
 </ul></li>
@@ -120,6 +121,7 @@ ga('send', 'pageview');
 <li><a href="../business-network/bnd-publish.html">Publish Models or Business Network Definitions</a></li>
 <li><a href="../business-network/query.html">Querying Business Network Data</a></li>
 <li><a href="../business-network/programmatic-access-control.html">Programmatic access control</a></li>
+<li><a href="../business-network/historian.html">Hyperledger Composer Historian</a></li>
 </ul></li>
 <li><p><a href="../applications/applications-index.html">Developing Applications</a></p>
 
@@ -169,7 +171,6 @@ ga('send', 'pageview');
 <li><a href="../reference/js_scripts.html">Transaction Processor Functions</a></li>
 <li><a href="../reference/commands.html">Hyperledger Composer CLI Commands</a></li>
 <li><a href="../reference/glossary.html">Hyperledger Composer Glossary of Terms</a></li>
-<li><a href="../reference/historian.html">Historian</a></li>
 </ul></li>
 <li><p><a href="../support/support-index.html">Support</a></p></li>
 <li><p><a href="../api-doc/api-doc-index.html">API Reference</a></p>
@@ -186,6 +187,26 @@ ga('send', 'pageview');
 <li><a href="../api-doc/participantregistry.js.html">Runtime participantregistry.js</a></li>
 <li><a href="../api-doc/query.js.html">Runtime query.js</a></li>
 <li><a href="../api-doc/serializer.js.html">Runtime serializer.js</a></li>
+<li><a href="../api-doc/businessnetworkdefinition.html">Common businessnetworkdefinition</a></li>
+<li><a href="../api-doc/businessnetworkmetadata.html">Common businessnetworkmetadata</a></li>
+<li><a href="../api-doc/concept.html">Common concept</a></li>
+<li><a href="../api-doc/factory.html">Common factory</a></li>
+<li><a href="../api-doc/idcard.html">Common idcard</a></li>
+<li><a href="../api-doc/identifiable.html">Common identifiable</a></li>
+<li><a href="../api-doc/illegalmodelexception.html">Common illegalmodelexception</a></li>
+<li><a href="../api-doc/introspector.html">Common introspector</a></li>
+<li><a href="../api-doc/invalidqueryexception.html">Common invalidqueryexception</a></li>
+<li><a href="../api-doc/parseexception.html">Common parseexception</a></li>
+<li><a href="../api-doc/relationship.html">Common relationship</a></li>
+<li><a href="../api-doc/resource.html">Common resource</a></li>
+<li><a href="../api-doc/securitycontext.html">Common securitycontext</a></li>
+<li><a href="../api-doc/securityexception.html">Common securityexception</a></li>
+<li><a href="../api-doc/serializer.html">Common serializer</a></li>
+<li><a href="../api-doc/typed.html">Common typed</a></li>
+<li><a href="../api-doc/typenotfoundexception.html">Common typenotfoundexception</a></li>
+<li><a href="../api-doc/validatedconcept.html">Common validatedconcept</a></li>
+<li><a href="../api-doc/validatedresource.html">Common validatedresource</a></li>
+<li><a href="../api-doc/validationexception.html">Common validationexception</a></li>
 </ul></li>
 </ul>
 
@@ -199,7 +220,7 @@ ga('send', 'pageview');
   <div class="footer-right-break">
     <ul>
       <li><a href="https://github.com/hyperledger/composer">GitHub</a></li>
-      <!-- <li><a href="https://github.com/hyperledger/api-doc/composer/LICENSE.txt">Legal</a></li> -->
+      <!-- <li><a href="https://github.com/hyperledger/composer/LICENSE.txt">Legal</a></li> -->
       <li><a href="/api-doc/composer/unstable/jsdoc/index.html">APIs</a></li>
       <li><a href="http://stackoverflow.com/questions/tagged/fabric-composer">Stack Overflow</a></li>
       <li><a href="https://goo.gl/forms/7YPMLP2LTN2hjIRk2">Feedback?</a></li>
@@ -221,27 +242,32 @@ ga('send', 'pageview');
 
 <h2 id="before-you-begin">Before you begin</h2>
 
+<p>To run Hyperledger Composer and Hyperledger Fabric, we recommend you have at least 4Gb of memory.</p>
+
 <p>The following are prerequisites for installing the required development tools:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">Operating Systems: Ubuntu Linux 14.04 / 16.04 LTS (both 64-bit), or Mac OS 10.12
-Docker Engine: Version 17.03 or higher
-Docker-Compose: Version 1.8 or higher
-Node: 6.x (note version 7 is not supported)
-npm: v3.x or v5.x
-git: 2.9.x or higher
-Python: 2.7.x
-A code editor of your choice, we recommend VSCode.
-</code></pre></div>
+
+<ul>
+<li>Operating Systems: Ubuntu Linux 14.04 / 16.04 LTS (both 64-bit), or Mac OS 10.12</li>
+<li>Docker Engine: Version 17.03 or higher</li>
+<li>Docker-Compose: Version 1.8 or higher</li>
+<li>Node: 6.x (note versions 7 and higher are not supported)</li>
+<li>npm: v3.x or v5.x</li>
+<li>git: 2.9.x or higher</li>
+<li>Python: 2.7.x</li>
+<li>A code editor of your choice, we recommend VSCode.</li>
+</ul>
+
 <p><strong>Please do not install Hyperledger Composer as a superuser - or use &#39;sudo&#39; or the &#39;root&#39; user, if on Linux (doing will cause issues installation errors). Hyperledger Composer should be installed as non-privileged user.</strong></p>
 
 <p>If you&#39;re running on Ubuntu, you can download the prerequisites using the following commands:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">curl -O https://hyperledger.github.io/api-doc/composer/prereqs-ubuntu.sh
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">curl -O https://hyperledger.github.io/composer/prereqs-ubuntu.sh
 
 chmod u+x prereqs-ubuntu.sh
 </code></pre></div>
 <p>Next run the script - as this briefly uses sudo during its execution, you will be prompted for your password.</p>
 <div class="highlight"><pre><code class="language-" data-lang="">./prereqs-ubuntu.sh
 </code></pre></div>
-<p>To run Hyperledger Composer and Hyperledger Fabric, we recommend you have at least 4Gb of memory.</p>
+<p>If you&#39;re running Mac OS X, you can follow the <a href="../installing/prereqs-mac.html">installation guide for Mac OS X pre-requisites</a>.</p>
 
 <hr>
 
@@ -324,7 +350,7 @@ tar xvzf fabric-dev-servers.tar.gz
 
 <p><img src="../assets/img/developer-tools-commands.png" alt="">.</p>
 
-<p>This diagram explains the order in which the scripts can be run. </p>
+<p>This diagram explains the order in which the scripts can be run.</p>
 
 <p><strong>Downloading Fabric</strong></p>
 
