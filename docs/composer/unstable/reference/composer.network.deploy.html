@@ -10,7 +10,7 @@
     <title>Hyperledger Composer Network Deploy CLI | Hyperledger Composer</title>
   
   <meta name="viewport" content="width=device-width">
-  <link rel="icon" type="image/x-icon" href="/api-doc/composer/unstable/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="/composer/unstable/favicon.ico">
   <meta name="google-site-verification" content="fBQRJ6h7MV7_TJ7grbgq4P-d-07NRfDWPe4pqEEoH5w">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -24,15 +24,15 @@ ga('require', 'eventTracker');
 ga('send', 'pageview');
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-<script async src="/api-doc/composer/unstable/assets/js/autotrack.js"></script>
+<script async src="/composer/unstable/assets/js/autotrack.js"></script>
 <!-- End Google Analytics -->
 
   
 
   
-    <link href="/api-doc/composer/unstable/assets/css/normalize.css" rel="stylesheet">
-    <link href="/api-doc/composer/unstable/assets/css/new-style.min.css" rel="stylesheet">
-    <link href="/api-doc/composer/unstable/assets/css/grid-layout.min.css" rel="stylesheet">
+    <link href="/composer/unstable/assets/css/normalize.css" rel="stylesheet">
+    <link href="/composer/unstable/assets/css/new-style.min.css" rel="stylesheet">
+    <link href="/composer/unstable/assets/css/grid-layout.min.css" rel="stylesheet">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min.js"></script>
   
@@ -57,7 +57,7 @@ ga('send', 'pageview');
             <!-- Navigation -->
   <nav class="navbar-docs" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
-            <a class="navbar-brand" href="/api-doc/composer/unstable/index.html"><b>Hyperledger</b> Composer</a>
+            <a class="navbar-brand" href="/composer/unstable/index.html"><b>Hyperledger</b> Composer</a>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <div class="top-nav-docs">
@@ -75,6 +75,19 @@ ga('send', 'pageview');
 </nav>
 
           </div>
+
+            <div class="search-form">
+              <form action="/composer/unstable/search.html" method="get">
+                <!-- <label for="search-box">Search</label> -->
+
+                <input type="text" id="search-box"  class="search-box" name="query" placeholder="Search here...">
+                <input type="submit" class="submit-input hide" value="">
+
+                <div class="search-icon">
+                  <img src="/composer/unstable/assets/img/Search_Icon_1.svg" class="trigger" type="submit">
+                </div>
+              </form>
+            </div>
 
           <div class="docs-current-page-grid">
           <p>Hyperledger Composer Network Deploy CLI</p>
@@ -108,7 +121,7 @@ ga('send', 'pageview');
 <li><p><a href="../playground/playground-index.html">Using Playground</a></p>
 
 <ul>
-<li><a href="../playground/id-cards-playground.html">ID Cards</a></li>
+<li><a href="../playground/id-cards-playground.html">Business Network Cards</a></li>
 </ul></li>
 <li><p><a href="../business-network/business-network-index.html">Developing Business Networks</a></p>
 
@@ -119,7 +132,7 @@ ga('send', 'pageview');
 <li><a href="../business-network/publishing-events.html">Emitting Events</a></li>
 <li><a href="../business-network/testing.html">Testing Business Networks</a></li>
 <li><a href="../business-network/bnd-publish.html">Publish Models or Business Network Definitions</a></li>
-<li><a href="../business-network/query.html">Querying Business Network Data</a></li>
+<li><a href="../business-network/query.html">Using Filters and Queries with Business Network Data</a></li>
 <li><a href="../business-network/programmatic-access-control.html">Programmatic access control</a></li>
 <li><a href="../business-network/historian.html">Hyperledger Composer Historian</a></li>
 </ul></li>
@@ -154,11 +167,7 @@ ga('send', 'pageview');
 <li><a href="../managing/identity-revoke.html">Revoking an identity from a participant</a></li>
 <li><a href="../managing/updating-composer.html">Updating the Hyperledger Composer Runtime</a></li>
 </ul></li>
-<li><p><a href="../problems/diagnostics.html">Diagnosing Problems</a></p>
-
-<ul>
-<li><a href="../problems/deployment-local-playground.html">Error using the local Playground</a></li>
-</ul></li>
+<li><p><a href="../problems/diagnostics.html">Diagnosing Problems</a></p></li>
 <li><p><a href="../reference/reference-index.html">Reference</a></p>
 
 <ul>
@@ -173,43 +182,47 @@ ga('send', 'pageview');
 <li><a href="../reference/glossary.html">Hyperledger Composer Glossary of Terms</a></li>
 </ul></li>
 <li><p><a href="../support/support-index.html">Support</a></p></li>
-<li><p><a href="../api-doc-beta/api-doc-index.html">API Reference</a></p>
+<li><p><a href="../api-doc-inline/api-doc-index.html">API Reference</a></p>
 
 <ul>
-<li><a href="../api-doc-beta/adminconnection.html">AdminConnection (Admin API)</a></li>
-<li><a href="../api-doc-beta/assetregistry.html">AssetRegistry (Client API)</a></li>
-<li><a href="../api-doc-beta/baseexception.html">BaseException (Common API)</a></li>
-<li><a href="../api-doc-beta/basefileexception.html">BaseFileException (Common API)</a></li>
-<li><a href="../api-doc-beta/businessnetworkconnection.html">BusinessNetworkConnection (Client API)</a></li>
-<li><a href="../api-doc-beta/businessnetworkdefinition.html">BusinessNetworkDefinition (Common API)</a></li>
-<li><a href="../api-doc-beta/businessnetworkmetadata.html">BusinessNetworkMetadata (Common API)</a></li>
-<li><a href="../api-doc-beta/concept.html">Concept (Common API)</a></li>
-<li><a href="../api-doc-beta/consolelogger.html">ConsoleLogger ( API)</a></li>
-<li><a href="../api-doc-beta/factory.html">Factory (Common API)</a></li>
-<li><a href="../api-doc-beta/filewallet.html">FileWallet ( API)</a></li>
-<li><a href="../api-doc-beta/historian.html">Historian (Client API)</a></li>
-<li><a href="../api-doc-beta/idcard.html">IdCard (Common API)</a></li>
-<li><a href="../api-doc-beta/identifiable.html">Identifiable (Common API)</a></li>
-<li><a href="../api-doc-beta/identityregistry.html">IdentityRegistry (Client API)</a></li>
-<li><a href="../api-doc-beta/illegalmodelexception.html">IllegalModelException (Common API)</a></li>
-<li><a href="../api-doc-beta/introspector.html">Introspector (Common API)</a></li>
-<li><a href="../api-doc-beta/invalidqueryexception.html">InvalidQueryException (Common API)</a></li>
-<li><a href="../api-doc-beta/parseexception.html">ParseException (Common API)</a></li>
-<li><a href="../api-doc-beta/participantregistry.html">ParticipantRegistry (Client API)</a></li>
-<li><a href="../api-doc-beta/query.html">Query (Client API)</a></li>
-<li><a href="../api-doc-beta/registry.html">Registry (Client API)</a></li>
-<li><a href="../api-doc-beta/relationship.html">Relationship (Common API)</a></li>
-<li><a href="../api-doc-beta/resource.html">Resource (Common API)</a></li>
-<li><a href="../api-doc-beta/securitycontext.html">SecurityContext (Common API)</a></li>
-<li><a href="../api-doc-beta/securityexception.html">SecurityException (Common API)</a></li>
-<li><a href="../api-doc-beta/serializer.html">Serializer (Common API)</a></li>
-<li><a href="../api-doc-beta/transactionregistry.html">TransactionRegistry (Client API)</a></li>
-<li><a href="../api-doc-beta/typed.html">Typed (Common API)</a></li>
-<li><a href="../api-doc-beta/typenotfoundexception.html">TypeNotFoundException (Common API)</a></li>
-<li><a href="../api-doc-beta/validatedconcept.html">ValidatedConcept (Common API)</a></li>
-<li><a href="../api-doc-beta/validatedresource.html">ValidatedResource (Common API)</a></li>
-<li><a href="../api-doc-beta/validationexception.html">ValidationException (Common API)</a></li>
-<li><a href="../api-doc-beta/wallet.html">Wallet ( API)</a></li>
+<li><a href="../api-doc-inline/admin-adminconnection.html">AdminConnection (Admin API)</a></li>
+<li><a href="../api-doc-inline/client-assetregistry.html">AssetRegistry (Client API)</a></li>
+<li><a href="../api-doc-inline/client-businessnetworkconnection.html">BusinessNetworkConnection (Client API)</a></li>
+<li><a href="../api-doc-inline/client-historian.html">Historian (Client API)</a></li>
+<li><a href="../api-doc-inline/client-identityregistry.html">IdentityRegistry (Client API)</a></li>
+<li><a href="../api-doc-inline/client-participantregistry.html">ParticipantRegistry (Client API)</a></li>
+<li><a href="../api-doc-inline/client-query.html">Query (Client API)</a></li>
+<li><a href="../api-doc-inline/client-registry.html">Registry (Client API)</a></li>
+<li><a href="../api-doc-inline/client-transactionregistry.html">TransactionRegistry (Client API)</a></li>
+<li><a href="../api-doc-inline/common-baseexception.html">BaseException (Common API)</a></li>
+<li><a href="../api-doc-inline/common-basefileexception.html">BaseFileException (Common API)</a></li>
+<li><a href="../api-doc-inline/common-businessnetworkdefinition.html">BusinessNetworkDefinition (Common API)</a></li>
+<li><a href="../api-doc-inline/common-businessnetworkmetadata.html">BusinessNetworkMetadata (Common API)</a></li>
+<li><a href="../api-doc-inline/common-concept.html">Concept (Common API)</a></li>
+<li><a href="../api-doc-inline/common-factory.html">Factory (Common API)</a></li>
+<li><a href="../api-doc-inline/common-identifiable.html">Identifiable (Common API)</a></li>
+<li><a href="../api-doc-inline/common-illegalmodelexception.html">IllegalModelException (Common API)</a></li>
+<li><a href="../api-doc-inline/common-introspector.html">Introspector (Common API)</a></li>
+<li><a href="../api-doc-inline/common-invalidqueryexception.html">InvalidQueryException (Common API)</a></li>
+<li><a href="../api-doc-inline/common-parseexception.html">ParseException (Common API)</a></li>
+<li><a href="../api-doc-inline/common-relationship.html">Relationship (Common API)</a></li>
+<li><a href="../api-doc-inline/common-resource.html">Resource (Common API)</a></li>
+<li><a href="../api-doc-inline/common-securitycontext.html">SecurityContext (Common API)</a></li>
+<li><a href="../api-doc-inline/common-securityexception.html">SecurityException (Common API)</a></li>
+<li><a href="../api-doc-inline/common-serializer.html">Serializer (Common API)</a></li>
+<li><a href="../api-doc-inline/common-typed.html">Typed (Common API)</a></li>
+<li><a href="../api-doc-inline/common-typenotfoundexception.html">TypeNotFoundException (Common API)</a></li>
+<li><a href="../api-doc-inline/common-validatedconcept.html">ValidatedConcept (Common API)</a></li>
+<li><a href="../api-doc-inline/common-validatedresource.html">ValidatedResource (Common API)</a></li>
+<li><a href="../api-doc-inline/common-validationexception.html">ValidationException (Common API)</a></li>
+<li><a href="../api-doc-inline/runtime-assetregistry.html">AssetRegistry (Runtime API)</a></li>
+<li><a href="../api-doc-inline/runtime-factory.html">Factory (Runtime API)</a></li>
+<li><a href="../api-doc-inline/runtime-participantregistry.html">ParticipantRegistry (Runtime API)</a></li>
+<li><a href="../api-doc-inline/runtime-query.html">Query (Runtime API)</a></li>
+<li><a href="../api-doc-inline/runtime-serializer.html">Serializer (Runtime API)</a></li>
+<li><a href="../api-doc-inline/undefined-consolelogger.html">ConsoleLogger ( API)</a></li>
+<li><a href="../api-doc-inline/undefined-filewallet.html">FileWallet ( API)</a></li>
+<li><a href="../api-doc-inline/undefined-wallet.html">Wallet ( API)</a></li>
 </ul></li>
 </ul>
 
@@ -223,8 +236,6 @@ ga('send', 'pageview');
   <div class="footer-right-break">
     <ul>
       <li><a href="https://github.com/hyperledger/composer">GitHub</a></li>
-      <!-- <li><a href="https://github.com/hyperledger/composer/LICENSE.txt">Legal</a></li> -->
-      <li><a href="/api-doc/composer/unstable/jsdoc/index.html">APIs</a></li>
       <li><a href="http://stackoverflow.com/questions/tagged/fabric-composer">Stack Overflow</a></li>
       <li><a href="https://goo.gl/forms/7YPMLP2LTN2hjIRk2">Feedback?</a></li>
     </ul>
@@ -243,22 +254,29 @@ ga('send', 'pageview');
 
 <hr>
 
-<p>The <code>composer network deploy</code> utility is used to deploy a business network archive from local disk to a Hyperledger Fabric v1.0 runtime.</p>
+<p>The <code>composer network deploy</code> utility is used to deploy a business network archive from local disk to a Hyperledger Fabric v1.0 network.
+Before using this command, read the topic <a href="../business-network/bnd-deploy.html">Deploying and Updating Business Networks</a>.</p>
 <div class="highlight"><pre><code class="language-" data-lang="">composer network deploy -a &lt;business-network-archive&gt; -p &lt;connection-profile-name&gt; -i &lt;enrollment-id&gt; -s &lt;enrollment-secret&gt;
 </code></pre></div>
 <h3 id="options">Options</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">--help                       Show help  [boolean]
---version, -v                Show version number  [boolean]
---archiveFile, -a            The business network archive file name  [string] [required]
---connectionProfileName, -p  The connection profile name  [string]
---enrollId, -i               The enrollment ID of the user  [string] [required]
---loglevel, -l               The initial loglevel to set (INFO|WARNING|ERROR|DEBUG)  [string]
---option, -o                 Options that are specific specific to a connection. Multiple options are specified by repeating this option  [string]
---optionsFile, -O            A file containing options that are specific to connection  [string]
---enrollSecret, -s           The enrollment secret of the user  [string]
+<div class="highlight"><pre><code class="language-" data-lang="">composer network deploy [options]
+
+Options:
+  --help                             Show help  [boolean]
+  -v, --version                      Show version number  [boolean]
+  --archiveFile, -a                  The business network archive file name  [string] [required]
+  --connectionProfileName, -p        The connection profile name  [string] [required]
+  --enrollId, -i                     The enrollment ID of the user  [string] [required]
+  --loglevel, -l                     The initial loglevel to set (INFO|WARNING|ERROR|DEBUG)  [string]
+  --option, -o                       Options that are specific specific to connection. Multiple options are specified by repeating this option  [string]
+  --optionsFile, -O                  A file containing options that are specific to connection  [string]
+  --enrollSecret, -s                 The enrollment secret of the user  [string]
+  --networkAdmin, -A                 The identity name of the business network administrator  [string]
+  --networkAdminCertificateFile, -C  The certificate of the business network administrator  [string]
+  --networkAdminEnrollSecret, -S     Use enrollment secret for the business network administrator  [boolean]
 </code></pre></div>
 <h2 id="example-output">Example Output</h2>
-<div class="highlight"><pre><code class="language-" data-lang="">composer network deploy -a digitalPropertyNetwork.bna -p hlfv1 -i PeerAdmin -s randomString
+<div class="highlight"><pre><code class="language-" data-lang="">composer network deploy -a digitalPropertyNetwork.bna -p hlfv1 -i PeerAdmin -s randomString -A admin -S
 
 Deploying business network from archive digitalPropertyNetwork.bna
 Business network definition:
@@ -294,7 +312,7 @@ Command completed successfully.
 </span></code></pre></div></li>
 </ul>
 
-<p>For more information on writing Hyperledger Fabric endorsement policies, see the <a href="https://fabric-sdk-node.github.io/global.html#Policy">Hyperledger Fabric node SDK documentation</a>.</p>
+<p>For more information on writing Hyperledger Fabric endorsement policies, see the <a href="https://fabric-sdk-node.github.io/global.html#Policy">Hyperledger Fabric Node.js SDK documentation</a>.</p>
 
             
           </section>
@@ -348,7 +366,8 @@ Command completed successfully.
     });
 })(document);
 </script>
-<script src="/api-doc/composer/unstable/assets/js/nav.js"></script>
+<script src="/composer/unstable/assets/js/nav.js"></script>
+<script src="/composer/unstable/assets/js/search_bar.js"></script>
 
     
 
