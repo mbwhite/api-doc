@@ -77,7 +77,7 @@ ga('send', 'pageview');
           </div>
 
             <div class="search-form">
-              <form action="/composer/unstable/search.html" method="get">
+              <form action="/composer/unstable/search/search.html" method="get">
                 <!-- <label for="search-box">Search</label> -->
 
                 <input type="text" id="search-box"  class="search-box" name="query" placeholder="Search here...">
@@ -132,7 +132,7 @@ ga('send', 'pageview');
 <li><a href="../business-network/publishing-events.html">Emitting Events</a></li>
 <li><a href="../business-network/testing.html">Testing Business Networks</a></li>
 <li><a href="../business-network/bnd-publish.html">Publish Models or Business Network Definitions</a></li>
-<li><a href="../business-network/query.html">Using Filters and Queries with Business Network Data</a></li>
+<li><a href="../business-network/query.html">Using Queries and Filters with Business Network Data</a></li>
 <li><a href="../business-network/programmatic-access-control.html">Programmatic access control</a></li>
 <li><a href="../business-network/historian.html">Hyperledger Composer Historian</a></li>
 </ul></li>
@@ -253,7 +253,7 @@ ga('send', 'pageview');
               <h1 id="factory">Factory</h1>
 
 <p>Do not attempt to create an instance of this class.<br>
-You must use the {@link module:composer-runtime#getFactory getFactory}
+You must use the module:composer-runtime#getFactory getFactory
 method instead.</p>
 
 <h3 id="details">Details</h3>
@@ -268,41 +268,48 @@ method instead.</p>
 
 <table><thead>
 <tr>
-<th style="text-align: left">Returns</th>
 <th style="text-align: left">Name</th>
+<th style="text-align: left">Returns</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
+<td style="text-align: left"><a href="#newconcept">newConcept</a></td>
 <td style="text-align: left"><code>Concept</code></td>
-<td style="text-align: left"><a href="#newconcept-ns-type">newConcept</a></td>
 <td style="text-align: left">Create a new concept with a given namespace, type, and identifier. A concept is an advanced data structure</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#newevent">newEvent</a></td>
 <td style="text-align: left"><code>Resource</code></td>
-<td style="text-align: left"><a href="#newevent-ns-type">newEvent</a></td>
 <td style="text-align: left">Create a new type with a given namespace and type</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#newrelationship">newRelationship</a></td>
 <td style="text-align: left"><code>Relationship</code></td>
-<td style="text-align: left"><a href="#newrelationship-ns-type-id">newRelationship</a></td>
 <td style="text-align: left">Create a new relationship with a given namespace, type, and identifier. A relationship is a typed pointer to an instance. For example, a new relationship with namespace &#39;org.acme&#39;, type &#39;Vehicle&#39; and identifier &#39;VEHICLE_1&#39; creates` a pointer that points at an existing instance of org.acme.Vehicle with the identifier &#39;VEHICLE_1&#39;.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#newresource">newResource</a></td>
 <td style="text-align: left"><code>Resource</code></td>
-<td style="text-align: left"><a href="#newresource-ns-type-id">newResource</a></td>
-<td style="text-align: left">Create a new resource (an instance of an asset, participant, or transaction). The properties of the new instance should be set as standard JavaScript object properties. The new instance can then be stored in a registry using the appropriate registry APIs, for example {@link module:composer-runtime.AssetRegistry AssetRegistry}.</td>
+<td style="text-align: left">Create a new resource (an instance of an asset, participant, or transaction). The properties of the new instance should be set as standard JavaScript object properties. The new instance can then be stored in a registry using the appropriate registry APIs, for example module:composer-runtime.AssetRegistry AssetRegistry.</td>
 </tr>
 </tbody></table>
 
-<hr>
-
-<h2 id="method-details">Method Details</h2>
+<h1 id="method-details">Method Details</h1>
 
 <h2 id="newresource-ns-type-id">newResource( ns, type, id )</h2>
 
-<p>Create a new resource (an instance of an asset, participant, or transaction). The properties of the new instance should be set as standard JavaScript object properties. The new instance can then be stored in a registry using the appropriate registry APIs, for example {@link module:composer-runtime.AssetRegistry AssetRegistry}.</p>
+<p>Create a new resource (an instance of an asset, participant, or transaction). The properties of the new instance should be set as standard JavaScript object properties. The new instance can then be stored in a registry using the appropriate registry APIs, for example module:composer-runtime.AssetRegistry AssetRegistry.</p>
 
+<h3 id="example">Example</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the factory.</span>
+<span class="kd">var</span> <span class="nx">factory</span> <span class="o">=</span> <span class="nx">getFactory</span><span class="p">();</span>
+<span class="c1">// Create a new vehicle.</span>
+<span class="kd">var</span> <span class="nx">vehicle</span> <span class="o">=</span> <span class="nx">factory</span><span class="p">.</span><span class="nx">newResource</span><span class="p">(</span><span class="s1">'org.acme'</span><span class="p">,</span> <span class="s1">'Vehicle'</span><span class="p">,</span> <span class="s1">'VEHICLE_1'</span><span class="p">);</span>
+<span class="c1">// Set the properties of the new vehicle.</span>
+<span class="nx">vehicle</span><span class="p">.</span><span class="nx">colour</span> <span class="o">=</span> <span class="s1">'BLUE'</span><span class="p">;</span>
+<span class="nx">vehicle</span><span class="p">.</span><span class="nx">manufacturer</span> <span class="o">=</span> <span class="s1">'Toyota'</span><span class="p">;</span>
+</code></pre></div>
 <h3 id="returns">Returns</h3>
 
 <p><code>Resource</code> - The new instance of the resource.</p>
@@ -337,8 +344,6 @@ method instead.</p>
 </tr>
 </tbody></table>
 
-<p>No parameters</p>
-
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the factory.</span>
 <span class="kd">var</span> <span class="nx">factory</span> <span class="o">=</span> <span class="nx">getFactory</span><span class="p">();</span>
@@ -348,12 +353,20 @@ method instead.</p>
 <span class="nx">vehicle</span><span class="p">.</span><span class="nx">colour</span> <span class="o">=</span> <span class="s1">'BLUE'</span><span class="p">;</span>
 <span class="nx">vehicle</span><span class="p">.</span><span class="nx">manufacturer</span> <span class="o">=</span> <span class="s1">'Toyota'</span><span class="p">;</span>
 </code></pre></div>
-<hr>
-
 <h2 id="newrelationship-ns-type-id">newRelationship( ns, type, id )</h2>
 
 <p>Create a new relationship with a given namespace, type, and identifier. A relationship is a typed pointer to an instance. For example, a new relationship with namespace &#39;org.acme&#39;, type &#39;Vehicle&#39; and identifier &#39;VEHICLE_1&#39; creates` a pointer that points at an existing instance of org.acme.Vehicle with the identifier &#39;VEHICLE_1&#39;.</p>
 
+<h3 id="example">Example</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// The existing driver of the vehicle.</span>
+<span class="kd">var</span> <span class="nx">driver</span><span class="p">;</span>
+<span class="c1">// Get the factory.</span>
+<span class="kd">var</span> <span class="nx">factory</span> <span class="o">=</span> <span class="nx">getFactory</span><span class="p">();</span>
+<span class="c1">// Create a new relationship to the vehicle.</span>
+<span class="kd">var</span> <span class="nx">vehicle</span> <span class="o">=</span> <span class="nx">factory</span><span class="p">.</span><span class="nx">newRelationship</span><span class="p">(</span><span class="s1">'org.acme'</span><span class="p">,</span> <span class="s1">'Vehicle'</span><span class="p">,</span> <span class="s1">'VEHICLE_1'</span><span class="p">);</span>
+<span class="c1">// Set the relationship as the value of the vehicle property of the driver.</span>
+<span class="nx">driver</span><span class="p">.</span><span class="nx">vehicle</span> <span class="o">=</span> <span class="nx">vehicle</span><span class="p">;</span>
+</code></pre></div>
 <h3 id="returns">Returns</h3>
 
 <p><code>Relationship</code> - The new instance of the relationship.</p>
@@ -388,8 +401,6 @@ method instead.</p>
 </tr>
 </tbody></table>
 
-<p>No parameters</p>
-
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// The existing driver of the vehicle.</span>
 <span class="kd">var</span> <span class="nx">driver</span><span class="p">;</span>
@@ -400,12 +411,20 @@ method instead.</p>
 <span class="c1">// Set the relationship as the value of the vehicle property of the driver.</span>
 <span class="nx">driver</span><span class="p">.</span><span class="nx">vehicle</span> <span class="o">=</span> <span class="nx">vehicle</span><span class="p">;</span>
 </code></pre></div>
-<hr>
-
 <h2 id="newconcept-ns-type">newConcept( ns, type )</h2>
 
 <p>Create a new concept with a given namespace, type, and identifier. A concept is an advanced data structure</p>
 
+<h3 id="example">Example</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// The existing driver of the vehicle.</span>
+<span class="kd">var</span> <span class="nx">person</span><span class="p">;</span>
+<span class="c1">// Get the factory.</span>
+<span class="kd">var</span> <span class="nx">factory</span> <span class="o">=</span> <span class="nx">getFactory</span><span class="p">();</span>
+<span class="c1">// Create a new relationship to the vehicle.</span>
+<span class="kd">var</span> <span class="nx">record</span> <span class="o">=</span> <span class="nx">factory</span><span class="p">.</span><span class="nx">newConcept</span><span class="p">(</span><span class="s1">'org.acme'</span><span class="p">,</span> <span class="s1">'Record'</span><span class="p">);</span>
+<span class="c1">// Add the record to the persons array of records.</span>
+<span class="nx">person</span><span class="p">.</span><span class="nx">records</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">record</span><span class="p">);</span>
+</code></pre></div>
 <h3 id="returns">Returns</h3>
 
 <p><code>Concept</code> - The new instance of the concept.</p>
@@ -434,8 +453,6 @@ method instead.</p>
 </tr>
 </tbody></table>
 
-<p>No parameters</p>
-
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// The existing driver of the vehicle.</span>
 <span class="kd">var</span> <span class="nx">person</span><span class="p">;</span>
@@ -446,8 +463,6 @@ method instead.</p>
 <span class="c1">// Add the record to the persons array of records.</span>
 <span class="nx">person</span><span class="p">.</span><span class="nx">records</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">record</span><span class="p">);</span>
 </code></pre></div>
-<hr>
-
 <h2 id="newevent-ns-type">newEvent( ns, type )</h2>
 
 <p>Create a new type with a given namespace and type</p>
@@ -479,10 +494,6 @@ method instead.</p>
 <td style="text-align: left">The type of the event.</td>
 </tr>
 </tbody></table>
-
-<p>No parameters</p>
-
-<hr>
 
             
           </section>

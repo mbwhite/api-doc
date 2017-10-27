@@ -77,7 +77,7 @@ ga('send', 'pageview');
           </div>
 
             <div class="search-form">
-              <form action="/composer/unstable/search.html" method="get">
+              <form action="/composer/unstable/search/search.html" method="get">
                 <!-- <label for="search-box">Search</label> -->
 
                 <input type="text" id="search-box"  class="search-box" name="query" placeholder="Search here...">
@@ -132,7 +132,7 @@ ga('send', 'pageview');
 <li><a href="../business-network/publishing-events.html">Emitting Events</a></li>
 <li><a href="../business-network/testing.html">Testing Business Networks</a></li>
 <li><a href="../business-network/bnd-publish.html">Publish Models or Business Network Definitions</a></li>
-<li><a href="../business-network/query.html">Using Filters and Queries with Business Network Data</a></li>
+<li><a href="../business-network/query.html">Using Queries and Filters with Business Network Data</a></li>
 <li><a href="../business-network/programmatic-access-control.html">Programmatic access control</a></li>
 <li><a href="../business-network/historian.html">Hyperledger Composer Historian</a></li>
 </ul></li>
@@ -268,50 +268,48 @@ and assets.
 
 <table><thead>
 <tr>
-<th style="text-align: left">Returns</th>
 <th style="text-align: left">Name</th>
+<th style="text-align: left">Returns</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td style="text-align: left"><code>void</code></td>
 <td style="text-align: left"><a href="#constructor-modelmanager">constructor</a></td>
-<td style="text-align: left">Create the factory. <p> <strong>Note: Only to be called by framework code. Applications should retrieve instances from {@link Hyperledger-Composer}</strong> </p></td>
+<td style="text-align: left"><code>void</code></td>
+<td style="text-align: left">Create the factory. <p> <strong>Note: Only to be called by framework code. Applications should retrieve instances from Hyperledger-Composer</strong> </p></td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#newconcept-string-string-object-boolean-string-boolean">newConcept</a></td>
 <td style="text-align: left"><code>Resource</code></td>
-<td style="text-align: left"><a href="#newconcept-ns-type-options">newConcept</a></td>
 <td style="text-align: left">Create a new Concept with a given namespace and type name</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#newevent-string-string-string-object-string-boolean-boolean">newEvent</a></td>
 <td style="text-align: left"><code>Resource</code></td>
-<td style="text-align: left"><a href="#newevent-ns-type-id-options">newEvent</a></td>
 <td style="text-align: left">Create a new event object. The identifier of the event is set to a UUID.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#newrelationship-string-string-string">newRelationship</a></td>
 <td style="text-align: left"><code>Relationship</code></td>
-<td style="text-align: left"><a href="#newrelationship-ns-type-id">newRelationship</a></td>
 <td style="text-align: left">Create a new Relationship with a given namespace, type and identifier. A relationship is a typed pointer to an instance. I.e the relationship with namespace = &#39;org.acme&#39;, type = &#39;Vehicle&#39; and id = &#39;ABC&#39; creates` a pointer that points at an instance of org.acme.Vehicle with the id ABC.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#newresource-string-string-string-object-boolean-string-boolean-boolean">newResource</a></td>
 <td style="text-align: left"><code>Resource</code></td>
-<td style="text-align: left"><a href="#newresource-ns-type-id-options">newResource</a></td>
 <td style="text-align: left">Create a new Resource with a given namespace, type name and id</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#newtransaction-string-string-string-object-string-boolean-boolean">newTransaction</a></td>
 <td style="text-align: left"><code>Resource</code></td>
-<td style="text-align: left"><a href="#newtransaction-ns-type-id-options">newTransaction</a></td>
 <td style="text-align: left">Create a new transaction object. The identifier of the transaction is set to a UUID.</td>
 </tr>
 </tbody></table>
 
-<hr>
-
-<h2 id="method-details">Method Details</h2>
+<h1 id="method-details">Method Details</h1>
 
 <h2 id="new-factory">new Factory()</h2>
 
-<p>Create the factory. <p> <strong>Note: Only to be called by framework code. Applications should retrieve instances from {@link Hyperledger-Composer}</strong> </p></p>
+<p>Create the factory. <p> <strong>Note: Only to be called by framework code. Applications should retrieve instances from Hyperledger-Composer</strong> </p></p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -330,10 +328,6 @@ and assets.
 <td style="text-align: left">The ModelManager to use for this registry</td>
 </tr>
 </tbody></table>
-
-<p>No parameters</p>
-
-<hr>
 
 <h2 id="newresource-ns-type-id-options">newResource( ns, type, id, options )</h2>
 
@@ -393,7 +387,7 @@ and assets.
 <td style="text-align: left"><strong>options.disableValidation</strong></td>
 <td style="text-align: left">boolean</td>
 <td style="text-align: left">true</td>
-<td style="text-align: left">pass true if you want the factory to return a {@link Resource} instead of a {@link ValidatedResource}. Defaults to false.</td>
+<td style="text-align: left">pass true if you want the factory to return a Resource} instead of a {@link ValidatedResource. Defaults to false.</td>
 </tr>
 <tr>
 <td style="text-align: left"><strong>options.generate</strong></td>
@@ -407,9 +401,13 @@ and assets.
 <td style="text-align: left">true</td>
 <td style="text-align: left">if <code>options.generate</code> is specified, whether optional fields should be generated.</td>
 </tr>
+<tr>
+<td style="text-align: left"><strong>options.allowEmptyId</strong></td>
+<td style="text-align: left">boolean</td>
+<td style="text-align: left">true</td>
+<td style="text-align: left">if <code>options.allowEmptyId</code> is specified as true, a zero length string for id is allowed (allows it to be filled in later).</td>
+</tr>
 </tbody></table>
-
-<hr>
 
 <h2 id="newconcept-ns-type-options">newConcept( ns, type, options )</h2>
 
@@ -463,7 +461,7 @@ and assets.
 <td style="text-align: left"><strong>options.disableValidation</strong></td>
 <td style="text-align: left">boolean</td>
 <td style="text-align: left">true</td>
-<td style="text-align: left">pass true if you want the factory to return a {@link Concept} instead of a {@link ValidatedConcept}. Defaults to false.</td>
+<td style="text-align: left">pass true if you want the factory to return a Concept} instead of a {@link ValidatedConcept. Defaults to false.</td>
 </tr>
 <tr>
 <td style="text-align: left"><strong>options.generate</strong></td>
@@ -478,8 +476,6 @@ and assets.
 <td style="text-align: left">if <code>options.generate</code> is specified, whether optional fields should be generated.</td>
 </tr>
 </tbody></table>
-
-<hr>
 
 <h2 id="newrelationship-ns-type-id">newRelationship( ns, type, id )</h2>
 
@@ -518,10 +514,6 @@ and assets.
 <td style="text-align: left">the identifier</td>
 </tr>
 </tbody></table>
-
-<p>No parameters</p>
-
-<hr>
 
 <h2 id="newtransaction-ns-type-id-options">newTransaction( ns, type, id, options )</h2>
 
@@ -589,9 +581,13 @@ and assets.
 <td style="text-align: left">true</td>
 <td style="text-align: left">if <code>options.generate</code> is specified, whether optional fields should be generated.</td>
 </tr>
+<tr>
+<td style="text-align: left"><strong>options.allowEmptyId</strong></td>
+<td style="text-align: left">boolean</td>
+<td style="text-align: left">true</td>
+<td style="text-align: left">if <code>options.allowEmptyId</code> is specified as true, a zero length string for id is allowed (allows it to be filled in later).</td>
+</tr>
 </tbody></table>
-
-<hr>
 
 <h2 id="newevent-ns-type-id-options">newEvent( ns, type, id, options )</h2>
 
@@ -659,9 +655,13 @@ and assets.
 <td style="text-align: left">true</td>
 <td style="text-align: left">if <code>options.generate</code> is specified, whether optional fields should be generated.</td>
 </tr>
+<tr>
+<td style="text-align: left"><strong>options.allowEmptyId</strong></td>
+<td style="text-align: left">boolean</td>
+<td style="text-align: left">true</td>
+<td style="text-align: left">if <code>options.allowEmptyId</code> is specified as true, a zero length string for id is allowed (allows it to be filled in later).</td>
+</tr>
 </tbody></table>
-
-<hr>
 
             
           </section>

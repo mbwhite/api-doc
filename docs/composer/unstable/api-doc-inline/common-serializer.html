@@ -77,7 +77,7 @@ ga('send', 'pageview');
           </div>
 
             <div class="search-form">
-              <form action="/composer/unstable/search.html" method="get">
+              <form action="/composer/unstable/search/search.html" method="get">
                 <!-- <label for="search-box">Search</label> -->
 
                 <input type="text" id="search-box"  class="search-box" name="query" placeholder="Search here...">
@@ -132,7 +132,7 @@ ga('send', 'pageview');
 <li><a href="../business-network/publishing-events.html">Emitting Events</a></li>
 <li><a href="../business-network/testing.html">Testing Business Networks</a></li>
 <li><a href="../business-network/bnd-publish.html">Publish Models or Business Network Definitions</a></li>
-<li><a href="../business-network/query.html">Using Filters and Queries with Business Network Data</a></li>
+<li><a href="../business-network/query.html">Using Queries and Filters with Business Network Data</a></li>
 <li><a href="../business-network/programmatic-access-control.html">Programmatic access control</a></li>
 <li><a href="../business-network/historian.html">Hyperledger Composer Historian</a></li>
 </ul></li>
@@ -268,35 +268,33 @@ ga('send', 'pageview');
 
 <table><thead>
 <tr>
-<th style="text-align: left">Returns</th>
 <th style="text-align: left">Name</th>
+<th style="text-align: left">Returns</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td style="text-align: left"><code>void</code></td>
 <td style="text-align: left"><a href="#constructor-factory-modelmanager">constructor</a></td>
-<td style="text-align: left">Create a Serializer. <strong>Note: Only to be called by framework code. Applications should retrieve instances from {@link Composer}</strong> </p></td>
+<td style="text-align: left"><code>void</code></td>
+<td style="text-align: left">Create a Serializer. <strong>Note: Only to be called by framework code. Applications should retrieve instances from Composer</strong> </p></td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#fromjson-object-object-boolean-boolean">fromJSON</a></td>
 <td style="text-align: left"><code>Resource</code></td>
-<td style="text-align: left"><a href="#fromjson-jsonobject-options">fromJSON</a></td>
-<td style="text-align: left">Create a {@link Resource} from a JavaScript Object representation. The JavaScript Object should have been created by calling the {@link Serializer#toJSON toJSON} API.</td>
+<td style="text-align: left">Create a Resource} from a JavaScript Object representation. The JavaScript Object should have been created by calling the {@link Serializer#toJSON toJSON API.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#tojson-resource-object-boolean-boolean-boolean-boolean">toJSON</a></td>
 <td style="text-align: left"><code>Object</code></td>
-<td style="text-align: left"><a href="#tojson-resource-options">toJSON</a></td>
-<td style="text-align: left"><p> Convert a {@link Resource} to a JavaScript object suitable for long-term peristent storage. </p></td>
+<td style="text-align: left"><p> Convert a Resource to a JavaScript object suitable for long-term peristent storage. </p></td>
 </tr>
 </tbody></table>
 
-<hr>
-
-<h2 id="method-details">Method Details</h2>
+<h1 id="method-details">Method Details</h1>
 
 <h2 id="new-serializer">new Serializer()</h2>
 
-<p>Create a Serializer. <strong>Note: Only to be called by framework code. Applications should retrieve instances from {@link Composer}</strong> </p></p>
+<p>Create a Serializer. <strong>Note: Only to be called by framework code. Applications should retrieve instances from Composer</strong> </p></p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -322,13 +320,9 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<p>No parameters</p>
-
-<hr>
-
 <h2 id="tojson-resource-options">toJSON( resource, options )</h2>
 
-<p> Convert a {@link Resource} to a JavaScript object suitable for long-term peristent storage. </p>
+<p> Convert a Resource to a JavaScript object suitable for long-term peristent storage. </p>
 
 <h3 id="returns">Returns</h3>
 
@@ -394,11 +388,9 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<hr>
-
 <h2 id="fromjson-jsonobject-options">fromJSON( jsonobject, options )</h2>
 
-<p>Create a {@link Resource} from a JavaScript Object representation. The JavaScript Object should have been created by calling the {@link Serializer#toJSON toJSON} API.
+<p>Create a Resource} from a JavaScript Object representation. The JavaScript Object should have been created by calling the {@link Serializer#toJSON toJSON API.
 The Resource is populated based on the JavaScript object.</p>
 
 <h3 id="returns">Returns</h3>
@@ -452,8 +444,6 @@ The Resource is populated based on the JavaScript object.</p>
 <td style="text-align: left">validate the structure of the Resource with its model prior to serialization (default to true)</td>
 </tr>
 </tbody></table>
-
-<hr>
 
             
           </section>

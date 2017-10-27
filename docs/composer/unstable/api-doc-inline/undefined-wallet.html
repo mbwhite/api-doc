@@ -77,7 +77,7 @@ ga('send', 'pageview');
           </div>
 
             <div class="search-form">
-              <form action="/composer/unstable/search.html" method="get">
+              <form action="/composer/unstable/search/search.html" method="get">
                 <!-- <label for="search-box">Search</label> -->
 
                 <input type="text" id="search-box"  class="search-box" name="query" placeholder="Search here...">
@@ -132,7 +132,7 @@ ga('send', 'pageview');
 <li><a href="../business-network/publishing-events.html">Emitting Events</a></li>
 <li><a href="../business-network/testing.html">Testing Business Networks</a></li>
 <li><a href="../business-network/bnd-publish.html">Publish Models or Business Network Definitions</a></li>
-<li><a href="../business-network/query.html">Using Filters and Queries with Business Network Data</a></li>
+<li><a href="../business-network/query.html">Using Queries and Filters with Business Network Data</a></li>
 <li><a href="../business-network/programmatic-access-control.html">Programmatic access control</a></li>
 <li><a href="../business-network/historian.html">Hyperledger Composer Historian</a></li>
 </ul></li>
@@ -266,56 +266,54 @@ ga('send', 'pageview');
 
 <table><thead>
 <tr>
-<th style="text-align: left">Returns</th>
 <th style="text-align: left">Name</th>
+<th style="text-align: left">Returns</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
+<td style="text-align: left"><a href="#add-string-string">add</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#add-name-value">add</a></td>
 <td style="text-align: left">Add a new credential to the wallet.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#contains-string">contains</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#contains-name">contains</a></td>
 <td style="text-align: left">Check to see if the named credentials are in the wallet.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#get-string">get</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#get-name">get</a></td>
 <td style="text-align: left">Get the named credentials from the wallet.</td>
 </tr>
 <tr>
-<td style="text-align: left"><code>Wallet</code></td>
 <td style="text-align: left"><a href="#getwallet">getWallet</a></td>
+<td style="text-align: left"><code>Wallet</code></td>
 <td style="text-align: left">Get the wallet singleton.</td>
 </tr>
 <tr>
-<td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left"><a href="#list">list</a></td>
+<td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">List all of the credentials in the wallet.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#remove-string">remove</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#remove-name">remove</a></td>
 <td style="text-align: left">Remove existing credentials from the wallet.</td>
 </tr>
 <tr>
-<td style="text-align: left"><code>void</code></td>
 <td style="text-align: left"><a href="#setwallet-wallet">setWallet</a></td>
+<td style="text-align: left"><code>void</code></td>
 <td style="text-align: left">Set the wallet singleton.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#update-string-string">update</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#update-name-value">update</a></td>
 <td style="text-align: left">Update existing credentials in the wallet.</td>
 </tr>
 </tbody></table>
 
-<hr>
-
-<h2 id="method-details">Method Details</h2>
+<h1 id="method-details">Method Details</h1>
 
 <h2 id="getwallet">getWallet(  )</h2>
 
@@ -323,16 +321,11 @@ ga('send', 'pageview');
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Wallet</code> - The wallet singleton, or null if one
-has not been specified.</p>
+<p><code>Wallet</code> - The wallet singleton, or null if one has not been specified.</p>
 
 <h3 id="parameters">Parameters</h3>
 
 <p>No parameters</p>
-
-<p>No parameters</p>
-
-<hr>
 
 <h2 id="setwallet-wallet">setWallet( wallet )</h2>
 
@@ -356,27 +349,17 @@ has not been specified.</p>
 </tr>
 </tbody></table>
 
-<p>No parameters</p>
-
-<hr>
-
 <h2 id="list">list(  )</h2>
 
 <p>List all of the credentials in the wallet.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that is resolved with
-an array of credential names, or rejected with an
-error.</p>
+<p><code>Promise</code> - A promise that is resolved with an array of credential names, or rejected with an error.</p>
 
 <h3 id="parameters">Parameters</h3>
 
 <p>No parameters</p>
-
-<p>No parameters</p>
-
-<hr>
 
 <h2 id="contains-name">contains( name )</h2>
 
@@ -384,9 +367,7 @@ error.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that is resolved with
-a boolean; true if the named credentials are in the
-wallet, false otherwise.</p>
+<p><code>Promise</code> - A promise that is resolved with a boolean; true if the named credentials are in the wallet, false otherwise.</p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -405,10 +386,6 @@ wallet, false otherwise.</p>
 <td style="text-align: left">The name of the credentials.</td>
 </tr>
 </tbody></table>
-
-<p>No parameters</p>
-
-<hr>
 
 <h2 id="get-name">get( name )</h2>
 
@@ -416,8 +393,7 @@ wallet, false otherwise.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that is resolved with
-the named credentials, or rejected with an error.</p>
+<p><code>Promise</code> - A promise that is resolved with the named credentials, or rejected with an error.</p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -436,10 +412,6 @@ the named credentials, or rejected with an error.</p>
 <td style="text-align: left">The name of the credentials.</td>
 </tr>
 </tbody></table>
-
-<p>No parameters</p>
-
-<hr>
 
 <h2 id="add-name-value">add( name, value )</h2>
 
@@ -447,8 +419,7 @@ the named credentials, or rejected with an error.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that is resolved when
-complete, or rejected with an error.</p>
+<p><code>Promise</code> - A promise that is resolved when complete, or rejected with an error.</p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -473,10 +444,6 @@ complete, or rejected with an error.</p>
 <td style="text-align: left">The credentials.</td>
 </tr>
 </tbody></table>
-
-<p>No parameters</p>
-
-<hr>
 
 <h2 id="update-name-value">update( name, value )</h2>
 
@@ -484,8 +451,7 @@ complete, or rejected with an error.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that is resolved when
-complete, or rejected with an error.</p>
+<p><code>Promise</code> - A promise that is resolved when complete, or rejected with an error.</p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -511,18 +477,13 @@ complete, or rejected with an error.</p>
 </tr>
 </tbody></table>
 
-<p>No parameters</p>
-
-<hr>
-
 <h2 id="remove-name">remove( name )</h2>
 
 <p>Remove existing credentials from the wallet.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that is resolved when
-complete, or rejected with an error.</p>
+<p><code>Promise</code> - A promise that is resolved when complete, or rejected with an error.</p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -541,10 +502,6 @@ complete, or rejected with an error.</p>
 <td style="text-align: left">The name of the credentials.</td>
 </tr>
 </tbody></table>
-
-<p>No parameters</p>
-
-<hr>
 
             
           </section>

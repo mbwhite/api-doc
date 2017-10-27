@@ -77,7 +77,7 @@ ga('send', 'pageview');
           </div>
 
             <div class="search-form">
-              <form action="/composer/unstable/search.html" method="get">
+              <form action="/composer/unstable/search/search.html" method="get">
                 <!-- <label for="search-box">Search</label> -->
 
                 <input type="text" id="search-box"  class="search-box" name="query" placeholder="Search here...">
@@ -132,7 +132,7 @@ ga('send', 'pageview');
 <li><a href="../business-network/publishing-events.html">Emitting Events</a></li>
 <li><a href="../business-network/testing.html">Testing Business Networks</a></li>
 <li><a href="../business-network/bnd-publish.html">Publish Models or Business Network Definitions</a></li>
-<li><a href="../business-network/query.html">Using Filters and Queries with Business Network Data</a></li>
+<li><a href="../business-network/query.html">Using Queries and Filters with Business Network Data</a></li>
 <li><a href="../business-network/programmatic-access-control.html">Programmatic access control</a></li>
 <li><a href="../business-network/historian.html">Hyperledger Composer Historian</a></li>
 </ul></li>
@@ -268,141 +268,139 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 
 <table><thead>
 <tr>
-<th style="text-align: left">Returns</th>
 <th style="text-align: left">Name</th>
+<th style="text-align: left">Returns</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
+<td style="text-align: left"><a href="#addassetregistry-string-string">addAssetRegistry</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#addassetregistry-id-name">addAssetRegistry</a></td>
 <td style="text-align: left">Add a new asset registry.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#addparticipantregistry-string-string">addParticipantRegistry</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#addparticipantregistry-id-name">addParticipantRegistry</a></td>
 <td style="text-align: left">Add a new participant registry.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#assetregistryexists-string">assetRegistryExists</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#assetregistryexists-id">assetRegistryExists</a></td>
 <td style="text-align: left">Determine whether a asset registry exists.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#bindidentity-string">bindIdentity</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#bindidentity-participant-certificate">bindIdentity</a></td>
 <td style="text-align: left">Bind an existing identity to the specified participant.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#buildquery-string">buildQuery</a></td>
 <td style="text-align: left"><code>Query</code></td>
-<td style="text-align: left"><a href="#buildquery-query">buildQuery</a></td>
 <td style="text-align: left">Build a query ready for later execution. The specified query string must be written in the Composer query language.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#connect-string-string-string-string-object">connect</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#connect-connectionprofile-businessnetwork-enrollmentid-enrollmentsecret-additionalconnectoptions">connect</a></td>
 <td style="text-align: left">Connects to a business network using a connection profile, and authenticates to the Hyperledger Fabric.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#constructor-object-connectionprofilestore-object">constructor</a></td>
 <td style="text-align: left"><code>void</code></td>
-<td style="text-align: left"><a href="#constructor-options">constructor</a></td>
 <td style="text-align: left">Create an instance of the BusinessNetworkConnection class. must be called to connect to a deployed BusinessNetworkDefinition.</td>
 </tr>
 <tr>
-<td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left"><a href="#disconnect">disconnect</a></td>
+<td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Disconnects from the Hyperledger Fabric.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#getallassetregistries-boolean">getAllAssetRegistries</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#getallassetregistries-includesystem">getAllAssetRegistries</a></td>
 <td style="text-align: left">Get a list of all existing asset registries.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#getallparticipantregistries-boolean">getAllParticipantRegistries</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#getallparticipantregistries-includesystem">getAllParticipantRegistries</a></td>
 <td style="text-align: left">Get a list of all existing participant registries.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#getalltransactionregistries-boolean">getAllTransactionRegistries</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#getalltransactionregistries-includesystem">getAllTransactionRegistries</a></td>
 <td style="text-align: left">Get all transaction registries.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#getassetregistry-string">getAssetRegistry</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#getassetregistry-id">getAssetRegistry</a></td>
 <td style="text-align: left">Get an existing asset registry.</td>
 </tr>
 <tr>
-<td style="text-align: left"><code>BusinessNetworkDefinition</code></td>
 <td style="text-align: left"><a href="#getbusinessnetwork">getBusinessNetwork</a></td>
+<td style="text-align: left"><code>BusinessNetworkDefinition</code></td>
 <td style="text-align: left">Returns the currently connected BusinessNetworkDefinition</td>
 </tr>
 <tr>
-<td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left"><a href="#gethistorian">getHistorian</a></td>
+<td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Get the historian</td>
 </tr>
 <tr>
-<td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left"><a href="#getidentityregistry">getIdentityRegistry</a></td>
+<td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Get the identity registry.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#getparticipantregistry-string">getParticipantRegistry</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#getparticipantregistry-id">getParticipantRegistry</a></td>
 <td style="text-align: left">Get an existing participant registry.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#getregistry-string">getRegistry</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#getregistry-fullyqualifiedname">getRegistry</a></td>
 <td style="text-align: left">Given a fully qualified name, works out and looks up the registry that this resource will be found in. This only gives back the default registry - it does not look in any application defined registry.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#gettransactionregistry-string">getTransactionRegistry</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#gettransactionregistry-id">getTransactionRegistry</a></td>
 <td style="text-align: left">Get the transaction registry.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#issueidentity-string-object-boolean">issueIdentity</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#issueidentity-participant-identityname-options">issueIdentity</a></td>
 <td style="text-align: left">Issue an identity with the specified name and map it to the specified participant.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#participantregistryexists-string">participantRegistryExists</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#participantregistryexists-id">participantRegistryExists</a></td>
 <td style="text-align: left">Determine whether a participant registry exists.</td>
 </tr>
 <tr>
-<td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left"><a href="#ping">ping</a></td>
+<td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Test the connection to the runtime and verify that the version of the runtime is compatible with this level of the client node.js module.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#query-object">query</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#query-query-parameters">query</a></td>
 <td style="text-align: left">Execute a query defined in a Composer query file, or execute a query built with buildQuery.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#revokeidentity">revokeIdentity</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#revokeidentity-identity">revokeIdentity</a></td>
 <td style="text-align: left">Revoke the specified identity by removing any existing mapping to a participant.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#submittransaction-resource">submitTransaction</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#submittransaction-transaction">submitTransaction</a></td>
 <td style="text-align: left">Submit a transaction for processing by the currently connected business network.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#transactionregistryexists-string">transactionRegistryExists</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#transactionregistryexists-id">transactionRegistryExists</a></td>
 <td style="text-align: left">Determine whether a transaction registry exists.</td>
 </tr>
 </tbody></table>
 
-<hr>
-
-<h2 id="method-details">Method Details</h2>
+<h1 id="method-details">Method Details</h1>
 
 <h2 id="new-businessnetworkconnection">new BusinessNetworkConnection()</h2>
 
@@ -450,19 +448,26 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </tr>
 </tbody></table>
 
-<hr>
-
 <h2 id="getbusinessnetwork">getBusinessNetwork(  )</h2>
 
 <p>Returns the currently connected BusinessNetworkDefinition</p>
 
+<h3 id="example">Example</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the Business Network Definition</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">getBusinessNetwork</span><span class="p">();</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">BusinessNetworkDefinition</span><span class="p">){</span>
+    <span class="c1">// Retrieved Business Network Definition</span>
+<span class="p">});</span>
+</code></pre></div>
 <h3 id="returns">Returns</h3>
 
 <p><code>BusinessNetworkDefinition</code> - the business network</p>
 
 <h3 id="parameters">Parameters</h3>
-
-<p>No parameters</p>
 
 <p>No parameters</p>
 
@@ -477,12 +482,21 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="c1">// Retrieved Business Network Definition</span>
 <span class="p">});</span>
 </code></pre></div>
-<hr>
-
 <h2 id="getallassetregistries-includesystem">getAllAssetRegistries( includesystem )</h2>
 
 <p>Get a list of all existing asset registries.</p>
 
+<h3 id="example">Example</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get all asset registries</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">getAllAssetRegistries</span><span class="p">();</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">assetRegistries</span><span class="p">){</span>
+    <span class="c1">// Retrieved Asset Registries</span>
+<span class="p">});</span>
+</code></pre></div>
 <h3 id="returns">Returns</h3>
 
 <p><code>Promise</code> - A promise that will be resolved with a list of existing asset registries</p>
@@ -505,8 +519,6 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </tr>
 </tbody></table>
 
-<p>No parameters</p>
-
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get all asset registries</span>
 <span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
@@ -518,12 +530,21 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="c1">// Retrieved Asset Registries</span>
 <span class="p">});</span>
 </code></pre></div>
-<hr>
-
 <h2 id="getassetregistry-id">getAssetRegistry( id )</h2>
 
 <p>Get an existing asset registry.</p>
 
+<h3 id="example">Example</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get a asset registry</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">getAssetRegistry</span><span class="p">(</span><span class="s1">'businessNetworkIdentifier.registryId'</span><span class="p">);</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">assetRegistry</span><span class="p">){</span>
+    <span class="c1">// Retrieved Asset Registry</span>
+<span class="p">});</span>
+</code></pre></div>
 <h3 id="returns">Returns</h3>
 
 <p><code>Promise</code> - A promise that will be resolved with the existing asset registry, or rejected if the asset registry does not exist.</p>
@@ -546,8 +567,6 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </tr>
 </tbody></table>
 
-<p>No parameters</p>
-
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get a asset registry</span>
 <span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
@@ -559,12 +578,23 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="c1">// Retrieved Asset Registry</span>
 <span class="p">});</span>
 </code></pre></div>
-<hr>
-
 <h2 id="assetregistryexists-id">assetRegistryExists( id )</h2>
 
 <p>Determine whether a asset registry exists.</p>
 
+<h3 id="example">Example</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Determine whether an asset registry exists</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">assetRegistryExists</span><span class="p">(</span><span class="s1">'businessNetworkIdentifier.registryId'</span><span class="p">);</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">exists</span><span class="p">){</span>
+    <span class="c1">// if (exists === true) {</span>
+    <span class="c1">// logic here...</span>
+    <span class="c1">//}</span>
+<span class="p">});</span>
+</code></pre></div>
 <h3 id="returns">Returns</h3>
 
 <p><code>Promise</code> - A promise that will be resolved with a boolean indicating whether the asset registry exists.</p>
@@ -587,8 +617,6 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </tr>
 </tbody></table>
 
-<p>No parameters</p>
-
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Determine whether an asset registry exists</span>
 <span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
@@ -602,12 +630,18 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="c1">//}</span>
 <span class="p">});</span>
 </code></pre></div>
-<hr>
-
 <h2 id="addassetregistry-id-name">addAssetRegistry( id, name )</h2>
 
 <p>Add a new asset registry.</p>
 
+<h3 id="example">Example</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Add a new asset registry</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">addAssetRegistry</span><span class="p">(</span><span class="s1">'registryId'</span><span class="p">,</span><span class="s1">'registryName'</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
 <h3 id="returns">Returns</h3>
 
 <p><code>Promise</code> - A promise that will be resolved with the new asset registry after it has been added.</p>
@@ -636,8 +670,6 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </tr>
 </tbody></table>
 
-<p>No parameters</p>
-
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Add a new asset registry</span>
 <span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
@@ -646,12 +678,21 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">addAssetRegistry</span><span class="p">(</span><span class="s1">'registryId'</span><span class="p">,</span><span class="s1">'registryName'</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div>
-<hr>
-
 <h2 id="getallparticipantregistries-includesystem">getAllParticipantRegistries( includesystem )</h2>
 
 <p>Get a list of all existing participant registries.</p>
 
+<h3 id="example">Example</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get all participant registries</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">getAllParticipantRegistries</span><span class="p">();</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">participantRegistries</span><span class="p">){</span>
+    <span class="c1">// Retrieved Participant Registries</span>
+<span class="p">});</span>
+</code></pre></div>
 <h3 id="returns">Returns</h3>
 
 <p><code>Promise</code> - A promise that will be resolved with a list of existing participant registries</p>
@@ -674,8 +715,6 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </tr>
 </tbody></table>
 
-<p>No parameters</p>
-
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get all participant registries</span>
 <span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
@@ -687,12 +726,21 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="c1">// Retrieved Participant Registries</span>
 <span class="p">});</span>
 </code></pre></div>
-<hr>
-
 <h2 id="getparticipantregistry-id">getParticipantRegistry( id )</h2>
 
 <p>Get an existing participant registry.</p>
 
+<h3 id="example">Example</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get a participant registry</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">getParticipantRegistry</span><span class="p">(</span><span class="s1">'businessNetworkIdentifier.registryId'</span><span class="p">);</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">participantRegistry</span><span class="p">){</span>
+    <span class="c1">// Retrieved Participant Registry</span>
+<span class="p">});</span>
+</code></pre></div>
 <h3 id="returns">Returns</h3>
 
 <p><code>Promise</code> - A promise that will be resolved with the existing participant registry, or rejected if the participant registry does not exist.</p>
@@ -715,8 +763,6 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </tr>
 </tbody></table>
 
-<p>No parameters</p>
-
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get a participant registry</span>
 <span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
@@ -728,12 +774,23 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="c1">// Retrieved Participant Registry</span>
 <span class="p">});</span>
 </code></pre></div>
-<hr>
-
 <h2 id="participantregistryexists-id">participantRegistryExists( id )</h2>
 
 <p>Determine whether a participant registry exists.</p>
 
+<h3 id="example">Example</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Determine whether an asset registry exists</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">participantRegistryExists</span><span class="p">(</span><span class="s1">'businessNetworkIdentifier.registryId'</span><span class="p">);</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">exists</span><span class="p">){</span>
+    <span class="c1">// if (exists === true) {</span>
+    <span class="c1">// logic here...</span>
+    <span class="c1">//}</span>
+<span class="p">});</span>
+</code></pre></div>
 <h3 id="returns">Returns</h3>
 
 <p><code>Promise</code> - A promise that will be resolved with a boolean indicating whether the participant registry exists.</p>
@@ -756,8 +813,6 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </tr>
 </tbody></table>
 
-<p>No parameters</p>
-
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Determine whether an asset registry exists</span>
 <span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
@@ -771,12 +826,18 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="c1">//}</span>
 <span class="p">});</span>
 </code></pre></div>
-<hr>
-
 <h2 id="addparticipantregistry-id-name">addParticipantRegistry( id, name )</h2>
 
 <p>Add a new participant registry.</p>
 
+<h3 id="example">Example</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Add a new participant registry</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">addParticipantRegistry</span><span class="p">(</span><span class="s1">'registryId'</span><span class="p">,</span><span class="s1">'registryName'</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
 <h3 id="returns">Returns</h3>
 
 <p><code>Promise</code> - A promise that will be resolved with the new participant registry after it has been added.</p>
@@ -805,8 +866,6 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </tr>
 </tbody></table>
 
-<p>No parameters</p>
-
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Add a new participant registry</span>
 <span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
@@ -815,15 +874,24 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">addParticipantRegistry</span><span class="p">(</span><span class="s1">'registryId'</span><span class="p">,</span><span class="s1">'registryName'</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div>
-<hr>
-
 <h2 id="gettransactionregistry-id">getTransactionRegistry( id )</h2>
 
 <p>Get the transaction registry.</p>
 
+<h3 id="example">Example</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the transaction registry</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">getTransactionRegistry</span><span class="p">(</span><span class="s1">'org.acme.exampleTransaction'</span><span class="p">);</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">transactionRegistry</span><span class="p">){</span>
+    <span class="c1">// Retrieved transaction registry.</span>
+<span class="p">});</span>
+</code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved to the {@link TransactionRegistry}</p>
+<p><code>Promise</code> - A promise that will be resolved to the TransactionRegistry</p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -843,8 +911,6 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </tr>
 </tbody></table>
 
-<p>No parameters</p>
-
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the transaction registry</span>
 <span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
@@ -856,15 +922,24 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="c1">// Retrieved transaction registry.</span>
 <span class="p">});</span>
 </code></pre></div>
-<hr>
-
 <h2 id="getalltransactionregistries-includesystem">getAllTransactionRegistries( includesystem )</h2>
 
 <p>Get all transaction registries.</p>
 
+<h3 id="example">Example</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the transaction registry</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">getAllTransactionRegistries</span><span class="p">();</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">transactionRegistries</span><span class="p">){</span>
+    <span class="c1">// Retrieved transaction Registries</span>
+<span class="p">});</span>
+</code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved to the {@link TransactionRegistry}</p>
+<p><code>Promise</code> - A promise that will be resolved to the TransactionRegistry</p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -884,8 +959,6 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </tr>
 </tbody></table>
 
-<p>No parameters</p>
-
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the transaction registry</span>
 <span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
@@ -897,12 +970,23 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="c1">// Retrieved transaction Registries</span>
 <span class="p">});</span>
 </code></pre></div>
-<hr>
-
 <h2 id="transactionregistryexists-id">transactionRegistryExists( id )</h2>
 
 <p>Determine whether a transaction registry exists.</p>
 
+<h3 id="example">Example</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Determine whether an transaction registry exists</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetwork</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">transactionRegistryExists</span><span class="p">(</span><span class="s1">'businessNetworkIdentifier.registryId'</span><span class="p">);</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">exists</span><span class="p">){</span>
+    <span class="c1">// if (exists === true) {</span>
+    <span class="c1">// logic here...</span>
+    <span class="c1">//}</span>
+<span class="p">});</span>
+</code></pre></div>
 <h3 id="returns">Returns</h3>
 
 <p><code>Promise</code> - A promise that will be resolved with a boolean indicating whether the transaction registry exists.</p>
@@ -925,8 +1009,6 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </tr>
 </tbody></table>
 
-<p>No parameters</p>
-
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Determine whether an transaction registry exists</span>
 <span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
@@ -940,19 +1022,26 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="c1">//}</span>
 <span class="p">});</span>
 </code></pre></div>
-<hr>
-
 <h2 id="gethistorian">getHistorian(  )</h2>
 
 <p>Get the historian</p>
 
+<h3 id="example">Example</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the historian</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">getHistorian</span><span class="p">();</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">historian</span><span class="p">){</span>
+    <span class="c1">// Retrieved historian</span>
+<span class="p">});</span>
+</code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved to the {@link Historian}</p>
+<p><code>Promise</code> - A promise that will be resolved to the Historian</p>
 
 <h3 id="parameters">Parameters</h3>
-
-<p>No parameters</p>
 
 <p>No parameters</p>
 
@@ -967,19 +1056,26 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="c1">// Retrieved historian</span>
 <span class="p">});</span>
 </code></pre></div>
-<hr>
-
 <h2 id="getidentityregistry">getIdentityRegistry(  )</h2>
 
 <p>Get the identity registry.</p>
 
+<h3 id="example">Example</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the identity registry</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">getIdentityRegistry</span><span class="p">();</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">identityRegistry</span><span class="p">){</span>
+    <span class="c1">// Retrieved identity registry</span>
+<span class="p">});</span>
+</code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved to the {@link IdentityRegistry}</p>
+<p><code>Promise</code> - A promise that will be resolved to the IdentityRegistry</p>
 
 <h3 id="parameters">Parameters</h3>
-
-<p>No parameters</p>
 
 <p>No parameters</p>
 
@@ -994,12 +1090,18 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="c1">// Retrieved identity registry</span>
 <span class="p">});</span>
 </code></pre></div>
-<hr>
-
 <h2 id="connect-connectionprofile-businessnetwork-enrollmentid-enrollmentsecret-additionalconnectoptions">connect( connectionprofile, businessnetwork, enrollmentid, enrollmentsecret, additionalconnectoptions )</h2>
 
 <p>Connects to a business network using a connection profile, and authenticates to the Hyperledger Fabric.</p>
 
+<h3 id="example">Example</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Connect and log in to HLF</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="c1">// Connected</span>
+<span class="p">});</span>
+</code></pre></div>
 <h3 id="returns">Returns</h3>
 
 <p><code>Promise</code> - A promise to a BusinessNetworkDefinition that indicates the connection is complete</p>
@@ -1046,8 +1148,6 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </tr>
 </tbody></table>
 
-<p>No parameters</p>
-
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Connect and log in to HLF</span>
 <span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
@@ -1056,12 +1156,20 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="c1">// Connected</span>
 <span class="p">});</span>
 </code></pre></div>
-<hr>
-
 <h2 id="getregistry-fullyqualifiedname">getRegistry( fullyqualifiedname )</h2>
 
 <p>Given a fully qualified name, works out and looks up the registry that this resource will be found in. This only gives back the default registry - it does not look in any application defined registry.</p>
 
+<h3 id="example">Example</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Locate the registry for a fully qualififed name</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetwork</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="nx">sampleAssetRegistry</span> <span class="o">=</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">getRegistry</span><span class="p">(</span><span class="s1">'org.acme.sampleAsset'</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">sampleTransactionRegistry</span> <span class="o">=</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">getRegistry</span><span class="p">(</span><span class="s1">'org.acme.sampleTransaction'</span><span class="p">);</span>
+     <span class="kd">var</span> <span class="nx">sampleParticipantRegistry</span> <span class="o">=</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">getRegistry</span><span class="p">(</span><span class="s1">'org.acme.sampleParticipant'</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
 <h3 id="returns">Returns</h3>
 
 <p><code>Promise</code> - resolved with the registry that this fqn could be found in by default</p>
@@ -1084,8 +1192,6 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </tr>
 </tbody></table>
 
-<p>No parameters</p>
-
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Locate the registry for a fully qualififed name</span>
 <span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
@@ -1096,19 +1202,26 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
      <span class="kd">var</span> <span class="nx">sampleParticipantRegistry</span> <span class="o">=</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">getRegistry</span><span class="p">(</span><span class="s1">'org.acme.sampleParticipant'</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div>
-<hr>
-
 <h2 id="disconnect">disconnect(  )</h2>
 
 <p>Disconnects from the Hyperledger Fabric.</p>
 
+<h3 id="example">Example</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Disconnects from HLF</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">disconnect</span><span class="p">();</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="c1">// Disconnected.</span>
+<span class="p">});</span>
+</code></pre></div>
 <h3 id="returns">Returns</h3>
 
 <p><code>Promise</code> - A promise that will be resolved when the connection is terminated.</p>
 
 <h3 id="parameters">Parameters</h3>
-
-<p>No parameters</p>
 
 <p>No parameters</p>
 
@@ -1123,12 +1236,23 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="c1">// Disconnected.</span>
 <span class="p">});</span>
 </code></pre></div>
-<hr>
-
 <h2 id="submittransaction-transaction">submitTransaction( transaction )</h2>
 
 <p>Submit a transaction for processing by the currently connected business network.</p>
 
+<h3 id="example">Example</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Submits a transaction</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="nx">factory</span> <span class="o">=</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">getBusinessNetwork</span><span class="p">().</span><span class="nx">getFactory</span><span class="p">();</span>
+    <span class="kd">var</span> <span class="nx">transaction</span> <span class="o">=</span> <span class="nx">factory</span><span class="p">.</span><span class="nx">newTransaction</span><span class="p">(</span><span class="s1">'network.transactions'</span><span class="p">,</span> <span class="s1">'TransactionType'</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">submitTransaction</span><span class="p">(</span><span class="nx">transaction</span><span class="p">);</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="c1">// Submitted a transaction.</span>
+<span class="p">});</span>
+</code></pre></div>
 <h3 id="returns">Returns</h3>
 
 <p><code>Promise</code> - A promise that will be fulfilled when the transaction has been processed.</p>
@@ -1147,11 +1271,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 <td style="text-align: left"><strong>transaction</strong></td>
 <td style="text-align: left">Resource</td>
 <td style="text-align: left">false</td>
-<td style="text-align: left">The transaction to submit. Use {@link Factory#newTransaction newTransaction} to create this object.</td>
+<td style="text-align: left">The transaction to submit. Use Factory#newTransaction newTransaction to create this object.</td>
 </tr>
 </tbody></table>
-
-<p>No parameters</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Submits a transaction</span>
@@ -1166,13 +1288,28 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="c1">// Submitted a transaction.</span>
 <span class="p">});</span>
 </code></pre></div>
-<hr>
-
 <h2 id="buildquery-query">buildQuery( query )</h2>
 
 <p>Build a query ready for later execution. The specified query string must be written in the Composer query language.
 This functionality is Blockchain platform dependent. For example, when a Composer business network is deployed to Hyperledger Fabric v1.0, Hyperledger Fabric must be configured with the CouchDB database for the world state.</p>
 
+<h3 id="example">Example</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Build and execute a query.</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">query</span> <span class="o">=</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">buildQuery</span><span class="p">(</span><span class="s1">'SELECT org.acme.sample.SampleAsset WHERE (value == _$inputValue)'</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">query</span><span class="p">(</span><span class="nx">query</span><span class="p">,</span> <span class="p">{</span> <span class="na">inputValue</span><span class="p">:</span> <span class="s1">'blue'</span> <span class="p">})</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">assets</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">assets</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">asset</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// Process each asset.</span>
+    <span class="p">});</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Add optional error handling here.</span>
+  <span class="p">});</span>
+</code></pre></div>
 <h3 id="returns">Returns</h3>
 
 <p><code>Query</code> - The built query, which can be passed in a call to query.</p>
@@ -1195,8 +1332,6 @@ This functionality is Blockchain platform dependent. For example, when a Compose
 </tr>
 </tbody></table>
 
-<p>No parameters</p>
-
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Build and execute a query.</span>
 <span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
@@ -1214,16 +1349,30 @@ This functionality is Blockchain platform dependent. For example, when a Compose
     <span class="c1">// Add optional error handling here.</span>
   <span class="p">});</span>
 </code></pre></div>
-<hr>
-
 <h2 id="query-query-parameters">query( query, parameters )</h2>
 
 <p>Execute a query defined in a Composer query file, or execute a query built with buildQuery.
 This functionality is Blockchain platform dependent. For example, when a Composer business network is deployed to Hyperledger Fabric v1.0, Hyperledger Fabric must be configured with the CouchDB database for the world state.</p>
 
+<h3 id="example">Example</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Execute the query.</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">query</span><span class="p">(</span><span class="s1">'Q1'</span><span class="p">,</span> <span class="p">{</span> <span class="na">inputValue</span><span class="p">:</span> <span class="s1">'blue'</span> <span class="p">})</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">assets</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">assets</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">asset</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// Process each asset.</span>
+    <span class="p">});</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Add optional error handling here.</span>
+  <span class="p">});</span>
+</code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved with an array of {@link module:composer-common.Resource Resource} representing the resources returned by the query.</p>
+<p><code>Promise</code> - A promise that will be resolved with an array of module:composer-common.Resource Resource representing the resources returned by the query.</p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -1249,8 +1398,6 @@ This functionality is Blockchain platform dependent. For example, when a Compose
 </tr>
 </tbody></table>
 
-<p>No parameters</p>
-
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Execute the query.</span>
 <span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
@@ -1267,19 +1414,26 @@ This functionality is Blockchain platform dependent. For example, when a Compose
     <span class="c1">// Add optional error handling here.</span>
   <span class="p">});</span>
 </code></pre></div>
-<hr>
-
 <h2 id="ping">ping(  )</h2>
 
 <p>Test the connection to the runtime and verify that the version of the runtime is compatible with this level of the client node.js module.</p>
 
+<h3 id="example">Example</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Test the connection to the runtime</span>
+<span class="kd">var</span> <span class="nx">businessNetwork</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+<span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="s1">'businessNetworkIdentifier'</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">businessNetworkDefinition</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">ping</span><span class="p">();</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="c1">// Connection tested.</span>
+<span class="p">});</span>
+</code></pre></div>
 <h3 id="returns">Returns</h3>
 
 <p><code>Promise</code> - A promise that will be fulfilled when the connection has been tested. The promise will be rejected if the version is incompatible.</p>
 
 <h3 id="parameters">Parameters</h3>
-
-<p>No parameters</p>
 
 <p>No parameters</p>
 
@@ -1294,8 +1448,6 @@ This functionality is Blockchain platform dependent. For example, when a Compose
     <span class="c1">// Connection tested.</span>
 <span class="p">});</span>
 </code></pre></div>
-<hr>
-
 <h2 id="issueidentity-participant-identityname-options">issueIdentity( participant, identityname, options )</h2>
 
 <p>Issue an identity with the specified name and map it to the specified participant.</p>
@@ -1352,8 +1504,6 @@ This functionality is Blockchain platform dependent. For example, when a Compose
 </tr>
 </tbody></table>
 
-<hr>
-
 <h2 id="bindidentity-participant-certificate">bindIdentity( participant, certificate )</h2>
 
 <p>Bind an existing identity to the specified participant.</p>
@@ -1386,10 +1536,6 @@ This functionality is Blockchain platform dependent. For example, when a Compose
 </tr>
 </tbody></table>
 
-<p>No parameters</p>
-
-<hr>
-
 <h2 id="revokeidentity-identity">revokeIdentity( identity )</h2>
 
 <p>Revoke the specified identity by removing any existing mapping to a participant.</p>
@@ -1415,10 +1561,6 @@ This functionality is Blockchain platform dependent. For example, when a Compose
 <td style="text-align: left">The identity, or the identifier of the identity.</td>
 </tr>
 </tbody></table>
-
-<p>No parameters</p>
-
-<hr>
 
             
           </section>

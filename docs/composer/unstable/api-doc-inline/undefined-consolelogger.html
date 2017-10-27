@@ -77,7 +77,7 @@ ga('send', 'pageview');
           </div>
 
             <div class="search-form">
-              <form action="/composer/unstable/search.html" method="get">
+              <form action="/composer/unstable/search/search.html" method="get">
                 <!-- <label for="search-box">Search</label> -->
 
                 <input type="text" id="search-box"  class="search-box" name="query" placeholder="Search here...">
@@ -132,7 +132,7 @@ ga('send', 'pageview');
 <li><a href="../business-network/publishing-events.html">Emitting Events</a></li>
 <li><a href="../business-network/testing.html">Testing Business Networks</a></li>
 <li><a href="../business-network/bnd-publish.html">Publish Models or Business Network Definitions</a></li>
-<li><a href="../business-network/query.html">Using Filters and Queries with Business Network Data</a></li>
+<li><a href="../business-network/query.html">Using Queries and Filters with Business Network Data</a></li>
 <li><a href="../business-network/programmatic-access-control.html">Programmatic access control</a></li>
 <li><a href="../business-network/historian.html">Hyperledger Composer Historian</a></li>
 </ul></li>
@@ -266,26 +266,24 @@ ga('send', 'pageview');
 
 <table><thead>
 <tr>
-<th style="text-align: left">Returns</th>
 <th style="text-align: left">Name</th>
+<th style="text-align: left">Returns</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
+<td style="text-align: left"><a href="#format-string-string-">format</a></td>
 <td style="text-align: left"><code>string</code></td>
-<td style="text-align: left"><a href="#format-method-msg-args">format</a></td>
 <td style="text-align: left">Called to format.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#log-string-string-string-">log</a></td>
 <td style="text-align: left"><code>void</code></td>
-<td style="text-align: left"><a href="#log-level-method-msg-args">log</a></td>
 <td style="text-align: left">Called to log.</td>
 </tr>
 </tbody></table>
 
-<hr>
-
-<h2 id="method-details">Method Details</h2>
+<h1 id="method-details">Method Details</h1>
 
 <h2 id="format-method-msg-args">format( method, msg, args )</h2>
 
@@ -324,10 +322,6 @@ ga('send', 'pageview');
 <td style="text-align: left">The arguments.</td>
 </tr>
 </tbody></table>
-
-<p>No parameters</p>
-
-<hr>
 
 <h2 id="log-level-method-msg-args">log( level, method, msg, args )</h2>
 
@@ -368,10 +362,6 @@ ga('send', 'pageview');
 <td style="text-align: left">The arguments.</td>
 </tr>
 </tbody></table>
-
-<p>No parameters</p>
-
-<hr>
 
             
           </section>

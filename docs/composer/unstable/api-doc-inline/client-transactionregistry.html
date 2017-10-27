@@ -77,7 +77,7 @@ ga('send', 'pageview');
           </div>
 
             <div class="search-form">
-              <form action="/composer/unstable/search.html" method="get">
+              <form action="/composer/unstable/search/search.html" method="get">
                 <!-- <label for="search-box">Search</label> -->
 
                 <input type="text" id="search-box"  class="search-box" name="query" placeholder="Search here...">
@@ -132,7 +132,7 @@ ga('send', 'pageview');
 <li><a href="../business-network/publishing-events.html">Emitting Events</a></li>
 <li><a href="../business-network/testing.html">Testing Business Networks</a></li>
 <li><a href="../business-network/bnd-publish.html">Publish Models or Business Network Definitions</a></li>
-<li><a href="../business-network/query.html">Using Filters and Queries with Business Network Data</a></li>
+<li><a href="../business-network/query.html">Using Queries and Filters with Business Network Data</a></li>
 <li><a href="../business-network/programmatic-access-control.html">Programmatic access control</a></li>
 <li><a href="../business-network/historian.html">Hyperledger Composer Historian</a></li>
 </ul></li>
@@ -272,31 +272,34 @@ ga('send', 'pageview');
 
 <table><thead>
 <tr>
-<th style="text-align: left">Returns</th>
 <th style="text-align: left">Name</th>
+<th style="text-align: left">Returns</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
+<td style="text-align: left"><a href="#addtransactionregistry-securitycontext-string-string-modelmanager-factory-serializer">addTransactionRegistry</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#addtransactionregistry-securitycontext-id-name-modelmanager-factory-serializer">addTransactionRegistry</a></td>
 <td style="text-align: left">Add a new transaction registry.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#getalltransactionregistries-securitycontext-modelmanager-factory-serializer-businessnetworkconnection-boolean">getAllTransactionRegistries</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#getalltransactionregistries-securitycontext-modelmanager-factory-serializer-bnc-systemregistry">getAllTransactionRegistries</a></td>
 <td style="text-align: left">Get a list of all existing transaction registries.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#gettransactionregistry-securitycontext-string-modelmanager-factory-serializer">getTransactionRegistry</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#gettransactionregistry-securitycontext-id-modelmanager-factory-serializer">getTransactionRegistry</a></td>
 <td style="text-align: left">Get an existing transaction registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#transactionregistryexists-securitycontext-string-modelmanager-factory-serializer">transactionRegistryExists</a></td>
+<td style="text-align: left"><code>Promise</code></td>
+<td style="text-align: left">Determine whether an registry exists.</td>
 </tr>
 </tbody></table>
 
-<hr>
-
-<h2 id="method-details">Method Details</h2>
+<h1 id="method-details">Method Details</h1>
 
 <h2 id="getalltransactionregistries-securitycontext-modelmanager-factory-serializer-bnc-systemregistry">getAllTransactionRegistries( securitycontext, modelmanager, factory, serializer, bnc, systemregistry )</h2>
 
@@ -304,7 +307,7 @@ ga('send', 'pageview');
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved with a list of {@link TransactionRegistry} instances representing the transaction registries.</p>
+<p><code>Promise</code> - A promise that will be resolved with a list of TransactionRegistry instances representing the transaction registries.</p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -354,17 +357,13 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<p>No parameters</p>
-
-<hr>
-
 <h2 id="gettransactionregistry-securitycontext-id-modelmanager-factory-serializer">getTransactionRegistry( securitycontext, id, modelmanager, factory, serializer )</h2>
 
 <p>Get an existing transaction registry.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved with a {@link TransactionRegistry} instance representing the transaction registry.</p>
+<p><code>Promise</code> - A promise that will be resolved with a TransactionRegistry instance representing the transaction registry.</p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -408,17 +407,13 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<p>No parameters</p>
-
-<hr>
-
 <h2 id="addtransactionregistry-securitycontext-id-name-modelmanager-factory-serializer">addTransactionRegistry( securitycontext, id, name, modelmanager, factory, serializer )</h2>
 
 <p>Add a new transaction registry.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved with a {@link TransactionRegistry} instance representing the new transaction registry.</p>
+<p><code>Promise</code> - A promise that will be resolved with a TransactionRegistry instance representing the new transaction registry.</p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -468,9 +463,55 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<p>No parameters</p>
+<h2 id="transactionregistryexists-securitycontext-id-modelmanager-factory-serializer">transactionRegistryExists( securitycontext, id, modelmanager, factory, serializer )</h2>
 
-<hr>
+<p>Determine whether an registry exists.</p>
+
+<h3 id="returns">Returns</h3>
+
+<p><code>Promise</code> - A promise that will be resolved with a boolean indicating whether the asset registry exists</p>
+
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Optional</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><strong>securityContext</strong></td>
+<td style="text-align: left">SecurityContext</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The user&#39;s security context.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>id</strong></td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The unique identifier of the asset registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>modelManager</strong></td>
+<td style="text-align: left">ModelManager</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The ModelManager to use for this asset registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>factory</strong></td>
+<td style="text-align: left">Factory</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The factory to use for this asset registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>serializer</strong></td>
+<td style="text-align: left">Serializer</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The Serializer to use for this asset registry.</td>
+</tr>
+</tbody></table>
 
             
           </section>

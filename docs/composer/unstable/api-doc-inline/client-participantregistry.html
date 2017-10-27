@@ -77,7 +77,7 @@ ga('send', 'pageview');
           </div>
 
             <div class="search-form">
-              <form action="/composer/unstable/search.html" method="get">
+              <form action="/composer/unstable/search/search.html" method="get">
                 <!-- <label for="search-box">Search</label> -->
 
                 <input type="text" id="search-box"  class="search-box" name="query" placeholder="Search here...">
@@ -132,7 +132,7 @@ ga('send', 'pageview');
 <li><a href="../business-network/publishing-events.html">Emitting Events</a></li>
 <li><a href="../business-network/testing.html">Testing Business Networks</a></li>
 <li><a href="../business-network/bnd-publish.html">Publish Models or Business Network Definitions</a></li>
-<li><a href="../business-network/query.html">Using Filters and Queries with Business Network Data</a></li>
+<li><a href="../business-network/query.html">Using Queries and Filters with Business Network Data</a></li>
 <li><a href="../business-network/programmatic-access-control.html">Programmatic access control</a></li>
 <li><a href="../business-network/historian.html">Hyperledger Composer Historian</a></li>
 </ul></li>
@@ -272,16 +272,327 @@ ga('send', 'pageview');
 
 <table><thead>
 <tr>
-<th style="text-align: left">Returns</th>
 <th style="text-align: left">Name</th>
+<th style="text-align: left">Returns</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
+<tr>
+<td style="text-align: left"><a href="#addparticipantregistry-securitycontext-string-string-modelmanager-factory-serializer-businessnetworkconnection">addParticipantRegistry</a></td>
+<td style="text-align: left"><code>Promise</code></td>
+<td style="text-align: left">Add a new participant registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#constructor-string-string-securitycontext-modelmanager-factory-serializer-businessnetworkconnection">constructor</a></td>
+<td style="text-align: left"><code>void</code></td>
+<td style="text-align: left">Create an participant registry. <p> <strong>Note: Only to be called by framework code. Applications should retrieve instances from BusinessNetworkConnection</strong> </p></td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#getallparticipantregistries-securitycontext-modelmanager-factory-serializer-businessnetworkconnection-boolean">getAllParticipantRegistries</a></td>
+<td style="text-align: left"><code>Promise</code></td>
+<td style="text-align: left">Get a list of all existing participant registries.</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#getparticipantregistry-securitycontext-string-modelmanager-factory-serializer-businessnetworkconnection">getParticipantRegistry</a></td>
+<td style="text-align: left"><code>Promise</code></td>
+<td style="text-align: left">Get an existing participant registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#participantregistryexists-securitycontext-string-modelmanager-factory-serializer-businessnetworkconnection">participantRegistryExists</a></td>
+<td style="text-align: left"><code>Promise</code></td>
+<td style="text-align: left">Determine whether a participant registry exists.</td>
+</tr>
 </tbody></table>
 
-<hr>
+<h1 id="method-details">Method Details</h1>
 
-<h2 id="method-details">Method Details</h2>
+<h2 id="getallparticipantregistries-securitycontext-modelmanager-factory-serializer-bnc-includesystem">getAllParticipantRegistries( securitycontext, modelmanager, factory, serializer, bnc, includesystem )</h2>
+
+<p>Get a list of all existing participant registries.</p>
+
+<h3 id="returns">Returns</h3>
+
+<p><code>Promise</code> - A promise that will be resolved with a list of ParticipantRegistry instances representing the participant registries.</p>
+
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Optional</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><strong>securityContext</strong></td>
+<td style="text-align: left">SecurityContext</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The user&#39;s security context.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>modelManager</strong></td>
+<td style="text-align: left">ModelManager</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The ModelManager to use for this participant registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>factory</strong></td>
+<td style="text-align: left">Factory</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The factory to use for this participant registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>serializer</strong></td>
+<td style="text-align: left">Serializer</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The Serializer to use for this participant registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>bnc</strong></td>
+<td style="text-align: left">BusinessNetworkConnection</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">BusinessNetworkConnection to use</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>includeSystem</strong></td>
+<td style="text-align: left">Boolean</td>
+<td style="text-align: left">true</td>
+<td style="text-align: left">Should system registries be included? (optional, default to false)</td>
+</tr>
+</tbody></table>
+
+<h2 id="getparticipantregistry-securitycontext-id-modelmanager-factory-serializer-bnc">getParticipantRegistry( securitycontext, id, modelmanager, factory, serializer, bnc )</h2>
+
+<p>Get an existing participant registry.</p>
+
+<h3 id="returns">Returns</h3>
+
+<p><code>Promise</code> - A promise that will be resolved with a ParticipantRegistry instance representing the participant registry.</p>
+
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Optional</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><strong>securityContext</strong></td>
+<td style="text-align: left">SecurityContext</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The user&#39;s security context.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>id</strong></td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The unique identifier of the participant registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>modelManager</strong></td>
+<td style="text-align: left">ModelManager</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The ModelManager to use for this participant registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>factory</strong></td>
+<td style="text-align: left">Factory</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The factory to use for this participant registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>serializer</strong></td>
+<td style="text-align: left">Serializer</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The Serializer to use for this participant registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>bnc</strong></td>
+<td style="text-align: left">BusinessNetworkConnection</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">BusinessNetworkConnection to use</td>
+</tr>
+</tbody></table>
+
+<h2 id="participantregistryexists-securitycontext-id-modelmanager-factory-serializer-bnc">participantRegistryExists( securitycontext, id, modelmanager, factory, serializer, bnc )</h2>
+
+<p>Determine whether a participant registry exists.</p>
+
+<h3 id="returns">Returns</h3>
+
+<p><code>Promise</code> - A promise that will be resolved with a boolean indicating whether the asset registry exists</p>
+
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Optional</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><strong>securityContext</strong></td>
+<td style="text-align: left">SecurityContext</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The user&#39;s security context.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>id</strong></td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The unique identifier of the asset registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>modelManager</strong></td>
+<td style="text-align: left">ModelManager</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The ModelManager to use for this asset registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>factory</strong></td>
+<td style="text-align: left">Factory</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The factory to use for this asset registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>serializer</strong></td>
+<td style="text-align: left">Serializer</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The Serializer to use for this asset registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>bnc</strong></td>
+<td style="text-align: left">BusinessNetworkConnection</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">BusinessNetworkConnection to use</td>
+</tr>
+</tbody></table>
+
+<h2 id="addparticipantregistry-securitycontext-id-name-modelmanager-factory-serializer-bnc">addParticipantRegistry( securitycontext, id, name, modelmanager, factory, serializer, bnc )</h2>
+
+<p>Add a new participant registry.</p>
+
+<h3 id="returns">Returns</h3>
+
+<p><code>Promise</code> - A promise that will be resolved with a ParticipantRegistry instance representing the new participant registry.</p>
+
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Optional</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><strong>securityContext</strong></td>
+<td style="text-align: left">SecurityContext</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The user&#39;s security context.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>id</strong></td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The unique identifier of the participant registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>name</strong></td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The name of the participant registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>modelManager</strong></td>
+<td style="text-align: left">ModelManager</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The ModelManager to use for this participant registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>factory</strong></td>
+<td style="text-align: left">Factory</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The factory to use for this participant registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>serializer</strong></td>
+<td style="text-align: left">Serializer</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The Serializer to use for this participant registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>bnc</strong></td>
+<td style="text-align: left">BusinessNetworkConnection</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">BusinessNetworkConnection to use</td>
+</tr>
+</tbody></table>
+
+<h2 id="new-participantregistry">new ParticipantRegistry()</h2>
+
+<p>Create an participant registry. <p> <strong>Note: Only to be called by framework code. Applications should retrieve instances from BusinessNetworkConnection</strong> </p></p>
+
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Optional</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><strong>id</strong></td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The unique identifier of the participant registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>name</strong></td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The display name for the participant registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>securityContext</strong></td>
+<td style="text-align: left">SecurityContext</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The security context to use for this participant registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>modelManager</strong></td>
+<td style="text-align: left">ModelManager</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The ModelManager to use for this participant registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>factory</strong></td>
+<td style="text-align: left">Factory</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The factory to use for this participant registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>serializer</strong></td>
+<td style="text-align: left">Serializer</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The Serializer to use for this participant registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>bnc</strong></td>
+<td style="text-align: left">BusinessNetworkConnection</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">BusinessNetworkConnection to use</td>
+</tr>
+</tbody></table>
 
             
           </section>

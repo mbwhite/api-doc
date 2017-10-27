@@ -77,7 +77,7 @@ ga('send', 'pageview');
           </div>
 
             <div class="search-form">
-              <form action="/composer/unstable/search.html" method="get">
+              <form action="/composer/unstable/search/search.html" method="get">
                 <!-- <label for="search-box">Search</label> -->
 
                 <input type="text" id="search-box"  class="search-box" name="query" placeholder="Search here...">
@@ -132,7 +132,7 @@ ga('send', 'pageview');
 <li><a href="../business-network/publishing-events.html">Emitting Events</a></li>
 <li><a href="../business-network/testing.html">Testing Business Networks</a></li>
 <li><a href="../business-network/bnd-publish.html">Publish Models or Business Network Definitions</a></li>
-<li><a href="../business-network/query.html">Using Filters and Queries with Business Network Data</a></li>
+<li><a href="../business-network/query.html">Using Queries and Filters with Business Network Data</a></li>
 <li><a href="../business-network/programmatic-access-control.html">Programmatic access control</a></li>
 <li><a href="../business-network/historian.html">Hyperledger Composer Historian</a></li>
 </ul></li>
@@ -283,17 +283,17 @@ Options:
 
 <ul>
 <li><p>Using the <code>-o</code> option, the endorsement policy can be sent as a single-line JSON string as follows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">composer network deploy -o endorsementPolicy='{"identities": [.... }'
+<div class="highlight"><pre><code class="language-" data-lang="">composer network start -o endorsementPolicy='{"identities": [.... }'
 </code></pre></div></li>
 <li><p>Using the <code>-o</code> option, the endorsement policy can be sent as a file path as follows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">composer network deploy -o endorsementPolicyFile=/path/to/file/endorsementPolicy.json
+<div class="highlight"><pre><code class="language-" data-lang="">composer network start -o endorsementPolicyFile=/path/to/file/endorsementPolicy.json
 </code></pre></div>
 <p>In this case, the endorsement policy file should follow this format:</p>
 <div class="highlight"><pre><code class="language-" data-lang=""><span class="p">{</span><span class="nt">"identities"</span><span class="p">:[</span><span class="err">...</span><span class="p">],</span><span class="w">
     </span><span class="nt">"policy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">}}</span><span class="w">
 </span></code></pre></div></li>
 <li><p>Using the <code>-O</code> option, the endorsement policy can be sent as a file path as follows:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">composer network deploy -O /path/to/file/options.json
+<div class="highlight"><pre><code class="language-" data-lang="">composer network start -O /path/to/file/options.json
 </code></pre></div>
 <p>In this case, the options file should follow this format:</p>
 <div class="highlight"><pre><code class="language-" data-lang=""><span class="w">        </span><span class="p">{</span><span class="nt">"endorsementPolicy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"Identities"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="err">.</span><span class="w">

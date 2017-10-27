@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
   
-    <title>Using Filters and Queries with Business Network Data | Hyperledger Composer</title>
+    <title>Using Queries and Filters with Business Network Data | Hyperledger Composer</title>
   
   <meta name="viewport" content="width=device-width">
   <link rel="icon" type="image/x-icon" href="/composer/unstable/favicon.ico">
@@ -77,7 +77,7 @@ ga('send', 'pageview');
           </div>
 
             <div class="search-form">
-              <form action="/composer/unstable/search.html" method="get">
+              <form action="/composer/unstable/search/search.html" method="get">
                 <!-- <label for="search-box">Search</label> -->
 
                 <input type="text" id="search-box"  class="search-box" name="query" placeholder="Search here...">
@@ -90,7 +90,7 @@ ga('send', 'pageview');
             </div>
 
           <div class="docs-current-page-grid">
-          <p>Using Filters and Queries with Business Network Data</p>
+          <p>Using Queries and Filters with Business Network Data</p>
           </div>
 
           <nav class="context-nav">
@@ -132,7 +132,7 @@ ga('send', 'pageview');
 <li><a href="../business-network/publishing-events.html">Emitting Events</a></li>
 <li><a href="../business-network/testing.html">Testing Business Networks</a></li>
 <li><a href="../business-network/bnd-publish.html">Publish Models or Business Network Definitions</a></li>
-<li><a href="../business-network/query.html">Using Filters and Queries with Business Network Data</a></li>
+<li><a href="../business-network/query.html">Using Queries and Filters with Business Network Data</a></li>
 <li><a href="../business-network/programmatic-access-control.html">Programmatic access control</a></li>
 <li><a href="../business-network/historian.html">Hyperledger Composer Historian</a></li>
 </ul></li>
@@ -258,7 +258,7 @@ ga('send', 'pageview');
 
 <p>Note: When using the Hyperledger Fabric v1.0 runtime Hyperledger Fabric must be configured to use CouchDB persistence.</p>
 
-<p>Filters are similar to queries, but use the LoopBack filter syntax, and can only be sent using the Hyperledger Composer REST API. Currently, only the <code>WHERE</code> LoopBack filter is supported. The supported operators within <code>WHERE</code> are: <strong>=</strong>, <strong>and</strong>, <strong>or</strong>, <strong>gt</strong>, <strong>gte</strong>, <strong>lt</strong>, <strong>lte</strong>, <strong>between</strong>, <strong>neq</strong>. Filters are submitted using a <code>GET</code> call against an asset type, participant type, or transaction type; the filter is then supplied as a parameter. Filters return the results from the specified class, and will not return results from classes extending the specified class.</p>
+<p>Filters are similar to queries, but use the LoopBack filter syntax, and can only be sent using the Hyperledger Composer REST API. Currently, only the <code>WHERE</code> LoopBack filter is supported. The supported operators within <code>WHERE</code> are: <strong>=</strong>, <strong>and</strong>, <strong>or</strong>, <strong>gt</strong>, <strong>gte</strong>, <strong>lt</strong>, <strong>lte</strong>, <strong>neq</strong>. Filters are submitted using a <code>GET</code> call against an asset type, participant type, or transaction type; the filter is then supplied as a parameter. Filters return the results from the specified class, and will not return results from classes extending the specified class.</p>
 
 <h2 id="types-of-queries">Types of Queries</h2>
 
@@ -316,7 +316,7 @@ ga('send', 'pageview');
 </span></code></pre></div>
 <p><em>Please note</em>: Only the top level <code>WHERE</code> operator can have more than two operands.</p>
 
-<p>Currently, only the <code>WHERE</code> LoopBack filter is supported. The supported operators within <code>WHERE</code> are: <strong>=</strong>, <strong>and</strong>, <strong>or</strong>, <strong>gt</strong>, <strong>gte</strong>, <strong>lt</strong>, <strong>lte</strong>, <strong>between</strong>, <strong>neq</strong>. Filters can combine multiple operators, in the following example, an <strong>and</strong> operator is nested within an <strong>or</strong> operator.</p>
+<p>Currently, only the <code>WHERE</code> LoopBack filter is supported. The supported operators within <code>WHERE</code> are: <strong>=</strong>, <strong>and</strong>, <strong>or</strong>, <strong>gt</strong>, <strong>gte</strong>, <strong>lt</strong>, <strong>lte</strong>, <strong>neq</strong>. Filters can combine multiple operators, in the following example, an <strong>and</strong> operator is nested within an <strong>or</strong> operator.</p>
 <div class="highlight"><pre><code class="language-" data-lang=""><span class="p">{</span><span class="nt">"where"</span><span class="p">:{</span><span class="nt">"or"</span><span class="p">:[{</span><span class="nt">"and"</span><span class="p">:[{</span><span class="nt">"field1"</span><span class="p">:</span><span class="s2">"foo"</span><span class="p">},{</span><span class="nt">"field2"</span><span class="p">:</span><span class="s2">"bar"</span><span class="p">}]},{</span><span class="nt">"field3"</span><span class="p">:</span><span class="s2">"foobar"</span><span class="p">}]}}</span><span class="w">
 </span></code></pre></div>
 <p>The <strong>between</strong> operator returns values between the given range. It accepts numbers, datetime values, and strings. If supplied with strings, the <strong>between</strong> operator returns results between the supplied strings alphabetically. In the example below, the filter will return all resources where the driver property is alphabetically between <em>a</em> and <em>c</em>, inclusively.</p>

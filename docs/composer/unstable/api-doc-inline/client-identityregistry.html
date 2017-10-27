@@ -77,7 +77,7 @@ ga('send', 'pageview');
           </div>
 
             <div class="search-form">
-              <form action="/composer/unstable/search.html" method="get">
+              <form action="/composer/unstable/search/search.html" method="get">
                 <!-- <label for="search-box">Search</label> -->
 
                 <input type="text" id="search-box"  class="search-box" name="query" placeholder="Search here...">
@@ -132,7 +132,7 @@ ga('send', 'pageview');
 <li><a href="../business-network/publishing-events.html">Emitting Events</a></li>
 <li><a href="../business-network/testing.html">Testing Business Networks</a></li>
 <li><a href="../business-network/bnd-publish.html">Publish Models or Business Network Definitions</a></li>
-<li><a href="../business-network/query.html">Using Filters and Queries with Business Network Data</a></li>
+<li><a href="../business-network/query.html">Using Queries and Filters with Business Network Data</a></li>
 <li><a href="../business-network/programmatic-access-control.html">Programmatic access control</a></li>
 <li><a href="../business-network/historian.html">Hyperledger Composer Historian</a></li>
 </ul></li>
@@ -272,21 +272,19 @@ ga('send', 'pageview');
 
 <table><thead>
 <tr>
-<th style="text-align: left">Returns</th>
 <th style="text-align: left">Name</th>
+<th style="text-align: left">Returns</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left"><a href="#getidentityregistry-securitycontext-modelmanager-factory-serializer">getIdentityRegistry</a></td>
+<td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Get an existing identity registry.</td>
 </tr>
 </tbody></table>
 
-<hr>
-
-<h2 id="method-details">Method Details</h2>
+<h1 id="method-details">Method Details</h1>
 
 <h2 id="getidentityregistry-securitycontext-modelmanager-factory-serializer">getIdentityRegistry( securitycontext, modelmanager, factory, serializer )</h2>
 
@@ -294,7 +292,7 @@ ga('send', 'pageview');
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved with a {@link IdentityRegistry} instance representing the identity registry.</p>
+<p><code>Promise</code> - A promise that will be resolved with a IdentityRegistry instance representing the identity registry.</p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -331,10 +329,6 @@ ga('send', 'pageview');
 <td style="text-align: left">The Serializer to use for this identity registry.</td>
 </tr>
 </tbody></table>
-
-<p>No parameters</p>
-
-<hr>
 
             
           </section>

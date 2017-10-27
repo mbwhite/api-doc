@@ -77,7 +77,7 @@ ga('send', 'pageview');
           </div>
 
             <div class="search-form">
-              <form action="/composer/unstable/search.html" method="get">
+              <form action="/composer/unstable/search/search.html" method="get">
                 <!-- <label for="search-box">Search</label> -->
 
                 <input type="text" id="search-box"  class="search-box" name="query" placeholder="Search here...">
@@ -132,7 +132,7 @@ ga('send', 'pageview');
 <li><a href="../business-network/publishing-events.html">Emitting Events</a></li>
 <li><a href="../business-network/testing.html">Testing Business Networks</a></li>
 <li><a href="../business-network/bnd-publish.html">Publish Models or Business Network Definitions</a></li>
-<li><a href="../business-network/query.html">Using Filters and Queries with Business Network Data</a></li>
+<li><a href="../business-network/query.html">Using Queries and Filters with Business Network Data</a></li>
 <li><a href="../business-network/programmatic-access-control.html">Programmatic access control</a></li>
 <li><a href="../business-network/historian.html">Hyperledger Composer Historian</a></li>
 </ul></li>
@@ -267,71 +267,317 @@ ga('send', 'pageview');
 
 <table><thead>
 <tr>
-<th style="text-align: left">Returns</th>
 <th style="text-align: left">Name</th>
+<th style="text-align: left">Returns</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left"><a href="#add-resource">add</a></td>
+<td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Adds a new resource to the registry.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#addall-resource%5B%5D">addAll</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#addall-resources">addAll</a></td>
 <td style="text-align: left">Adds a list of new resources to the registry.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#addregistry-securitycontext-string-string-string">addRegistry</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#exists-id">exists</a></td>
+<td style="text-align: left">Add a new asset registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#constructor-string-string-string-securitycontext-modelmanager-factory-serializer-businessnetworkconnection">constructor</a></td>
+<td style="text-align: left"><code>void</code></td>
+<td style="text-align: left">Create a registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#exists-string">exists</a></td>
+<td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Determines whether a specific resource exists in the registry.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#existsregistry-securitycontext-string-string">existsRegistry</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#get-id">get</a></td>
+<td style="text-align: left">Determines whether a registry exists.</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#get-string">get</a></td>
+<td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Get a specific resource in the registry.</td>
 </tr>
 <tr>
-<td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left"><a href="#getall">getAll</a></td>
+<td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Get all of the resources in the registry.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#getallregistries-securitycontext-string-boolean">getAllRegistries</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#remove-resource">remove</a></td>
+<td style="text-align: left">Get a list of all existing registries.</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#getregistry-securitycontext-string-string">getRegistry</a></td>
+<td style="text-align: left"><code>Promise</code></td>
+<td style="text-align: left">Get an existing registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#remove">remove</a></td>
+<td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Remove an asset with a given type and id from the registry.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#removeall">removeAll</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#removeall-resources">removeAll</a></td>
 <td style="text-align: left">Removes a list of resources from the registry.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#resolve-string">resolve</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#resolve-id">resolve</a></td>
-<td style="text-align: left">Get a specific resource in the registry, and resolve all of its relationships to other assets, participants, and transactions. The result is a JavaScript object, and should only be used for visualization purposes. You cannot use the {@link add} or {@link update} functions with a resolved resource.</td>
+<td style="text-align: left">Get a specific resource in the registry, and resolve all of its relationships to other assets, participants, and transactions. The result is a JavaScript object, and should only be used for visualization purposes. You cannot use the add} or {@link update functions with a resolved resource.</td>
 </tr>
 <tr>
-<td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left"><a href="#resolveall">resolveAll</a></td>
-<td style="text-align: left">Get all of the resources in the registry, and resolve all of their relationships to other assets, participants, and transactions. The result is a JavaScript object, and should only be used for visualization purposes. You cannot use the {@link add} or {@link update} functions with a resolved resource.</td>
+<td style="text-align: left"><code>Promise</code></td>
+<td style="text-align: left">Get all of the resources in the registry, and resolve all of their relationships to other assets, participants, and transactions. The result is a JavaScript object, and should only be used for visualization purposes. You cannot use the add} or {@link update functions with a resolved resource.</td>
 </tr>
 <tr>
-<td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left"><a href="#update-resource">update</a></td>
+<td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Updates a resource in the registry.</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="#updateall-resource%5B%5D">updateAll</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left"><a href="#updateall-resources">updateAll</a></td>
 <td style="text-align: left">Updates a list of resources in the registry.</td>
 </tr>
 </tbody></table>
 
-<hr>
+<h1 id="method-details">Method Details</h1>
 
-<h2 id="method-details">Method Details</h2>
+<h2 id="getallregistries-securitycontext-registrytype-includesystem">getAllRegistries( securitycontext, registrytype, includesystem )</h2>
+
+<p>Get a list of all existing registries.</p>
+
+<h3 id="returns">Returns</h3>
+
+<p><code>Promise</code> - A promise that will be resolved with an array of JSON objects representing the registries.</p>
+
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Optional</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><strong>securityContext</strong></td>
+<td style="text-align: left">SecurityContext</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The user&#39;s security context.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>registryType</strong></td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The type of this registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>includeSystem</strong></td>
+<td style="text-align: left">boolean</td>
+<td style="text-align: left">true</td>
+<td style="text-align: left">True if system registries should be included (optional default is false)</td>
+</tr>
+</tbody></table>
+
+<h2 id="getregistry-securitycontext-registrytype-id">getRegistry( securitycontext, registrytype, id )</h2>
+
+<p>Get an existing registry.</p>
+
+<h3 id="returns">Returns</h3>
+
+<p><code>Promise</code> - A promise that will be resolved with a JSON object representing the registry.</p>
+
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Optional</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><strong>securityContext</strong></td>
+<td style="text-align: left">SecurityContext</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The user&#39;s security context.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>registryType</strong></td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The type of this registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>id</strong></td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The unique identifier of the registry.</td>
+</tr>
+</tbody></table>
+
+<h2 id="existsregistry-securitycontext-registrytype-id">existsRegistry( securitycontext, registrytype, id )</h2>
+
+<p>Determines whether a registry exists.</p>
+
+<h3 id="returns">Returns</h3>
+
+<p><code>Promise</code> - A promise that will be resolved with true/false depending on whether the registry exists</p>
+
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Optional</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><strong>securityContext</strong></td>
+<td style="text-align: left">SecurityContext</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The user&#39;s security context.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>registryType</strong></td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The type of this registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>id</strong></td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The unique identifier of the registry.</td>
+</tr>
+</tbody></table>
+
+<h2 id="addregistry-securitycontext-registrytype-id-name">addRegistry( securitycontext, registrytype, id, name )</h2>
+
+<p>Add a new asset registry.</p>
+
+<h3 id="returns">Returns</h3>
+
+<p><code>Promise</code> - A promise that will be resolved with a JSON object representing the registry.</p>
+
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Optional</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><strong>securityContext</strong></td>
+<td style="text-align: left">SecurityContext</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The user&#39;s security context.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>registryType</strong></td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The type of this registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>id</strong></td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The unique identifier of the registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>name</strong></td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The name of the registry.</td>
+</tr>
+</tbody></table>
+
+<h2 id="new-registry">new Registry()</h2>
+
+<p>Create a registry.
+<strong>Note: Only to be called by framework code. Applications should retrieve instances from BusinessNetworkConnection</strong> </p></p>
+
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Optional</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><strong>registryType</strong></td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The type of this registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>id</strong></td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The unique identifier of the registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>name</strong></td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The display name for the registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>securityContext</strong></td>
+<td style="text-align: left">SecurityContext</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The users security context.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>modelManager</strong></td>
+<td style="text-align: left">ModelManager</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The ModelManager to use for this registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>factory</strong></td>
+<td style="text-align: left">Factory</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The factory to use for this registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>serializer</strong></td>
+<td style="text-align: left">Serializer</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">The Serializer to use for this registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>bnc</strong></td>
+<td style="text-align: left">BusinessNetworkConnection</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">Instance of the BusinessNetworkConnection TODO: Rationalize the bnc with the other objects - as the bnc contains these other arguments</td>
+</tr>
+</tbody></table>
 
 <h2 id="addall-resources">addAll( resources )</h2>
 
@@ -359,10 +605,6 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<p>No parameters</p>
-
-<hr>
-
 <h2 id="add-resource">add( resource )</h2>
 
 <p>Adds a new resource to the registry.</p>
@@ -388,10 +630,6 @@ ga('send', 'pageview');
 <td style="text-align: left">The resource to be added to the registry.</td>
 </tr>
 </tbody></table>
-
-<p>No parameters</p>
-
-<hr>
 
 <h2 id="updateall-resources">updateAll( resources )</h2>
 
@@ -419,10 +657,6 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<p>No parameters</p>
-
-<hr>
-
 <h2 id="update-resource">update( resource )</h2>
 
 <p>Updates a resource in the registry.</p>
@@ -448,10 +682,6 @@ ga('send', 'pageview');
 <td style="text-align: left">The resource to be updated in the registry.</td>
 </tr>
 </tbody></table>
-
-<p>No parameters</p>
-
-<hr>
 
 <h2 id="removeall-resources">removeAll( resources )</h2>
 
@@ -479,10 +709,6 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<p>No parameters</p>
-
-<hr>
-
 <h2 id="remove-resource">remove( resource )</h2>
 
 <p>Remove an asset with a given type and id from the registry.</p>
@@ -509,10 +735,6 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<p>No parameters</p>
-
-<hr>
-
 <h2 id="getall">getAll(  )</h2>
 
 <p>Get all of the resources in the registry.</p>
@@ -524,10 +746,6 @@ ga('send', 'pageview');
 <h3 id="parameters">Parameters</h3>
 
 <p>No parameters</p>
-
-<p>No parameters</p>
-
-<hr>
 
 <h2 id="get-id">get( id )</h2>
 
@@ -555,10 +773,6 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<p>No parameters</p>
-
-<hr>
-
 <h2 id="exists-id">exists( id )</h2>
 
 <p>Determines whether a specific resource exists in the registry.</p>
@@ -585,13 +799,9 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<p>No parameters</p>
-
-<hr>
-
 <h2 id="resolveall">resolveAll(  )</h2>
 
-<p>Get all of the resources in the registry, and resolve all of their relationships to other assets, participants, and transactions. The result is a JavaScript object, and should only be used for visualization purposes. You cannot use the {@link add} or {@link update} functions with a resolved resource.</p>
+<p>Get all of the resources in the registry, and resolve all of their relationships to other assets, participants, and transactions. The result is a JavaScript object, and should only be used for visualization purposes. You cannot use the add} or {@link update functions with a resolved resource.</p>
 
 <h3 id="returns">Returns</h3>
 
@@ -601,13 +811,9 @@ ga('send', 'pageview');
 
 <p>No parameters</p>
 
-<p>No parameters</p>
-
-<hr>
-
 <h2 id="resolve-id">resolve( id )</h2>
 
-<p>Get a specific resource in the registry, and resolve all of its relationships to other assets, participants, and transactions. The result is a JavaScript object, and should only be used for visualization purposes. You cannot use the {@link add} or {@link update} functions with a resolved resource.</p>
+<p>Get a specific resource in the registry, and resolve all of its relationships to other assets, participants, and transactions. The result is a JavaScript object, and should only be used for visualization purposes. You cannot use the add} or {@link update functions with a resolved resource.</p>
 
 <h3 id="returns">Returns</h3>
 
@@ -630,10 +836,6 @@ ga('send', 'pageview');
 <td style="text-align: left">The unique identifier of the asset.</td>
 </tr>
 </tbody></table>
-
-<p>No parameters</p>
-
-<hr>
 
             
           </section>
