@@ -185,6 +185,7 @@ ga('send', 'pageview');
 <li><p><a href="../api-doc-inline/api-doc-index.html">API Reference</a></p>
 
 <ul>
+<li><a href="../api-doc-inline/allData.html">API Class Index</a></li>
 <li><a href="../api-doc-inline/admin-adminconnection.html">AdminConnection (Admin API)</a></li>
 <li><a href="../api-doc-inline/client-assetregistry.html">AssetRegistry (Client API)</a></li>
 <li><a href="../api-doc-inline/client-businessnetworkconnection.html">BusinessNetworkConnection (Client API)</a></li>
@@ -215,6 +216,7 @@ ga('send', 'pageview');
 <li><a href="../api-doc-inline/common-validatedconcept.html">ValidatedConcept (Common API)</a></li>
 <li><a href="../api-doc-inline/common-validatedresource.html">ValidatedResource (Common API)</a></li>
 <li><a href="../api-doc-inline/common-validationexception.html">ValidationException (Common API)</a></li>
+<li><a href="../api-doc-inline/runtime-api.html">Api (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-assetregistry.html">AssetRegistry (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-factory.html">Factory (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-participantregistry.html">ParticipantRegistry (Runtime API)</a></li>
@@ -250,7 +252,9 @@ ga('send', 'pageview');
           <section class="content-chunk">
             <!-- <a class="toggle open" href="#nav">open</a> -->
             
-              <h1 id="serializer">Serializer</h1>
+              <p><a href="api-doc-index">Overview</a>  -  <a href="allData#common-api">Common API </a>  -  <a href="allData#client-api">Client API</a>  -  <a href="allData#admin-api">Admin API </a>  -  <a href="allData#runtime-api">Runtime API </a></p>
+
+<h1 id="serializer">Serializer</h1>
 
 <p>Serialize Resources instances to/from various formats for long-term storage
 (e.g. on the blockchain).
@@ -274,19 +278,19 @@ ga('send', 'pageview');
 </tr>
 </thead><tbody>
 <tr>
-<td style="text-align: left"><a href="#constructor-factory-modelmanager">constructor</a></td>
+<td style="text-align: left"><a href="#constructor">constructor</a></td>
 <td style="text-align: left"><code>void</code></td>
-<td style="text-align: left">Create a Serializer. <strong>Note: Only to be called by framework code. Applications should retrieve instances from <strong>Composer</strong></strong> </p></td>
+<td style="text-align: left">Create a Serializer. <strong>Note: Only to be called by framework code. Applications should retrieve instances from <a href="common-businessnetworkdefinition">BusinessNetworkDefinition</a></strong> </p></td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#fromjson-object-object-boolean-boolean">fromJSON</a></td>
+<td style="text-align: left"><a href="#fromjson">fromJSON</a></td>
 <td style="text-align: left"><code>Resource</code></td>
-<td style="text-align: left">Create a <strong>Resource} from a JavaScript Object representation. The JavaScript Object should have been created by calling the {@link Serializer#toJSON toJSON</strong> API.</td>
+<td style="text-align: left">Create a <a href="common-resource">Resource</a> from a JavaScript Object representation. The JavaScript Object should have been created by calling the {@link Serializer#toJSON toJSON} API.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#tojson-resource-object-boolean-boolean-boolean-boolean">toJSON</a></td>
+<td style="text-align: left"><a href="#tojson">toJSON</a></td>
 <td style="text-align: left"><code>Object</code></td>
-<td style="text-align: left"><p> Convert a <strong>Resource</strong> to a JavaScript object suitable for long-term peristent storage. </p></td>
+<td style="text-align: left"><p> Convert a <a href="common-resource">Resource</a> to a JavaScript object suitable for long-term peristent storage. </p></td>
 </tr>
 </tbody></table>
 
@@ -294,7 +298,7 @@ ga('send', 'pageview');
 
 <h2 id="new-serializer">new Serializer()</h2>
 
-<p>Create a Serializer. <strong>Note: Only to be called by framework code. Applications should retrieve instances from <strong>Composer</strong></strong> </p></p>
+<p>Create a Serializer. <strong>Note: Only to be called by framework code. Applications should retrieve instances from <a href="common-businessnetworkdefinition">BusinessNetworkDefinition</a></strong> </p></p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -320,9 +324,11 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<h2 id="tojson-resource-options">toJSON( resource, options )</h2>
+<h2 id="tojson">toJSON</h2>
 
-<p> Convert a **Resource** to a JavaScript object suitable for long-term peristent storage. </p>
+<p><em>Object toJSON( Resource resource, Object options )</em></p>
+
+<p> Convert a [Resource](common-resource) to a JavaScript object suitable for long-term peristent storage. </p>
 
 <h3 id="returns">Returns</h3>
 
@@ -352,7 +358,7 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<h4 id="sub-options">Sub-options</h4>
+<h3 id="sub-options">Sub-options</h3>
 
 <table><thead>
 <tr>
@@ -388,9 +394,11 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<h2 id="fromjson-jsonobject-options">fromJSON( jsonobject, options )</h2>
+<h2 id="fromjson">fromJSON</h2>
 
-<p>Create a <strong>Resource} from a JavaScript Object representation. The JavaScript Object should have been created by calling the {@link Serializer#toJSON toJSON</strong> API.
+<p><em>Resource fromJSON( Object jsonobject, Object options )</em></p>
+
+<p>Create a <a href="common-resource">Resource</a> from a JavaScript Object representation. The JavaScript Object should have been created by calling the {@link Serializer#toJSON toJSON} API.
 The Resource is populated based on the JavaScript object.</p>
 
 <h3 id="returns">Returns</h3>
@@ -421,7 +429,7 @@ The Resource is populated based on the JavaScript object.</p>
 </tr>
 </tbody></table>
 
-<h4 id="sub-options">Sub-options</h4>
+<h3 id="sub-options">Sub-options</h3>
 
 <table><thead>
 <tr>

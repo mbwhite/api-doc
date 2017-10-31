@@ -185,6 +185,7 @@ ga('send', 'pageview');
 <li><p><a href="../api-doc-inline/api-doc-index.html">API Reference</a></p>
 
 <ul>
+<li><a href="../api-doc-inline/allData.html">API Class Index</a></li>
 <li><a href="../api-doc-inline/admin-adminconnection.html">AdminConnection (Admin API)</a></li>
 <li><a href="../api-doc-inline/client-assetregistry.html">AssetRegistry (Client API)</a></li>
 <li><a href="../api-doc-inline/client-businessnetworkconnection.html">BusinessNetworkConnection (Client API)</a></li>
@@ -215,6 +216,7 @@ ga('send', 'pageview');
 <li><a href="../api-doc-inline/common-validatedconcept.html">ValidatedConcept (Common API)</a></li>
 <li><a href="../api-doc-inline/common-validatedresource.html">ValidatedResource (Common API)</a></li>
 <li><a href="../api-doc-inline/common-validationexception.html">ValidationException (Common API)</a></li>
+<li><a href="../api-doc-inline/runtime-api.html">Api (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-assetregistry.html">AssetRegistry (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-factory.html">Factory (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-participantregistry.html">ParticipantRegistry (Runtime API)</a></li>
@@ -250,7 +252,9 @@ ga('send', 'pageview');
           <section class="content-chunk">
             <!-- <a class="toggle open" href="#nav">open</a> -->
             
-              <h1 id="consolelogger">ConsoleLogger</h1>
+              <p><a href="api-doc-index">Overview</a>  -  <a href="allData#common-api">Common API </a>  -  <a href="allData#client-api">Client API</a>  -  <a href="allData#admin-api">Admin API </a>  -  <a href="allData#runtime-api">Runtime API </a></p>
+
+<h1 id="consolelogger">ConsoleLogger</h1>
 
 <p>A functional logger implementation that simply writes to the console.</p>
 
@@ -272,12 +276,12 @@ ga('send', 'pageview');
 </tr>
 </thead><tbody>
 <tr>
-<td style="text-align: left"><a href="#format-string-string-">format</a></td>
+<td style="text-align: left"><a href="#format">format</a></td>
 <td style="text-align: left"><code>string</code></td>
 <td style="text-align: left">Called to format.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#log-string-string-string-">log</a></td>
+<td style="text-align: left"><a href="#log">log</a></td>
 <td style="text-align: left"><code>void</code></td>
 <td style="text-align: left">Called to log.</td>
 </tr>
@@ -285,7 +289,9 @@ ga('send', 'pageview');
 
 <h1 id="method-details">Method Details</h1>
 
-<h2 id="format-method-msg-args">format( method, msg, args )</h2>
+<h2 id="format">format</h2>
+
+<p><em>string format( string method, string msg, [ args] )</em></p>
 
 <p>Called to format.</p>
 
@@ -323,7 +329,9 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<h2 id="log-level-method-msg-args">log( level, method, msg, args )</h2>
+<h2 id="log">log</h2>
+
+<p><em>void log( string level, string method, string msg, [ args] )</em></p>
 
 <p>Called to log.</p>
 

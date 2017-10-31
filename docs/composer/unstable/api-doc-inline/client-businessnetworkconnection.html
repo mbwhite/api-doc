@@ -185,6 +185,7 @@ ga('send', 'pageview');
 <li><p><a href="../api-doc-inline/api-doc-index.html">API Reference</a></p>
 
 <ul>
+<li><a href="../api-doc-inline/allData.html">API Class Index</a></li>
 <li><a href="../api-doc-inline/admin-adminconnection.html">AdminConnection (Admin API)</a></li>
 <li><a href="../api-doc-inline/client-assetregistry.html">AssetRegistry (Client API)</a></li>
 <li><a href="../api-doc-inline/client-businessnetworkconnection.html">BusinessNetworkConnection (Client API)</a></li>
@@ -215,6 +216,7 @@ ga('send', 'pageview');
 <li><a href="../api-doc-inline/common-validatedconcept.html">ValidatedConcept (Common API)</a></li>
 <li><a href="../api-doc-inline/common-validatedresource.html">ValidatedResource (Common API)</a></li>
 <li><a href="../api-doc-inline/common-validationexception.html">ValidationException (Common API)</a></li>
+<li><a href="../api-doc-inline/runtime-api.html">Api (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-assetregistry.html">AssetRegistry (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-factory.html">Factory (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-participantregistry.html">ParticipantRegistry (Runtime API)</a></li>
@@ -250,7 +252,9 @@ ga('send', 'pageview');
           <section class="content-chunk">
             <!-- <a class="toggle open" href="#nav">open</a> -->
             
-              <h1 id="businessnetworkconnection">BusinessNetworkConnection</h1>
+              <p><a href="api-doc-index">Overview</a>  -  <a href="allData#common-api">Common API </a>  -  <a href="allData#client-api">Client API</a>  -  <a href="allData#admin-api">Admin API </a>  -  <a href="allData#runtime-api">Runtime API </a></p>
+
+<h1 id="businessnetworkconnection">BusinessNetworkConnection</h1>
 
 <p>Use this class to connect to and then interact with a deployed BusinessNetworkDefinition.
 Use the AdminConnection class in the composer-admin module to deploy BusinessNetworksDefinitions.</p>
@@ -274,37 +278,37 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </tr>
 </thead><tbody>
 <tr>
-<td style="text-align: left"><a href="#addassetregistry-string-string">addAssetRegistry</a></td>
+<td style="text-align: left"><a href="#addassetregistry">addAssetRegistry</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Add a new asset registry.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#addparticipantregistry-string-string">addParticipantRegistry</a></td>
+<td style="text-align: left"><a href="#addparticipantregistry">addParticipantRegistry</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Add a new participant registry.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#assetregistryexists-string">assetRegistryExists</a></td>
+<td style="text-align: left"><a href="#assetregistryexists">assetRegistryExists</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Determine whether a asset registry exists.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#bindidentity-string">bindIdentity</a></td>
+<td style="text-align: left"><a href="#bindidentity">bindIdentity</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Bind an existing identity to the specified participant.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#buildquery-string">buildQuery</a></td>
+<td style="text-align: left"><a href="#buildquery">buildQuery</a></td>
 <td style="text-align: left"><code>Query</code></td>
 <td style="text-align: left">Build a query ready for later execution. The specified query string must be written in the Composer query language.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#connect-string-string-string-string-object">connect</a></td>
+<td style="text-align: left"><a href="#connect">connect</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Connects to a business network using a connection profile, and authenticates to the Hyperledger Fabric.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#constructor-object-connectionprofilestore-object">constructor</a></td>
+<td style="text-align: left"><a href="#constructor">constructor</a></td>
 <td style="text-align: left"><code>void</code></td>
 <td style="text-align: left">Create an instance of the BusinessNetworkConnection class. must be called to connect to a deployed BusinessNetworkDefinition.</td>
 </tr>
@@ -314,22 +318,22 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 <td style="text-align: left">Disconnects from the Hyperledger Fabric.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#getallassetregistries-boolean">getAllAssetRegistries</a></td>
+<td style="text-align: left"><a href="#getallassetregistries">getAllAssetRegistries</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Get a list of all existing asset registries.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#getallparticipantregistries-boolean">getAllParticipantRegistries</a></td>
+<td style="text-align: left"><a href="#getallparticipantregistries">getAllParticipantRegistries</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Get a list of all existing participant registries.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#getalltransactionregistries-boolean">getAllTransactionRegistries</a></td>
+<td style="text-align: left"><a href="#getalltransactionregistries">getAllTransactionRegistries</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Get all transaction registries.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#getassetregistry-string">getAssetRegistry</a></td>
+<td style="text-align: left"><a href="#getassetregistry">getAssetRegistry</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Get an existing asset registry.</td>
 </tr>
@@ -349,27 +353,27 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 <td style="text-align: left">Get the identity registry.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#getparticipantregistry-string">getParticipantRegistry</a></td>
+<td style="text-align: left"><a href="#getparticipantregistry">getParticipantRegistry</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Get an existing participant registry.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#getregistry-string">getRegistry</a></td>
+<td style="text-align: left"><a href="#getregistry">getRegistry</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Given a fully qualified name, works out and looks up the registry that this resource will be found in. This only gives back the default registry - it does not look in any application defined registry.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#gettransactionregistry-string">getTransactionRegistry</a></td>
+<td style="text-align: left"><a href="#gettransactionregistry">getTransactionRegistry</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Get the transaction registry.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#issueidentity-string-object-boolean">issueIdentity</a></td>
+<td style="text-align: left"><a href="#issueidentity">issueIdentity</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Issue an identity with the specified name and map it to the specified participant.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#participantregistryexists-string">participantRegistryExists</a></td>
+<td style="text-align: left"><a href="#participantregistryexists">participantRegistryExists</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Determine whether a participant registry exists.</td>
 </tr>
@@ -379,7 +383,7 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 <td style="text-align: left">Test the connection to the runtime and verify that the version of the runtime is compatible with this level of the client node.js module.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#query-object">query</a></td>
+<td style="text-align: left"><a href="#query">query</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Execute a query defined in a Composer query file, or execute a query built with buildQuery.</td>
 </tr>
@@ -389,12 +393,12 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 <td style="text-align: left">Revoke the specified identity by removing any existing mapping to a participant.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#submittransaction-resource">submitTransaction</a></td>
+<td style="text-align: left"><a href="#submittransaction">submitTransaction</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Submit a transaction for processing by the currently connected business network.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#transactionregistryexists-string">transactionRegistryExists</a></td>
+<td style="text-align: left"><a href="#transactionregistryexists">transactionRegistryExists</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Determine whether a transaction registry exists.</td>
 </tr>
@@ -424,7 +428,7 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </tr>
 </tbody></table>
 
-<h4 id="sub-options">Sub-options</h4>
+<h3 id="sub-options">Sub-options</h3>
 
 <table><thead>
 <tr>
@@ -448,7 +452,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </tr>
 </tbody></table>
 
-<h2 id="getbusinessnetwork">getBusinessNetwork(  )</h2>
+<h2 id="getbusinessnetwork">getBusinessNetwork</h2>
+
+<p><em>BusinessNetworkDefinition getBusinessNetwork(  )</em></p>
 
 <p>Returns the currently connected BusinessNetworkDefinition</p>
 
@@ -482,7 +488,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="c1">// Retrieved Business Network Definition</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="getallassetregistries-includesystem">getAllAssetRegistries( includesystem )</h2>
+<h2 id="getallassetregistries">getAllAssetRegistries</h2>
+
+<p><em>Promise getAllAssetRegistries( [boolean includesystem] )</em></p>
 
 <p>Get a list of all existing asset registries.</p>
 
@@ -530,7 +538,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="c1">// Retrieved Asset Registries</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="getassetregistry-id">getAssetRegistry( id )</h2>
+<h2 id="getassetregistry">getAssetRegistry</h2>
+
+<p><em>Promise getAssetRegistry( string id )</em></p>
 
 <p>Get an existing asset registry.</p>
 
@@ -578,7 +588,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="c1">// Retrieved Asset Registry</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="assetregistryexists-id">assetRegistryExists( id )</h2>
+<h2 id="assetregistryexists">assetRegistryExists</h2>
+
+<p><em>Promise assetRegistryExists( string id )</em></p>
 
 <p>Determine whether a asset registry exists.</p>
 
@@ -630,7 +642,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="c1">//}</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="addassetregistry-id-name">addAssetRegistry( id, name )</h2>
+<h2 id="addassetregistry">addAssetRegistry</h2>
+
+<p><em>Promise addAssetRegistry( string id, string name )</em></p>
 
 <p>Add a new asset registry.</p>
 
@@ -678,7 +692,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">addAssetRegistry</span><span class="p">(</span><span class="s1">'registryId'</span><span class="p">,</span><span class="s1">'registryName'</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="getallparticipantregistries-includesystem">getAllParticipantRegistries( includesystem )</h2>
+<h2 id="getallparticipantregistries">getAllParticipantRegistries</h2>
+
+<p><em>Promise getAllParticipantRegistries( [boolean includesystem] )</em></p>
 
 <p>Get a list of all existing participant registries.</p>
 
@@ -726,7 +742,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="c1">// Retrieved Participant Registries</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="getparticipantregistry-id">getParticipantRegistry( id )</h2>
+<h2 id="getparticipantregistry">getParticipantRegistry</h2>
+
+<p><em>Promise getParticipantRegistry( string id )</em></p>
 
 <p>Get an existing participant registry.</p>
 
@@ -774,7 +792,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="c1">// Retrieved Participant Registry</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="participantregistryexists-id">participantRegistryExists( id )</h2>
+<h2 id="participantregistryexists">participantRegistryExists</h2>
+
+<p><em>Promise participantRegistryExists( string id )</em></p>
 
 <p>Determine whether a participant registry exists.</p>
 
@@ -826,7 +846,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="c1">//}</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="addparticipantregistry-id-name">addParticipantRegistry( id, name )</h2>
+<h2 id="addparticipantregistry">addParticipantRegistry</h2>
+
+<p><em>Promise addParticipantRegistry( string id, string name )</em></p>
 
 <p>Add a new participant registry.</p>
 
@@ -874,7 +896,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="k">return</span> <span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">addParticipantRegistry</span><span class="p">(</span><span class="s1">'registryId'</span><span class="p">,</span><span class="s1">'registryName'</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="gettransactionregistry-id">getTransactionRegistry( id )</h2>
+<h2 id="gettransactionregistry">getTransactionRegistry</h2>
+
+<p><em>Promise getTransactionRegistry( string id )</em></p>
 
 <p>Get the transaction registry.</p>
 
@@ -891,7 +915,7 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved to the <strong>TransactionRegistry</strong></p>
+<p><code>Promise</code> - A promise that will be resolved to the <a href="client-transactionregistry">TransactionRegistry</a></p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -922,7 +946,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="c1">// Retrieved transaction registry.</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="getalltransactionregistries-includesystem">getAllTransactionRegistries( includesystem )</h2>
+<h2 id="getalltransactionregistries">getAllTransactionRegistries</h2>
+
+<p><em>Promise getAllTransactionRegistries( [boolean includesystem] )</em></p>
 
 <p>Get all transaction registries.</p>
 
@@ -939,7 +965,7 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved to the <strong>TransactionRegistry</strong></p>
+<p><code>Promise</code> - A promise that will be resolved to the <a href="client-transactionregistry">TransactionRegistry</a></p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -970,7 +996,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="c1">// Retrieved transaction Registries</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="transactionregistryexists-id">transactionRegistryExists( id )</h2>
+<h2 id="transactionregistryexists">transactionRegistryExists</h2>
+
+<p><em>Promise transactionRegistryExists( string id )</em></p>
 
 <p>Determine whether a transaction registry exists.</p>
 
@@ -1022,7 +1050,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="c1">//}</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="gethistorian">getHistorian(  )</h2>
+<h2 id="gethistorian">getHistorian</h2>
+
+<p><em>Promise getHistorian(  )</em></p>
 
 <p>Get the historian</p>
 
@@ -1039,7 +1069,7 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved to the <strong>Historian</strong></p>
+<p><code>Promise</code> - A promise that will be resolved to the <a href="client-historian">Historian</a></p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -1056,7 +1086,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="c1">// Retrieved historian</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="getidentityregistry">getIdentityRegistry(  )</h2>
+<h2 id="getidentityregistry">getIdentityRegistry</h2>
+
+<p><em>Promise getIdentityRegistry(  )</em></p>
 
 <p>Get the identity registry.</p>
 
@@ -1073,7 +1105,7 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved to the <strong>IdentityRegistry</strong></p>
+<p><code>Promise</code> - A promise that will be resolved to the <a href="client-identityregistry">IdentityRegistry</a></p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -1090,7 +1122,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="c1">// Retrieved identity registry</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="connect-connectionprofile-businessnetwork-enrollmentid-enrollmentsecret-additionalconnectoptions">connect( connectionprofile, businessnetwork, enrollmentid, enrollmentsecret, additionalconnectoptions )</h2>
+<h2 id="connect">connect</h2>
+
+<p><em>Promise connect( string connectionprofile, string businessnetwork, string enrollmentid, string enrollmentsecret, [Object additionalconnectoptions] )</em></p>
 
 <p>Connects to a business network using a connection profile, and authenticates to the Hyperledger Fabric.</p>
 
@@ -1156,7 +1190,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="c1">// Connected</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="getregistry-fullyqualifiedname">getRegistry( fullyqualifiedname )</h2>
+<h2 id="getregistry">getRegistry</h2>
+
+<p><em>Promise getRegistry( String fullyqualifiedname )</em></p>
 
 <p>Given a fully qualified name, works out and looks up the registry that this resource will be found in. This only gives back the default registry - it does not look in any application defined registry.</p>
 
@@ -1202,7 +1238,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
      <span class="kd">var</span> <span class="nx">sampleParticipantRegistry</span> <span class="o">=</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">getRegistry</span><span class="p">(</span><span class="s1">'org.acme.sampleParticipant'</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="disconnect">disconnect(  )</h2>
+<h2 id="disconnect">disconnect</h2>
+
+<p><em>Promise disconnect(  )</em></p>
 
 <p>Disconnects from the Hyperledger Fabric.</p>
 
@@ -1236,7 +1274,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="c1">// Disconnected.</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="submittransaction-transaction">submitTransaction( transaction )</h2>
+<h2 id="submittransaction">submitTransaction</h2>
+
+<p><em>Promise submitTransaction( Resource transaction )</em></p>
 
 <p>Submit a transaction for processing by the currently connected business network.</p>
 
@@ -1271,7 +1311,7 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 <td style="text-align: left"><strong>transaction</strong></td>
 <td style="text-align: left">Resource</td>
 <td style="text-align: left">false</td>
-<td style="text-align: left">The transaction to submit. Use <strong>Factory#newTransaction newTransaction</strong> to create this object.</td>
+<td style="text-align: left">The transaction to submit. Use {@link Factory#newTransaction newTransaction} to create this object.</td>
 </tr>
 </tbody></table>
 
@@ -1288,7 +1328,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
     <span class="c1">// Submitted a transaction.</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="buildquery-query">buildQuery( query )</h2>
+<h2 id="buildquery">buildQuery</h2>
+
+<p><em>Query buildQuery( string query )</em></p>
 
 <p>Build a query ready for later execution. The specified query string must be written in the Composer query language.
 This functionality is Blockchain platform dependent. For example, when a Composer business network is deployed to Hyperledger Fabric v1.0, Hyperledger Fabric must be configured with the CouchDB database for the world state.</p>
@@ -1349,7 +1391,9 @@ This functionality is Blockchain platform dependent. For example, when a Compose
     <span class="c1">// Add optional error handling here.</span>
   <span class="p">});</span>
 </code></pre></div>
-<h2 id="query-query-parameters">query( query, parameters )</h2>
+<h2 id="query">query</h2>
+
+<p><em>Promise query( string; Query query, [Object parameters] )</em></p>
 
 <p>Execute a query defined in a Composer query file, or execute a query built with buildQuery.
 This functionality is Blockchain platform dependent. For example, when a Composer business network is deployed to Hyperledger Fabric v1.0, Hyperledger Fabric must be configured with the CouchDB database for the world state.</p>
@@ -1372,7 +1416,7 @@ This functionality is Blockchain platform dependent. For example, when a Compose
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved with an array of <strong>module:composer-common.Resource Resource</strong> representing the resources returned by the query.</p>
+<p><code>Promise</code> - A promise that will be resolved with an array of {@link module:composer-common.Resource Resource} representing the resources returned by the query.</p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -1414,7 +1458,9 @@ This functionality is Blockchain platform dependent. For example, when a Compose
     <span class="c1">// Add optional error handling here.</span>
   <span class="p">});</span>
 </code></pre></div>
-<h2 id="ping">ping(  )</h2>
+<h2 id="ping">ping</h2>
+
+<p><em>Promise ping(  )</em></p>
 
 <p>Test the connection to the runtime and verify that the version of the runtime is compatible with this level of the client node.js module.</p>
 
@@ -1448,7 +1494,9 @@ This functionality is Blockchain platform dependent. For example, when a Compose
     <span class="c1">// Connection tested.</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="issueidentity-participant-identityname-options">issueIdentity( participant, identityname, options )</h2>
+<h2 id="issueidentity">issueIdentity</h2>
+
+<p><em>Promise issueIdentity( Resource; Relationship; string participant, string identityname, [object options] )</em></p>
 
 <p>Issue an identity with the specified name and map it to the specified participant.</p>
 
@@ -1486,7 +1534,7 @@ This functionality is Blockchain platform dependent. For example, when a Compose
 </tr>
 </tbody></table>
 
-<h4 id="sub-options">Sub-options</h4>
+<h3 id="sub-options">Sub-options</h3>
 
 <table><thead>
 <tr>
@@ -1504,7 +1552,9 @@ This functionality is Blockchain platform dependent. For example, when a Compose
 </tr>
 </tbody></table>
 
-<h2 id="bindidentity-participant-certificate">bindIdentity( participant, certificate )</h2>
+<h2 id="bindidentity">bindIdentity</h2>
+
+<p><em>Promise bindIdentity( Resource; string participant, string certificate )</em></p>
 
 <p>Bind an existing identity to the specified participant.</p>
 
@@ -1536,7 +1586,9 @@ This functionality is Blockchain platform dependent. For example, when a Compose
 </tr>
 </tbody></table>
 
-<h2 id="revokeidentity-identity">revokeIdentity( identity )</h2>
+<h2 id="revokeidentity">revokeIdentity</h2>
+
+<p><em>Promise revokeIdentity( Resource; string identity )</em></p>
 
 <p>Revoke the specified identity by removing any existing mapping to a participant.</p>
 

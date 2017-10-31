@@ -185,6 +185,7 @@ ga('send', 'pageview');
 <li><p><a href="../api-doc-inline/api-doc-index.html">API Reference</a></p>
 
 <ul>
+<li><a href="../api-doc-inline/allData.html">API Class Index</a></li>
 <li><a href="../api-doc-inline/admin-adminconnection.html">AdminConnection (Admin API)</a></li>
 <li><a href="../api-doc-inline/client-assetregistry.html">AssetRegistry (Client API)</a></li>
 <li><a href="../api-doc-inline/client-businessnetworkconnection.html">BusinessNetworkConnection (Client API)</a></li>
@@ -215,6 +216,7 @@ ga('send', 'pageview');
 <li><a href="../api-doc-inline/common-validatedconcept.html">ValidatedConcept (Common API)</a></li>
 <li><a href="../api-doc-inline/common-validatedresource.html">ValidatedResource (Common API)</a></li>
 <li><a href="../api-doc-inline/common-validationexception.html">ValidationException (Common API)</a></li>
+<li><a href="../api-doc-inline/runtime-api.html">Api (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-assetregistry.html">AssetRegistry (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-factory.html">Factory (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-participantregistry.html">ParticipantRegistry (Runtime API)</a></li>
@@ -250,7 +252,9 @@ ga('send', 'pageview');
           <section class="content-chunk">
             <!-- <a class="toggle open" href="#nav">open</a> -->
             
-              <h1 id="registry">Registry</h1>
+              <p><a href="api-doc-index">Overview</a>  -  <a href="allData#common-api">Common API </a>  -  <a href="allData#client-api">Client API</a>  -  <a href="allData#admin-api">Admin API </a>  -  <a href="allData#runtime-api">Runtime API </a></p>
+
+<h1 id="registry">Registry</h1>
 
 <p>Class representing an Abstract Registry.
 <p><a href="./diagrams/registry.svg"><img src="./diagrams/registry.svg" style="height:100%;"/></a></p></p>
@@ -273,37 +277,37 @@ ga('send', 'pageview');
 </tr>
 </thead><tbody>
 <tr>
-<td style="text-align: left"><a href="#add-resource">add</a></td>
+<td style="text-align: left"><a href="#add">add</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Adds a new resource to the registry.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#addall-resource%5B%5D">addAll</a></td>
+<td style="text-align: left"><a href="#addall">addAll</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Adds a list of new resources to the registry.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#addregistry-securitycontext-string-string-string">addRegistry</a></td>
+<td style="text-align: left"><a href="#addregistry">addRegistry</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Add a new asset registry.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#constructor-string-string-string-securitycontext-modelmanager-factory-serializer-businessnetworkconnection">constructor</a></td>
+<td style="text-align: left"><a href="#constructor">constructor</a></td>
 <td style="text-align: left"><code>void</code></td>
 <td style="text-align: left">Create a registry.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#exists-string">exists</a></td>
+<td style="text-align: left"><a href="#exists">exists</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Determines whether a specific resource exists in the registry.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#existsregistry-securitycontext-string-string">existsRegistry</a></td>
+<td style="text-align: left"><a href="#existsregistry">existsRegistry</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Determines whether a registry exists.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#get-string">get</a></td>
+<td style="text-align: left"><a href="#get">get</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Get a specific resource in the registry.</td>
 </tr>
@@ -313,12 +317,12 @@ ga('send', 'pageview');
 <td style="text-align: left">Get all of the resources in the registry.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#getallregistries-securitycontext-string-boolean">getAllRegistries</a></td>
+<td style="text-align: left"><a href="#getallregistries">getAllRegistries</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Get a list of all existing registries.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#getregistry-securitycontext-string-string">getRegistry</a></td>
+<td style="text-align: left"><a href="#getregistry">getRegistry</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Get an existing registry.</td>
 </tr>
@@ -333,22 +337,22 @@ ga('send', 'pageview');
 <td style="text-align: left">Removes a list of resources from the registry.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#resolve-string">resolve</a></td>
+<td style="text-align: left"><a href="#resolve">resolve</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left">Get a specific resource in the registry, and resolve all of its relationships to other assets, participants, and transactions. The result is a JavaScript object, and should only be used for visualization purposes. You cannot use the <strong>add} or {@link update</strong> functions with a resolved resource.</td>
+<td style="text-align: left">Get a specific resource in the registry, and resolve all of its relationships to other assets, participants, and transactions. The result is a JavaScript object, and should only be used for visualization purposes. You cannot use the  {@link #add add} or {@link #update update} functions with a resolved resource.</td>
 </tr>
 <tr>
 <td style="text-align: left"><a href="#resolveall">resolveAll</a></td>
 <td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left">Get all of the resources in the registry, and resolve all of their relationships to other assets, participants, and transactions. The result is a JavaScript object, and should only be used for visualization purposes. You cannot use the <strong>add} or {@link update</strong> functions with a resolved resource.</td>
+<td style="text-align: left">Get all of the resources in the registry, and resolve all of their relationships to other assets, participants, and transactions. The result is a JavaScript object, and should only be used for visualization purposes. You cannot use the {@link #add add} or {@link #update update} functions with a resolved resource.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#update-resource">update</a></td>
+<td style="text-align: left"><a href="#update">update</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Updates a resource in the registry.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#updateall-resource%5B%5D">updateAll</a></td>
+<td style="text-align: left"><a href="#updateall">updateAll</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Updates a list of resources in the registry.</td>
 </tr>
@@ -356,7 +360,9 @@ ga('send', 'pageview');
 
 <h1 id="method-details">Method Details</h1>
 
-<h2 id="getallregistries-securitycontext-registrytype-includesystem">getAllRegistries( securitycontext, registrytype, includesystem )</h2>
+<h2 id="getallregistries">getAllRegistries</h2>
+
+<p><em>Promise getAllRegistries( SecurityContext securitycontext, string registrytype, [boolean includesystem] )</em></p>
 
 <p>Get a list of all existing registries.</p>
 
@@ -394,7 +400,9 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<h2 id="getregistry-securitycontext-registrytype-id">getRegistry( securitycontext, registrytype, id )</h2>
+<h2 id="getregistry">getRegistry</h2>
+
+<p><em>Promise getRegistry( SecurityContext securitycontext, string registrytype, string id )</em></p>
 
 <p>Get an existing registry.</p>
 
@@ -432,7 +440,9 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<h2 id="existsregistry-securitycontext-registrytype-id">existsRegistry( securitycontext, registrytype, id )</h2>
+<h2 id="existsregistry">existsRegistry</h2>
+
+<p><em>Promise existsRegistry( SecurityContext securitycontext, string registrytype, string id )</em></p>
 
 <p>Determines whether a registry exists.</p>
 
@@ -470,7 +480,9 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<h2 id="addregistry-securitycontext-registrytype-id-name">addRegistry( securitycontext, registrytype, id, name )</h2>
+<h2 id="addregistry">addRegistry</h2>
+
+<p><em>Promise addRegistry( SecurityContext securitycontext, string registrytype, string id, string name )</em></p>
 
 <p>Add a new asset registry.</p>
 
@@ -517,7 +529,7 @@ ga('send', 'pageview');
 <h2 id="new-registry">new Registry()</h2>
 
 <p>Create a registry.
-<strong>Note: Only to be called by framework code. Applications should retrieve instances from <strong>BusinessNetworkConnection</strong></strong> </p></p>
+<strong>Note: Only to be called by framework code. Applications should retrieve instances from <a href="client-businessnetworkconnection">BusinessNetworkConnection</a></strong> </p></p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -579,7 +591,9 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<h2 id="addall-resources">addAll( resources )</h2>
+<h2 id="addall">addAll</h2>
+
+<p><em>Promise addAll(  resources )</em></p>
 
 <p>Adds a list of new resources to the registry.</p>
 
@@ -605,7 +619,9 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<h2 id="add-resource">add( resource )</h2>
+<h2 id="add">add</h2>
+
+<p><em>Promise add( Resource resource )</em></p>
 
 <p>Adds a new resource to the registry.</p>
 
@@ -631,7 +647,9 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<h2 id="updateall-resources">updateAll( resources )</h2>
+<h2 id="updateall">updateAll</h2>
+
+<p><em>Promise updateAll(  resources )</em></p>
 
 <p>Updates a list of resources in the registry.</p>
 
@@ -657,7 +675,9 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<h2 id="update-resource">update( resource )</h2>
+<h2 id="update">update</h2>
+
+<p><em>Promise update( Resource resource )</em></p>
 
 <p>Updates a resource in the registry.</p>
 
@@ -683,7 +703,9 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<h2 id="removeall-resources">removeAll( resources )</h2>
+<h2 id="removeall">removeAll</h2>
+
+<p><em>Promise removeAll( ;  resources )</em></p>
 
 <p>Removes a list of resources from the registry.</p>
 
@@ -709,7 +731,9 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<h2 id="remove-resource">remove( resource )</h2>
+<h2 id="remove">remove</h2>
+
+<p><em>Promise remove( Resource; string resource )</em></p>
 
 <p>Remove an asset with a given type and id from the registry.</p>
 
@@ -735,7 +759,9 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<h2 id="getall">getAll(  )</h2>
+<h2 id="getall">getAll</h2>
+
+<p><em>Promise getAll(  )</em></p>
 
 <p>Get all of the resources in the registry.</p>
 
@@ -747,7 +773,9 @@ ga('send', 'pageview');
 
 <p>No parameters</p>
 
-<h2 id="get-id">get( id )</h2>
+<h2 id="get">get</h2>
+
+<p><em>Promise get( string id )</em></p>
 
 <p>Get a specific resource in the registry.</p>
 
@@ -773,7 +801,9 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<h2 id="exists-id">exists( id )</h2>
+<h2 id="exists">exists</h2>
+
+<p><em>Promise exists( string id )</em></p>
 
 <p>Determines whether a specific resource exists in the registry.</p>
 
@@ -799,9 +829,11 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<h2 id="resolveall">resolveAll(  )</h2>
+<h2 id="resolveall">resolveAll</h2>
 
-<p>Get all of the resources in the registry, and resolve all of their relationships to other assets, participants, and transactions. The result is a JavaScript object, and should only be used for visualization purposes. You cannot use the <strong>add} or {@link update</strong> functions with a resolved resource.</p>
+<p><em>Promise resolveAll(  )</em></p>
+
+<p>Get all of the resources in the registry, and resolve all of their relationships to other assets, participants, and transactions. The result is a JavaScript object, and should only be used for visualization purposes. You cannot use the {@link #add add} or {@link #update update} functions with a resolved resource.</p>
 
 <h3 id="returns">Returns</h3>
 
@@ -811,9 +843,11 @@ ga('send', 'pageview');
 
 <p>No parameters</p>
 
-<h2 id="resolve-id">resolve( id )</h2>
+<h2 id="resolve">resolve</h2>
 
-<p>Get a specific resource in the registry, and resolve all of its relationships to other assets, participants, and transactions. The result is a JavaScript object, and should only be used for visualization purposes. You cannot use the <strong>add} or {@link update</strong> functions with a resolved resource.</p>
+<p><em>Promise resolve( string id )</em></p>
+
+<p>Get a specific resource in the registry, and resolve all of its relationships to other assets, participants, and transactions. The result is a JavaScript object, and should only be used for visualization purposes. You cannot use the  {@link #add add} or {@link #update update} functions with a resolved resource.</p>
 
 <h3 id="returns">Returns</h3>
 

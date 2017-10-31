@@ -185,6 +185,7 @@ ga('send', 'pageview');
 <li><p><a href="../api-doc-inline/api-doc-index.html">API Reference</a></p>
 
 <ul>
+<li><a href="../api-doc-inline/allData.html">API Class Index</a></li>
 <li><a href="../api-doc-inline/admin-adminconnection.html">AdminConnection (Admin API)</a></li>
 <li><a href="../api-doc-inline/client-assetregistry.html">AssetRegistry (Client API)</a></li>
 <li><a href="../api-doc-inline/client-businessnetworkconnection.html">BusinessNetworkConnection (Client API)</a></li>
@@ -215,6 +216,7 @@ ga('send', 'pageview');
 <li><a href="../api-doc-inline/common-validatedconcept.html">ValidatedConcept (Common API)</a></li>
 <li><a href="../api-doc-inline/common-validatedresource.html">ValidatedResource (Common API)</a></li>
 <li><a href="../api-doc-inline/common-validationexception.html">ValidationException (Common API)</a></li>
+<li><a href="../api-doc-inline/runtime-api.html">Api (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-assetregistry.html">AssetRegistry (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-factory.html">Factory (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-participantregistry.html">ParticipantRegistry (Runtime API)</a></li>
@@ -250,10 +252,12 @@ ga('send', 'pageview');
           <section class="content-chunk">
             <!-- <a class="toggle open" href="#nav">open</a> -->
             
-              <h1 id="assetregistry">AssetRegistry</h1>
+              <p><a href="api-doc-index">Overview</a>  -  <a href="allData#common-api">Common API </a>  -  <a href="allData#client-api">Client API</a>  -  <a href="allData#admin-api">Admin API </a>  -  <a href="allData#runtime-api">Runtime API </a></p>
+
+<h1 id="assetregistry">AssetRegistry</h1>
 
 <p>Do not attempt to create an instance of this class.<br>
-You must use the <strong>module:composer-runtime#getAssetRegistry getAssetRegistry</strong>
+You must use the <a href="runtime-api#getassetregistry">getAssetRegistry</a>
 method instead.</p>
 
 <h3 id="details">Details</h3>
@@ -322,7 +326,9 @@ method instead.</p>
 
 <h1 id="method-details">Method Details</h1>
 
-<h2 id="getall">getAll(  )</h2>
+<h2 id="getall">getAll</h2>
+
+<p><em>Promise getAll(  )</em></p>
 
 <p>Get a list of all of the existing assets in this asset registry.</p>
 
@@ -345,7 +351,7 @@ method instead.</p>
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise. The promise is resolved with an array of <strong>Resource</strong> instances representing all of the assets stored in this asset registry. If the asset registry does not exist, or the current user does not have access to the asset registry, then the promise will be rejected with an error that describes the problem.</p>
+<p><code>Promise</code> - A promise. The promise is resolved with an array of <a href="common-resource">Resource</a> instances representing all of the assets stored in this asset registry. If the asset registry does not exist, or the current user does not have access to the asset registry, then the promise will be rejected with an error that describes the problem.</p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -368,7 +374,9 @@ method instead.</p>
     <span class="c1">// Add optional error handling here.</span>
   <span class="p">});</span>
 </code></pre></div>
-<h2 id="get-id">get( id )</h2>
+<h2 id="get">get</h2>
+
+<p><em>Promise get( string id )</em></p>
 
 <p>Get the specified asset in this asset registry using the unique identifier of the asset.</p>
 
@@ -389,7 +397,7 @@ method instead.</p>
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise. The promise is resolved with a <strong>Resource</strong> instance representing the specified asset in this asset registry. If the specified asset does not exist, or the current user does not have access to the specified asset, then the promise will be rejected with an error that describes the problem.</p>
+<p><code>Promise</code> - A promise. The promise is resolved with a <a href="common-resource">Resource</a> instance representing the specified asset in this asset registry. If the specified asset does not exist, or the current user does not have access to the specified asset, then the promise will be rejected with an error that describes the problem.</p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -424,7 +432,9 @@ method instead.</p>
     <span class="c1">// Add optional error handling here.</span>
   <span class="p">});</span>
 </code></pre></div>
-<h2 id="exists-id">exists( id )</h2>
+<h2 id="exists">exists</h2>
+
+<p><em>Promise exists( string id )</em></p>
 
 <p>Determines whether a specific asset exists in this asset registry.</p>
 
@@ -480,7 +490,9 @@ method instead.</p>
     <span class="c1">// Add optional error handling here.</span>
   <span class="p">});</span>
 </code></pre></div>
-<h2 id="addall-assets">addAll( assets )</h2>
+<h2 id="addall">addAll</h2>
+
+<p><em>Promise addAll(  assets )</em></p>
 
 <p>Add all of the specified assets to this asset registry.</p>
 
@@ -544,7 +556,9 @@ method instead.</p>
     <span class="c1">// Add optional error handling here.</span>
   <span class="p">});</span>
 </code></pre></div>
-<h2 id="add-asset">add( asset )</h2>
+<h2 id="add">add</h2>
+
+<p><em>Promise add( Resource asset )</em></p>
 
 <p>Add the specified asset to this asset registry.</p>
 
@@ -602,7 +616,9 @@ method instead.</p>
     <span class="c1">// Add optional error handling here.</span>
   <span class="p">});</span>
 </code></pre></div>
-<h2 id="updateall-assets">updateAll( assets )</h2>
+<h2 id="updateall">updateAll</h2>
+
+<p><em>Promise updateAll(  assets )</em></p>
 
 <p>Update all of the specified assets in this asset registry.</p>
 
@@ -668,7 +684,9 @@ method instead.</p>
     <span class="c1">// Add optional error handling here.</span>
   <span class="p">});</span>
 </code></pre></div>
-<h2 id="update-asset">update( asset )</h2>
+<h2 id="update">update</h2>
+
+<p><em>Promise update( Resource asset )</em></p>
 
 <p>Update the specified asset in this asset registry.</p>
 
@@ -728,7 +746,9 @@ method instead.</p>
     <span class="c1">// Add optional error handling here.</span>
   <span class="p">});</span>
 </code></pre></div>
-<h2 id="removeall-assets">removeAll( assets )</h2>
+<h2 id="removeall">removeAll</h2>
+
+<p><em>Promise removeAll( ;  assets )</em></p>
 
 <p>Remove all of the specified assets from this asset registry.</p>
 
@@ -788,7 +808,9 @@ method instead.</p>
     <span class="c1">// Add optional error handling here.</span>
   <span class="p">});</span>
 </code></pre></div>
-<h2 id="remove-asset">remove( asset )</h2>
+<h2 id="remove">remove</h2>
+
+<p><em>Promise remove( string; Resource asset )</em></p>
 
 <p>Remove the specified asset from this asset registry.</p>
 

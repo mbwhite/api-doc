@@ -185,6 +185,7 @@ ga('send', 'pageview');
 <li><p><a href="../api-doc-inline/api-doc-index.html">API Reference</a></p>
 
 <ul>
+<li><a href="../api-doc-inline/allData.html">API Class Index</a></li>
 <li><a href="../api-doc-inline/admin-adminconnection.html">AdminConnection (Admin API)</a></li>
 <li><a href="../api-doc-inline/client-assetregistry.html">AssetRegistry (Client API)</a></li>
 <li><a href="../api-doc-inline/client-businessnetworkconnection.html">BusinessNetworkConnection (Client API)</a></li>
@@ -215,6 +216,7 @@ ga('send', 'pageview');
 <li><a href="../api-doc-inline/common-validatedconcept.html">ValidatedConcept (Common API)</a></li>
 <li><a href="../api-doc-inline/common-validatedresource.html">ValidatedResource (Common API)</a></li>
 <li><a href="../api-doc-inline/common-validationexception.html">ValidationException (Common API)</a></li>
+<li><a href="../api-doc-inline/runtime-api.html">Api (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-assetregistry.html">AssetRegistry (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-factory.html">Factory (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-participantregistry.html">ParticipantRegistry (Runtime API)</a></li>
@@ -250,7 +252,9 @@ ga('send', 'pageview');
           <section class="content-chunk">
             <!-- <a class="toggle open" href="#nav">open</a> -->
             
-              <h1 id="businessnetworkdefinition">BusinessNetworkDefinition</h1>
+              <p><a href="api-doc-index">Overview</a>  -  <a href="allData#common-api">Common API </a>  -  <a href="allData#client-api">Client API</a>  -  <a href="allData#admin-api">Admin API </a>  -  <a href="allData#runtime-api">Runtime API </a></p>
+
+<h1 id="businessnetworkdefinition">BusinessNetworkDefinition</h1>
 
 <p>
 A BusinessNetworkDefinition defines a set of Participants that exchange Assets by
@@ -276,17 +280,17 @@ the network as well as a set of executable scripts.
 </tr>
 </thead><tbody>
 <tr>
-<td style="text-align: left"><a href="#constructor-string-string-object-string">constructor</a></td>
+<td style="text-align: left"><a href="#constructor">constructor</a></td>
 <td style="text-align: left"><code>void</code></td>
-<td style="text-align: left">Create the BusinessNetworkDefinition. <p> <strong>Note: Only to be called by framework code. Applications should retrieve instances from <strong>BusinessNetworkDefinition.fromArchive</strong></strong> </p></td>
+<td style="text-align: left">Create the BusinessNetworkDefinition. <p> <strong>Note: Only to be called by framework code. Applications should retrieve instances from <a href="common-businessnetworkdefinition#fromarchive">BusinessNetworkDefinition#fromArchive</a></strong> </p></td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#fromarchive-buffer">fromArchive</a></td>
+<td style="text-align: left"><a href="#fromarchive">fromArchive</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Create a BusinessNetworkDefinition from an archive.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#fromdirectory-string-object-object-boolean-boolean">fromDirectory</a></td>
+<td style="text-align: left"><a href="#fromdirectory">fromDirectory</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Builds a BusinessNetworkDefintion from the contents of a directory. The directory must include a package.json in the root (used to specify the name, version and description of the business network). This method is designed to work with business networks that refer to external models using npm dependencies as well as business networks that statically package their model files. <p> If package.json contains a dependencies property then this method will search for model (CTO) files under the node_modules directory for each dependency that passes the options.dependencyGlob pattern. </p> <p> If the network depends on an npm module its dependencies (transitive closure) will also be scanned for model (CTO) files. </p> <p> The directory may optionally contain a README.md file which is accessible from the BusinessNetworkMetadata.getREADME method. </p> <p> In addition all model files will be added that are not under node_modules and that pass the options.modelFileGlob pattern. By default you should put model files under a directory called &#39;models&#39;. </p> <p> All script (js) files will be added that are not under node_modules and that pass the options.scriptGlob pattern. By default you should put Javascript files under the &#39;lib&#39; directory. </p></td>
 </tr>
@@ -331,7 +335,7 @@ the network as well as a set of executable scripts.
 <td style="text-align: left">Returns the version for this business network</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#toarchive-object">toArchive</a></td>
+<td style="text-align: left"><a href="#toarchive">toArchive</a></td>
 <td style="text-align: left"><code>Buffer</code></td>
 <td style="text-align: left">Store a BusinessNetworkDefinition as an archive.</td>
 </tr>
@@ -341,7 +345,7 @@ the network as well as a set of executable scripts.
 
 <h2 id="new-businessnetworkdefinition">new BusinessNetworkDefinition()</h2>
 
-<p>Create the BusinessNetworkDefinition. <p> <strong>Note: Only to be called by framework code. Applications should retrieve instances from <strong>BusinessNetworkDefinition.fromArchive</strong></strong> </p></p>
+<p>Create the BusinessNetworkDefinition. <p> <strong>Note: Only to be called by framework code. Applications should retrieve instances from <a href="common-businessnetworkdefinition#fromarchive">BusinessNetworkDefinition#fromArchive</a></strong> </p></p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -379,7 +383,9 @@ the network as well as a set of executable scripts.
 </tr>
 </tbody></table>
 
-<h2 id="getidentifier">getIdentifier(  )</h2>
+<h2 id="getidentifier">getIdentifier</h2>
+
+<p><em>String getIdentifier(  )</em></p>
 
 <p>Returns the identifier for this business network</p>
 
@@ -391,7 +397,9 @@ the network as well as a set of executable scripts.
 
 <p>No parameters</p>
 
-<h2 id="getmetadata">getMetadata(  )</h2>
+<h2 id="getmetadata">getMetadata</h2>
+
+<p><em>BusinessNetworkMetadata getMetadata(  )</em></p>
 
 <p>Returns the metadata for this business network</p>
 
@@ -403,7 +411,9 @@ the network as well as a set of executable scripts.
 
 <p>No parameters</p>
 
-<h2 id="getname">getName(  )</h2>
+<h2 id="getname">getName</h2>
+
+<p><em>String getName(  )</em></p>
 
 <p>Returns the name for this business network</p>
 
@@ -415,7 +425,9 @@ the network as well as a set of executable scripts.
 
 <p>No parameters</p>
 
-<h2 id="getversion">getVersion(  )</h2>
+<h2 id="getversion">getVersion</h2>
+
+<p><em>String getVersion(  )</em></p>
 
 <p>Returns the version for this business network</p>
 
@@ -427,7 +439,9 @@ the network as well as a set of executable scripts.
 
 <p>No parameters</p>
 
-<h2 id="getdescription">getDescription(  )</h2>
+<h2 id="getdescription">getDescription</h2>
+
+<p><em>String getDescription(  )</em></p>
 
 <p>Returns the description for this business network</p>
 
@@ -439,7 +453,9 @@ the network as well as a set of executable scripts.
 
 <p>No parameters</p>
 
-<h2 id="fromarchive-buffer">fromArchive( buffer )</h2>
+<h2 id="fromarchive">fromArchive</h2>
+
+<p><em>Promise fromArchive( Buffer buffer )</em></p>
 
 <p>Create a BusinessNetworkDefinition from an archive.</p>
 
@@ -465,7 +481,9 @@ the network as well as a set of executable scripts.
 </tr>
 </tbody></table>
 
-<h2 id="toarchive-options">toArchive( options )</h2>
+<h2 id="toarchive">toArchive</h2>
+
+<p><em>Buffer toArchive( [Object options] )</em></p>
 
 <p>Store a BusinessNetworkDefinition as an archive.</p>
 
@@ -491,7 +509,9 @@ the network as well as a set of executable scripts.
 </tr>
 </tbody></table>
 
-<h2 id="fromdirectory-path-options">fromDirectory( path, options )</h2>
+<h2 id="fromdirectory">fromDirectory</h2>
+
+<p><em>Promise fromDirectory( String path, [Object options] )</em></p>
 
 <p>Builds a BusinessNetworkDefintion from the contents of a directory. The directory must include a package.json in the root (used to specify the name, version and description of the business network). This method is designed to work with business networks that refer to external models using npm dependencies as well as business networks that statically package their model files. <p> If package.json contains a dependencies property then this method will search for model (CTO) files under the node_modules directory for each dependency that passes the options.dependencyGlob pattern. </p> <p> If the network depends on an npm module its dependencies (transitive closure) will also be scanned for model (CTO) files. </p> <p> The directory may optionally contain a README.md file which is accessible from the BusinessNetworkMetadata.getREADME method. </p> <p> In addition all model files will be added that are not under node_modules and that pass the options.modelFileGlob pattern. By default you should put model files under a directory called &#39;models&#39;. </p> <p> All script (js) files will be added that are not under node_modules and that pass the options.scriptGlob pattern. By default you should put Javascript files under the &#39;lib&#39; directory. </p></p>
 
@@ -523,7 +543,7 @@ the network as well as a set of executable scripts.
 </tr>
 </tbody></table>
 
-<h4 id="sub-options">Sub-options</h4>
+<h3 id="sub-options">Sub-options</h3>
 
 <table><thead>
 <tr>
@@ -553,7 +573,9 @@ the network as well as a set of executable scripts.
 </tr>
 </tbody></table>
 
-<h2 id="getintrospector">getIntrospector(  )</h2>
+<h2 id="getintrospector">getIntrospector</h2>
+
+<p><em>Introspector getIntrospector(  )</em></p>
 
 <p>Provides access to the Introspector for this business network. The Introspector is used to reflect on the types defined within this business network.</p>
 
@@ -565,7 +587,9 @@ the network as well as a set of executable scripts.
 
 <p>No parameters</p>
 
-<h2 id="getfactory">getFactory(  )</h2>
+<h2 id="getfactory">getFactory</h2>
+
+<p><em>Factory getFactory(  )</em></p>
 
 <p>Provides access to the Factory for this business network. The Factory is used to create the types defined in this business network.</p>
 
@@ -577,7 +601,9 @@ the network as well as a set of executable scripts.
 
 <p>No parameters</p>
 
-<h2 id="getserializer">getSerializer(  )</h2>
+<h2 id="getserializer">getSerializer</h2>
+
+<p><em>Serializer getSerializer(  )</em></p>
 
 <p>Provides access to the Serializer for this business network. The Serializer is used to serialize instances of the types defined within this business network.</p>
 

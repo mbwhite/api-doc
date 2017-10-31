@@ -185,6 +185,7 @@ ga('send', 'pageview');
 <li><p><a href="../api-doc-inline/api-doc-index.html">API Reference</a></p>
 
 <ul>
+<li><a href="../api-doc-inline/allData.html">API Class Index</a></li>
 <li><a href="../api-doc-inline/admin-adminconnection.html">AdminConnection (Admin API)</a></li>
 <li><a href="../api-doc-inline/client-assetregistry.html">AssetRegistry (Client API)</a></li>
 <li><a href="../api-doc-inline/client-businessnetworkconnection.html">BusinessNetworkConnection (Client API)</a></li>
@@ -215,6 +216,7 @@ ga('send', 'pageview');
 <li><a href="../api-doc-inline/common-validatedconcept.html">ValidatedConcept (Common API)</a></li>
 <li><a href="../api-doc-inline/common-validatedresource.html">ValidatedResource (Common API)</a></li>
 <li><a href="../api-doc-inline/common-validationexception.html">ValidationException (Common API)</a></li>
+<li><a href="../api-doc-inline/runtime-api.html">Api (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-assetregistry.html">AssetRegistry (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-factory.html">Factory (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-participantregistry.html">ParticipantRegistry (Runtime API)</a></li>
@@ -250,7 +252,9 @@ ga('send', 'pageview');
           <section class="content-chunk">
             <!-- <a class="toggle open" href="#nav">open</a> -->
             
-              <h1 id="participantregistry">ParticipantRegistry</h1>
+              <p><a href="api-doc-index">Overview</a>  -  <a href="allData#common-api">Common API </a>  -  <a href="allData#client-api">Client API</a>  -  <a href="allData#admin-api">Admin API </a>  -  <a href="allData#runtime-api">Runtime API </a></p>
+
+<h1 id="participantregistry">ParticipantRegistry</h1>
 
 <p>The ParticipantRegistry is used to manage a set of participants stored on the blockchain.
 <p><a href="./diagrams/participantregistry.svg"><img src="./diagrams/participantregistry.svg" style="height:100%;"/></a></p></p>
@@ -265,7 +269,7 @@ ga('send', 'pageview');
 <h3 id="see-also">See also</h3>
 
 <ul>
-<li>See <a href="registry">Registry</a></li>
+<li>See (see {@link registry)</li>
 </ul>
 
 <h2 id="method-summary">Method Summary</h2>
@@ -278,27 +282,27 @@ ga('send', 'pageview');
 </tr>
 </thead><tbody>
 <tr>
-<td style="text-align: left"><a href="#addparticipantregistry-securitycontext-string-string-modelmanager-factory-serializer-businessnetworkconnection">addParticipantRegistry</a></td>
+<td style="text-align: left"><a href="#addparticipantregistry">addParticipantRegistry</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Add a new participant registry.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#constructor-string-string-securitycontext-modelmanager-factory-serializer-businessnetworkconnection">constructor</a></td>
+<td style="text-align: left"><a href="#constructor">constructor</a></td>
 <td style="text-align: left"><code>void</code></td>
-<td style="text-align: left">Create an participant registry. <p> <strong>Note: Only to be called by framework code. Applications should retrieve instances from <strong>BusinessNetworkConnection</strong></strong> </p></td>
+<td style="text-align: left">Create an participant registry. <p> <strong>Note: Only to be called by framework code. Applications should retrieve instances from <a href="client-businessnetworkconnection">BusinessNetworkConnection</a></strong> </p></td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#getallparticipantregistries-securitycontext-modelmanager-factory-serializer-businessnetworkconnection-boolean">getAllParticipantRegistries</a></td>
+<td style="text-align: left"><a href="#getallparticipantregistries">getAllParticipantRegistries</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Get a list of all existing participant registries.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#getparticipantregistry-securitycontext-string-modelmanager-factory-serializer-businessnetworkconnection">getParticipantRegistry</a></td>
+<td style="text-align: left"><a href="#getparticipantregistry">getParticipantRegistry</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Get an existing participant registry.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#participantregistryexists-securitycontext-string-modelmanager-factory-serializer-businessnetworkconnection">participantRegistryExists</a></td>
+<td style="text-align: left"><a href="#participantregistryexists">participantRegistryExists</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Determine whether a participant registry exists.</td>
 </tr>
@@ -306,13 +310,15 @@ ga('send', 'pageview');
 
 <h1 id="method-details">Method Details</h1>
 
-<h2 id="getallparticipantregistries-securitycontext-modelmanager-factory-serializer-bnc-includesystem">getAllParticipantRegistries( securitycontext, modelmanager, factory, serializer, bnc, includesystem )</h2>
+<h2 id="getallparticipantregistries">getAllParticipantRegistries</h2>
+
+<p><em>Promise getAllParticipantRegistries( SecurityContext securitycontext, ModelManager modelmanager, Factory factory, Serializer serializer, BusinessNetworkConnection bnc, [Boolean includesystem] )</em></p>
 
 <p>Get a list of all existing participant registries.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved with a list of <strong>ParticipantRegistry</strong> instances representing the participant registries.</p>
+<p><code>Promise</code> - A promise that will be resolved with a list of <a href="client-participantregistry">ParticipantRegistry</a> instances representing the participant registries.</p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -362,13 +368,15 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<h2 id="getparticipantregistry-securitycontext-id-modelmanager-factory-serializer-bnc">getParticipantRegistry( securitycontext, id, modelmanager, factory, serializer, bnc )</h2>
+<h2 id="getparticipantregistry">getParticipantRegistry</h2>
+
+<p><em>Promise getParticipantRegistry( SecurityContext securitycontext, string id, ModelManager modelmanager, Factory factory, Serializer serializer, BusinessNetworkConnection bnc )</em></p>
 
 <p>Get an existing participant registry.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved with a <strong>ParticipantRegistry</strong> instance representing the participant registry.</p>
+<p><code>Promise</code> - A promise that will be resolved with a <a href="client-participantregistry">ParticipantRegistry</a> instance representing the participant registry.</p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -418,7 +426,9 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<h2 id="participantregistryexists-securitycontext-id-modelmanager-factory-serializer-bnc">participantRegistryExists( securitycontext, id, modelmanager, factory, serializer, bnc )</h2>
+<h2 id="participantregistryexists">participantRegistryExists</h2>
+
+<p><em>Promise participantRegistryExists( SecurityContext securitycontext, string id, ModelManager modelmanager, Factory factory, Serializer serializer, BusinessNetworkConnection bnc )</em></p>
 
 <p>Determine whether a participant registry exists.</p>
 
@@ -474,13 +484,15 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<h2 id="addparticipantregistry-securitycontext-id-name-modelmanager-factory-serializer-bnc">addParticipantRegistry( securitycontext, id, name, modelmanager, factory, serializer, bnc )</h2>
+<h2 id="addparticipantregistry">addParticipantRegistry</h2>
+
+<p><em>Promise addParticipantRegistry( SecurityContext securitycontext, string id, string name, ModelManager modelmanager, Factory factory, Serializer serializer, BusinessNetworkConnection bnc )</em></p>
 
 <p>Add a new participant registry.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved with a <strong>ParticipantRegistry</strong> instance representing the new participant registry.</p>
+<p><code>Promise</code> - A promise that will be resolved with a <a href="client-participantregistry">ParticipantRegistry</a> instance representing the new participant registry.</p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -538,7 +550,7 @@ ga('send', 'pageview');
 
 <h2 id="new-participantregistry">new ParticipantRegistry()</h2>
 
-<p>Create an participant registry. <p> <strong>Note: Only to be called by framework code. Applications should retrieve instances from <strong>BusinessNetworkConnection</strong></strong> </p></p>
+<p>Create an participant registry. <p> <strong>Note: Only to be called by framework code. Applications should retrieve instances from <a href="client-businessnetworkconnection">BusinessNetworkConnection</a></strong> </p></p>
 
 <h3 id="parameters">Parameters</h3>
 

@@ -185,6 +185,7 @@ ga('send', 'pageview');
 <li><p><a href="../api-doc-inline/api-doc-index.html">API Reference</a></p>
 
 <ul>
+<li><a href="../api-doc-inline/allData.html">API Class Index</a></li>
 <li><a href="../api-doc-inline/admin-adminconnection.html">AdminConnection (Admin API)</a></li>
 <li><a href="../api-doc-inline/client-assetregistry.html">AssetRegistry (Client API)</a></li>
 <li><a href="../api-doc-inline/client-businessnetworkconnection.html">BusinessNetworkConnection (Client API)</a></li>
@@ -215,6 +216,7 @@ ga('send', 'pageview');
 <li><a href="../api-doc-inline/common-validatedconcept.html">ValidatedConcept (Common API)</a></li>
 <li><a href="../api-doc-inline/common-validatedresource.html">ValidatedResource (Common API)</a></li>
 <li><a href="../api-doc-inline/common-validationexception.html">ValidationException (Common API)</a></li>
+<li><a href="../api-doc-inline/runtime-api.html">Api (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-assetregistry.html">AssetRegistry (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-factory.html">Factory (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-participantregistry.html">ParticipantRegistry (Runtime API)</a></li>
@@ -250,10 +252,12 @@ ga('send', 'pageview');
           <section class="content-chunk">
             <!-- <a class="toggle open" href="#nav">open</a> -->
             
-              <h1 id="factory">Factory</h1>
+              <p><a href="api-doc-index">Overview</a>  -  <a href="allData#common-api">Common API </a>  -  <a href="allData#client-api">Client API</a>  -  <a href="allData#admin-api">Admin API </a>  -  <a href="allData#runtime-api">Runtime API </a></p>
+
+<h1 id="factory">Factory</h1>
 
 <p>Do not attempt to create an instance of this class.<br>
-You must use the <strong>module:composer-runtime#getFactory getFactory</strong>
+You must use the <a href="runtime-api#getfactory">getFactory</a>
 method instead.</p>
 
 <h3 id="details">Details</h3>
@@ -291,15 +295,17 @@ method instead.</p>
 <tr>
 <td style="text-align: left"><a href="#newresource">newResource</a></td>
 <td style="text-align: left"><code>Resource</code></td>
-<td style="text-align: left">Create a new resource (an instance of an asset, participant, or transaction). The properties of the new instance should be set as standard JavaScript object properties. The new instance can then be stored in a registry using the appropriate registry APIs, for example <strong>module:composer-runtime.AssetRegistry AssetRegistry</strong>.</td>
+<td style="text-align: left">Create a new resource (an instance of an asset, participant, or transaction). The properties of the new instance should be set as standard JavaScript object properties. The new instance can then be stored in a registry using the appropriate registry APIs, for example <a href="runtime-assetregistry">AssetRegistry</a>.</td>
 </tr>
 </tbody></table>
 
 <h1 id="method-details">Method Details</h1>
 
-<h2 id="newresource-ns-type-id">newResource( ns, type, id )</h2>
+<h2 id="newresource">newResource</h2>
 
-<p>Create a new resource (an instance of an asset, participant, or transaction). The properties of the new instance should be set as standard JavaScript object properties. The new instance can then be stored in a registry using the appropriate registry APIs, for example <strong>module:composer-runtime.AssetRegistry AssetRegistry</strong>.</p>
+<p><em>Resource newResource( string ns, string type, string id )</em></p>
+
+<p>Create a new resource (an instance of an asset, participant, or transaction). The properties of the new instance should be set as standard JavaScript object properties. The new instance can then be stored in a registry using the appropriate registry APIs, for example <a href="runtime-assetregistry">AssetRegistry</a>.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the factory.</span>
@@ -353,7 +359,9 @@ method instead.</p>
 <span class="nx">vehicle</span><span class="p">.</span><span class="nx">colour</span> <span class="o">=</span> <span class="s1">'BLUE'</span><span class="p">;</span>
 <span class="nx">vehicle</span><span class="p">.</span><span class="nx">manufacturer</span> <span class="o">=</span> <span class="s1">'Toyota'</span><span class="p">;</span>
 </code></pre></div>
-<h2 id="newrelationship-ns-type-id">newRelationship( ns, type, id )</h2>
+<h2 id="newrelationship">newRelationship</h2>
+
+<p><em>Relationship newRelationship( string ns, string type, string id )</em></p>
 
 <p>Create a new relationship with a given namespace, type, and identifier. A relationship is a typed pointer to an instance. For example, a new relationship with namespace &#39;org.acme&#39;, type &#39;Vehicle&#39; and identifier &#39;VEHICLE_1&#39; creates` a pointer that points at an existing instance of org.acme.Vehicle with the identifier &#39;VEHICLE_1&#39;.</p>
 
@@ -411,7 +419,9 @@ method instead.</p>
 <span class="c1">// Set the relationship as the value of the vehicle property of the driver.</span>
 <span class="nx">driver</span><span class="p">.</span><span class="nx">vehicle</span> <span class="o">=</span> <span class="nx">vehicle</span><span class="p">;</span>
 </code></pre></div>
-<h2 id="newconcept-ns-type">newConcept( ns, type )</h2>
+<h2 id="newconcept">newConcept</h2>
+
+<p><em>Concept newConcept( string ns, string type )</em></p>
 
 <p>Create a new concept with a given namespace, type, and identifier. A concept is an advanced data structure</p>
 
@@ -463,7 +473,9 @@ method instead.</p>
 <span class="c1">// Add the record to the persons array of records.</span>
 <span class="nx">person</span><span class="p">.</span><span class="nx">records</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">record</span><span class="p">);</span>
 </code></pre></div>
-<h2 id="newevent-ns-type">newEvent( ns, type )</h2>
+<h2 id="newevent">newEvent</h2>
+
+<p><em>Resource newEvent( string ns, string type )</em></p>
 
 <p>Create a new type with a given namespace and type</p>
 

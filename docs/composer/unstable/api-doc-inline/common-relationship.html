@@ -185,6 +185,7 @@ ga('send', 'pageview');
 <li><p><a href="../api-doc-inline/api-doc-index.html">API Reference</a></p>
 
 <ul>
+<li><a href="../api-doc-inline/allData.html">API Class Index</a></li>
 <li><a href="../api-doc-inline/admin-adminconnection.html">AdminConnection (Admin API)</a></li>
 <li><a href="../api-doc-inline/client-assetregistry.html">AssetRegistry (Client API)</a></li>
 <li><a href="../api-doc-inline/client-businessnetworkconnection.html">BusinessNetworkConnection (Client API)</a></li>
@@ -215,6 +216,7 @@ ga('send', 'pageview');
 <li><a href="../api-doc-inline/common-validatedconcept.html">ValidatedConcept (Common API)</a></li>
 <li><a href="../api-doc-inline/common-validatedresource.html">ValidatedResource (Common API)</a></li>
 <li><a href="../api-doc-inline/common-validationexception.html">ValidationException (Common API)</a></li>
+<li><a href="../api-doc-inline/runtime-api.html">Api (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-assetregistry.html">AssetRegistry (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-factory.html">Factory (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-participantregistry.html">ParticipantRegistry (Runtime API)</a></li>
@@ -250,7 +252,9 @@ ga('send', 'pageview');
           <section class="content-chunk">
             <!-- <a class="toggle open" href="#nav">open</a> -->
             
-              <h1 id="relationship">Relationship</h1>
+              <p><a href="api-doc-index">Overview</a>  -  <a href="allData#common-api">Common API </a>  -  <a href="allData#client-api">Client API</a>  -  <a href="allData#admin-api">Admin API </a>  -  <a href="allData#runtime-api">Runtime API </a></p>
+
+<h1 id="relationship">Relationship</h1>
 
 <p>A Relationship is a typed pointer to an instance. I.e the relationship
 with namespace = &#39;org.acme&#39;, type = &#39;Vehicle&#39; and id = &#39;ABC&#39; creates
@@ -267,7 +271,7 @@ ABC.</p>
 <h3 id="see-also">See also</h3>
 
 <ul>
-<li>See <a href="identifiable">Identifiable</a></li>
+<li>See (see {@link identifiable)</li>
 </ul>
 
 <h2 id="method-summary">Method Summary</h2>
@@ -280,7 +284,7 @@ ABC.</p>
 </tr>
 </thead><tbody>
 <tr>
-<td style="text-align: left"><a href="#fromuri-modelmanager-string-string-string">fromURI</a></td>
+<td style="text-align: left"><a href="#fromuri">fromURI</a></td>
 <td style="text-align: left"><code>Relationship</code></td>
 <td style="text-align: left">Contructs a Relationship instance from a URI representation (created using toURI).</td>
 </tr>
@@ -298,7 +302,9 @@ ABC.</p>
 
 <h1 id="method-details">Method Details</h1>
 
-<h2 id="tostring">toString(  )</h2>
+<h2 id="tostring">toString</h2>
+
+<p><em>String toString(  )</em></p>
 
 <p>Returns the string representation of this class</p>
 
@@ -310,7 +316,9 @@ ABC.</p>
 
 <p>No parameters</p>
 
-<h2 id="isrelationship">isRelationship(  )</h2>
+<h2 id="isrelationship">isRelationship</h2>
+
+<p><em>boolean isRelationship(  )</em></p>
 
 <p>Determine if this identifiable is a relationship.</p>
 
@@ -322,7 +330,9 @@ ABC.</p>
 
 <p>No parameters</p>
 
-<h2 id="fromuri-modelmanager-uriasstring-defaultnamespace-defaulttype">fromURI( modelmanager, uriasstring, defaultnamespace, defaulttype )</h2>
+<h2 id="fromuri">fromURI</h2>
+
+<p><em>Relationship fromURI( ModelManager modelmanager, String uriasstring, [String defaultnamespace], [String defaulttype] )</em></p>
 
 <p>Contructs a Relationship instance from a URI representation (created using toURI).</p>
 

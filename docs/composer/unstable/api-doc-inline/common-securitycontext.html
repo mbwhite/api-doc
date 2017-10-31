@@ -185,6 +185,7 @@ ga('send', 'pageview');
 <li><p><a href="../api-doc-inline/api-doc-index.html">API Reference</a></p>
 
 <ul>
+<li><a href="../api-doc-inline/allData.html">API Class Index</a></li>
 <li><a href="../api-doc-inline/admin-adminconnection.html">AdminConnection (Admin API)</a></li>
 <li><a href="../api-doc-inline/client-assetregistry.html">AssetRegistry (Client API)</a></li>
 <li><a href="../api-doc-inline/client-businessnetworkconnection.html">BusinessNetworkConnection (Client API)</a></li>
@@ -215,6 +216,7 @@ ga('send', 'pageview');
 <li><a href="../api-doc-inline/common-validatedconcept.html">ValidatedConcept (Common API)</a></li>
 <li><a href="../api-doc-inline/common-validatedresource.html">ValidatedResource (Common API)</a></li>
 <li><a href="../api-doc-inline/common-validationexception.html">ValidationException (Common API)</a></li>
+<li><a href="../api-doc-inline/runtime-api.html">Api (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-assetregistry.html">AssetRegistry (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-factory.html">Factory (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-participantregistry.html">ParticipantRegistry (Runtime API)</a></li>
@@ -250,7 +252,9 @@ ga('send', 'pageview');
           <section class="content-chunk">
             <!-- <a class="toggle open" href="#nav">open</a> -->
             
-              <h1 id="securitycontext">SecurityContext</h1>
+              <p><a href="api-doc-index">Overview</a>  -  <a href="allData#common-api">Common API </a>  -  <a href="allData#client-api">Client API</a>  -  <a href="allData#admin-api">Admin API </a>  -  <a href="allData#runtime-api">Runtime API </a></p>
+
+<h1 id="securitycontext">SecurityContext</h1>
 
 <p>SecurityContext is used to authenticate and manage
 user credentials to the underlying blockchain fabric.
@@ -274,9 +278,9 @@ user credentials to the underlying blockchain fabric.
 </tr>
 </thead><tbody>
 <tr>
-<td style="text-align: left"><a href="#constructor-connection-string">constructor</a></td>
+<td style="text-align: left"><a href="#constructor">constructor</a></td>
 <td style="text-align: left"><code>void</code></td>
-<td style="text-align: left">Create the SecurityContext. <strong>Note: Only to be called by framework code. Applications should retrieve instances by calling <strong>Composer#login login</strong></strong> </p></td>
+<td style="text-align: left">Create the SecurityContext. <strong>Note: Only to be called by framework code. </strong> </p></td>
 </tr>
 <tr>
 <td style="text-align: left"><a href="#getconnection">getConnection</a></td>
@@ -294,7 +298,7 @@ user credentials to the underlying blockchain fabric.
 
 <h2 id="new-securitycontext">new SecurityContext()</h2>
 
-<p>Create the SecurityContext. <strong>Note: Only to be called by framework code. Applications should retrieve instances by calling <strong>Composer#login login</strong></strong> </p></p>
+<p>Create the SecurityContext. <strong>Note: Only to be called by framework code. </strong> </p></p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -320,7 +324,9 @@ user credentials to the underlying blockchain fabric.
 </tr>
 </tbody></table>
 
-<h2 id="getconnection">getConnection(  )</h2>
+<h2 id="getconnection">getConnection</h2>
+
+<p><em>Connection getConnection(  )</em></p>
 
 <p>Get the owning connection.</p>
 
@@ -332,7 +338,9 @@ user credentials to the underlying blockchain fabric.
 
 <p>No parameters</p>
 
-<h2 id="getuser">getUser(  )</h2>
+<h2 id="getuser">getUser</h2>
+
+<p><em>string getUser(  )</em></p>
 
 <p>Get the current username.</p>
 

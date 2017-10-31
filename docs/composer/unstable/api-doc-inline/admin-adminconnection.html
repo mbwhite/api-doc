@@ -185,6 +185,7 @@ ga('send', 'pageview');
 <li><p><a href="../api-doc-inline/api-doc-index.html">API Reference</a></p>
 
 <ul>
+<li><a href="../api-doc-inline/allData.html">API Class Index</a></li>
 <li><a href="../api-doc-inline/admin-adminconnection.html">AdminConnection (Admin API)</a></li>
 <li><a href="../api-doc-inline/client-assetregistry.html">AssetRegistry (Client API)</a></li>
 <li><a href="../api-doc-inline/client-businessnetworkconnection.html">BusinessNetworkConnection (Client API)</a></li>
@@ -215,6 +216,7 @@ ga('send', 'pageview');
 <li><a href="../api-doc-inline/common-validatedconcept.html">ValidatedConcept (Common API)</a></li>
 <li><a href="../api-doc-inline/common-validatedresource.html">ValidatedResource (Common API)</a></li>
 <li><a href="../api-doc-inline/common-validationexception.html">ValidationException (Common API)</a></li>
+<li><a href="../api-doc-inline/runtime-api.html">Api (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-assetregistry.html">AssetRegistry (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-factory.html">Factory (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-participantregistry.html">ParticipantRegistry (Runtime API)</a></li>
@@ -250,7 +252,9 @@ ga('send', 'pageview');
           <section class="content-chunk">
             <!-- <a class="toggle open" href="#nav">open</a> -->
             
-              <h1 id="adminconnection">AdminConnection</h1>
+              <p><a href="api-doc-index">Overview</a>  -  <a href="allData#common-api">Common API </a>  -  <a href="allData#client-api">Client API</a>  -  <a href="allData#admin-api">Admin API </a>  -  <a href="allData#runtime-api">Runtime API </a></p>
+
+<h1 id="adminconnection">AdminConnection</h1>
 
 <p>This class creates an administration connection to a Hyperledger Composer runtime. The
 connection can then be used to:
@@ -287,27 +291,27 @@ Calling an api after disconnect and before connect will give an error.</p>
 </tr>
 </thead><tbody>
 <tr>
-<td style="text-align: left"><a href="#connect-string-string-string-string">connect</a></td>
+<td style="text-align: left"><a href="#connect">connect</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Connects and logs in to the Hyperledger Fabric using a named connection profile. The connection profile must exist in the profile store.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#constructor-object-connectionprofilestore-object">constructor</a></td>
+<td style="text-align: left"><a href="#constructor">constructor</a></td>
 <td style="text-align: left"><code>void</code></td>
 <td style="text-align: left">Create an instance of the AdminConnection class.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#createprofile-string-object">createProfile</a></td>
+<td style="text-align: left"><a href="#createprofile">createProfile</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Stores a connection profile into the profile store being used by this AdminConnection.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#deleteprofile-string">deleteProfile</a></td>
+<td style="text-align: left"><a href="#deleteprofile">deleteProfile</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Deletes the specified connection profile from the profile store being used by this AdminConnection.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#deploy-businessnetworkdefinition-object">deploy</a></td>
+<td style="text-align: left"><a href="#deploy">deploy</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Deploys a new BusinessNetworkDefinition to the Hyperledger Fabric. The connection must be connected for this method to succeed.</td>
 </tr>
@@ -317,7 +321,7 @@ Calling an api after disconnect and before connect will give an error.</p>
 <td style="text-align: left">Disconnects this connection.securityContext</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#exportidentity-string-string">exportIdentity</a></td>
+<td style="text-align: left"><a href="#exportidentity">exportIdentity</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Obtain the credentials associated with a given identity.</td>
 </tr>
@@ -332,17 +336,17 @@ Calling an api after disconnect and before connect will give an error.</p>
 <td style="text-align: left">Get the current logging level of a business network. The connection must be connected for this method to succeed.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#getprofile-string">getProfile</a></td>
+<td style="text-align: left"><a href="#getprofile">getProfile</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Retrieve the specified connection profile from the profile store being used by this AdminConnection.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#importidentity-string-string-string-string">importIdentity</a></td>
+<td style="text-align: left"><a href="#importidentity">importIdentity</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Import an identity into a profiles&#39; wallet. No connection needs to be established for this method to succeed.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#install-businessnetworkidentifier-object">install</a></td>
+<td style="text-align: left"><a href="#install">install</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Installs the Hyperledger Composer runtime to the Hyperledger Fabric in preparation for the business network to be started. The connection mustbe connected for this method to succeed. You must pass the name of the business network that is defined in your archive that this runtime will be started with.</td>
 </tr>
@@ -357,32 +361,32 @@ Calling an api after disconnect and before connect will give an error.</p>
 <td style="text-align: left">Test the connection to the runtime and verify that the version of the runtime is compatible with this level of the node.js module.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#requestidentity-string-string-string">requestIdentity</a></td>
+<td style="text-align: left"><a href="#requestidentity">requestIdentity</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Request the certificates for an identity. No connection needs to be established for this method to succeed.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#reset-businessnetworkidentifier">reset</a></td>
+<td style="text-align: left"><a href="#reset">reset</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Resets an existing BusinessNetworkDefinition on the Hyperledger Fabric. The BusinessNetworkDefinition must have been previously deployed.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#setloglevel-any">setLogLevel</a></td>
+<td style="text-align: left"><a href="#setloglevel">setLogLevel</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Set the logging level of a business network. The connection must be connected for this method to succeed.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#start-businessnetworkdefinition-object">start</a></td>
+<td style="text-align: left"><a href="#start">start</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Starts a business network within the runtime previously installed to the Hyperledger Fabric with the same name as the business network to be started. The connection must be connected for this method to succeed.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#undeploy-businessnetworkidentifier">undeploy</a></td>
+<td style="text-align: left"><a href="#undeploy">undeploy</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Undeploys a BusinessNetworkDefinition from the Hyperledger Fabric. The business network will no longer be able to process transactions.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#update-businessnetworkdefinition">update</a></td>
+<td style="text-align: left"><a href="#update">update</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Updates an existing BusinessNetworkDefinition on the Hyperledger Fabric. The BusinessNetworkDefinition must have been previously deployed.</td>
 </tr>
@@ -417,7 +421,7 @@ Calling an api after disconnect and before connect will give an error.</p>
 </tr>
 </tbody></table>
 
-<h4 id="sub-options">Sub-options</h4>
+<h3 id="sub-options">Sub-options</h3>
 
 <table><thead>
 <tr>
@@ -441,7 +445,9 @@ Calling an api after disconnect and before connect will give an error.</p>
 </tr>
 </tbody></table>
 
-<h2 id="createprofile-connectionprofile-data">createProfile( connectionprofile, data )</h2>
+<h2 id="createprofile">createProfile</h2>
+
+<p><em>Promise createProfile( string connectionprofile, Object data )</em></p>
 
 <p>Stores a connection profile into the profile store being used by this AdminConnection.</p>
 
@@ -509,7 +515,9 @@ Calling an api after disconnect and before connect will give an error.</p>
     <span class="c1">// Add optional error handling here.</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="deleteprofile-connectionprofile">deleteProfile( connectionprofile )</h2>
+<h2 id="deleteprofile">deleteProfile</h2>
+
+<p><em>Promise deleteProfile( string connectionprofile )</em></p>
 
 <p>Deletes the specified connection profile from the profile store being used by this AdminConnection.</p>
 
@@ -557,7 +565,9 @@ Calling an api after disconnect and before connect will give an error.</p>
     <span class="c1">// Add optional error handling here.</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="getprofile-connectionprofile">getProfile( connectionprofile )</h2>
+<h2 id="getprofile">getProfile</h2>
+
+<p><em>Promise getProfile( string connectionprofile )</em></p>
 
 <p>Retrieve the specified connection profile from the profile store being used by this AdminConnection.</p>
 
@@ -601,7 +611,9 @@ Calling an api after disconnect and before connect will give an error.</p>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">profile</span><span class="p">);</span>
   <span class="p">});</span>
 </code></pre></div>
-<h2 id="getallprofiles">getAllProfiles(  )</h2>
+<h2 id="getallprofiles">getAllProfiles</h2>
+
+<p><em>Promise getAllProfiles(  )</em></p>
 
 <p>Retrieve all connection profiles from the profile store being used by this AdminConnection.</p>
 
@@ -635,7 +647,9 @@ Calling an api after disconnect and before connect will give an error.</p>
     <span class="p">}</span>
   <span class="p">});</span>
 </code></pre></div>
-<h2 id="connect-connectionprofile-enrollmentid-enrollmentsecret-businessnetworkidentifier">connect( connectionprofile, enrollmentid, enrollmentsecret, businessnetworkidentifier )</h2>
+<h2 id="connect">connect</h2>
+
+<p><em>Promise connect( string connectionprofile, string enrollmentid, string enrollmentsecret, string businessnetworkidentifier )</em></p>
 
 <p>Connects and logs in to the Hyperledger Fabric using a named connection profile. The connection profile must exist in the profile store.</p>
 
@@ -701,7 +715,9 @@ Calling an api after disconnect and before connect will give an error.</p>
     <span class="c1">// Add optional error handling here.</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="disconnect">disconnect(  )</h2>
+<h2 id="disconnect">disconnect</h2>
+
+<p><em>Promise disconnect(  )</em></p>
 
 <p>Disconnects this connection.securityContext</p>
 
@@ -735,7 +751,9 @@ Calling an api after disconnect and before connect will give an error.</p>
     <span class="c1">// Add optional error handling here.</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="install-businessnetworkidentifier-installoptions">install( businessnetworkidentifier, installoptions )</h2>
+<h2 id="install">install</h2>
+
+<p><em>Promise install( BusinessNetworkIdentifier businessnetworkidentifier, Object installoptions )</em></p>
 
 <p>Installs the Hyperledger Composer runtime to the Hyperledger Fabric in preparation for the business network to be started. The connection mustbe connected for this method to succeed. You must pass the name of the business network that is defined in your archive that this runtime will be started with.</p>
 
@@ -791,7 +809,9 @@ Calling an api after disconnect and before connect will give an error.</p>
     <span class="c1">// Add optional error handling here.</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="start-businessnetworkdefinition-startoptions">start( businessnetworkdefinition, startoptions )</h2>
+<h2 id="start">start</h2>
+
+<p><em>Promise start( BusinessNetworkDefinition businessnetworkdefinition, [Object startoptions] )</em></p>
 
 <p>Starts a business network within the runtime previously installed to the Hyperledger Fabric with the same name as the business network to be started. The connection must be connected for this method to succeed.</p>
 
@@ -847,7 +867,9 @@ Calling an api after disconnect and before connect will give an error.</p>
     <span class="c1">// Add optional error handling here.</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="deploy-businessnetworkdefinition-deployoptions">deploy( businessnetworkdefinition, deployoptions )</h2>
+<h2 id="deploy">deploy</h2>
+
+<p><em>Promise deploy( BusinessNetworkDefinition businessnetworkdefinition, Object deployoptions )</em></p>
 
 <p>Deploys a new BusinessNetworkDefinition to the Hyperledger Fabric. The connection must be connected for this method to succeed.</p>
 
@@ -903,7 +925,9 @@ Calling an api after disconnect and before connect will give an error.</p>
     <span class="c1">// Add optional error handling here.</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="undeploy-businessnetworkidentifier">undeploy( businessnetworkidentifier )</h2>
+<h2 id="undeploy">undeploy</h2>
+
+<p><em>Promise undeploy( BusinessNetworkIdentifier businessnetworkidentifier )</em></p>
 
 <p>Undeploys a BusinessNetworkDefinition from the Hyperledger Fabric. The business network will no longer be able to process transactions.</p>
 
@@ -951,7 +975,9 @@ Calling an api after disconnect and before connect will give an error.</p>
     <span class="c1">// Add optional error handling here.</span>
 <span class="p">})</span>
 </code></pre></div>
-<h2 id="update-businessnetworkdefinition">update( businessnetworkdefinition )</h2>
+<h2 id="update">update</h2>
+
+<p><em>Promise update( BusinessNetworkDefinition businessnetworkdefinition )</em></p>
 
 <p>Updates an existing BusinessNetworkDefinition on the Hyperledger Fabric. The BusinessNetworkDefinition must have been previously deployed.</p>
 
@@ -1001,7 +1027,9 @@ Calling an api after disconnect and before connect will give an error.</p>
     <span class="c1">// Add optional error handling here.</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="reset-businessnetworkidentifier">reset( businessnetworkidentifier )</h2>
+<h2 id="reset">reset</h2>
+
+<p><em>Promise reset( BusinessNetworkIdentifier businessnetworkidentifier )</em></p>
 
 <p>Resets an existing BusinessNetworkDefinition on the Hyperledger Fabric. The BusinessNetworkDefinition must have been previously deployed.
 Note this will remove ALL the contents of the network registries, but not any system registries</p>
@@ -1052,7 +1080,9 @@ Note this will remove ALL the contents of the network registries, but not any sy
     <span class="c1">// Add optional error handling here.</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="upgrade">upgrade(  )</h2>
+<h2 id="upgrade">upgrade</h2>
+
+<p><em>Promise upgrade(  )</em></p>
 
 <p>Upgrades an existing business network&#39;s composer runtime to a later level. The connection must be connected specifying the business network identifier as part of the connection for this method to succeed.</p>
 
@@ -1094,7 +1124,9 @@ Note this will remove ALL the contents of the network registries, but not any sy
     <span class="c1">// Add optional error handling here.</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="ping">ping(  )</h2>
+<h2 id="ping">ping</h2>
+
+<p><em>Promise ping(  )</em></p>
 
 <p>Test the connection to the runtime and verify that the version of the runtime is compatible with this level of the node.js module.</p>
 
@@ -1128,7 +1160,9 @@ Note this will remove ALL the contents of the network registries, but not any sy
     <span class="c1">// Add optional error handling here.</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="setloglevel-newloglevel">setLogLevel( newloglevel )</h2>
+<h2 id="setloglevel">setLogLevel</h2>
+
+<p><em>Promise setLogLevel( any newloglevel )</em></p>
 
 <p>Set the logging level of a business network. The connection must be connected for this method to succeed.</p>
 
@@ -1176,7 +1210,9 @@ Note this will remove ALL the contents of the network registries, but not any sy
     <span class="c1">// Add optional error handling here.</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="getloglevel">getLogLevel(  )</h2>
+<h2 id="getloglevel">getLogLevel</h2>
+
+<p><em>Promise getLogLevel(  )</em></p>
 
 <p>Get the current logging level of a business network. The connection must be connected for this method to succeed.</p>
 
@@ -1210,7 +1246,9 @@ Note this will remove ALL the contents of the network registries, but not any sy
     <span class="c1">// Add optional error handling here.</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="list">list(  )</h2>
+<h2 id="list">list</h2>
+
+<p><em>Promise list(  )</em></p>
 
 <p>List all of the deployed business networks. The connection must be connected for this method to succeed.</p>
 
@@ -1250,7 +1288,9 @@ Note this will remove ALL the contents of the network registries, but not any sy
     <span class="c1">// Add optional error handling here.</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="importidentity-connectionprofile-id-certificate-privatekey">importIdentity( connectionprofile, id, certificate, privatekey )</h2>
+<h2 id="importidentity">importIdentity</h2>
+
+<p><em>Promise importIdentity( string connectionprofile, string id, string certificate, string privatekey )</em></p>
 
 <p>Import an identity into a profiles&#39; wallet. No connection needs to be established for this method to succeed.</p>
 
@@ -1318,7 +1358,9 @@ Note this will remove ALL the contents of the network registries, but not any sy
     <span class="c1">// Add optional error handling here.</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="requestidentity-connectionprofile-enrollmentid-enrollmentsecret">requestIdentity( connectionprofile, enrollmentid, enrollmentsecret )</h2>
+<h2 id="requestidentity">requestIdentity</h2>
+
+<p><em>Promise requestIdentity( string connectionprofile, string enrollmentid, string enrollmentsecret )</em></p>
 
 <p>Request the certificates for an identity. No connection needs to be established for this method to succeed.</p>
 
@@ -1390,7 +1432,9 @@ Note this will remove ALL the contents of the network registries, but not any sy
     <span class="c1">// Add optional error handling here.</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="exportidentity-connectionprofilename-id">exportIdentity( connectionprofilename, id )</h2>
+<h2 id="exportidentity">exportIdentity</h2>
+
+<p><em>Promise exportIdentity( String connectionprofilename, String id )</em></p>
 
 <p>Obtain the credentials associated with a given identity.</p>
 

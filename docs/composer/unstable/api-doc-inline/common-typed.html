@@ -185,6 +185,7 @@ ga('send', 'pageview');
 <li><p><a href="../api-doc-inline/api-doc-index.html">API Reference</a></p>
 
 <ul>
+<li><a href="../api-doc-inline/allData.html">API Class Index</a></li>
 <li><a href="../api-doc-inline/admin-adminconnection.html">AdminConnection (Admin API)</a></li>
 <li><a href="../api-doc-inline/client-assetregistry.html">AssetRegistry (Client API)</a></li>
 <li><a href="../api-doc-inline/client-businessnetworkconnection.html">BusinessNetworkConnection (Client API)</a></li>
@@ -215,6 +216,7 @@ ga('send', 'pageview');
 <li><a href="../api-doc-inline/common-validatedconcept.html">ValidatedConcept (Common API)</a></li>
 <li><a href="../api-doc-inline/common-validatedresource.html">ValidatedResource (Common API)</a></li>
 <li><a href="../api-doc-inline/common-validationexception.html">ValidationException (Common API)</a></li>
+<li><a href="../api-doc-inline/runtime-api.html">Api (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-assetregistry.html">AssetRegistry (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-factory.html">Factory (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-participantregistry.html">ParticipantRegistry (Runtime API)</a></li>
@@ -250,7 +252,9 @@ ga('send', 'pageview');
           <section class="content-chunk">
             <!-- <a class="toggle open" href="#nav">open</a> -->
             
-              <h1 id="typed">Typed</h1>
+              <p><a href="api-doc-index">Overview</a>  -  <a href="allData#common-api">Common API </a>  -  <a href="allData#client-api">Client API</a>  -  <a href="allData#admin-api">Admin API </a>  -  <a href="allData#runtime-api">Runtime API </a></p>
+
+<h1 id="typed">Typed</h1>
 
 <p>Object is an instance with a namespace and a type.</p>
 
@@ -274,7 +278,7 @@ ga('send', 'pageview');
 </tr>
 </thead><tbody>
 <tr>
-<td style="text-align: left"><a href="#addarrayvalue-string-string">addArrayValue</a></td>
+<td style="text-align: left"><a href="#addarrayvalue">addArrayValue</a></td>
 <td style="text-align: left"><code>void</code></td>
 <td style="text-align: left">Adds a value to an array property on this Resource</td>
 </tr>
@@ -294,12 +298,12 @@ ga('send', 'pageview');
 <td style="text-align: left">Get the type of the instance (a short name, not including namespace).</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#instanceof-string">instanceOf</a></td>
+<td style="text-align: left"><a href="#instanceof">instanceOf</a></td>
 <td style="text-align: left"><code>boolean</code></td>
 <td style="text-align: left">Check to see if this instance is an instance of the specified fully qualified type name.</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#setpropertyvalue-string-string">setPropertyValue</a></td>
+<td style="text-align: left"><a href="#setpropertyvalue">setPropertyValue</a></td>
 <td style="text-align: left"><code>void</code></td>
 <td style="text-align: left">Sets a property on this Resource</td>
 </tr>
@@ -307,7 +311,9 @@ ga('send', 'pageview');
 
 <h1 id="method-details">Method Details</h1>
 
-<h2 id="gettype">getType(  )</h2>
+<h2 id="gettype">getType</h2>
+
+<p><em>string getType(  )</em></p>
 
 <p>Get the type of the instance (a short name, not including namespace).</p>
 
@@ -319,7 +325,9 @@ ga('send', 'pageview');
 
 <p>No parameters</p>
 
-<h2 id="getfullyqualifiedtype">getFullyQualifiedType(  )</h2>
+<h2 id="getfullyqualifiedtype">getFullyQualifiedType</h2>
+
+<p><em>string getFullyQualifiedType(  )</em></p>
 
 <p>Get the fully-qualified type name of the instance (including namespace).</p>
 
@@ -331,7 +339,9 @@ ga('send', 'pageview');
 
 <p>No parameters</p>
 
-<h2 id="getnamespace">getNamespace(  )</h2>
+<h2 id="getnamespace">getNamespace</h2>
+
+<p><em>string getNamespace(  )</em></p>
 
 <p>Get the namespace of the instance.</p>
 
@@ -343,7 +353,9 @@ ga('send', 'pageview');
 
 <p>No parameters</p>
 
-<h2 id="setpropertyvalue-propname-value">setPropertyValue( propname, value )</h2>
+<h2 id="setpropertyvalue">setPropertyValue</h2>
+
+<p><em>void setPropertyValue( string propname, string value )</em></p>
 
 <p>Sets a property on this Resource</p>
 
@@ -371,7 +383,9 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<h2 id="addarrayvalue-propname-value">addArrayValue( propname, value )</h2>
+<h2 id="addarrayvalue">addArrayValue</h2>
+
+<p><em>void addArrayValue( string propname, string value )</em></p>
 
 <p>Adds a value to an array property on this Resource</p>
 
@@ -399,7 +413,9 @@ ga('send', 'pageview');
 </tr>
 </tbody></table>
 
-<h2 id="instanceof-fqt">instanceOf( fqt )</h2>
+<h2 id="instanceof">instanceOf</h2>
+
+<p><em>boolean instanceOf( String fqt )</em></p>
 
 <p>Check to see if this instance is an instance of the specified fully qualified type name.</p>
 

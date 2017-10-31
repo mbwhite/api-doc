@@ -185,6 +185,7 @@ ga('send', 'pageview');
 <li><p><a href="../api-doc-inline/api-doc-index.html">API Reference</a></p>
 
 <ul>
+<li><a href="../api-doc-inline/allData.html">API Class Index</a></li>
 <li><a href="../api-doc-inline/admin-adminconnection.html">AdminConnection (Admin API)</a></li>
 <li><a href="../api-doc-inline/client-assetregistry.html">AssetRegistry (Client API)</a></li>
 <li><a href="../api-doc-inline/client-businessnetworkconnection.html">BusinessNetworkConnection (Client API)</a></li>
@@ -215,6 +216,7 @@ ga('send', 'pageview');
 <li><a href="../api-doc-inline/common-validatedconcept.html">ValidatedConcept (Common API)</a></li>
 <li><a href="../api-doc-inline/common-validatedresource.html">ValidatedResource (Common API)</a></li>
 <li><a href="../api-doc-inline/common-validationexception.html">ValidationException (Common API)</a></li>
+<li><a href="../api-doc-inline/runtime-api.html">Api (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-assetregistry.html">AssetRegistry (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-factory.html">Factory (Runtime API)</a></li>
 <li><a href="../api-doc-inline/runtime-participantregistry.html">ParticipantRegistry (Runtime API)</a></li>
@@ -250,7 +252,9 @@ ga('send', 'pageview');
           <section class="content-chunk">
             <!-- <a class="toggle open" href="#nav">open</a> -->
             
-              <h1 id="businessnetworkmetadata">BusinessNetworkMetadata</h1>
+              <p><a href="api-doc-index">Overview</a>  -  <a href="allData#common-api">Common API </a>  -  <a href="allData#client-api">Client API</a>  -  <a href="allData#admin-api">Admin API </a>  -  <a href="allData#runtime-api">Runtime API </a></p>
+
+<h1 id="businessnetworkmetadata">BusinessNetworkMetadata</h1>
 
 <p>
 Defines the metadata for a BusinessNeworkDefinition. This includes:
@@ -278,9 +282,9 @@ Defines the metadata for a BusinessNeworkDefinition. This includes:
 </tr>
 </thead><tbody>
 <tr>
-<td style="text-align: left"><a href="#constructor-object-string">constructor</a></td>
+<td style="text-align: left"><a href="#constructor">constructor</a></td>
 <td style="text-align: left"><code>void</code></td>
-<td style="text-align: left">Create the BusinessNetworkMetadata. <p> <strong>Note: Only to be called by framework code. Applications should retrieve instances from <strong>BusinessNetworkDefinition</strong></strong> </p></td>
+<td style="text-align: left">Create the BusinessNetworkMetadata. <p> <strong>Note: Only to be called by framework code. Applications should retrieve instances from <a href="common-businessnetworkdefinition">BusinessNetworkDefinition</a></strong> </p></td>
 </tr>
 <tr>
 <td style="text-align: left"><a href="#getdescription">getDescription</a></td>
@@ -318,7 +322,7 @@ Defines the metadata for a BusinessNeworkDefinition. This includes:
 
 <h2 id="new-businessnetworkmetadata">new BusinessNetworkMetadata()</h2>
 
-<p>Create the BusinessNetworkMetadata. <p> <strong>Note: Only to be called by framework code. Applications should retrieve instances from <strong>BusinessNetworkDefinition</strong></strong> </p></p>
+<p>Create the BusinessNetworkMetadata. <p> <strong>Note: Only to be called by framework code. Applications should retrieve instances from <a href="common-businessnetworkdefinition">BusinessNetworkDefinition</a></strong> </p></p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -344,7 +348,9 @@ Defines the metadata for a BusinessNeworkDefinition. This includes:
 </tr>
 </tbody></table>
 
-<h2 id="getreadme">getREADME(  )</h2>
+<h2 id="getreadme">getREADME</h2>
+
+<p><em>String getREADME(  )</em></p>
 
 <p>Returns the README.md for this business network. This may be null if the business network does not have a README.md</p>
 
@@ -356,7 +362,9 @@ Defines the metadata for a BusinessNeworkDefinition. This includes:
 
 <p>No parameters</p>
 
-<h2 id="getpackagejson">getPackageJson(  )</h2>
+<h2 id="getpackagejson">getPackageJson</h2>
+
+<p><em>object getPackageJson(  )</em></p>
 
 <p>Returns the package.json for this business network.</p>
 
@@ -368,7 +376,9 @@ Defines the metadata for a BusinessNeworkDefinition. This includes:
 
 <p>No parameters</p>
 
-<h2 id="getname">getName(  )</h2>
+<h2 id="getname">getName</h2>
+
+<p><em>string getName(  )</em></p>
 
 <p>Returns the name for this business network.</p>
 
@@ -380,7 +390,9 @@ Defines the metadata for a BusinessNeworkDefinition. This includes:
 
 <p>No parameters</p>
 
-<h2 id="getdescription">getDescription(  )</h2>
+<h2 id="getdescription">getDescription</h2>
+
+<p><em>string getDescription(  )</em></p>
 
 <p>Returns the description for this business network.</p>
 
@@ -392,7 +404,9 @@ Defines the metadata for a BusinessNeworkDefinition. This includes:
 
 <p>No parameters</p>
 
-<h2 id="getversion">getVersion(  )</h2>
+<h2 id="getversion">getVersion</h2>
+
+<p><em>string getVersion(  )</em></p>
 
 <p>Returns the version for this business network.</p>
 
@@ -404,7 +418,9 @@ Defines the metadata for a BusinessNeworkDefinition. This includes:
 
 <p>No parameters</p>
 
-<h2 id="getidentifier">getIdentifier(  )</h2>
+<h2 id="getidentifier">getIdentifier</h2>
+
+<p><em>string getIdentifier(  )</em></p>
 
 <p>Returns the identifier for this business network, formed from name@version.</p>
 
