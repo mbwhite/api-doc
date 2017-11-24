@@ -1,1 +1,0 @@
-Sitemap: https://hyperledger.github.io/composer//api-doc/composer/unstable/sitemap.xml
