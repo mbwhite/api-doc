@@ -339,11 +339,14 @@ retrieve instances from <a href="common-businessnetworkdefinition#fromarchive">B
 
 <p><em>String getIdentifier(  )</em></p>
 
-<p>Returns the identifier for this business network The identifier is formed from a business network name + &#39;@&#39; + version. The version is a semver valid version string. It is not used by Hyperledger Composer and is not needed in any other API. It is for application developer information purposes onlyu</p>
+<p><strong>__</strong>
+Returns the identifier for this business network The identifier is formed from a business network name + &#39;@&#39; + version. The version is a semver valid version string. It is not used by Hyperledger Composer and is not needed in any other API. It is for application developer information purposes onlyu</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>String</code> - the identifier of this business network</p>
+<p><strong><a href="common-string">String</a></strong> - the identifier of this business network</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -353,11 +356,14 @@ retrieve instances from <a href="common-businessnetworkdefinition#fromarchive">B
 
 <p><em>BusinessNetworkMetadata getMetadata(  )</em></p>
 
-<p>Returns the metadata for this business network</p>
+<p><strong>__</strong>
+Returns the metadata for this business network</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>BusinessNetworkMetadata</code> - the metadata for this business network</p>
+<p><strong><a href="common-businessnetworkmetadata">BusinessNetworkMetadata</a></strong> - the metadata for this business network</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -367,11 +373,14 @@ retrieve instances from <a href="common-businessnetworkdefinition#fromarchive">B
 
 <p><em>String getName(  )</em></p>
 
-<p>Returns the name for this business network</p>
+<p><strong>__</strong>
+Returns the name for this business network</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>String</code> - the name of this business network</p>
+<p><strong><a href="common-string">String</a></strong> - the name of this business network</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -381,11 +390,14 @@ retrieve instances from <a href="common-businessnetworkdefinition#fromarchive">B
 
 <p><em>String getVersion(  )</em></p>
 
-<p>Returns the version for this business network</p>
+<p><strong>__</strong>
+Returns the version for this business network</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>String</code> - the version of this business network. Use semver module to parse.</p>
+<p><strong><a href="common-string">String</a></strong> - the version of this business network. Use semver module to parse.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -395,11 +407,14 @@ retrieve instances from <a href="common-businessnetworkdefinition#fromarchive">B
 
 <p><em>String getDescription(  )</em></p>
 
-<p>Returns the description for this business network</p>
+<p><strong>__</strong>
+Returns the description for this business network</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>String</code> - the description of this business network</p>
+<p><strong><a href="common-string">String</a></strong> - the description of this business network</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -409,11 +424,14 @@ retrieve instances from <a href="common-businessnetworkdefinition#fromarchive">B
 
 <p><em>Promise fromArchive( Buffer buffer )</em></p>
 
-<p>Create a BusinessNetworkDefinition from an archive.</p>
+<p><strong>__</strong>
+Create a BusinessNetworkDefinition from an archive.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - a Promise to the instantiated business network</p>
+<p><strong><a href="common-promise">Promise</a></strong> - a Promise to the instantiated business network</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -421,14 +439,14 @@ retrieve instances from <a href="common-businessnetworkdefinition#fromarchive">B
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>Buffer</strong></td>
 <td style="text-align: left">Buffer</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">the Buffer to a zip archive</td>
 </tr>
 </tbody></table>
@@ -437,11 +455,14 @@ retrieve instances from <a href="common-businessnetworkdefinition#fromarchive">B
 
 <p><em>Buffer toArchive( [Object options] )</em></p>
 
-<p>Store a BusinessNetworkDefinition as an archive.</p>
+<p><strong>__</strong>
+Store a BusinessNetworkDefinition as an archive.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Buffer</code> - buffer  - the zlib buffer</p>
+<p><strong><a href="common-buffer">Buffer</a></strong> - buffer  - the zlib buffer</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -449,14 +470,14 @@ retrieve instances from <a href="common-businessnetworkdefinition#fromarchive">B
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>options</strong></td>
 <td style="text-align: left">Object</td>
-<td style="text-align: left">true</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">JSZip options</td>
 </tr>
 </tbody></table>
@@ -465,11 +486,14 @@ retrieve instances from <a href="common-businessnetworkdefinition#fromarchive">B
 
 <p><em>Promise fromDirectory( String path, [Object options] )</em></p>
 
-<p>Builds a BusinessNetworkDefintion from the contents of a directory. The directory must include a package.json in the root (used to specify the name, version and description of the business network). This method is designed to work with business networks that refer to external models using npm dependencies as well as business networks that statically package their model files. <p> If package.json contains a dependencies property then this method will search for model (CTO) files under the node_modules directory for each dependency that passes the options.dependencyGlob pattern. </p> <p> If the network depends on an npm module its dependencies (transitive closure) will also be scanned for model (CTO) files. </p> <p> The directory may optionally contain a README.md file which is accessible from the BusinessNetworkMetadata.getREADME method. </p> <p> In addition all model files will be added that are not under node_modules and that pass the options.modelFileGlob pattern. By default you should put model files under a directory called &#39;models&#39;. </p> <p> All script (js) files will be added that are not under node_modules and that pass the options.scriptGlob pattern. By default you should put Javascript files under the &#39;lib&#39; directory. </p></p>
+<p><strong>__</strong>
+Builds a BusinessNetworkDefintion from the contents of a directory. The directory must include a package.json in the root (used to specify the name, version and description of the business network). This method is designed to work with business networks that refer to external models using npm dependencies as well as business networks that statically package their model files. <p> If package.json contains a dependencies property then this method will search for model (CTO) files under the node_modules directory for each dependency that passes the options.dependencyGlob pattern. </p> <p> If the network depends on an npm module its dependencies (transitive closure) will also be scanned for model (CTO) files. </p> <p> The directory may optionally contain a README.md file which is accessible from the BusinessNetworkMetadata.getREADME method. </p> <p> In addition all model files will be added that are not under node_modules and that pass the options.modelFileGlob pattern. By default you should put model files under a directory called &#39;models&#39;. </p> <p> All script (js) files will be added that are not under node_modules and that pass the options.scriptGlob pattern. By default you should put Javascript files under the &#39;lib&#39; directory. </p></p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - a Promise to the instantiated business network</p>
+<p><strong><a href="common-promise">Promise</a></strong> - a Promise to the instantiated business network</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -477,20 +501,20 @@ retrieve instances from <a href="common-businessnetworkdefinition#fromarchive">B
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>path</strong></td>
 <td style="text-align: left">String</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">to a local directory</td>
 </tr>
 <tr>
 <td style="text-align: left"><strong>options</strong></td>
 <td style="text-align: left">Object</td>
-<td style="text-align: left">true</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">an optional set of options to configure the instance.</td>
 </tr>
 </tbody></table>
@@ -501,26 +525,26 @@ retrieve instances from <a href="common-businessnetworkdefinition#fromarchive">B
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>options.dependencyGlob</strong></td>
 <td style="text-align: left">Object</td>
-<td style="text-align: left">true</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">specify the glob pattern used to match the npm dependencies to process. Defaults to **</td>
 </tr>
 <tr>
 <td style="text-align: left"><strong>options.modelFileGlob</strong></td>
 <td style="text-align: left">boolean</td>
-<td style="text-align: left">true</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">specify the glob pattern used to match the model files to include. Defaults to <strong>\/models/</strong>\/*.cto</td>
 </tr>
 <tr>
 <td style="text-align: left"><strong>options.scriptGlob</strong></td>
 <td style="text-align: left">boolean</td>
-<td style="text-align: left">true</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">specify the glob pattern used to match the script files to include. Defaults to <strong>\/lib/</strong>\/*.js</td>
 </tr>
 </tbody></table>
@@ -529,11 +553,14 @@ retrieve instances from <a href="common-businessnetworkdefinition#fromarchive">B
 
 <p><em>Introspector getIntrospector(  )</em></p>
 
-<p>Provides access to the Introspector for this business network. The Introspector is used to reflect on the types defined within this business network.</p>
+<p><strong>__</strong>
+Provides access to the Introspector for this business network. The Introspector is used to reflect on the types defined within this business network.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Introspector</code> - the Introspector for this business network</p>
+<p><strong><a href="common-introspector">Introspector</a></strong> - the Introspector for this business network</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -543,11 +570,14 @@ retrieve instances from <a href="common-businessnetworkdefinition#fromarchive">B
 
 <p><em>Factory getFactory(  )</em></p>
 
-<p>Provides access to the Factory for this business network. The Factory is used to create the types defined in this business network.</p>
+<p><strong>__</strong>
+Provides access to the Factory for this business network. The Factory is used to create the types defined in this business network.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Factory</code> - the Factory for this business network</p>
+<p><strong><a href="common-factory">Factory</a></strong> - the Factory for this business network</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -557,15 +587,20 @@ retrieve instances from <a href="common-businessnetworkdefinition#fromarchive">B
 
 <p><em>Serializer getSerializer(  )</em></p>
 
-<p>Provides access to the Serializer for this business network. The Serializer is used to serialize instances of the types defined within this business network.</p>
+<p><strong>__</strong>
+Provides access to the Serializer for this business network. The Serializer is used to serialize instances of the types defined within this business network.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Serializer</code> - the Serializer for this business network</p>
+<p><strong><a href="common-serializer">Serializer</a></strong> - the Serializer for this business network</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
 <p>No parameters</p>
+
+<h2 id="inherited-methods">Inherited methods</h2>
 
             
           </section>

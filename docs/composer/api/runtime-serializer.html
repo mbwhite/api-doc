@@ -291,7 +291,8 @@ method instead.</p>
 
 <p><em>Object toJSON( Resource resource, [Object options] )</em></p>
 
-<p>Convert a <a href="common-resource">Resource</a> to a JavaScript object suitable for long-term peristent storage.</p>
+<p><strong>__</strong>
+Convert a <a href="common-resource">Resource</a> to a JavaScript object suitable for long-term peristent storage.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the serializer.</span>
@@ -301,7 +302,9 @@ method instead.</p>
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Object</code> - The JavaScript object that represents the resource</p>
+<p><strong><a href="runtime-object">Object</a></strong> - The JavaScript object that represents the resource</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -309,20 +312,20 @@ method instead.</p>
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>resource</strong></td>
 <td style="text-align: left">Resource</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The resource instance to convert to JSON.</td>
 </tr>
 <tr>
 <td style="text-align: left"><strong>options</strong></td>
 <td style="text-align: left">Object</td>
-<td style="text-align: left">true</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The optional serialization options.</td>
 </tr>
 </tbody></table>
@@ -333,26 +336,26 @@ method instead.</p>
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>options.validate</strong></td>
 <td style="text-align: left">boolean</td>
-<td style="text-align: left">true</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">Validate the structure of the resource with its model prior to serialization, true by default.</td>
 </tr>
 <tr>
 <td style="text-align: left"><strong>options.convertResourcesToRelationships</strong></td>
 <td style="text-align: left">boolean</td>
-<td style="text-align: left">true</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">Convert resources that are specified for relationship fields into relationships, false by default.</td>
 </tr>
 <tr>
 <td style="text-align: left"><strong>options.permitResourcesForRelationships</strong></td>
 <td style="text-align: left">boolean</td>
-<td style="text-align: left">true</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">Permit resources in the place of relationships (serializing them as resources), false by default.</td>
 </tr>
 </tbody></table>
@@ -367,7 +370,8 @@ method instead.</p>
 
 <p><em>Resource fromJSON( Object json, [Object options] )</em></p>
 
-<p>Create a <a href="common-resource">Resource</a> from a JavaScript object representation. The JavaScript object should have been created by calling the <a href="runtime-serializer#tojson">toJSON</a> api</p>
+<p><strong>__</strong>
+Create a <a href="common-resource">Resource</a> from a JavaScript object representation. The JavaScript object should have been created by calling the <a href="runtime-serializer#tojson">toJSON</a> api</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the serializer.</span>
@@ -377,7 +381,9 @@ method instead.</p>
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Resource</code> - The resource.</p>
+<p><strong><a href="runtime-resource">Resource</a></strong> - The resource.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -385,20 +391,20 @@ method instead.</p>
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>json</strong></td>
 <td style="text-align: left">Object</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The JavaScript object for the resource.</td>
 </tr>
 <tr>
 <td style="text-align: left"><strong>options</strong></td>
 <td style="text-align: left">Object</td>
-<td style="text-align: left">true</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The optional serialization options.</td>
 </tr>
 </tbody></table>
@@ -409,14 +415,14 @@ method instead.</p>
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>options.acceptResourcesForRelationships</strong></td>
 <td style="text-align: left">boolean</td>
-<td style="text-align: left">true</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">Handle JSON objects in the place of strings for relationships, false by default.</td>
 </tr>
 </tbody></table>
@@ -427,6 +433,8 @@ method instead.</p>
 <span class="c1">// Serialize a vehicle.</span>
 <span class="kd">var</span> <span class="nx">vehicle</span> <span class="o">=</span> <span class="nx">serializer</span><span class="p">.</span><span class="nx">fromJSON</span><span class="p">(</span><span class="nx">json</span><span class="p">);</span>
 </code></pre></div>
+<h2 id="inherited-methods">Inherited methods</h2>
+
             
           </section>
         </div>

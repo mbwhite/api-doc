@@ -283,24 +283,9 @@ ga('send', 'pageview');
 <td style="text-align: left">Adds a list of new resources to the registry</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#addregistry">addRegistry</a></td>
-<td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left">Add a new asset registry</td>
-</tr>
-<tr>
-<td style="text-align: left"><a href="#constructor">constructor</a></td>
-<td style="text-align: left"><code>void</code></td>
-<td style="text-align: left">Create a registry</td>
-</tr>
-<tr>
 <td style="text-align: left"><a href="#exists">exists</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Determines whether a specific resource exists in the registry</td>
-</tr>
-<tr>
-<td style="text-align: left"><a href="#existsregistry">existsRegistry</a></td>
-<td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left">Determines whether a registry exists</td>
 </tr>
 <tr>
 <td style="text-align: left"><a href="#get">get</a></td>
@@ -311,16 +296,6 @@ ga('send', 'pageview');
 <td style="text-align: left"><a href="#getall">getAll</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Get all of the resources in the registry</td>
-</tr>
-<tr>
-<td style="text-align: left"><a href="#getallregistries">getAllRegistries</a></td>
-<td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left">Get a list of all existing registries</td>
-</tr>
-<tr>
-<td style="text-align: left"><a href="#getregistry">getRegistry</a></td>
-<td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left">Get an existing registry</td>
 </tr>
 <tr>
 <td style="text-align: left"><a href="#remove">remove</a></td>
@@ -356,246 +331,18 @@ ga('send', 'pageview');
 
 <h1 id="method-details">Method Details</h1>
 
-<h2 id="getallregistries">getAllRegistries</h2>
-
-<p><em>Promise getAllRegistries( SecurityContext securitycontext, string registrytype, [boolean includesystem] )</em></p>
-
-<p>Get a list of all existing registries.</p>
-
-<h3 id="returns">Returns</h3>
-
-<p><code>Promise</code> - A promise that will be resolved with an array of JSON objects representing the registries.</p>
-
-<h3 id="parameters">Parameters</h3>
-
-<table><thead>
-<tr>
-<th style="text-align: left">Name</th>
-<th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
-<th style="text-align: left">Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left"><strong>securityContext</strong></td>
-<td style="text-align: left">SecurityContext</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">The user&#39;s security context.</td>
-</tr>
-<tr>
-<td style="text-align: left"><strong>registryType</strong></td>
-<td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">The type of this registry.</td>
-</tr>
-<tr>
-<td style="text-align: left"><strong>includeSystem</strong></td>
-<td style="text-align: left">boolean</td>
-<td style="text-align: left">true</td>
-<td style="text-align: left">True if system registries should be included (optional default is false)</td>
-</tr>
-</tbody></table>
-
-<h2 id="getregistry">getRegistry</h2>
-
-<p><em>Promise getRegistry( SecurityContext securitycontext, string registrytype, string id )</em></p>
-
-<p>Get an existing registry.</p>
-
-<h3 id="returns">Returns</h3>
-
-<p><code>Promise</code> - A promise that will be resolved with a JSON object representing the registry.</p>
-
-<h3 id="parameters">Parameters</h3>
-
-<table><thead>
-<tr>
-<th style="text-align: left">Name</th>
-<th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
-<th style="text-align: left">Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left"><strong>securityContext</strong></td>
-<td style="text-align: left">SecurityContext</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">The user&#39;s security context.</td>
-</tr>
-<tr>
-<td style="text-align: left"><strong>registryType</strong></td>
-<td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">The type of this registry.</td>
-</tr>
-<tr>
-<td style="text-align: left"><strong>id</strong></td>
-<td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">The unique identifier of the registry.</td>
-</tr>
-</tbody></table>
-
-<h2 id="existsregistry">existsRegistry</h2>
-
-<p><em>Promise existsRegistry( SecurityContext securitycontext, string registrytype, string id )</em></p>
-
-<p>Determines whether a registry exists.</p>
-
-<h3 id="returns">Returns</h3>
-
-<p><code>Promise</code> - A promise that will be resolved with true/false depending on whether the registry exists</p>
-
-<h3 id="parameters">Parameters</h3>
-
-<table><thead>
-<tr>
-<th style="text-align: left">Name</th>
-<th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
-<th style="text-align: left">Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left"><strong>securityContext</strong></td>
-<td style="text-align: left">SecurityContext</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">The user&#39;s security context.</td>
-</tr>
-<tr>
-<td style="text-align: left"><strong>registryType</strong></td>
-<td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">The type of this registry.</td>
-</tr>
-<tr>
-<td style="text-align: left"><strong>id</strong></td>
-<td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">The unique identifier of the registry.</td>
-</tr>
-</tbody></table>
-
-<h2 id="addregistry">addRegistry</h2>
-
-<p><em>Promise addRegistry( SecurityContext securitycontext, string registrytype, string id, string name )</em></p>
-
-<p>Add a new asset registry.</p>
-
-<h3 id="returns">Returns</h3>
-
-<p><code>Promise</code> - A promise that will be resolved with a JSON object representing the registry.</p>
-
-<h3 id="parameters">Parameters</h3>
-
-<table><thead>
-<tr>
-<th style="text-align: left">Name</th>
-<th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
-<th style="text-align: left">Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left"><strong>securityContext</strong></td>
-<td style="text-align: left">SecurityContext</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">The user&#39;s security context.</td>
-</tr>
-<tr>
-<td style="text-align: left"><strong>registryType</strong></td>
-<td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">The type of this registry.</td>
-</tr>
-<tr>
-<td style="text-align: left"><strong>id</strong></td>
-<td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">The unique identifier of the registry.</td>
-</tr>
-<tr>
-<td style="text-align: left"><strong>name</strong></td>
-<td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">The name of the registry.</td>
-</tr>
-</tbody></table>
-
-<h2 id="new-registry">new Registry()</h2>
-
-<p>Create a registry.
-<strong>Note: Only to be called by framework code. Applications should retrieve instances from <a href="client-businessnetworkconnection">BusinessNetworkConnection</a></strong> </p></p>
-
-<h3 id="parameters">Parameters</h3>
-
-<table><thead>
-<tr>
-<th style="text-align: left">Name</th>
-<th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
-<th style="text-align: left">Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left"><strong>registryType</strong></td>
-<td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">The type of this registry.</td>
-</tr>
-<tr>
-<td style="text-align: left"><strong>id</strong></td>
-<td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">The unique identifier of the registry.</td>
-</tr>
-<tr>
-<td style="text-align: left"><strong>name</strong></td>
-<td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">The display name for the registry.</td>
-</tr>
-<tr>
-<td style="text-align: left"><strong>securityContext</strong></td>
-<td style="text-align: left">SecurityContext</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">The users security context.</td>
-</tr>
-<tr>
-<td style="text-align: left"><strong>modelManager</strong></td>
-<td style="text-align: left">ModelManager</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">The ModelManager to use for this registry.</td>
-</tr>
-<tr>
-<td style="text-align: left"><strong>factory</strong></td>
-<td style="text-align: left">Factory</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">The factory to use for this registry.</td>
-</tr>
-<tr>
-<td style="text-align: left"><strong>serializer</strong></td>
-<td style="text-align: left">Serializer</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">The Serializer to use for this registry.</td>
-</tr>
-<tr>
-<td style="text-align: left"><strong>bnc</strong></td>
-<td style="text-align: left">BusinessNetworkConnection</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">Instance of the BusinessNetworkConnection TODO: Rationalize the bnc with the other objects - as the bnc contains these other arguments</td>
-</tr>
-</tbody></table>
-
 <h2 id="addall">addAll</h2>
 
 <p><em>Promise addAll(  resources )</em></p>
 
-<p>Adds a list of new resources to the registry.</p>
+<p><strong>__</strong>
+Adds a list of new resources to the registry.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved when the resource is added to the registry.</p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise that will be resolved when the resource is added to the registry.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -603,14 +350,14 @@ ga('send', 'pageview');
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>resources</strong></td>
 <td style="text-align: left"></td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The resources to be added to the registry.</td>
 </tr>
 </tbody></table>
@@ -619,11 +366,14 @@ ga('send', 'pageview');
 
 <p><em>Promise add( Resource resource )</em></p>
 
-<p>Adds a new resource to the registry.</p>
+<p><strong>__</strong>
+Adds a new resource to the registry.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved when the resource is added to the registry.</p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise that will be resolved when the resource is added to the registry.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -631,14 +381,14 @@ ga('send', 'pageview');
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>resource</strong></td>
 <td style="text-align: left">Resource</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The resource to be added to the registry.</td>
 </tr>
 </tbody></table>
@@ -647,11 +397,14 @@ ga('send', 'pageview');
 
 <p><em>Promise updateAll(  resources )</em></p>
 
-<p>Updates a list of resources in the registry.</p>
+<p><strong>__</strong>
+Updates a list of resources in the registry.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved when the resource is added to the registry.</p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise that will be resolved when the resource is added to the registry.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -659,14 +412,14 @@ ga('send', 'pageview');
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>resources</strong></td>
 <td style="text-align: left"></td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The resources to be updated in the asset registry.</td>
 </tr>
 </tbody></table>
@@ -675,11 +428,14 @@ ga('send', 'pageview');
 
 <p><em>Promise update( Resource resource )</em></p>
 
-<p>Updates a resource in the registry.</p>
+<p><strong>__</strong>
+Updates a resource in the registry.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved when the resource is updated in the registry.</p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise that will be resolved when the resource is updated in the registry.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -687,14 +443,14 @@ ga('send', 'pageview');
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>resource</strong></td>
 <td style="text-align: left">Resource</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The resource to be updated in the registry.</td>
 </tr>
 </tbody></table>
@@ -703,11 +459,14 @@ ga('send', 'pageview');
 
 <p><em>Promise removeAll( ;  resources )</em></p>
 
-<p>Removes a list of resources from the registry.</p>
+<p><strong>__</strong>
+Removes a list of resources from the registry.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved when the resource is added to the registry.</p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise that will be resolved when the resource is added to the registry.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -715,14 +474,14 @@ ga('send', 'pageview');
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>resources</strong></td>
 <td style="text-align: left">;</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The resources, or the unique identifiers of the resources.</td>
 </tr>
 </tbody></table>
@@ -731,11 +490,14 @@ ga('send', 'pageview');
 
 <p><em>Promise remove( Resource; string resource )</em></p>
 
-<p>Remove an asset with a given type and id from the registry.</p>
+<p><strong>__</strong>
+Remove an asset with a given type and id from the registry.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved when the resource is removed from the registry.</p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise that will be resolved when the resource is removed from the registry.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -743,14 +505,14 @@ ga('send', 'pageview');
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>resource</strong></td>
 <td style="text-align: left">Resource; string</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The resource, or the unique identifier of the resource.</td>
 </tr>
 </tbody></table>
@@ -759,11 +521,14 @@ ga('send', 'pageview');
 
 <p><em>Promise getAll(  )</em></p>
 
-<p>Get all of the resources in the registry.</p>
+<p><strong>__</strong>
+Get all of the resources in the registry.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved with an array of JSON objects representing the resources.</p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise that will be resolved with an array of JSON objects representing the resources.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -773,11 +538,14 @@ ga('send', 'pageview');
 
 <p><em>Promise get( string id )</em></p>
 
-<p>Get a specific resource in the registry.</p>
+<p><strong>__</strong>
+Get a specific resource in the registry.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved with a JSON object representing the resource.</p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise that will be resolved with a JSON object representing the resource.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -785,14 +553,14 @@ ga('send', 'pageview');
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>id</strong></td>
 <td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The unique identifier of the resource.</td>
 </tr>
 </tbody></table>
@@ -801,11 +569,14 @@ ga('send', 'pageview');
 
 <p><em>Promise exists( string id )</em></p>
 
-<p>Determines whether a specific resource exists in the registry.</p>
+<p><strong>__</strong>
+Determines whether a specific resource exists in the registry.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved with true/false depending on whether the resource exists.</p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise that will be resolved with true/false depending on whether the resource exists.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -813,14 +584,14 @@ ga('send', 'pageview');
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>id</strong></td>
 <td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The unique identifier of the resource.</td>
 </tr>
 </tbody></table>
@@ -829,11 +600,14 @@ ga('send', 'pageview');
 
 <p><em>Promise resolveAll(  )</em></p>
 
-<p>Get all of the resources in the registry, and resolve all of their relationships to other assets, participants, and transactions. The result is a JavaScript object, and should only be used for visualization purposes. You cannot use the <a href="#add">add</a> or <a href="#update">update</a> functions with a resolved resource.</p>
+<p><strong>__</strong>
+Get all of the resources in the registry, and resolve all of their relationships to other assets, participants, and transactions. The result is a JavaScript object, and should only be used for visualization purposes. You cannot use the <a href="#add">add</a> or <a href="#update">update</a> functions with a resolved resource.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved with an array of JavaScript objects representing the resources and all of their resolved relationships.</p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise that will be resolved with an array of JavaScript objects representing the resources and all of their resolved relationships.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -843,11 +617,14 @@ ga('send', 'pageview');
 
 <p><em>Promise resolve( string id )</em></p>
 
-<p>Get a specific resource in the registry, and resolve all of its relationships to other assets, participants, and transactions. The result is a JavaScript object, and should only be used for visualization purposes. You cannot use the  <a href="#add">add</a> or <a href="#update">update</a> functions with a resolved resource.</p>
+<p><strong>__</strong>
+Get a specific resource in the registry, and resolve all of its relationships to other assets, participants, and transactions. The result is a JavaScript object, and should only be used for visualization purposes. You cannot use the  <a href="#add">add</a> or <a href="#update">update</a> functions with a resolved resource.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved with a JavaScript object representing the resource and all of its resolved relationships.</p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise that will be resolved with a JavaScript object representing the resource and all of its resolved relationships.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -855,17 +632,19 @@ ga('send', 'pageview');
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>id</strong></td>
 <td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The unique identifier of the asset.</td>
 </tr>
 </tbody></table>
+
+<h2 id="inherited-methods">Inherited methods</h2>
 
             
           </section>

@@ -309,11 +309,14 @@ ga('send', 'pageview');
 
 <p><em>String getDefaultCardName( IdCard card )</em></p>
 
-<p>Get a default name for a given business network card.</p>
+<p><strong>__</strong>
+Get a default name for a given business network card.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>String</code> - A card name</p>
+<p><strong><a href="common-string">String</a></strong> - A card name</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -321,14 +324,14 @@ ga('send', 'pageview');
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>card</strong></td>
 <td style="text-align: left">IdCard</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">A business network card</td>
 </tr>
 </tbody></table>
@@ -337,11 +340,14 @@ ga('send', 'pageview');
 
 <p><em>Promise get( String cardname )</em></p>
 
-<p>Gets a card from the store.</p>
+<p><strong>__</strong>
+Gets a card from the store.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that is resolved with an IdCard, or rejected if the card does not exist.</p>
+<p><strong><a href="common-promise">Promise</a></strong> - A promise that is resolved with an IdCard, or rejected if the card does not exist.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -349,14 +355,14 @@ ga('send', 'pageview');
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>cardName</strong></td>
 <td style="text-align: left">String</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The name of the card to get</td>
 </tr>
 </tbody></table>
@@ -365,11 +371,14 @@ ga('send', 'pageview');
 
 <p><em>Promise put( String cardname, IdCard card )</em></p>
 
-<p>Puts a card in the store. If the named card already exists in the store, it will be replaced.</p>
+<p><strong>__</strong>
+Puts a card in the store. If the named card already exists in the store, it will be replaced.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that resolves once the data is written</p>
+<p><strong><a href="common-promise">Promise</a></strong> - A promise that resolves once the data is written</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -377,20 +386,20 @@ ga('send', 'pageview');
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>cardName</strong></td>
 <td style="text-align: left">String</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The name of the card to save</td>
 </tr>
 <tr>
 <td style="text-align: left"><strong>card</strong></td>
 <td style="text-align: left">IdCard</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The card</td>
 </tr>
 </tbody></table>
@@ -399,11 +408,14 @@ ga('send', 'pageview');
 
 <p><em>Promise has( String cardname )</em></p>
 
-<p>Has returns a boolean indicating whether a card with the specified name exists or not.</p>
+<p><strong>__</strong>
+Has returns a boolean indicating whether a card with the specified name exists or not.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise resolved with true or false.</p>
+<p><strong><a href="common-promise">Promise</a></strong> - A promise resolved with true or false.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -411,14 +423,14 @@ ga('send', 'pageview');
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>cardName</strong></td>
 <td style="text-align: left">String</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The name of the card to check</td>
 </tr>
 </tbody></table>
@@ -427,11 +439,14 @@ ga('send', 'pageview');
 
 <p><em>Promise getAll(  )</em></p>
 
-<p>Gets all cards from the store.</p>
+<p><strong>__</strong>
+Gets all cards from the store.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that is resolved with a Map where the keys are identity card names and the values are IdCard objects.</p>
+<p><strong><a href="common-promise">Promise</a></strong> - A promise that is resolved with a Map where the keys are identity card names and the values are IdCard objects.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -441,11 +456,14 @@ ga('send', 'pageview');
 
 <p><em>Promise delete( String cardname )</em></p>
 
-<p>Delete a specific card from the store.</p>
+<p><strong>__</strong>
+Delete a specific card from the store.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that resolves to true if the card existed; otherwise false.</p>
+<p><strong><a href="common-promise">Promise</a></strong> - A promise that resolves to true if the card existed; otherwise false.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -453,17 +471,19 @@ ga('send', 'pageview');
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>cardName</strong></td>
 <td style="text-align: left">String</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The name of the card to delete.</td>
 </tr>
 </tbody></table>
+
+<h2 id="inherited-methods">Inherited methods</h2>
 
             
           </section>

@@ -319,11 +319,14 @@ ga('send', 'pageview');
 
 <p><em>Wallet getWallet(  )</em></p>
 
-<p>Get the wallet singleton.</p>
+<p><strong>__</strong>
+Get the wallet singleton.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Wallet</code> - The wallet singleton, or null if one has not been specified.</p>
+<p><strong><a href="-wallet">Wallet</a></strong> - The wallet singleton, or null if one has not been specified.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -333,7 +336,10 @@ ga('send', 'pageview');
 
 <p><em>void setWallet( Wallet wallet )</em></p>
 
-<p>Set the wallet singleton.</p>
+<p><strong>__</strong>
+Set the wallet singleton.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -341,14 +347,14 @@ ga('send', 'pageview');
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>wallet</strong></td>
 <td style="text-align: left">Wallet</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The new wallet singleton.</td>
 </tr>
 </tbody></table>
@@ -357,11 +363,14 @@ ga('send', 'pageview');
 
 <p><em>Promise list(  )</em></p>
 
-<p>List all of the credentials in the wallet.</p>
+<p><strong>__</strong>
+List all of the credentials in the wallet.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that is resolved with an array of credential names, or rejected with an error.</p>
+<p><strong><a href="-promise">Promise</a></strong> - A promise that is resolved with an array of credential names, or rejected with an error.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -371,11 +380,14 @@ ga('send', 'pageview');
 
 <p><em>Promise contains( string name )</em></p>
 
-<p>Check to see if the named credentials are in the wallet.</p>
+<p><strong>__</strong>
+Check to see if the named credentials are in the wallet.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that is resolved with a boolean; true if the named credentials are in the wallet, false otherwise.</p>
+<p><strong><a href="-promise">Promise</a></strong> - A promise that is resolved with a boolean; true if the named credentials are in the wallet, false otherwise.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -383,14 +395,14 @@ ga('send', 'pageview');
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>name</strong></td>
 <td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The name of the credentials.</td>
 </tr>
 </tbody></table>
@@ -399,11 +411,14 @@ ga('send', 'pageview');
 
 <p><em>Promise get( string name )</em></p>
 
-<p>Get the named credentials from the wallet.</p>
+<p><strong>__</strong>
+Get the named credentials from the wallet.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that is resolved with the named credentials, or rejected with an error.</p>
+<p><strong><a href="-promise">Promise</a></strong> - A promise that is resolved with the named credentials, or rejected with an error.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -411,14 +426,14 @@ ga('send', 'pageview');
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>name</strong></td>
 <td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The name of the credentials.</td>
 </tr>
 </tbody></table>
@@ -427,11 +442,14 @@ ga('send', 'pageview');
 
 <p><em>Promise add( string name, string value )</em></p>
 
-<p>Add a new credential to the wallet.</p>
+<p><strong>__</strong>
+Add a new credential to the wallet.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that is resolved when complete, or rejected with an error.</p>
+<p><strong><a href="-promise">Promise</a></strong> - A promise that is resolved when complete, or rejected with an error.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -439,20 +457,20 @@ ga('send', 'pageview');
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>name</strong></td>
 <td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The name of the credentials.</td>
 </tr>
 <tr>
 <td style="text-align: left"><strong>value</strong></td>
 <td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The credentials.</td>
 </tr>
 </tbody></table>
@@ -461,11 +479,14 @@ ga('send', 'pageview');
 
 <p><em>Promise update( string name, string value )</em></p>
 
-<p>Update existing credentials in the wallet.</p>
+<p><strong>__</strong>
+Update existing credentials in the wallet.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that is resolved when complete, or rejected with an error.</p>
+<p><strong><a href="-promise">Promise</a></strong> - A promise that is resolved when complete, or rejected with an error.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -473,20 +494,20 @@ ga('send', 'pageview');
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>name</strong></td>
 <td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The name of the credentials.</td>
 </tr>
 <tr>
 <td style="text-align: left"><strong>value</strong></td>
 <td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The credentials.</td>
 </tr>
 </tbody></table>
@@ -495,11 +516,14 @@ ga('send', 'pageview');
 
 <p><em>Promise remove( string name )</em></p>
 
-<p>Remove existing credentials from the wallet.</p>
+<p><strong>__</strong>
+Remove existing credentials from the wallet.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that is resolved when complete, or rejected with an error.</p>
+<p><strong><a href="-promise">Promise</a></strong> - A promise that is resolved when complete, or rejected with an error.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -507,17 +531,19 @@ ga('send', 'pageview');
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>name</strong></td>
 <td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The name of the credentials.</td>
 </tr>
 </tbody></table>
+
+<h2 id="inherited-methods">Inherited methods</h2>
 
             
           </section>

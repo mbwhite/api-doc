@@ -1,0 +1,23 @@
+{
+  "name": "api-doc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server --silent -o"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbwhite/api-docs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mbwhite/api-docs/issues"
+  },
+  "homepage": "https://github.com/mbwhite/api-docs#readme",
+  "dependencies": {
+    "http-server": "^0.10.0"
+  }
+}

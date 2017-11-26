@@ -292,7 +292,10 @@ ga('send', 'pageview');
 
 <h2 id="new-introspector">new Introspector()</h2>
 
-<p>Create the Introspector. <p> <strong>Note: Only to be called by framework code. Applications should retrieve instances from <a href="common-businessnetworkdefinition">BusinessNetworkDefinition</a></strong> </p></p>
+<p><strong>__</strong>
+Create the Introspector. <p> <strong>Note: Only to be called by framework code. Applications should retrieve instances from <a href="common-businessnetworkdefinition">BusinessNetworkDefinition</a></strong> </p></p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -300,14 +303,14 @@ ga('send', 'pageview');
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>modelManager</strong></td>
 <td style="text-align: left">ModelManager</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">the ModelManager that backs this Introspector</td>
 </tr>
 </tbody></table>
@@ -316,11 +319,14 @@ ga('send', 'pageview');
 
 <p><em>ClassDeclaration[] getClassDeclarations(  )</em></p>
 
-<p>Returns all the class declarations for the business network.</p>
+<p><strong>__</strong>
+Returns all the class declarations for the business network.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p>`` - the array of class declarations</p>
+<p><strong><a href="common-"></a></strong> - the array of class declarations</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -330,11 +336,14 @@ ga('send', 'pageview');
 
 <p><em>ClassDeclaration getClassDeclaration( String fullyqualifiedtypename )</em></p>
 
-<p>Returns the class declaration with the given fully qualified name. Throws an error if the class declaration does not exist.</p>
+<p><strong>__</strong>
+Returns the class declaration with the given fully qualified name. Throws an error if the class declaration does not exist.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>ClassDeclaration</code> - the class declaration</p>
+<p><strong><a href="common-classdeclaration">ClassDeclaration</a></strong> - the class declaration</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -342,17 +351,19 @@ ga('send', 'pageview');
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>fullyQualifiedTypeName</strong></td>
 <td style="text-align: left">String</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">the fully qualified name of the type</td>
 </tr>
 </tbody></table>
+
+<h2 id="inherited-methods">Inherited methods</h2>
 
             
           </section>

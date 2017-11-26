@@ -326,7 +326,8 @@ method instead.</p>
 
 <p><em>Promise getAll(  )</em></p>
 
-<p>Get a list of all of the existing participants in this participant registry.</p>
+<p><strong>__</strong>
+Get a list of all of the existing participants in this participant registry.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the driver participant registry.</span>
@@ -347,7 +348,9 @@ method instead.</p>
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise. The promise is resolved with an array of <a href="common-resource">Resource</a> instances representing all of the participants stored in this participant registry. If the participant registry does not exist, or the current user does not have access to the participant registry, then the promise will be rejected with an error that describes the problem.</p>
+<p><strong><a href="runtime-promise">Promise</a></strong> - A promise. The promise is resolved with an array of <a href="common-resource">Resource</a> instances representing all of the participants stored in this participant registry. If the participant registry does not exist, or the current user does not have access to the participant registry, then the promise will be rejected with an error that describes the problem.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -374,7 +377,8 @@ method instead.</p>
 
 <p><em>Promise get( string id )</em></p>
 
-<p>Get the specified participant in this participant registry using the unique identifier of the participant.</p>
+<p><strong>__</strong>
+Get the specified participant in this participant registry using the unique identifier of the participant.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the driver participant registry.</span>
@@ -393,7 +397,9 @@ method instead.</p>
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise. The promise is resolved with a <a href="common-resource">Resource</a> instance representing the specified participant in this participant registry. If the specified participant does not exist, or the current user does not have access to the specified participant, then the promise will be rejected with an error that describes the problem.</p>
+<p><strong><a href="runtime-promise">Promise</a></strong> - A promise. The promise is resolved with a <a href="common-resource">Resource</a> instance representing the specified participant in this participant registry. If the specified participant does not exist, or the current user does not have access to the specified participant, then the promise will be rejected with an error that describes the problem.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -401,14 +407,14 @@ method instead.</p>
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>id</strong></td>
 <td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The ID of the participant.</td>
 </tr>
 </tbody></table>
@@ -432,7 +438,8 @@ method instead.</p>
 
 <p><em>Promise exists( string id )</em></p>
 
-<p>Determines whether a specific participant exists in this participant registry.</p>
+<p><strong>__</strong>
+Determines whether a specific participant exists in this participant registry.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the driver participant registry.</span>
@@ -451,7 +458,9 @@ method instead.</p>
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise. The promise is resolved with a boolean which is true if the specified participant exists in this participant registry, and false if the specified participant does not exist.</p>
+<p><strong><a href="runtime-promise">Promise</a></strong> - A promise. The promise is resolved with a boolean which is true if the specified participant exists in this participant registry, and false if the specified participant does not exist.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -459,14 +468,14 @@ method instead.</p>
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>id</strong></td>
 <td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The ID of the participant.</td>
 </tr>
 </tbody></table>
@@ -490,7 +499,8 @@ method instead.</p>
 
 <p><em>Promise addAll(  participants )</em></p>
 
-<p>Add all of the specified participants to this participant registry.</p>
+<p><strong>__</strong>
+Add all of the specified participants to this participant registry.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the driver participant registry.</span>
@@ -513,7 +523,9 @@ method instead.</p>
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise. The promise is resolved when all of the participants have been added to this participant registry. If the participants cannot be added to this participant registry, or if the participants already exist in the participant registry, then the promise will be rejected with an error that describes the problem.</p>
+<p><strong><a href="runtime-promise">Promise</a></strong> - A promise. The promise is resolved when all of the participants have been added to this participant registry. If the participants cannot be added to this participant registry, or if the participants already exist in the participant registry, then the promise will be rejected with an error that describes the problem.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -521,14 +533,14 @@ method instead.</p>
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>participants</strong></td>
 <td style="text-align: left"></td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The participants to add to this participant registry.</td>
 </tr>
 </tbody></table>
@@ -556,7 +568,8 @@ method instead.</p>
 
 <p><em>Promise add( Resource participant )</em></p>
 
-<p>Add the specified participant to this participant registry.</p>
+<p><strong>__</strong>
+Add the specified participant to this participant registry.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the driver participant registry.</span>
@@ -576,7 +589,9 @@ method instead.</p>
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise. The promise is resolved when the participant has been added to this participant registry. If the participant cannot be added to this participant registry, or if the participant already exists in the participant registry, then the promise will be rejected with an error that describes the problem.</p>
+<p><strong><a href="runtime-promise">Promise</a></strong> - A promise. The promise is resolved when the participant has been added to this participant registry. If the participant cannot be added to this participant registry, or if the participant already exists in the participant registry, then the promise will be rejected with an error that describes the problem.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -584,14 +599,14 @@ method instead.</p>
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>participant</strong></td>
 <td style="text-align: left">Resource</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The participants to add to this participant registry.</td>
 </tr>
 </tbody></table>
@@ -616,7 +631,8 @@ method instead.</p>
 
 <p><em>Promise updateAll(  participants )</em></p>
 
-<p>Update all of the specified participants in this participant registry.</p>
+<p><strong>__</strong>
+Update all of the specified participants in this participant registry.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// The existing drivers that have come from elsewhere.</span>
@@ -640,7 +656,9 @@ method instead.</p>
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise. The promise is resolved when all of the participants have been updated in this participant registry. If the participants cannot be updated in this participant registry, or if the participants do not exist in the participant registry, then the promise will be rejected with an error that describes the problem.</p>
+<p><strong><a href="runtime-promise">Promise</a></strong> - A promise. The promise is resolved when all of the participants have been updated in this participant registry. If the participants cannot be updated in this participant registry, or if the participants do not exist in the participant registry, then the promise will be rejected with an error that describes the problem.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -648,14 +666,14 @@ method instead.</p>
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>participants</strong></td>
 <td style="text-align: left"></td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The participants to update in this participant registry.</td>
 </tr>
 </tbody></table>
@@ -684,7 +702,8 @@ method instead.</p>
 
 <p><em>Promise update( Resource participant )</em></p>
 
-<p>Update the specified participant in this participant registry.</p>
+<p><strong>__</strong>
+Update the specified participant in this participant registry.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// The existing driver that has come from elsewhere.</span>
@@ -705,7 +724,9 @@ method instead.</p>
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise. The promise is resolved when the participant have been updated in this participant registry. If the participant cannot be updated in this participant registry, or if the participant does not exist in the participant registry, then the promise will be rejected with an error that describes the problem.</p>
+<p><strong><a href="runtime-promise">Promise</a></strong> - A promise. The promise is resolved when the participant have been updated in this participant registry. If the participant cannot be updated in this participant registry, or if the participant does not exist in the participant registry, then the promise will be rejected with an error that describes the problem.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -713,14 +734,14 @@ method instead.</p>
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>participant</strong></td>
 <td style="text-align: left">Resource</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The participant to update in this participant registry.</td>
 </tr>
 </tbody></table>
@@ -746,7 +767,8 @@ method instead.</p>
 
 <p><em>Promise removeAll( ;  participants )</em></p>
 
-<p>Remove all of the specified participants from this participant registry.</p>
+<p><strong>__</strong>
+Remove all of the specified participants from this participant registry.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// The existing drivers that have come from elsewhere.</span>
@@ -767,7 +789,9 @@ method instead.</p>
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise. The promise is resolved when all of the participants have been removed from this participant registry. If the participants cannot be removed from this participant registry, or if the participants do not exist in the participant registry, then the promise will be rejected with an error that describes the problem.</p>
+<p><strong><a href="runtime-promise">Promise</a></strong> - A promise. The promise is resolved when all of the participants have been removed from this participant registry. If the participants cannot be removed from this participant registry, or if the participants do not exist in the participant registry, then the promise will be rejected with an error that describes the problem.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -775,14 +799,14 @@ method instead.</p>
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>participants</strong></td>
 <td style="text-align: left">;</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The participants, or the IDs of the participants, to remove from this participant registry.</td>
 </tr>
 </tbody></table>
@@ -808,7 +832,8 @@ method instead.</p>
 
 <p><em>Promise remove( string; Resource participant )</em></p>
 
-<p>Remove the specified participant from this participant registry.</p>
+<p><strong>__</strong>
+Remove the specified participant from this participant registry.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// The existing driver that has come from elsewhere.</span>
@@ -827,7 +852,9 @@ method instead.</p>
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise. The promise is resolved when the participant has been removed from this participant registry. If the participant cannot be removed from this participant registry, or if the participant does not exist in the participant registry, then the promise will be rejected with an error that describes the problem.</p>
+<p><strong><a href="runtime-promise">Promise</a></strong> - A promise. The promise is resolved when the participant has been removed from this participant registry. If the participant cannot be removed from this participant registry, or if the participant does not exist in the participant registry, then the promise will be rejected with an error that describes the problem.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -835,14 +862,14 @@ method instead.</p>
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>participant</strong></td>
 <td style="text-align: left">string; Resource</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The participant, or ID of the participant, to remove from this participant registry.</td>
 </tr>
 </tbody></table>
@@ -862,6 +889,8 @@ method instead.</p>
     <span class="c1">// Add optional error handling here.</span>
   <span class="p">});</span>
 </code></pre></div>
+<h2 id="inherited-methods">Inherited methods</h2>
+
             
           </section>
         </div>

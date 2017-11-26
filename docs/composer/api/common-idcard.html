@@ -345,7 +345,10 @@ as a specific user.</p>
 
 <h2 id="new-idcard">new IdCard()</h2>
 
-<p>Create the IdCard.</p>
+<p><strong>__</strong>
+Create the IdCard.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -353,20 +356,20 @@ as a specific user.</p>
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>metadata</strong></td>
 <td style="text-align: left">Object</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">metadata associated with the card.</td>
 </tr>
 <tr>
 <td style="text-align: left"><strong>connectionProfile</strong></td>
 <td style="text-align: left">Object</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">connection profile associated with the card.</td>
 </tr>
 </tbody></table>
@@ -375,12 +378,16 @@ as a specific user.</p>
 
 <p><em>String getUserName(  )</em></p>
 
-<p>Name of the user identity associated with the card. This should be unique within the scope of a given business network and connection profile.
+<p><strong>__</strong>
+Name of the user identity associated with the card. This should be unique within the scope of a given business network and connection profile.
+_**
 This is a mandatory field.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>String</code> - Name of the user identity.</p>
+<p><strong><a href="common-string">String</a></strong> - Name of the user identity.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -390,11 +397,14 @@ This is a mandatory field.</p>
 
 <p><em>String getDescription(  )</em></p>
 
-<p>Free text description of the card.</p>
+<p><strong>__</strong>
+Free text description of the card.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>String</code> - card description.</p>
+<p><strong><a href="common-string">String</a></strong> - card description.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -404,11 +414,14 @@ This is a mandatory field.</p>
 
 <p><em>String getBusinessNetworkName(  )</em></p>
 
-<p>Name of the business network to which the ID card applies. Generally this will be present but may be omitted for system cards.</p>
+<p><strong>__</strong>
+Name of the business network to which the ID card applies. Generally this will be present but may be omitted for system cards.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>String</code> - business network name.</p>
+<p><strong><a href="common-string">String</a></strong> - business network name.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -418,12 +431,16 @@ This is a mandatory field.</p>
 
 <p><em>Object getConnectionProfile(  )</em></p>
 
-<p>Connection profile for this card.
+<p><strong>__</strong>
+Connection profile for this card.
+_**
 This is a mandatory field.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Object</code> - connection profile.</p>
+<p><strong><a href="common-object">Object</a></strong> - connection profile.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -433,11 +450,14 @@ This is a mandatory field.</p>
 
 <p><em>Object getCredentials(  )</em></p>
 
-<p>Credentials associated with this card, and which are used to connect to the associated business network. <p> For PKI-based authentication, the credentials are expected to be of the form: <em>{ certificate: String, privateKey: String }</em>.</p>
+<p><strong>__</strong>
+Credentials associated with this card, and which are used to connect to the associated business network. <p> For PKI-based authentication, the credentials are expected to be of the form: <em>{ certificate: String, privateKey: String }</em>.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Object</code> - credentials.</p>
+<p><strong><a href="common-object">Object</a></strong> - credentials.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -447,7 +467,10 @@ This is a mandatory field.</p>
 
 <p><em>void setCredentials( Object credentials )</em></p>
 
-<p>Credentials to associate with this card. <p> For PKI-based authentication, the credentials are expected to be of the form: <em>{ certificate: String, privateKey: String }</em>.</p>
+<p><strong>__</strong>
+Credentials to associate with this card. <p> For PKI-based authentication, the credentials are expected to be of the form: <em>{ certificate: String, privateKey: String }</em>.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -455,14 +478,14 @@ This is a mandatory field.</p>
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>credentials</strong></td>
 <td style="text-align: left">Object</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">credentials.</td>
 </tr>
 </tbody></table>
@@ -471,11 +494,14 @@ This is a mandatory field.</p>
 
 <p><em>Object getEnrollmentCredentials(  )</em></p>
 
-<p>Enrollment credentials. If there are no credentials associated with this card, these credentials  are used to enroll with a business network and obtain certificates. <p> For an ID/secret enrollment scheme, the credentials are expected to be of the form: <em>{ secret: String }</em>.</p>
+<p><strong>__</strong>
+Enrollment credentials. If there are no credentials associated with this card, these credentials  are used to enroll with a business network and obtain certificates. <p> For an ID/secret enrollment scheme, the credentials are expected to be of the form: <em>{ secret: String }</em>.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Object</code> - enrollment credentials, or null if none exist.</p>
+<p><strong><a href="common-object">Object</a></strong> - enrollment credentials, or null if none exist.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -485,11 +511,14 @@ This is a mandatory field.</p>
 
 <p><em>String[] getRoles(  )</em></p>
 
-<p>Special roles for which this ID can be used, which can include: <ul>   <li>PeerAdmin</li>   <li>ChannelAdmin</li>   <li>Issuer</li> </ul></p>
+<p><strong>__</strong>
+Special roles for which this ID can be used, which can include: <ul>   <li>PeerAdmin</li>   <li>ChannelAdmin</li>   <li>Issuer</li> </ul></p>
 
 <h3 id="returns">Returns</h3>
 
-<p>`` - roles.</p>
+<p><strong><a href="common-"></a></strong> - roles.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -499,11 +528,14 @@ This is a mandatory field.</p>
 
 <p><em>Promise fromArchive( String; ArrayBuffer; Uint8Array; Buffer; Blob; Promise zipdata )</em></p>
 
-<p>Create an IdCard from a card archive. <p> Valid types for <em>zipData</em> are any of the types supported by JSZip.</p>
+<p><strong>__</strong>
+Create an IdCard from a card archive. <p> Valid types for <em>zipData</em> are any of the types supported by JSZip.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - Promise to the instantiated IdCard.</p>
+<p><strong><a href="common-promise">Promise</a></strong> - Promise to the instantiated IdCard.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -511,14 +543,14 @@ This is a mandatory field.</p>
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>zipData</strong></td>
 <td style="text-align: left">String; ArrayBuffer; Uint8Array; Buffer; Blob; Promise</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">card archive data.</td>
 </tr>
 </tbody></table>
@@ -527,11 +559,14 @@ This is a mandatory field.</p>
 
 <p><em>Promise toArchive( [Object options] )</em></p>
 
-<p>Generate a card archive representing this ID card. <p> The default value for the <em>options.type</em> parameter is <em>arraybuffer</em>. See JSZip documentation for other valid values.</p>
+<p><strong>__</strong>
+Generate a card archive representing this ID card. <p> The default value for the <em>options.type</em> parameter is <em>arraybuffer</em>. See JSZip documentation for other valid values.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - Promise of the generated ZIP file; by default an ArrayBuffer.</p>
+<p><strong><a href="common-promise">Promise</a></strong> - Promise of the generated ZIP file; by default an ArrayBuffer.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -539,14 +574,14 @@ This is a mandatory field.</p>
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>options</strong></td>
 <td style="text-align: left">Object</td>
-<td style="text-align: left">true</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">JSZip generation options.</td>
 </tr>
 </tbody></table>
@@ -557,14 +592,14 @@ This is a mandatory field.</p>
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>options.type</strong></td>
 <td style="text-align: left">String</td>
-<td style="text-align: left">true</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">type of the resulting ZIP file data.</td>
 </tr>
 </tbody></table>
@@ -573,11 +608,14 @@ This is a mandatory field.</p>
 
 <p><em>Promise fromDirectory( String carddirectory, [ fs] )</em></p>
 
-<p>Create an IdCard from a directory consisting of the content of an ID card.</p>
+<p><strong>__</strong>
+Create an IdCard from a directory consisting of the content of an ID card.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - Promise that resolves to an IdCard.</p>
+<p><strong><a href="common-promise">Promise</a></strong> - Promise that resolves to an IdCard.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -585,20 +623,20 @@ This is a mandatory field.</p>
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>cardDirectory</strong></td>
 <td style="text-align: left">String</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">directory containing card data.</td>
 </tr>
 <tr>
 <td style="text-align: left"><strong>fs</strong></td>
 <td style="text-align: left"></td>
-<td style="text-align: left">true</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">Node file system API implementation to use for reading card data. Defaults to the Node implementation.</td>
 </tr>
 </tbody></table>
@@ -607,11 +645,14 @@ This is a mandatory field.</p>
 
 <p><em>Promise toDirectory( String carddirectory, [ fs] )</em></p>
 
-<p>Save the content of an IdCard a directory.</p>
+<p><strong>__</strong>
+Save the content of an IdCard a directory.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - Promise that resolves then the save is complete.</p>
+<p><strong><a href="common-promise">Promise</a></strong> - Promise that resolves then the save is complete.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -619,23 +660,25 @@ This is a mandatory field.</p>
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>cardDirectory</strong></td>
 <td style="text-align: left">String</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">directory to save card data.</td>
 </tr>
 <tr>
 <td style="text-align: left"><strong>fs</strong></td>
 <td style="text-align: left"></td>
-<td style="text-align: left">true</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">Node file system API implementation to use for writing card data. Defaults to the Node implementation.</td>
 </tr>
 </tbody></table>
+
+<h2 id="inherited-methods">Inherited methods</h2>
 
             
           </section>

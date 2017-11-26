@@ -404,7 +404,10 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 
 <h2 id="new-businessnetworkconnection">new BusinessNetworkConnection()</h2>
 
-<p>Create an instance of the BusinessNetworkConnection class. must be called to connect to a deployed BusinessNetworkDefinition.</p>
+<p><strong>__</strong>
+Create an instance of the BusinessNetworkConnection class. must be called to connect to a deployed BusinessNetworkDefinition.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -412,14 +415,14 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>options</strong></td>
 <td style="text-align: left">Object</td>
-<td style="text-align: left">true</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">an optional set of options to configure the instance.</td>
 </tr>
 </tbody></table>
@@ -430,14 +433,14 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>options.cardStore</strong></td>
 <td style="text-align: left">BusinessNetworkCardStore</td>
-<td style="text-align: left">true</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">specify a card store implementation to use.</td>
 </tr>
 </tbody></table>
@@ -446,7 +449,8 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 
 <p><em>BusinessNetworkDefinition getBusinessNetwork(  )</em></p>
 
-<p>Returns the currently connected BusinessNetworkDefinition</p>
+<p><strong>__</strong>
+Returns the currently connected BusinessNetworkDefinition</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the Business Network Definition</span>
@@ -461,7 +465,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>BusinessNetworkDefinition</code> - the business network</p>
+<p><strong><a href="client-businessnetworkdefinition">BusinessNetworkDefinition</a></strong> - the business network</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -482,7 +488,8 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 
 <p><em>Promise getAllAssetRegistries( [boolean includesystem] )</em></p>
 
-<p>Get a list of all existing asset registries.</p>
+<p><strong>__</strong>
+Get a list of all existing asset registries.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get all asset registries</span>
@@ -497,7 +504,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved with a list of existing asset registries</p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise that will be resolved with a list of existing asset registries</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -505,14 +514,14 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>includeSystem</strong></td>
 <td style="text-align: left">boolean</td>
-<td style="text-align: left">true</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">if true the returned list will include the system transaction registries (optional, default to false)</td>
 </tr>
 </tbody></table>
@@ -532,7 +541,8 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 
 <p><em>Promise getAssetRegistry( string id )</em></p>
 
-<p>Get an existing asset registry.</p>
+<p><strong>__</strong>
+Get an existing asset registry.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get a asset registry</span>
@@ -547,7 +557,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved with the existing asset registry, or rejected if the asset registry does not exist.</p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise that will be resolved with the existing asset registry, or rejected if the asset registry does not exist.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -555,14 +567,14 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>id</strong></td>
 <td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The unique identifier of the asset registry</td>
 </tr>
 </tbody></table>
@@ -582,7 +594,8 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 
 <p><em>Promise assetRegistryExists( string id )</em></p>
 
-<p>Determine whether a asset registry exists.</p>
+<p><strong>__</strong>
+Determine whether a asset registry exists.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Determine whether an asset registry exists</span>
@@ -599,7 +612,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved with a boolean indicating whether the asset registry exists.</p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise that will be resolved with a boolean indicating whether the asset registry exists.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -607,14 +622,14 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>id</strong></td>
 <td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The unique identifier of the asset registry</td>
 </tr>
 </tbody></table>
@@ -636,7 +651,8 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 
 <p><em>Promise addAssetRegistry( string id, string name )</em></p>
 
-<p>Add a new asset registry.</p>
+<p><strong>__</strong>
+Add a new asset registry.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Add a new asset registry</span>
@@ -648,7 +664,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved with the new asset registry after it has been added.</p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise that will be resolved with the new asset registry after it has been added.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -656,20 +674,20 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>id</strong></td>
 <td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The unique identifier of the asset registry</td>
 </tr>
 <tr>
 <td style="text-align: left"><strong>name</strong></td>
 <td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The name of the asset registry</td>
 </tr>
 </tbody></table>
@@ -686,7 +704,8 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 
 <p><em>Promise getAllParticipantRegistries( [boolean includesystem] )</em></p>
 
-<p>Get a list of all existing participant registries.</p>
+<p><strong>__</strong>
+Get a list of all existing participant registries.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get all participant registries</span>
@@ -701,7 +720,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved with a list of existing participant registries</p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise that will be resolved with a list of existing participant registries</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -709,14 +730,14 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>includeSystem</strong></td>
 <td style="text-align: left">boolean</td>
-<td style="text-align: left">true</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">if true the returned list will include the system transaction registries (optional, default to false)</td>
 </tr>
 </tbody></table>
@@ -736,7 +757,8 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 
 <p><em>Promise getParticipantRegistry( string id )</em></p>
 
-<p>Get an existing participant registry.</p>
+<p><strong>__</strong>
+Get an existing participant registry.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get a participant registry</span>
@@ -751,7 +773,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved with the existing participant registry, or rejected if the participant registry does not exist.</p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise that will be resolved with the existing participant registry, or rejected if the participant registry does not exist.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -759,14 +783,14 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>id</strong></td>
 <td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The unique identifier of the participant registry</td>
 </tr>
 </tbody></table>
@@ -786,7 +810,8 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 
 <p><em>Promise participantRegistryExists( string id )</em></p>
 
-<p>Determine whether a participant registry exists.</p>
+<p><strong>__</strong>
+Determine whether a participant registry exists.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Determine whether an asset registry exists</span>
@@ -803,7 +828,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved with a boolean indicating whether the participant registry exists.</p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise that will be resolved with a boolean indicating whether the participant registry exists.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -811,14 +838,14 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>id</strong></td>
 <td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The unique identifier of the participant registry</td>
 </tr>
 </tbody></table>
@@ -840,7 +867,8 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 
 <p><em>Promise addParticipantRegistry( string id, string name )</em></p>
 
-<p>Add a new participant registry.</p>
+<p><strong>__</strong>
+Add a new participant registry.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Add a new participant registry</span>
@@ -852,7 +880,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved with the new participant registry after it has been added.</p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise that will be resolved with the new participant registry after it has been added.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -860,20 +890,20 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>id</strong></td>
 <td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The unique identifier of the participant registry</td>
 </tr>
 <tr>
 <td style="text-align: left"><strong>name</strong></td>
 <td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The name of the participant registry</td>
 </tr>
 </tbody></table>
@@ -890,7 +920,8 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 
 <p><em>Promise getTransactionRegistry( string id )</em></p>
 
-<p>Get the transaction registry.</p>
+<p><strong>__</strong>
+Get the transaction registry.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the transaction registry</span>
@@ -905,7 +936,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved to the <a href="client-transactionregistry">TransactionRegistry</a></p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise that will be resolved to the <a href="client-transactionregistry">TransactionRegistry</a></p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -913,14 +946,14 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>id</strong></td>
 <td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The unique identifier of the transaction registry</td>
 </tr>
 </tbody></table>
@@ -940,7 +973,8 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 
 <p><em>Promise getAllTransactionRegistries( [boolean includesystem] )</em></p>
 
-<p>Get all transaction registries.</p>
+<p><strong>__</strong>
+Get all transaction registries.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the transaction registry</span>
@@ -955,7 +989,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved to the <a href="client-transactionregistry">TransactionRegistry</a></p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise that will be resolved to the <a href="client-transactionregistry">TransactionRegistry</a></p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -963,14 +999,14 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>includeSystem</strong></td>
 <td style="text-align: left">boolean</td>
-<td style="text-align: left">true</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">if true the returned list will include the system transaction registries (optional, default to false)</td>
 </tr>
 </tbody></table>
@@ -990,7 +1026,8 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 
 <p><em>Promise transactionRegistryExists( string id )</em></p>
 
-<p>Determine whether a transaction registry exists.</p>
+<p><strong>__</strong>
+Determine whether a transaction registry exists.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Determine whether an transaction registry exists</span>
@@ -1007,7 +1044,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved with a boolean indicating whether the transaction registry exists.</p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise that will be resolved with a boolean indicating whether the transaction registry exists.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -1015,14 +1054,14 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>id</strong></td>
 <td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The unique identifier of the transaction registry</td>
 </tr>
 </tbody></table>
@@ -1044,7 +1083,8 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 
 <p><em>Promise getHistorian(  )</em></p>
 
-<p>Get the historian</p>
+<p><strong>__</strong>
+Get the historian</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the historian</span>
@@ -1059,7 +1099,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved to the <a href="client-historian">Historian</a></p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise that will be resolved to the <a href="client-historian">Historian</a></p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -1080,7 +1122,8 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 
 <p><em>Promise getIdentityRegistry(  )</em></p>
 
-<p>Get the identity registry.</p>
+<p><strong>__</strong>
+Get the identity registry.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the identity registry</span>
@@ -1095,7 +1138,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved to the <a href="client-identityregistry">IdentityRegistry</a></p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise that will be resolved to the <a href="client-identityregistry">IdentityRegistry</a></p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -1116,7 +1161,8 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 
 <p><em>Promise connect( String cardname, [Object additionalconnectoptions] )</em></p>
 
-<p>Connects to a business network using a business network card, and authenticates to the Hyperledger Fabric.</p>
+<p><strong>__</strong>
+Connects to a business network using a business network card, and authenticates to the Hyperledger Fabric.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Connect and log in to HLF</span>
@@ -1128,7 +1174,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise to a BusinessNetworkDefinition that indicates the connection is complete</p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise to a BusinessNetworkDefinition that indicates the connection is complete</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -1136,20 +1184,20 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>cardName</strong></td>
 <td style="text-align: left">String</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">businessNetworkCard Name (must have been imported already)</td>
 </tr>
 <tr>
 <td style="text-align: left"><strong>additionalConnectOptions</strong></td>
 <td style="text-align: left">Object</td>
-<td style="text-align: left">true</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">Additional configuration options supplied at runtime that override options set in the connection profile. which will override those in the specified connection profile.</td>
 </tr>
 </tbody></table>
@@ -1166,7 +1214,8 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 
 <p><em>Promise getRegistry( String fullyqualifiedname )</em></p>
 
-<p>Given a fully qualified name, works out and looks up the registry that this resource will be found in. This only gives back the default registry - it does not look in any application defined registry.</p>
+<p><strong>__</strong>
+Given a fully qualified name, works out and looks up the registry that this resource will be found in. This only gives back the default registry - it does not look in any application defined registry.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Locate the registry for a fully qualififed name</span>
@@ -1180,7 +1229,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - resolved with the registry that this fqn could be found in by default</p>
+<p><strong><a href="client-promise">Promise</a></strong> - resolved with the registry that this fqn could be found in by default</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -1188,14 +1239,14 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>fullyQualifiedName</strong></td>
 <td style="text-align: left">String</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The fully qualified name of the resources</td>
 </tr>
 </tbody></table>
@@ -1214,7 +1265,8 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 
 <p><em>Promise disconnect(  )</em></p>
 
-<p>Disconnects from the Hyperledger Fabric.</p>
+<p><strong>__</strong>
+Disconnects from the Hyperledger Fabric.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Disconnects from HLF</span>
@@ -1229,7 +1281,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved when the connection is terminated.</p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise that will be resolved when the connection is terminated.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -1250,7 +1304,8 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 
 <p><em>Promise submitTransaction( Resource transaction )</em></p>
 
-<p>Submit a transaction for processing by the currently connected business network.</p>
+<p><strong>__</strong>
+Submit a transaction for processing by the currently connected business network.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Submits a transaction</span>
@@ -1267,7 +1322,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be fulfilled when the transaction has been processed.</p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise that will be fulfilled when the transaction has been processed.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -1275,14 +1332,14 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>transaction</strong></td>
 <td style="text-align: left">Resource</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The transaction to submit. Use <a href="common-factory#newtransaction">newTransaction</a> to create this object.</td>
 </tr>
 </tbody></table>
@@ -1304,7 +1361,9 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 
 <p><em>Query buildQuery( string query )</em></p>
 
-<p>Build a query ready for later execution. The specified query string must be written in the Composer query language.
+<p><strong>__</strong>
+Build a query ready for later execution. The specified query string must be written in the Composer query language.
+_**
 This functionality is Blockchain platform dependent. For example, when a Composer business network is deployed to Hyperledger Fabric v1.0, Hyperledger Fabric must be configured with the CouchDB database for the world state.</p>
 
 <h3 id="example">Example</h3>
@@ -1326,7 +1385,9 @@ This functionality is Blockchain platform dependent. For example, when a Compose
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Query</code> - The built query, which can be passed in a call to query.</p>
+<p><strong><a href="client-query">Query</a></strong> - The built query, which can be passed in a call to query.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -1334,14 +1395,14 @@ This functionality is Blockchain platform dependent. For example, when a Compose
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>query</strong></td>
 <td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The query string, written using the Composer query language.</td>
 </tr>
 </tbody></table>
@@ -1367,7 +1428,9 @@ This functionality is Blockchain platform dependent. For example, when a Compose
 
 <p><em>Promise query( string; Query query, [Object parameters] )</em></p>
 
-<p>Execute a query defined in a Composer query file, or execute a query built with buildQuery.
+<p><strong>__</strong>
+Execute a query defined in a Composer query file, or execute a query built with buildQuery.
+_**
 This functionality is Blockchain platform dependent. For example, when a Composer business network is deployed to Hyperledger Fabric v1.0, Hyperledger Fabric must be configured with the CouchDB database for the world state.</p>
 
 <h3 id="example">Example</h3>
@@ -1388,7 +1451,9 @@ This functionality is Blockchain platform dependent. For example, when a Compose
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be resolved with an array of {@link module:composer-common.Resource Resource} representing the resources returned by the query.</p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise that will be resolved with an array of {@link module:composer-common.Resource Resource} representing the resources returned by the query.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -1396,20 +1461,20 @@ This functionality is Blockchain platform dependent. For example, when a Compose
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>query</strong></td>
 <td style="text-align: left">string; Query</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The name of the query, or a built query.</td>
 </tr>
 <tr>
 <td style="text-align: left"><strong>parameters</strong></td>
 <td style="text-align: left">Object</td>
-<td style="text-align: left">true</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The parameters for the query.</td>
 </tr>
 </tbody></table>
@@ -1434,7 +1499,8 @@ This functionality is Blockchain platform dependent. For example, when a Compose
 
 <p><em>Promise ping(  )</em></p>
 
-<p>Test the connection to the runtime and verify that the version of the runtime is compatible with this level of the client node.js module.</p>
+<p><strong>__</strong>
+Test the connection to the runtime and verify that the version of the runtime is compatible with this level of the client node.js module.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Test the connection to the runtime</span>
@@ -1449,7 +1515,9 @@ This functionality is Blockchain platform dependent. For example, when a Compose
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be fulfilled when the connection has been tested. The promise will be rejected if the version is incompatible.</p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise that will be fulfilled when the connection has been tested. The promise will be rejected if the version is incompatible.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -1470,11 +1538,14 @@ This functionality is Blockchain platform dependent. For example, when a Compose
 
 <p><em>Promise issueIdentity( Resource; Relationship; string participant, string identityname, [object options] )</em></p>
 
-<p>Issue an identity with the specified name and map it to the specified participant.</p>
+<p><strong>__</strong>
+Issue an identity with the specified name and map it to the specified participant.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be fulfilled when the identity has been added to the specified participant. The promise will be rejected if the participant does not exist, or if the identity is already mapped to another participant.</p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise that will be fulfilled when the identity has been added to the specified participant. The promise will be rejected if the participant does not exist, or if the identity is already mapped to another participant.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -1482,26 +1553,26 @@ This functionality is Blockchain platform dependent. For example, when a Compose
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>participant</strong></td>
 <td style="text-align: left">Resource; Relationship; string</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The participant, a relationship to the participant, or the fully qualified identifier of the participant. The participant must already exist.</td>
 </tr>
 <tr>
 <td style="text-align: left"><strong>identityName</strong></td>
 <td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The name for the new identity.</td>
 </tr>
 <tr>
 <td style="text-align: left"><strong>options</strong></td>
 <td style="text-align: left">object</td>
-<td style="text-align: left">true</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">Options for the new identity.</td>
 </tr>
 </tbody></table>
@@ -1512,14 +1583,14 @@ This functionality is Blockchain platform dependent. For example, when a Compose
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>options.issuer</strong></td>
 <td style="text-align: left">boolean</td>
-<td style="text-align: left">true</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">Whether or not the new identity should have permissions to create additional new identities. False by default.</td>
 </tr>
 </tbody></table>
@@ -1528,11 +1599,14 @@ This functionality is Blockchain platform dependent. For example, when a Compose
 
 <p><em>Promise bindIdentity( Resource; string participant, string certificate )</em></p>
 
-<p>Bind an existing identity to the specified participant.</p>
+<p><strong>__</strong>
+Bind an existing identity to the specified participant.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be fulfilled when the identity has been added to the specified participant. The promise will be rejected if the participant does not exist, or if the identity is already mapped to another participant.</p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise that will be fulfilled when the identity has been added to the specified participant. The promise will be rejected if the participant does not exist, or if the identity is already mapped to another participant.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -1540,20 +1614,20 @@ This functionality is Blockchain platform dependent. For example, when a Compose
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>participant</strong></td>
 <td style="text-align: left">Resource; string</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The participant, or the fully qualified identifier of the participant. The participant must already exist.</td>
 </tr>
 <tr>
 <td style="text-align: left"><strong>certificate</strong></td>
 <td style="text-align: left">string</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The certificate for the existing identity.</td>
 </tr>
 </tbody></table>
@@ -1562,11 +1636,14 @@ This functionality is Blockchain platform dependent. For example, when a Compose
 
 <p><em>Promise revokeIdentity( Resource; string identity )</em></p>
 
-<p>Revoke the specified identity by removing any existing mapping to a participant.</p>
+<p><strong>__</strong>
+Revoke the specified identity by removing any existing mapping to a participant.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><code>Promise</code> - A promise that will be fulfilled when the identity has been removed from the specified participant. The promise will be rejected if the participant does not exist, or if the identity is not mapped to the participant.</p>
+<p><strong><a href="client-promise">Promise</a></strong> - A promise that will be fulfilled when the identity has been removed from the specified participant. The promise will be rejected if the participant does not exist, or if the identity is not mapped to the participant.</p>
+
+<h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -1574,17 +1651,19 @@ This functionality is Blockchain platform dependent. For example, when a Compose
 <tr>
 <th style="text-align: left">Name</th>
 <th style="text-align: left">Type</th>
-<th style="text-align: left">Optional</th>
+<th style="text-align: left">Mandatory</th>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><strong>identity</strong></td>
 <td style="text-align: left">Resource; string</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left"><em>Yes</em></td>
 <td style="text-align: left">The identity, or the identifier of the identity.</td>
 </tr>
 </tbody></table>
+
+<h2 id="inherited-methods">Inherited methods</h2>
 
             
           </section>
