@@ -263,6 +263,8 @@ as adding assets are treated as transactions so are therefore recorded.</p>
 
 <p>Details of these are in the system model.</p>
 
+<p><strong>Applications should retrieve instances from <a href="client-businessnetworkconnection.html">BusinessNetworkConnection</a></strong></p>
+
 <h3 id="details">Details</h3>
 
 <ul>
@@ -286,9 +288,39 @@ as adding assets are treated as transactions so are therefore recorded.</p>
 </tr>
 </thead><tbody>
 <tr>
+<td style="text-align: left"><a href="#add">add</a></td>
+<td style="text-align: left"><code>void</code></td>
+<td style="text-align: left">Unsupported operation; you cannot add a historian record to the historian</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#addall">addAll</a></td>
+<td style="text-align: left"><code>void</code></td>
+<td style="text-align: left">Unsupported operation; you cannot add a historian record to the historian</td>
+</tr>
+<tr>
 <td style="text-align: left"><a href="#gethistorian">getHistorian</a></td>
 <td style="text-align: left"><code>Promise</code></td>
 <td style="text-align: left">Get an existing historian</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#remove">remove</a></td>
+<td style="text-align: left"><code>void</code></td>
+<td style="text-align: left">Unsupported operation; you cannot remove a historian record from the historian</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#removeall">removeAll</a></td>
+<td style="text-align: left"><code>void</code></td>
+<td style="text-align: left">Unsupported operation; you cannot remove a historian record from the historian</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#update">update</a></td>
+<td style="text-align: left"><code>void</code></td>
+<td style="text-align: left">Unsupported operation; you cannot update a historian record in the historian</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#updateall">updateAll</a></td>
+<td style="text-align: left"><code>void</code></td>
+<td style="text-align: left">Unsupported operation; you cannot update a historian record in the historian</td>
 </tr>
 </tbody></table>
 
@@ -302,42 +334,6 @@ as adding assets are treated as transactions so are therefore recorded.</p>
 <th style="text-align: left">Description</th>
 </tr>
 </thead><tbody>
-<tr>
-<td style="text-align: left">Registry</td>
-<td style="text-align: left"><a href="#remove">remove</a></td>
-<td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left">Remove an asset with a given type and id from the registry</td>
-</tr>
-<tr>
-<td style="text-align: left">Registry</td>
-<td style="text-align: left"><a href="#addall">addAll</a></td>
-<td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left">Adds a list of new resources to the registry</td>
-</tr>
-<tr>
-<td style="text-align: left">Registry</td>
-<td style="text-align: left"><a href="#updateall">updateAll</a></td>
-<td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left">Updates a list of resources in the registry</td>
-</tr>
-<tr>
-<td style="text-align: left">Registry</td>
-<td style="text-align: left"><a href="#update">update</a></td>
-<td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left">Updates a resource in the registry</td>
-</tr>
-<tr>
-<td style="text-align: left">Registry</td>
-<td style="text-align: left"><a href="#removeall">removeAll</a></td>
-<td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left">Removes a list of resources from the registry</td>
-</tr>
-<tr>
-<td style="text-align: left">Registry</td>
-<td style="text-align: left"><a href="#add">add</a></td>
-<td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left">Adds a new resource to the registry</td>
-</tr>
 <tr>
 <td style="text-align: left">Registry</td>
 <td style="text-align: left"><a href="#getall">getAll</a></td>
@@ -420,19 +416,43 @@ as adding assets are treated as transactions so are therefore recorded.</p>
 </tr>
 </tbody></table>
 
-<h2 id="inherited-methods">Inherited methods</h2>
+<h2 id="add">add</h2>
+
+<p><em>void add( Resource resource, string data )</em></p>
+
+<p>Unsupported operation; you cannot add a historian record to the historian. This method will always throw an exception when called.</p>
+
+<h3 id="see-also">See also</h3>
+
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Mandatory</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><strong>resource</strong></td>
+<td style="text-align: left">Resource</td>
+<td style="text-align: left"><em>Yes</em></td>
+<td style="text-align: left">The resource to be added to the registry.</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>data</strong></td>
+<td style="text-align: left">string</td>
+<td style="text-align: left"><em>Yes</em></td>
+<td style="text-align: left">The data for the resource.</td>
+</tr>
+</tbody></table>
 
 <h2 id="addall">addAll</h2>
 
-<p><em>Promise addAll(  resources )</em></p>
+<p><em>void addAll(  resources )</em></p>
 
-<p><strong>Inherited from:</strong>  Registry</p>
-
-<p>Adds a list of new resources to the registry.</p>
-
-<h3 id="returns">Returns</h3>
-
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> - A promise that will be resolved when the resource is added to the registry.</p>
+<p>Unsupported operation; you cannot add a historian record to the historian. This method will always throw an exception when called.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -454,81 +474,11 @@ as adding assets are treated as transactions so are therefore recorded.</p>
 </tr>
 </tbody></table>
 
-<h2 id="add">add</h2>
-
-<p><em>Promise add( Resource resource )</em></p>
-
-<p><strong>Inherited from:</strong>  Registry</p>
-
-<p>Adds a new resource to the registry.</p>
-
-<h3 id="returns">Returns</h3>
-
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> - A promise that will be resolved when the resource is added to the registry.</p>
-
-<h3 id="see-also">See also</h3>
-
-<h3 id="parameters">Parameters</h3>
-
-<table><thead>
-<tr>
-<th style="text-align: left">Name</th>
-<th style="text-align: left">Type</th>
-<th style="text-align: left">Mandatory</th>
-<th style="text-align: left">Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left"><strong>resource</strong></td>
-<td style="text-align: left">Resource</td>
-<td style="text-align: left"><em>Yes</em></td>
-<td style="text-align: left">The resource to be added to the registry.</td>
-</tr>
-</tbody></table>
-
-<h2 id="updateall">updateAll</h2>
-
-<p><em>Promise updateAll(  resources )</em></p>
-
-<p><strong>Inherited from:</strong>  Registry</p>
-
-<p>Updates a list of resources in the registry.</p>
-
-<h3 id="returns">Returns</h3>
-
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> - A promise that will be resolved when the resource is added to the registry.</p>
-
-<h3 id="see-also">See also</h3>
-
-<h3 id="parameters">Parameters</h3>
-
-<table><thead>
-<tr>
-<th style="text-align: left">Name</th>
-<th style="text-align: left">Type</th>
-<th style="text-align: left">Mandatory</th>
-<th style="text-align: left">Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left"><strong>resources</strong></td>
-<td style="text-align: left"></td>
-<td style="text-align: left"><em>Yes</em></td>
-<td style="text-align: left">The resources to be updated in the asset registry.</td>
-</tr>
-</tbody></table>
-
 <h2 id="update">update</h2>
 
-<p><em>Promise update( Resource resource )</em></p>
+<p><em>void update( Resource resource )</em></p>
 
-<p><strong>Inherited from:</strong>  Registry</p>
-
-<p>Updates a resource in the registry.</p>
-
-<h3 id="returns">Returns</h3>
-
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> - A promise that will be resolved when the resource is updated in the registry.</p>
+<p>Unsupported operation; you cannot update a historian record in the historian. This method will always throw an exception when called.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -550,17 +500,63 @@ as adding assets are treated as transactions so are therefore recorded.</p>
 </tr>
 </tbody></table>
 
+<h2 id="updateall">updateAll</h2>
+
+<p><em>void updateAll(  resources )</em></p>
+
+<p>Unsupported operation; you cannot update a historian record in the historian. This method will always throw an exception when called.</p>
+
+<h3 id="see-also">See also</h3>
+
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Mandatory</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><strong>resources</strong></td>
+<td style="text-align: left"></td>
+<td style="text-align: left"><em>Yes</em></td>
+<td style="text-align: left">The resources to be updated in the asset registry.</td>
+</tr>
+</tbody></table>
+
+<h2 id="remove">remove</h2>
+
+<p><em>void remove( Resource; string resource )</em></p>
+
+<p>Unsupported operation; you cannot remove a historian record from the historian. This method will always throw an exception when called.</p>
+
+<h3 id="see-also">See also</h3>
+
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Mandatory</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><strong>resource</strong></td>
+<td style="text-align: left">Resource; string</td>
+<td style="text-align: left"><em>Yes</em></td>
+<td style="text-align: left">The resource, or the unique identifier of the resource.</td>
+</tr>
+</tbody></table>
+
 <h2 id="removeall">removeAll</h2>
 
-<p><em>Promise removeAll( ;  resources )</em></p>
+<p><em>void removeAll( ;  resources )</em></p>
 
-<p><strong>Inherited from:</strong>  Registry</p>
-
-<p>Removes a list of resources from the registry.</p>
-
-<h3 id="returns">Returns</h3>
-
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> - A promise that will be resolved when the resource is added to the registry.</p>
+<p>Unsupported operation; you cannot remove a historian record from the historian. This method will always throw an exception when called.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -582,37 +578,7 @@ as adding assets are treated as transactions so are therefore recorded.</p>
 </tr>
 </tbody></table>
 
-<h2 id="remove">remove</h2>
-
-<p><em>Promise remove( Resource; string resource )</em></p>
-
-<p><strong>Inherited from:</strong>  Registry</p>
-
-<p>Remove an asset with a given type and id from the registry.</p>
-
-<h3 id="returns">Returns</h3>
-
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> - A promise that will be resolved when the resource is removed from the registry.</p>
-
-<h3 id="see-also">See also</h3>
-
-<h3 id="parameters">Parameters</h3>
-
-<table><thead>
-<tr>
-<th style="text-align: left">Name</th>
-<th style="text-align: left">Type</th>
-<th style="text-align: left">Mandatory</th>
-<th style="text-align: left">Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left"><strong>resource</strong></td>
-<td style="text-align: left">Resource; string</td>
-<td style="text-align: left"><em>Yes</em></td>
-<td style="text-align: left">The resource, or the unique identifier of the resource.</td>
-</tr>
-</tbody></table>
+<h2 id="inherited-methods">Inherited methods</h2>
 
 <h2 id="getall">getAll</h2>
 
