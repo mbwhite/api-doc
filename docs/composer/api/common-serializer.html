@@ -204,9 +204,11 @@ ga('send', 'pageview');
 <li><a href="../api/common-businessnetworkmetadata.html">BusinessNetworkMetadata (Common API)</a></li>
 <li><a href="../api/common-concept.html">Concept (Common API)</a></li>
 <li><a href="../api/common-factory.html">Factory (Common API)</a></li>
+<li><a href="../api/common-filesystemcardstore.html">FileSystemCardStore (Common API)</a></li>
 <li><a href="../api/common-idcard.html">IdCard (Common API)</a></li>
 <li><a href="../api/common-identifiable.html">Identifiable (Common API)</a></li>
 <li><a href="../api/common-introspector.html">Introspector (Common API)</a></li>
+<li><a href="../api/common-memorycardstore.html">MemoryCardStore (Common API)</a></li>
 <li><a href="../api/common-relationship.html">Relationship (Common API)</a></li>
 <li><a href="../api/common-resource.html">Resource (Common API)</a></li>
 <li><a href="../api/common-serializer.html">Serializer (Common API)</a></li>
@@ -280,13 +282,13 @@ ga('send', 'pageview');
 </tr>
 <tr>
 <td style="text-align: left"><a href="#fromjson">fromJSON</a></td>
-<td style="text-align: left"><code>Resource</code></td>
-<td style="text-align: left">Create a <a href="common-resource">Resource</a> from a JavaScript Object representation</td>
+<td style="text-align: left"><code>common-Resource</code></td>
+<td style="text-align: left">Create a <a href="common-resource.html">Resource</a> from a JavaScript Object representation</td>
 </tr>
 <tr>
 <td style="text-align: left"><a href="#tojson">toJSON</a></td>
 <td style="text-align: left"><code>Object</code></td>
-<td style="text-align: left"><p> Convert a <a href="common-resource">Resource</a> to a JavaScript object suitable for long-term peristent storage</td>
+<td style="text-align: left"><p> Convert a <a href="common-resource.html">Resource</a> to a JavaScript object suitable for long-term peristent storage</td>
 </tr>
 </tbody></table>
 
@@ -294,8 +296,7 @@ ga('send', 'pageview');
 
 <h2 id="new-serializer">new Serializer()</h2>
 
-<p><strong>__</strong>
-Create a Serializer. <strong>Note: Only to be called by framework code. Applications should retrieve instances from <a href="common-businessnetworkdefinition">BusinessNetworkDefinition</a></strong> </p></p>
+<p>Create a Serializer. <strong>Note: Only to be called by framework code. Applications should retrieve instances from <a href="common-businessnetworkdefinition.html">BusinessNetworkDefinition</a></strong> </p></p>
 
 <h3 id="see-also">See also</h3>
 
@@ -327,12 +328,11 @@ Create a Serializer. <strong>Note: Only to be called by framework code. Applicat
 
 <p><em>Object toJSON( Resource resource, Object options )</em></p>
 
-<p><strong>__</strong>
-<p> Convert a <a href="common-resource">Resource</a> to a JavaScript object suitable for long-term peristent storage. </p></p>
+<p> Convert a [Resource](common-resource.html) to a JavaScript object suitable for long-term peristent storage. </p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="common-object">Object</a></strong> - The Javascript Object that represents the resource</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></strong> - The Javascript Object that represents the resource</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -398,16 +398,14 @@ Create a Serializer. <strong>Note: Only to be called by framework code. Applicat
 
 <h2 id="fromjson">fromJSON</h2>
 
-<p><em>Resource fromJSON( Object jsonobject, Object options )</em></p>
+<p><em>common-Resource fromJSON( Object jsonobject, Object options )</em></p>
 
-<p><strong>__</strong>
-Create a <a href="common-resource">Resource</a> from a JavaScript Object representation. The JavaScript Object should have been created by calling the <a href="common-serializer#tojson">toJSON</a> API.
-_**
+<p>Create a <a href="common-resource.html">Resource</a> from a JavaScript Object representation. The JavaScript Object should have been created by calling the <a href="common-serializer#tojson.html">toJSON</a> API.
 The Resource is populated based on the JavaScript object.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="common-resource">Resource</a></strong> - The new populated resource</p>
+<p><strong><a href="common-resource.html">Resource</a></strong> - The new populated resource</p>
 
 <h3 id="see-also">See also</h3>
 

@@ -204,9 +204,11 @@ ga('send', 'pageview');
 <li><a href="../api/common-businessnetworkmetadata.html">BusinessNetworkMetadata (Common API)</a></li>
 <li><a href="../api/common-concept.html">Concept (Common API)</a></li>
 <li><a href="../api/common-factory.html">Factory (Common API)</a></li>
+<li><a href="../api/common-filesystemcardstore.html">FileSystemCardStore (Common API)</a></li>
 <li><a href="../api/common-idcard.html">IdCard (Common API)</a></li>
 <li><a href="../api/common-identifiable.html">Identifiable (Common API)</a></li>
 <li><a href="../api/common-introspector.html">Introspector (Common API)</a></li>
+<li><a href="../api/common-memorycardstore.html">MemoryCardStore (Common API)</a></li>
 <li><a href="../api/common-relationship.html">Relationship (Common API)</a></li>
 <li><a href="../api/common-resource.html">Resource (Common API)</a></li>
 <li><a href="../api/common-serializer.html">Serializer (Common API)</a></li>
@@ -345,8 +347,7 @@ as a specific user.</p>
 
 <h2 id="new-idcard">new IdCard()</h2>
 
-<p><strong>__</strong>
-Create the IdCard.</p>
+<p>Create the IdCard.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -378,14 +379,12 @@ Create the IdCard.</p>
 
 <p><em>String getUserName(  )</em></p>
 
-<p><strong>__</strong>
-Name of the user identity associated with the card. This should be unique within the scope of a given business network and connection profile.
-_**
+<p>Name of the user identity associated with the card. This should be unique within the scope of a given business network and connection profile.
 This is a mandatory field.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="common-string">String</a></strong> - Name of the user identity.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></strong> - Name of the user identity.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -397,12 +396,11 @@ This is a mandatory field.</p>
 
 <p><em>String getDescription(  )</em></p>
 
-<p><strong>__</strong>
-Free text description of the card.</p>
+<p>Free text description of the card.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="common-string">String</a></strong> - card description.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></strong> - card description.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -414,12 +412,11 @@ Free text description of the card.</p>
 
 <p><em>String getBusinessNetworkName(  )</em></p>
 
-<p><strong>__</strong>
-Name of the business network to which the ID card applies. Generally this will be present but may be omitted for system cards.</p>
+<p>Name of the business network to which the ID card applies. Generally this will be present but may be omitted for system cards.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="common-string">String</a></strong> - business network name.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></strong> - business network name.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -431,14 +428,12 @@ Name of the business network to which the ID card applies. Generally this will b
 
 <p><em>Object getConnectionProfile(  )</em></p>
 
-<p><strong>__</strong>
-Connection profile for this card.
-_**
+<p>Connection profile for this card.
 This is a mandatory field.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="common-object">Object</a></strong> - connection profile.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></strong> - connection profile.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -450,12 +445,11 @@ This is a mandatory field.</p>
 
 <p><em>Object getCredentials(  )</em></p>
 
-<p><strong>__</strong>
-Credentials associated with this card, and which are used to connect to the associated business network. <p> For PKI-based authentication, the credentials are expected to be of the form: <em>{ certificate: String, privateKey: String }</em>.</p>
+<p>Credentials associated with this card, and which are used to connect to the associated business network. <p> For PKI-based authentication, the credentials are expected to be of the form: <em>{ certificate: String, privateKey: String }</em>.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="common-object">Object</a></strong> - credentials.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></strong> - credentials.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -467,8 +461,7 @@ Credentials associated with this card, and which are used to connect to the asso
 
 <p><em>void setCredentials( Object credentials )</em></p>
 
-<p><strong>__</strong>
-Credentials to associate with this card. <p> For PKI-based authentication, the credentials are expected to be of the form: <em>{ certificate: String, privateKey: String }</em>.</p>
+<p>Credentials to associate with this card. <p> For PKI-based authentication, the credentials are expected to be of the form: <em>{ certificate: String, privateKey: String }</em>.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -494,12 +487,11 @@ Credentials to associate with this card. <p> For PKI-based authentication, the c
 
 <p><em>Object getEnrollmentCredentials(  )</em></p>
 
-<p><strong>__</strong>
-Enrollment credentials. If there are no credentials associated with this card, these credentials  are used to enroll with a business network and obtain certificates. <p> For an ID/secret enrollment scheme, the credentials are expected to be of the form: <em>{ secret: String }</em>.</p>
+<p>Enrollment credentials. If there are no credentials associated with this card, these credentials  are used to enroll with a business network and obtain certificates. <p> For an ID/secret enrollment scheme, the credentials are expected to be of the form: <em>{ secret: String }</em>.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="common-object">Object</a></strong> - enrollment credentials, or null if none exist.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></strong> - enrollment credentials, or null if none exist.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -511,12 +503,11 @@ Enrollment credentials. If there are no credentials associated with this card, t
 
 <p><em>String[] getRoles(  )</em></p>
 
-<p><strong>__</strong>
-Special roles for which this ID can be used, which can include: <ul>   <li>PeerAdmin</li>   <li>ChannelAdmin</li>   <li>Issuer</li> </ul></p>
+<p>Special roles for which this ID can be used, which can include: <ul>   <li>PeerAdmin</li>   <li>ChannelAdmin</li>   <li>Issuer</li> </ul></p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="common-"></a></strong> - roles.</p>
+<p><strong><a href="common-.html"></a></strong> - roles.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -528,12 +519,11 @@ Special roles for which this ID can be used, which can include: <ul>   <li>PeerA
 
 <p><em>Promise fromArchive( String; ArrayBuffer; Uint8Array; Buffer; Blob; Promise zipdata )</em></p>
 
-<p><strong>__</strong>
-Create an IdCard from a card archive. <p> Valid types for <em>zipData</em> are any of the types supported by JSZip.</p>
+<p>Create an IdCard from a card archive. <p> Valid types for <em>zipData</em> are any of the types supported by JSZip.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="common-promise">Promise</a></strong> - Promise to the instantiated IdCard.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - Promise to the instantiated IdCard.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -559,12 +549,11 @@ Create an IdCard from a card archive. <p> Valid types for <em>zipData</em> are a
 
 <p><em>Promise toArchive( [Object options] )</em></p>
 
-<p><strong>__</strong>
-Generate a card archive representing this ID card. <p> The default value for the <em>options.type</em> parameter is <em>arraybuffer</em>. See JSZip documentation for other valid values.</p>
+<p>Generate a card archive representing this ID card. <p> The default value for the <em>options.type</em> parameter is <em>arraybuffer</em>. See JSZip documentation for other valid values.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="common-promise">Promise</a></strong> - Promise of the generated ZIP file; by default an ArrayBuffer.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - Promise of the generated ZIP file; by default an ArrayBuffer.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -608,12 +597,11 @@ Generate a card archive representing this ID card. <p> The default value for the
 
 <p><em>Promise fromDirectory( String carddirectory, [ fs] )</em></p>
 
-<p><strong>__</strong>
-Create an IdCard from a directory consisting of the content of an ID card.</p>
+<p>Create an IdCard from a directory consisting of the content of an ID card.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="common-promise">Promise</a></strong> - Promise that resolves to an IdCard.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - Promise that resolves to an IdCard.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -645,12 +633,11 @@ Create an IdCard from a directory consisting of the content of an ID card.</p>
 
 <p><em>Promise toDirectory( String carddirectory, [ fs] )</em></p>
 
-<p><strong>__</strong>
-Save the content of an IdCard a directory.</p>
+<p>Save the content of an IdCard a directory.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="common-promise">Promise</a></strong> - Promise that resolves then the save is complete.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - Promise that resolves then the save is complete.</p>
 
 <h3 id="see-also">See also</h3>
 

@@ -204,9 +204,11 @@ ga('send', 'pageview');
 <li><a href="../api/common-businessnetworkmetadata.html">BusinessNetworkMetadata (Common API)</a></li>
 <li><a href="../api/common-concept.html">Concept (Common API)</a></li>
 <li><a href="../api/common-factory.html">Factory (Common API)</a></li>
+<li><a href="../api/common-filesystemcardstore.html">FileSystemCardStore (Common API)</a></li>
 <li><a href="../api/common-idcard.html">IdCard (Common API)</a></li>
 <li><a href="../api/common-identifiable.html">Identifiable (Common API)</a></li>
 <li><a href="../api/common-introspector.html">Introspector (Common API)</a></li>
+<li><a href="../api/common-memorycardstore.html">MemoryCardStore (Common API)</a></li>
 <li><a href="../api/common-relationship.html">Relationship (Common API)</a></li>
 <li><a href="../api/common-resource.html">Resource (Common API)</a></li>
 <li><a href="../api/common-serializer.html">Serializer (Common API)</a></li>
@@ -257,7 +259,7 @@ with namespace = &#39;org.acme&#39;, type = &#39;Vehicle&#39; and id = &#39;ABC&
 a pointer that points at an instance of org.acme.Vehicle with the id
 ABC.</p>
 
-<p>Applications should retrieve instances from <a href="common-factory">Factory</a></p>
+<p>Applications should retrieve instances from <a href="common-factory.html">Factory</a></p>
 
 <h3 id="details">Details</h3>
 
@@ -269,7 +271,7 @@ ABC.</p>
 <h3 id="see-also">See also</h3>
 
 <ul>
-<li>See <a href="common-identifiable">Identifiable</a></li>
+<li>See <a href="common-identifiable.html">Identifiable</a></li>
 </ul>
 
 <h2 id="method-summary">Method Summary</h2>
@@ -283,7 +285,7 @@ ABC.</p>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><a href="#fromuri">fromURI</a></td>
-<td style="text-align: left"><code>Relationship</code></td>
+<td style="text-align: left"><code>common-Relationship</code></td>
 <td style="text-align: left">Contructs a Relationship instance from a URI representation (created using toURI)</td>
 </tr>
 <tr>
@@ -382,12 +384,11 @@ ABC.</p>
 
 <p><em>String toString(  )</em></p>
 
-<p><strong>__</strong>
-Returns the string representation of this class</p>
+<p>Returns the string representation of this class</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="common-string">String</a></strong> - the string representation of the class</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></strong> - the string representation of the class</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -399,8 +400,7 @@ Returns the string representation of this class</p>
 
 <p><em>boolean isRelationship(  )</em></p>
 
-<p><strong>__</strong>
-Determine if this identifiable is a relationship.</p>
+<p>Determine if this identifiable is a relationship.</p>
 
 <h3 id="returns">Returns</h3>
 
@@ -414,14 +414,13 @@ Determine if this identifiable is a relationship.</p>
 
 <h2 id="fromuri">fromURI</h2>
 
-<p><em>Relationship fromURI( ModelManager modelmanager, String uriasstring, [String defaultnamespace], [String defaulttype] )</em></p>
+<p><em>common-Relationship fromURI( ModelManager modelmanager, String uriasstring, [String defaultnamespace], [String defaulttype] )</em></p>
 
-<p><strong>__</strong>
-Contructs a Relationship instance from a URI representation (created using toURI).</p>
+<p>Contructs a Relationship instance from a URI representation (created using toURI).</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="common-relationship">Relationship</a></strong> - the relationship</p>
+<p><strong><a href="common-relationship.html">Relationship</a></strong> - the relationship</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -555,7 +554,7 @@ Contructs a Relationship instance from a URI representation (created using toURI
 
 <h3 id="returns">Returns</h3>
 
-<p><a href="common-string">String</a> - the URI for the identifiable</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> - the URI for the identifiable</p>
 
 <h3 id="see-also">See also</h3>
 

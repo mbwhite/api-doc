@@ -204,9 +204,11 @@ ga('send', 'pageview');
 <li><a href="../api/common-businessnetworkmetadata.html">BusinessNetworkMetadata (Common API)</a></li>
 <li><a href="../api/common-concept.html">Concept (Common API)</a></li>
 <li><a href="../api/common-factory.html">Factory (Common API)</a></li>
+<li><a href="../api/common-filesystemcardstore.html">FileSystemCardStore (Common API)</a></li>
 <li><a href="../api/common-idcard.html">IdCard (Common API)</a></li>
 <li><a href="../api/common-identifiable.html">Identifiable (Common API)</a></li>
 <li><a href="../api/common-introspector.html">Introspector (Common API)</a></li>
+<li><a href="../api/common-memorycardstore.html">MemoryCardStore (Common API)</a></li>
 <li><a href="../api/common-relationship.html">Relationship (Common API)</a></li>
 <li><a href="../api/common-resource.html">Resource (Common API)</a></li>
 <li><a href="../api/common-serializer.html">Serializer (Common API)</a></li>
@@ -253,7 +255,7 @@ ga('send', 'pageview');
 <h1 id="participantregistry">ParticipantRegistry</h1>
 
 <p>Do not attempt to create an instance of this class.<br>
-You must use the <a href="runtime-api#getparticipantregistry">getParticipantRegistry</a>
+You must use the <a href="runtime-api#getparticipantregistry.html">getParticipantRegistry</a>
 method instead.</p>
 
 <h3 id="details">Details</h3>
@@ -326,8 +328,7 @@ method instead.</p>
 
 <p><em>Promise getAll(  )</em></p>
 
-<p><strong>__</strong>
-Get a list of all of the existing participants in this participant registry.</p>
+<p>Get a list of all of the existing participants in this participant registry.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the driver participant registry.</span>
@@ -348,7 +349,7 @@ Get a list of all of the existing participants in this participant registry.</p>
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="runtime-promise">Promise</a></strong> - A promise. The promise is resolved with an array of <a href="common-resource">Resource</a> instances representing all of the participants stored in this participant registry. If the participant registry does not exist, or the current user does not have access to the participant registry, then the promise will be rejected with an error that describes the problem.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise. The promise is resolved with an array of <a href="common-resource.html">Resource</a> instances representing all of the participants stored in this participant registry. If the participant registry does not exist, or the current user does not have access to the participant registry, then the promise will be rejected with an error that describes the problem.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -377,8 +378,7 @@ Get a list of all of the existing participants in this participant registry.</p>
 
 <p><em>Promise get( string id )</em></p>
 
-<p><strong>__</strong>
-Get the specified participant in this participant registry using the unique identifier of the participant.</p>
+<p>Get the specified participant in this participant registry using the unique identifier of the participant.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the driver participant registry.</span>
@@ -397,7 +397,7 @@ Get the specified participant in this participant registry using the unique iden
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="runtime-promise">Promise</a></strong> - A promise. The promise is resolved with a <a href="common-resource">Resource</a> instance representing the specified participant in this participant registry. If the specified participant does not exist, or the current user does not have access to the specified participant, then the promise will be rejected with an error that describes the problem.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise. The promise is resolved with a <a href="common-resource.html">Resource</a> instance representing the specified participant in this participant registry. If the specified participant does not exist, or the current user does not have access to the specified participant, then the promise will be rejected with an error that describes the problem.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -438,8 +438,7 @@ Get the specified participant in this participant registry using the unique iden
 
 <p><em>Promise exists( string id )</em></p>
 
-<p><strong>__</strong>
-Determines whether a specific participant exists in this participant registry.</p>
+<p>Determines whether a specific participant exists in this participant registry.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the driver participant registry.</span>
@@ -458,7 +457,7 @@ Determines whether a specific participant exists in this participant registry.</
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="runtime-promise">Promise</a></strong> - A promise. The promise is resolved with a boolean which is true if the specified participant exists in this participant registry, and false if the specified participant does not exist.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise. The promise is resolved with a boolean which is true if the specified participant exists in this participant registry, and false if the specified participant does not exist.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -499,8 +498,7 @@ Determines whether a specific participant exists in this participant registry.</
 
 <p><em>Promise addAll(  participants )</em></p>
 
-<p><strong>__</strong>
-Add all of the specified participants to this participant registry.</p>
+<p>Add all of the specified participants to this participant registry.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the driver participant registry.</span>
@@ -523,7 +521,7 @@ Add all of the specified participants to this participant registry.</p>
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="runtime-promise">Promise</a></strong> - A promise. The promise is resolved when all of the participants have been added to this participant registry. If the participants cannot be added to this participant registry, or if the participants already exist in the participant registry, then the promise will be rejected with an error that describes the problem.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise. The promise is resolved when all of the participants have been added to this participant registry. If the participants cannot be added to this participant registry, or if the participants already exist in the participant registry, then the promise will be rejected with an error that describes the problem.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -568,8 +566,7 @@ Add all of the specified participants to this participant registry.</p>
 
 <p><em>Promise add( Resource participant )</em></p>
 
-<p><strong>__</strong>
-Add the specified participant to this participant registry.</p>
+<p>Add the specified participant to this participant registry.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the driver participant registry.</span>
@@ -589,7 +586,7 @@ Add the specified participant to this participant registry.</p>
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="runtime-promise">Promise</a></strong> - A promise. The promise is resolved when the participant has been added to this participant registry. If the participant cannot be added to this participant registry, or if the participant already exists in the participant registry, then the promise will be rejected with an error that describes the problem.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise. The promise is resolved when the participant has been added to this participant registry. If the participant cannot be added to this participant registry, or if the participant already exists in the participant registry, then the promise will be rejected with an error that describes the problem.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -631,8 +628,7 @@ Add the specified participant to this participant registry.</p>
 
 <p><em>Promise updateAll(  participants )</em></p>
 
-<p><strong>__</strong>
-Update all of the specified participants in this participant registry.</p>
+<p>Update all of the specified participants in this participant registry.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// The existing drivers that have come from elsewhere.</span>
@@ -656,7 +652,7 @@ Update all of the specified participants in this participant registry.</p>
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="runtime-promise">Promise</a></strong> - A promise. The promise is resolved when all of the participants have been updated in this participant registry. If the participants cannot be updated in this participant registry, or if the participants do not exist in the participant registry, then the promise will be rejected with an error that describes the problem.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise. The promise is resolved when all of the participants have been updated in this participant registry. If the participants cannot be updated in this participant registry, or if the participants do not exist in the participant registry, then the promise will be rejected with an error that describes the problem.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -702,8 +698,7 @@ Update all of the specified participants in this participant registry.</p>
 
 <p><em>Promise update( Resource participant )</em></p>
 
-<p><strong>__</strong>
-Update the specified participant in this participant registry.</p>
+<p>Update the specified participant in this participant registry.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// The existing driver that has come from elsewhere.</span>
@@ -724,7 +719,7 @@ Update the specified participant in this participant registry.</p>
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="runtime-promise">Promise</a></strong> - A promise. The promise is resolved when the participant have been updated in this participant registry. If the participant cannot be updated in this participant registry, or if the participant does not exist in the participant registry, then the promise will be rejected with an error that describes the problem.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise. The promise is resolved when the participant have been updated in this participant registry. If the participant cannot be updated in this participant registry, or if the participant does not exist in the participant registry, then the promise will be rejected with an error that describes the problem.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -767,8 +762,7 @@ Update the specified participant in this participant registry.</p>
 
 <p><em>Promise removeAll( ;  participants )</em></p>
 
-<p><strong>__</strong>
-Remove all of the specified participants from this participant registry.</p>
+<p>Remove all of the specified participants from this participant registry.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// The existing drivers that have come from elsewhere.</span>
@@ -789,7 +783,7 @@ Remove all of the specified participants from this participant registry.</p>
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="runtime-promise">Promise</a></strong> - A promise. The promise is resolved when all of the participants have been removed from this participant registry. If the participants cannot be removed from this participant registry, or if the participants do not exist in the participant registry, then the promise will be rejected with an error that describes the problem.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise. The promise is resolved when all of the participants have been removed from this participant registry. If the participants cannot be removed from this participant registry, or if the participants do not exist in the participant registry, then the promise will be rejected with an error that describes the problem.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -832,8 +826,7 @@ Remove all of the specified participants from this participant registry.</p>
 
 <p><em>Promise remove( string; Resource participant )</em></p>
 
-<p><strong>__</strong>
-Remove the specified participant from this participant registry.</p>
+<p>Remove the specified participant from this participant registry.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// The existing driver that has come from elsewhere.</span>
@@ -852,7 +845,7 @@ Remove the specified participant from this participant registry.</p>
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="runtime-promise">Promise</a></strong> - A promise. The promise is resolved when the participant has been removed from this participant registry. If the participant cannot be removed from this participant registry, or if the participant does not exist in the participant registry, then the promise will be rejected with an error that describes the problem.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise. The promise is resolved when the participant has been removed from this participant registry. If the participant cannot be removed from this participant registry, or if the participant does not exist in the participant registry, then the promise will be rejected with an error that describes the problem.</p>
 
 <h3 id="see-also">See also</h3>
 

@@ -204,9 +204,11 @@ ga('send', 'pageview');
 <li><a href="../api/common-businessnetworkmetadata.html">BusinessNetworkMetadata (Common API)</a></li>
 <li><a href="../api/common-concept.html">Concept (Common API)</a></li>
 <li><a href="../api/common-factory.html">Factory (Common API)</a></li>
+<li><a href="../api/common-filesystemcardstore.html">FileSystemCardStore (Common API)</a></li>
 <li><a href="../api/common-idcard.html">IdCard (Common API)</a></li>
 <li><a href="../api/common-identifiable.html">Identifiable (Common API)</a></li>
 <li><a href="../api/common-introspector.html">Introspector (Common API)</a></li>
+<li><a href="../api/common-memorycardstore.html">MemoryCardStore (Common API)</a></li>
 <li><a href="../api/common-relationship.html">Relationship (Common API)</a></li>
 <li><a href="../api/common-resource.html">Resource (Common API)</a></li>
 <li><a href="../api/common-serializer.html">Serializer (Common API)</a></li>
@@ -320,8 +322,7 @@ stores the credentials on the file system.</p>
 
 <p><em>string getHomeDirectory(  )</em></p>
 
-<p><strong>__</strong>
-Get the current home directory.</p>
+<p>Get the current home directory.</p>
 
 <h3 id="returns">Returns</h3>
 
@@ -335,8 +336,7 @@ Get the current home directory.</p>
 
 <h2 id="new-filewallet">new FileWallet()</h2>
 
-<p><strong>__</strong>
-Constructor.</p>
+<p>Constructor.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -386,12 +386,11 @@ Constructor.</p>
 
 <p><em>Promise list(  )</em></p>
 
-<p><strong>__</strong>
-List all of the credentials in the wallet.</p>
+<p>List all of the credentials in the wallet.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="-promise">Promise</a></strong> - A promise that is resolved with an array of credential names, or rejected with an error.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise that is resolved with an array of credential names, or rejected with an error.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -403,12 +402,11 @@ List all of the credentials in the wallet.</p>
 
 <p><em>Promise contains( string name )</em></p>
 
-<p><strong>__</strong>
-Check to see if the named credentials are in the wallet.</p>
+<p>Check to see if the named credentials are in the wallet.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="-promise">Promise</a></strong> - A promise that is resolved with a boolean; true if the named credentials are in the wallet, false otherwise.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise that is resolved with a boolean; true if the named credentials are in the wallet, false otherwise.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -434,12 +432,11 @@ Check to see if the named credentials are in the wallet.</p>
 
 <p><em>Promise get( string name )</em></p>
 
-<p><strong>__</strong>
-Get the named credentials from the wallet.</p>
+<p>Get the named credentials from the wallet.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="-promise">Promise</a></strong> - A promise that is resolved with the named credentials, or rejected with an error.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise that is resolved with the named credentials, or rejected with an error.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -465,12 +462,11 @@ Get the named credentials from the wallet.</p>
 
 <p><em>Promise add( string name, string value )</em></p>
 
-<p><strong>__</strong>
-Add a new credential to the wallet.</p>
+<p>Add a new credential to the wallet.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="-promise">Promise</a></strong> - A promise that is resolved when complete, or rejected with an error.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise that is resolved when complete, or rejected with an error.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -502,12 +498,11 @@ Add a new credential to the wallet.</p>
 
 <p><em>Promise update( string name, string value )</em></p>
 
-<p><strong>__</strong>
-Update existing credentials in the wallet.</p>
+<p>Update existing credentials in the wallet.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="-promise">Promise</a></strong> - A promise that is resolved when complete, or rejected with an error.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise that is resolved when complete, or rejected with an error.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -539,12 +534,11 @@ Update existing credentials in the wallet.</p>
 
 <p><em>Promise remove( string name )</em></p>
 
-<p><strong>__</strong>
-Remove existing credentials from the wallet.</p>
+<p>Remove existing credentials from the wallet.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="-promise">Promise</a></strong> - A promise that is resolved when complete, or rejected with an error.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise that is resolved when complete, or rejected with an error.</p>
 
 <h3 id="see-also">See also</h3>
 

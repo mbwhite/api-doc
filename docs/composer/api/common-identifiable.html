@@ -204,9 +204,11 @@ ga('send', 'pageview');
 <li><a href="../api/common-businessnetworkmetadata.html">BusinessNetworkMetadata (Common API)</a></li>
 <li><a href="../api/common-concept.html">Concept (Common API)</a></li>
 <li><a href="../api/common-factory.html">Factory (Common API)</a></li>
+<li><a href="../api/common-filesystemcardstore.html">FileSystemCardStore (Common API)</a></li>
 <li><a href="../api/common-idcard.html">IdCard (Common API)</a></li>
 <li><a href="../api/common-identifiable.html">Identifiable (Common API)</a></li>
 <li><a href="../api/common-introspector.html">Introspector (Common API)</a></li>
+<li><a href="../api/common-memorycardstore.html">MemoryCardStore (Common API)</a></li>
 <li><a href="../api/common-relationship.html">Relationship (Common API)</a></li>
 <li><a href="../api/common-resource.html">Resource (Common API)</a></li>
 <li><a href="../api/common-serializer.html">Serializer (Common API)</a></li>
@@ -253,7 +255,7 @@ ga('send', 'pageview');
 <h1 id="identifiable">Identifiable</h1>
 
 <p>Identifiable is an entity with a namespace, type and an identifier.
-Applications should retrieve instances from <a href="common-factory">Factory</a>
+Applications should retrieve instances from <a href="common-factory.html">Factory</a>
 This class is abstract.</p>
 
 <h3 id="details">Details</h3>
@@ -365,8 +367,7 @@ This class is abstract.</p>
 
 <p><em>string getIdentifier(  )</em></p>
 
-<p><strong>__</strong>
-Get the identifier of this instance</p>
+<p>Get the identifier of this instance</p>
 
 <h3 id="returns">Returns</h3>
 
@@ -382,8 +383,7 @@ Get the identifier of this instance</p>
 
 <p><em>void setIdentifier( string id )</em></p>
 
-<p><strong>__</strong>
-Set the identifier of this instance</p>
+<p>Set the identifier of this instance</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -409,8 +409,7 @@ Set the identifier of this instance</p>
 
 <p><em>string getFullyQualifiedIdentifier(  )</em></p>
 
-<p><strong>__</strong>
-Get the fully qualified identifier of this instance. (namespace &#39;.&#39; type &#39;#&#39; identifier).</p>
+<p>Get the fully qualified identifier of this instance. (namespace &#39;.&#39; type &#39;#&#39; identifier).</p>
 
 <h3 id="returns">Returns</h3>
 
@@ -426,12 +425,11 @@ Get the fully qualified identifier of this instance. (namespace &#39;.&#39; type
 
 <p><em>String toString(  )</em></p>
 
-<p><strong>__</strong>
-Returns the string representation of this class</p>
+<p>Returns the string representation of this class</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="common-string">String</a></strong> - the string representation of the class</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></strong> - the string representation of the class</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -443,8 +441,7 @@ Returns the string representation of this class</p>
 
 <p><em>boolean isRelationship(  )</em></p>
 
-<p><strong>__</strong>
-Determine if this identifiable is a relationship.</p>
+<p>Determine if this identifiable is a relationship.</p>
 
 <h3 id="returns">Returns</h3>
 
@@ -460,8 +457,7 @@ Determine if this identifiable is a relationship.</p>
 
 <p><em>boolean isResource(  )</em></p>
 
-<p><strong>__</strong>
-Determine if this identifiable is a resource.</p>
+<p>Determine if this identifiable is a resource.</p>
 
 <h3 id="returns">Returns</h3>
 
@@ -477,12 +473,11 @@ Determine if this identifiable is a resource.</p>
 
 <p><em>String toURI(  )</em></p>
 
-<p><strong>__</strong>
-Returns a URI representation of a reference to this identifiable</p>
+<p>Returns a URI representation of a reference to this identifiable</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="common-string">String</a></strong> - the URI for the identifiable</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></strong> - the URI for the identifiable</p>
 
 <h3 id="see-also">See also</h3>
 

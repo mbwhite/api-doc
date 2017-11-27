@@ -204,9 +204,11 @@ ga('send', 'pageview');
 <li><a href="../api/common-businessnetworkmetadata.html">BusinessNetworkMetadata (Common API)</a></li>
 <li><a href="../api/common-concept.html">Concept (Common API)</a></li>
 <li><a href="../api/common-factory.html">Factory (Common API)</a></li>
+<li><a href="../api/common-filesystemcardstore.html">FileSystemCardStore (Common API)</a></li>
 <li><a href="../api/common-idcard.html">IdCard (Common API)</a></li>
 <li><a href="../api/common-identifiable.html">Identifiable (Common API)</a></li>
 <li><a href="../api/common-introspector.html">Introspector (Common API)</a></li>
+<li><a href="../api/common-memorycardstore.html">MemoryCardStore (Common API)</a></li>
 <li><a href="../api/common-relationship.html">Relationship (Common API)</a></li>
 <li><a href="../api/common-resource.html">Resource (Common API)</a></li>
 <li><a href="../api/common-serializer.html">Serializer (Common API)</a></li>
@@ -252,7 +254,10 @@ ga('send', 'pageview');
 
 <h1 id="businessnetworkcardstore">BusinessNetworkCardStore</h1>
 
-<p>Manages persistence of business network cards.</p>
+<p>Manages persistence of business network cards.
+Applications would not work with this abstract class directly, but with one of the subclass
+<a href="common-filesystemcardstore.html">FileSystemCardStore</a> or <a href="common-memorycardstore.html">MemoryCardStore</a>.  The File system card store is the default for
+both Admin and Business Network Connections</p>
 
 <h3 id="details">Details</h3>
 
@@ -309,12 +314,11 @@ ga('send', 'pageview');
 
 <p><em>String getDefaultCardName( IdCard card )</em></p>
 
-<p><strong>__</strong>
-Get a default name for a given business network card.</p>
+<p>Get a default name for a given business network card.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="common-string">String</a></strong> - A card name</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></strong> - A card name</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -340,12 +344,11 @@ Get a default name for a given business network card.</p>
 
 <p><em>Promise get( String cardname )</em></p>
 
-<p><strong>__</strong>
-Gets a card from the store.</p>
+<p>Gets a card from the store.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="common-promise">Promise</a></strong> - A promise that is resolved with an IdCard, or rejected if the card does not exist.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise that is resolved with an IdCard, or rejected if the card does not exist.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -371,12 +374,11 @@ Gets a card from the store.</p>
 
 <p><em>Promise put( String cardname, IdCard card )</em></p>
 
-<p><strong>__</strong>
-Puts a card in the store. If the named card already exists in the store, it will be replaced.</p>
+<p>Puts a card in the store. If the named card already exists in the store, it will be replaced.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="common-promise">Promise</a></strong> - A promise that resolves once the data is written</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise that resolves once the data is written</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -408,12 +410,11 @@ Puts a card in the store. If the named card already exists in the store, it will
 
 <p><em>Promise has( String cardname )</em></p>
 
-<p><strong>__</strong>
-Has returns a boolean indicating whether a card with the specified name exists or not.</p>
+<p>Has returns a boolean indicating whether a card with the specified name exists or not.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="common-promise">Promise</a></strong> - A promise resolved with true or false.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise resolved with true or false.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -439,12 +440,11 @@ Has returns a boolean indicating whether a card with the specified name exists o
 
 <p><em>Promise getAll(  )</em></p>
 
-<p><strong>__</strong>
-Gets all cards from the store.</p>
+<p>Gets all cards from the store.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="common-promise">Promise</a></strong> - A promise that is resolved with a Map where the keys are identity card names and the values are IdCard objects.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise that is resolved with a Map where the keys are identity card names and the values are IdCard objects.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -456,12 +456,11 @@ Gets all cards from the store.</p>
 
 <p><em>Promise delete( String cardname )</em></p>
 
-<p><strong>__</strong>
-Delete a specific card from the store.</p>
+<p>Delete a specific card from the store.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="common-promise">Promise</a></strong> - A promise that resolves to true if the card existed; otherwise false.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise that resolves to true if the card existed; otherwise false.</p>
 
 <h3 id="see-also">See also</h3>
 

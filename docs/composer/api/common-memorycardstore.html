@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
   
-    <title>Hyperledger Composer Glossary of Terms | Hyperledger Composer</title>
+    <title>MemoryCardStore (Common API) | Hyperledger Composer</title>
   
   <meta name="viewport" content="width=device-width">
   <link rel="icon" type="image/x-icon" href="/api-doc/composer/favicon.ico">
@@ -90,7 +90,7 @@ ga('send', 'pageview');
             </div>
 
           <div class="docs-current-page-grid">
-          <p>Hyperledger Composer Glossary of Terms</p>
+          <p>MemoryCardStore (Common API)</p>
           </div>
 
           <nav class="context-nav">
@@ -250,55 +250,125 @@ ga('send', 'pageview');
           <section class="content-chunk">
             <!-- <a class="toggle open" href="#nav">open</a> -->
             
-              <h1 id="glossary-and-definition-of-terms">Glossary and definition of terms</h1>
+              <p><a href="api-doc-index">Overview</a>  -  <a href="allData#common-api">Common API</a>  -  <a href="allData#client-api">Client API</a>  -  <a href="allData#admin-api">Admin API</a>  -  <a href="allData#runtime-api">Runtime API</a></p>
 
-<hr>
+<h1 id="memorycardstore">MemoryCardStore</h1>
 
-<p>From <a href="https://en.wikipedia.org/wiki/Blockchain_(database)">Wikipedia</a></p>
+<p>Transient in-memory storage of business network cards, useful for testing.
+To use this in preference to the default File System Card Store</p>
 
-<blockquote>
-<p>A blockchain— originally block chain — is a distributed database that maintains a continuously-growing list of records called blocks. Each block contains a timestamp and a link to a previous block. The data in a block cannot be altered retrospectively. Blockchains are an example of a distributed computing system with high byzantine fault tolerance.</p>
-</blockquote>
+<h3 id="details">Details</h3>
 
-<p><strong>Access Control File</strong>: Access Control Files (<code>.acl</code>) are optional files within a business network definition. They describe assets or groups of assets and define the participants who can perform operations which affect those assets.</p>
+<ul>
+<li><strong>Module</strong> common</li>
+</ul>
 
-<p><strong>Asset</strong>: An asset can be anything of value. A house is an example of a physical asset, and a mortgage is an example of non-physical asset. Assets within Hyperledger Composer can be defined to encompass any physical or non-physical asset.</p>
+<h3 id="see-also">See also</h3>
 
-<p><strong>Blockchain</strong>: A blockchain is a shared and replicated ledger that can record asset transfers and changes. An implemented blockchain platform is often referred to as a Blockchain Fabric.</p>
+<h2 id="method-summary">Method Summary</h2>
 
-<p><strong>Business Network Archive</strong>: A business network archive (<code>.bna</code>) is a compressed business network definition which contains at least a business network model and transaction processor functions and may optionally contain an access control file. Business network archives can be deployed to a Hyperledger fabric.</p>
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Returns</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><a href="#constructor">constructor</a></td>
+<td style="text-align: left"><code>void</code></td>
+<td style="text-align: left">Constructor</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#delete">delete</a></td>
+<td style="text-align: left"><code>void</code></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#get">get</a></td>
+<td style="text-align: left"><code>void</code></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#getall">getAll</a></td>
+<td style="text-align: left"><code>void</code></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#has">has</a></td>
+<td style="text-align: left"><code>void</code></td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#put">put</a></td>
+<td style="text-align: left"><code>void</code></td>
+<td style="text-align: left"></td>
+</tr>
+</tbody></table>
 
-<p><strong>Business Network Definition</strong>: A business network definition is made up of the business network model, transaction processor functions and optionally an access control file. The business network definition describes all assets, participants, transactions, and operations for a given solution, and can be interacted with by using a command line interface or an API.</p>
+<h1 id="method-details">Method Details</h1>
 
-<p><strong>Business Network Model</strong>: The business network model describes the assets, participants, and transactions in the business network. The model is in effect the static object structure of the overall business network.</p>
+<h2 id="new-memorycardstore">new MemoryCardStore()</h2>
 
-<p><strong>Connection Profile</strong>: Connection profiles are <code>.json</code> files used by Hyperledger Composer to connect to an instance of Hyperledger Fabric.</p>
+<p>Constructor.</p>
 
-<p><strong>Composer Playground</strong>: The Hyperledger Composer Playground is an open toolset allowing business networks to be rapidly modelled and tested. Sample business networks can be imported to learn more about Hyperledger Composer and business network archives can be exported for local editing or later use.</p>
+<h3 id="see-also">See also</h3>
 
-<p><strong>Events</strong>: Events are defined in the business network definition in the same way as assets or participants. Once events have been defined, they can be included in the transaction processor functions to be emitted as part of a transaction. Applications can subscribe to emitted events through the <code>composer-client</code> API.</p>
+<h3 id="parameters">Parameters</h3>
 
-<p><strong>Fabric</strong>: A fabric is a blockchain platform that user applications connect to in order to interact with a ledger. Examples of blockchain fabrics include Bitcoin, Ethereum, Open Blockchain and Hyperledger.</p>
+<p>No parameters</p>
 
-<p><strong>Hyperledger</strong>: Hyperledger is a Linux Foundation project to produce an open blockchain platform that is ready for business. It provides an implementation of the shared ledger, smart contracts, privacy and consensus mechanisms.</p>
+<h2 id="get">get</h2>
 
-<p><strong>Hyperledger Composer Admin API</strong> is an administrative API to build administrative applications. This API can deploy and update business network definitions on the Hyperledger Composer fabric runtime.</p>
+<p><em>void get(  )</em></p>
 
-<p><strong>Hyperledger Composer Client API</strong> The Client API is used by applications to connect to a business network and submit transactions. These applications could be command line, web applications, or end-user applications. The Client API permits CRUD operations on the assets that have been defined in the model. It also permits the submission of the transactions to be executed to update assets.</p>
+<h3 id="see-also">See also</h3>
 
-<p><strong>Identity</strong>: An identity is a distinct unique identifier associated with a participant. When joining a business network, an identity is issued to a participant which is used by the participant to interact with the business network. Identity documents normally expire after a given length of time, but can be issued or revoked maunally. Hyperledger Composer uses Hyperledger Fabric enrollment certificates as identity documents.</p>
+<h3 id="parameters">Parameters</h3>
 
-<p><strong>Modelling language</strong>: The Hyperledger Composer modelling language is used in the business network definition to describe the assets, participants, and transactions in the business network. For a more in-depth explanation of the modelling language, see <a href="../reference/cto_language.html">modelling language documentation</a>.</p>
+<p>No parameters</p>
 
-<p><strong>Participant</strong>: Participants represent the organizations or people who take part in the digital business network. Participants are defined in the business network model.</p>
+<h2 id="put">put</h2>
 
-<p><strong>Registry</strong>: Registries are a stores of assets held on the blockchain. The contents of the registry are validated using the blockchain consensus mechanism.</p>
+<p><em>void put(  )</em></p>
 
-<p><strong>Transaction</strong>: Transactions are submitted by a participant to affect the assets held in the asset registries on the Hyperledger blockchain. Transactions with a business network are defined in the business network model, and their operations are defined in the transaction processor function file.</p>
+<h3 id="see-also">See also</h3>
 
-<p><strong>Transaction Processor Functions</strong>: Transaction processor functions act on assets and participants to either create, update or delete properties on assets and participants. Transactions processor functions are written in JavaScript and contained in a script file as part of a business network definition.</p>
+<h3 id="parameters">Parameters</h3>
 
-<hr>
+<p>No parameters</p>
+
+<h2 id="has">has</h2>
+
+<p><em>void has(  )</em></p>
+
+<h3 id="see-also">See also</h3>
+
+<h3 id="parameters">Parameters</h3>
+
+<p>No parameters</p>
+
+<h2 id="getall">getAll</h2>
+
+<p><em>void getAll(  )</em></p>
+
+<h3 id="see-also">See also</h3>
+
+<h3 id="parameters">Parameters</h3>
+
+<p>No parameters</p>
+
+<h2 id="delete">delete</h2>
+
+<p><em>void delete(  )</em></p>
+
+<h3 id="see-also">See also</h3>
+
+<h3 id="parameters">Parameters</h3>
+
+<p>No parameters</p>
+
+<h2 id="inherited-methods">Inherited methods</h2>
 
             
           </section>
