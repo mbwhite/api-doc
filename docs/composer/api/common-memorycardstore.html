@@ -260,7 +260,8 @@ To use this in preference to the default File System Card Store</p>
 <h3 id="details">Details</h3>
 
 <ul>
-<li><strong>Module</strong> common</li>
+<li><p><strong>Extends</strong> BusinessNetworkCardStore</p></li>
+<li><p><strong>Module</strong> common</p></li>
 </ul>
 
 <h3 id="see-also">See also</h3>
@@ -282,27 +283,45 @@ To use this in preference to the default File System Card Store</p>
 <tr>
 <td style="text-align: left"><a href="#delete">delete</a></td>
 <td style="text-align: left"><code>void</code></td>
-<td style="text-align: left"></td>
+<td style="text-align: left">Delete a specific card from the store.</td>
 </tr>
 <tr>
 <td style="text-align: left"><a href="#get">get</a></td>
 <td style="text-align: left"><code>void</code></td>
-<td style="text-align: left"></td>
+<td style="text-align: left">Gets a card from the store.</td>
 </tr>
 <tr>
 <td style="text-align: left"><a href="#getall">getAll</a></td>
 <td style="text-align: left"><code>void</code></td>
-<td style="text-align: left"></td>
+<td style="text-align: left">Gets all cards from the store.</td>
 </tr>
 <tr>
 <td style="text-align: left"><a href="#has">has</a></td>
 <td style="text-align: left"><code>void</code></td>
-<td style="text-align: left"></td>
+<td style="text-align: left">Has returns a boolean indicating whether a card with the specified name exists or not.</td>
 </tr>
 <tr>
 <td style="text-align: left"><a href="#put">put</a></td>
 <td style="text-align: left"><code>void</code></td>
-<td style="text-align: left"></td>
+<td style="text-align: left">Puts a card in the store. If the named card already exists in the store, it will be replaced.</td>
+</tr>
+</tbody></table>
+
+<h2 id="inherited-method-summary">Inherited Method Summary</h2>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Supertype</th>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Returns</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">BusinessNetworkCardStore</td>
+<td style="text-align: left"><a href="#getdefaultcardname">getDefaultCardName</a></td>
+<td style="text-align: left"><code>String</code></td>
+<td style="text-align: left">Get a default name for a given business network card</td>
 </tr>
 </tbody></table>
 
@@ -320,37 +339,109 @@ To use this in preference to the default File System Card Store</p>
 
 <h2 id="get">get</h2>
 
-<p><em>void get(  )</em></p>
+<p><em>void get( String cardname )</em></p>
+
+<p>Gets a card from the store.</p>
+
+<h3 id="returns">Returns</h3>
+
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise that is resolved with an IdCard, or rejected if the card does not exist.</p>
 
 <h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
-<p>No parameters</p>
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Mandatory</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><strong>cardName</strong></td>
+<td style="text-align: left">String</td>
+<td style="text-align: left"><em>Yes</em></td>
+<td style="text-align: left">The name of the card to get</td>
+</tr>
+</tbody></table>
 
 <h2 id="put">put</h2>
 
-<p><em>void put(  )</em></p>
+<p><em>void put( String cardname, IdCard card )</em></p>
+
+<p>Puts a card in the store. If the named card already exists in the store, it will be replaced.</p>
+
+<h3 id="returns">Returns</h3>
+
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise that resolves once the data is written</p>
 
 <h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
-<p>No parameters</p>
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Mandatory</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><strong>cardName</strong></td>
+<td style="text-align: left">String</td>
+<td style="text-align: left"><em>Yes</em></td>
+<td style="text-align: left">The name of the card to save</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>card</strong></td>
+<td style="text-align: left">IdCard</td>
+<td style="text-align: left"><em>Yes</em></td>
+<td style="text-align: left">The card</td>
+</tr>
+</tbody></table>
 
 <h2 id="has">has</h2>
 
-<p><em>void has(  )</em></p>
+<p><em>void has( String cardname )</em></p>
+
+<p>Has returns a boolean indicating whether a card with the specified name exists or not.</p>
+
+<h3 id="returns">Returns</h3>
+
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise resolved with true or false.</p>
 
 <h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
-<p>No parameters</p>
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Mandatory</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><strong>cardName</strong></td>
+<td style="text-align: left">String</td>
+<td style="text-align: left"><em>Yes</em></td>
+<td style="text-align: left">The name of the card to check</td>
+</tr>
+</tbody></table>
 
 <h2 id="getall">getAll</h2>
 
 <p><em>void getAll(  )</em></p>
+
+<p>Gets all cards from the store.</p>
+
+<h3 id="returns">Returns</h3>
+
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise that is resolved with a Map where the keys are identity card names and the values are IdCard objects.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -360,15 +451,67 @@ To use this in preference to the default File System Card Store</p>
 
 <h2 id="delete">delete</h2>
 
-<p><em>void delete(  )</em></p>
+<p><em>void delete( String cardname )</em></p>
+
+<p>Delete a specific card from the store.</p>
+
+<h3 id="returns">Returns</h3>
+
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise that resolves to true if the card existed; otherwise false.</p>
 
 <h3 id="see-also">See also</h3>
 
 <h3 id="parameters">Parameters</h3>
 
-<p>No parameters</p>
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Mandatory</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><strong>cardName</strong></td>
+<td style="text-align: left">String</td>
+<td style="text-align: left"><em>Yes</em></td>
+<td style="text-align: left">The name of the card to delete.</td>
+</tr>
+</tbody></table>
 
 <h2 id="inherited-methods">Inherited methods</h2>
+
+<h2 id="getdefaultcardname">getDefaultCardName</h2>
+
+<p><em>String getDefaultCardName( IdCard card )</em></p>
+
+<p><strong>Inherited from:</strong>  BusinessNetworkCardStore</p>
+
+<p>Get a default name for a given business network card.</p>
+
+<h3 id="returns">Returns</h3>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> - A card name</p>
+
+<h3 id="see-also">See also</h3>
+
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Mandatory</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><strong>card</strong></td>
+<td style="text-align: left">IdCard</td>
+<td style="text-align: left"><em>Yes</em></td>
+<td style="text-align: left">A business network card</td>
+</tr>
+</tbody></table>
 
             
           </section>
