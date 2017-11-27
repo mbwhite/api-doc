@@ -197,21 +197,32 @@ ga('send', 'pageview');
 <li><a href="../api/client-query.html">Query (Client API)</a></li>
 <li><a href="../api/client-registry.html">Registry (Client API)</a></li>
 <li><a href="../api/client-transactionregistry.html">TransactionRegistry (Client API)</a></li>
-<li><a href="../api/common-baseexception.html">BaseException (Common API)</a></li>
-<li><a href="../api/common-basefileexception.html">BaseFileException (Common API)</a></li>
+<li><a href="../api/common-assetdeclaration.html">AssetDeclaration (Common API)</a></li>
 <li><a href="../api/common-businessnetworkcardstore.html">BusinessNetworkCardStore (Common API)</a></li>
 <li><a href="../api/common-businessnetworkdefinition.html">BusinessNetworkDefinition (Common API)</a></li>
 <li><a href="../api/common-businessnetworkmetadata.html">BusinessNetworkMetadata (Common API)</a></li>
+<li><a href="../api/common-classdeclaration.html">ClassDeclaration (Common API)</a></li>
+<li><a href="../api/common-conceptdeclaration.html">ConceptDeclaration (Common API)</a></li>
 <li><a href="../api/common-concept.html">Concept (Common API)</a></li>
+<li><a href="../api/common-enumdeclaration.html">EnumDeclaration (Common API)</a></li>
+<li><a href="../api/common-enumvaluedeclaration.html">EnumValueDeclaration (Common API)</a></li>
+<li><a href="../api/common-eventdeclaration.html">EventDeclaration (Common API)</a></li>
 <li><a href="../api/common-factory.html">Factory (Common API)</a></li>
 <li><a href="../api/common-filesystemcardstore.html">FileSystemCardStore (Common API)</a></li>
+<li><a href="../api/common-functiondeclaration.html">FunctionDeclaration (Common API)</a></li>
 <li><a href="../api/common-idcard.html">IdCard (Common API)</a></li>
 <li><a href="../api/common-identifiable.html">Identifiable (Common API)</a></li>
 <li><a href="../api/common-introspector.html">Introspector (Common API)</a></li>
 <li><a href="../api/common-memorycardstore.html">MemoryCardStore (Common API)</a></li>
+<li><a href="../api/common-modelfile.html">ModelFile (Common API)</a></li>
+<li><a href="../api/common-modelmanager.html">ModelManager (Common API)</a></li>
+<li><a href="../api/common-participantdeclaration.html">ParticipantDeclaration (Common API)</a></li>
+<li><a href="../api/common-property.html">Property (Common API)</a></li>
+<li><a href="../api/common-relationshipdeclaration.html">RelationshipDeclaration (Common API)</a></li>
 <li><a href="../api/common-relationship.html">Relationship (Common API)</a></li>
 <li><a href="../api/common-resource.html">Resource (Common API)</a></li>
 <li><a href="../api/common-serializer.html">Serializer (Common API)</a></li>
+<li><a href="../api/common-transactiondeclaration.html">TransactionDeclaration (Common API)</a></li>
 <li><a href="../api/common-typed.html">Typed (Common API)</a></li>
 <li><a href="../api/common-validatedconcept.html">ValidatedConcept (Common API)</a></li>
 <li><a href="../api/common-validatedresource.html">ValidatedResource (Common API)</a></li>
@@ -221,8 +232,6 @@ ga('send', 'pageview');
 <li><a href="../api/runtime-participantregistry.html">ParticipantRegistry (Runtime API)</a></li>
 <li><a href="../api/runtime-query.html">Query (Runtime API)</a></li>
 <li><a href="../api/runtime-serializer.html">Serializer (Runtime API)</a></li>
-<li><a href="../api/undefined-filewallet.html">FileWallet ( API)</a></li>
-<li><a href="../api/undefined-wallet.html">Wallet ( API)</a></li>
 </ul></li>
 </ul>
 
@@ -297,7 +306,7 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </tr>
 <tr>
 <td style="text-align: left"><a href="#buildquery">buildQuery</a></td>
-<td style="text-align: left"><code>runtime-Query</code></td>
+<td style="text-align: left"><code>Query</code></td>
 <td style="text-align: left">Build a query ready for later execution</td>
 </tr>
 <tr>
@@ -337,7 +346,7 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </tr>
 <tr>
 <td style="text-align: left"><a href="#getbusinessnetwork">getBusinessNetwork</a></td>
-<td style="text-align: left"><code>common-BusinessNetworkDefinition</code></td>
+<td style="text-align: left"><code>BusinessNetworkDefinition</code></td>
 <td style="text-align: left">Returns the currently connected BusinessNetworkDefinition</td>
 </tr>
 <tr>
@@ -448,7 +457,7 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 
 <h2 id="getbusinessnetwork">getBusinessNetwork</h2>
 
-<p><em>common-BusinessNetworkDefinition getBusinessNetwork(  )</em></p>
+<p><em>BusinessNetworkDefinition getBusinessNetwork(  )</em></p>
 
 <p>Returns the currently connected BusinessNetworkDefinition</p>
 
@@ -465,7 +474,7 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="client-businessnetworkdefinition.html">BusinessNetworkDefinition</a></strong> - the business network</p>
+<p><strong><a href="common-businessnetworkdefinition">BusinessNetworkDefinition</a></strong> - the business network</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -927,7 +936,7 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise that will be resolved to the <a href="client-transactionregistry.html">TransactionRegistry</a></p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise that will be resolved to the <a href="client-transactionregistry">TransactionRegistry</a></p>
 
 <h3 id="see-also">See also</h3>
 
@@ -979,7 +988,7 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise that will be resolved to the <a href="client-transactionregistry.html">TransactionRegistry</a></p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise that will be resolved to the <a href="client-transactionregistry">TransactionRegistry</a></p>
 
 <h3 id="see-also">See also</h3>
 
@@ -1087,7 +1096,7 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise that will be resolved to the <a href="client-historian.html">Historian</a></p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise that will be resolved to the <a href="client-historian">Historian</a></p>
 
 <h3 id="see-also">See also</h3>
 
@@ -1125,7 +1134,7 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise that will be resolved to the <a href="client-identityregistry.html">IdentityRegistry</a></p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise that will be resolved to the <a href="client-identityregistry">IdentityRegistry</a></p>
 
 <h3 id="see-also">See also</h3>
 
@@ -1323,7 +1332,7 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 <td style="text-align: left"><strong>transaction</strong></td>
 <td style="text-align: left">Resource</td>
 <td style="text-align: left"><em>Yes</em></td>
-<td style="text-align: left">The transaction to submit. Use <a href="common-factory#newtransaction.html">newTransaction</a> to create this object.</td>
+<td style="text-align: left">The transaction to submit. Use <a href="common-factory#newtransaction">newTransaction</a> to create this object.</td>
 </tr>
 </tbody></table>
 
@@ -1342,7 +1351,7 @@ Use the AdminConnection class in the composer-admin module to deploy BusinessNet
 </code></pre></div>
 <h2 id="buildquery">buildQuery</h2>
 
-<p><em>runtime-Query buildQuery( string query )</em></p>
+<p><em>Query buildQuery( string query )</em></p>
 
 <p>Build a query ready for later execution. The specified query string must be written in the Composer query language.
 This functionality is Blockchain platform dependent. For example, when a Composer business network is deployed to Hyperledger Fabric v1.0, Hyperledger Fabric must be configured with the CouchDB database for the world state.</p>
@@ -1366,7 +1375,7 @@ This functionality is Blockchain platform dependent. For example, when a Compose
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="client-query.html">Query</a></strong> - The built query, which can be passed in a call to query.</p>
+<p><strong><a href="runtime-query">Query</a></strong> - The built query, which can be passed in a call to query.</p>
 
 <h3 id="see-also">See also</h3>
 

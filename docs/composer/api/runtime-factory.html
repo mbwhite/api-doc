@@ -197,21 +197,32 @@ ga('send', 'pageview');
 <li><a href="../api/client-query.html">Query (Client API)</a></li>
 <li><a href="../api/client-registry.html">Registry (Client API)</a></li>
 <li><a href="../api/client-transactionregistry.html">TransactionRegistry (Client API)</a></li>
-<li><a href="../api/common-baseexception.html">BaseException (Common API)</a></li>
-<li><a href="../api/common-basefileexception.html">BaseFileException (Common API)</a></li>
+<li><a href="../api/common-assetdeclaration.html">AssetDeclaration (Common API)</a></li>
 <li><a href="../api/common-businessnetworkcardstore.html">BusinessNetworkCardStore (Common API)</a></li>
 <li><a href="../api/common-businessnetworkdefinition.html">BusinessNetworkDefinition (Common API)</a></li>
 <li><a href="../api/common-businessnetworkmetadata.html">BusinessNetworkMetadata (Common API)</a></li>
+<li><a href="../api/common-classdeclaration.html">ClassDeclaration (Common API)</a></li>
+<li><a href="../api/common-conceptdeclaration.html">ConceptDeclaration (Common API)</a></li>
 <li><a href="../api/common-concept.html">Concept (Common API)</a></li>
+<li><a href="../api/common-enumdeclaration.html">EnumDeclaration (Common API)</a></li>
+<li><a href="../api/common-enumvaluedeclaration.html">EnumValueDeclaration (Common API)</a></li>
+<li><a href="../api/common-eventdeclaration.html">EventDeclaration (Common API)</a></li>
 <li><a href="../api/common-factory.html">Factory (Common API)</a></li>
 <li><a href="../api/common-filesystemcardstore.html">FileSystemCardStore (Common API)</a></li>
+<li><a href="../api/common-functiondeclaration.html">FunctionDeclaration (Common API)</a></li>
 <li><a href="../api/common-idcard.html">IdCard (Common API)</a></li>
 <li><a href="../api/common-identifiable.html">Identifiable (Common API)</a></li>
 <li><a href="../api/common-introspector.html">Introspector (Common API)</a></li>
 <li><a href="../api/common-memorycardstore.html">MemoryCardStore (Common API)</a></li>
+<li><a href="../api/common-modelfile.html">ModelFile (Common API)</a></li>
+<li><a href="../api/common-modelmanager.html">ModelManager (Common API)</a></li>
+<li><a href="../api/common-participantdeclaration.html">ParticipantDeclaration (Common API)</a></li>
+<li><a href="../api/common-property.html">Property (Common API)</a></li>
+<li><a href="../api/common-relationshipdeclaration.html">RelationshipDeclaration (Common API)</a></li>
 <li><a href="../api/common-relationship.html">Relationship (Common API)</a></li>
 <li><a href="../api/common-resource.html">Resource (Common API)</a></li>
 <li><a href="../api/common-serializer.html">Serializer (Common API)</a></li>
+<li><a href="../api/common-transactiondeclaration.html">TransactionDeclaration (Common API)</a></li>
 <li><a href="../api/common-typed.html">Typed (Common API)</a></li>
 <li><a href="../api/common-validatedconcept.html">ValidatedConcept (Common API)</a></li>
 <li><a href="../api/common-validatedresource.html">ValidatedResource (Common API)</a></li>
@@ -221,8 +232,6 @@ ga('send', 'pageview');
 <li><a href="../api/runtime-participantregistry.html">ParticipantRegistry (Runtime API)</a></li>
 <li><a href="../api/runtime-query.html">Query (Runtime API)</a></li>
 <li><a href="../api/runtime-serializer.html">Serializer (Runtime API)</a></li>
-<li><a href="../api/undefined-filewallet.html">FileWallet ( API)</a></li>
-<li><a href="../api/undefined-wallet.html">Wallet ( API)</a></li>
 </ul></li>
 </ul>
 
@@ -257,7 +266,7 @@ ga('send', 'pageview');
 <p>Use the Factory to create instances of Resource: transactions, participants and assets.</p>
 
 <p>Do not attempt to create an instance of this class.<br>
-You must use the <a href="runtime-api#getfactory.html">getFactory</a>
+You must use the <a href="runtime-api#getfactory">getFactory</a>
 method instead.</p>
 
 <h3 id="details">Details</h3>
@@ -279,22 +288,22 @@ method instead.</p>
 </thead><tbody>
 <tr>
 <td style="text-align: left"><a href="#newconcept">newConcept</a></td>
-<td style="text-align: left"><code>common-Concept</code></td>
+<td style="text-align: left"><code>Concept</code></td>
 <td style="text-align: left">Create a new concept with a given namespace, type, and identifier</td>
 </tr>
 <tr>
 <td style="text-align: left"><a href="#newevent">newEvent</a></td>
-<td style="text-align: left"><code>common-Resource</code></td>
+<td style="text-align: left"><code>Resource</code></td>
 <td style="text-align: left">Create a new type with a given namespace and type</td>
 </tr>
 <tr>
 <td style="text-align: left"><a href="#newrelationship">newRelationship</a></td>
-<td style="text-align: left"><code>common-Relationship</code></td>
+<td style="text-align: left"><code>Relationship</code></td>
 <td style="text-align: left">Create a new relationship with a given namespace, type, and identifier</td>
 </tr>
 <tr>
 <td style="text-align: left"><a href="#newresource">newResource</a></td>
-<td style="text-align: left"><code>common-Resource</code></td>
+<td style="text-align: left"><code>Resource</code></td>
 <td style="text-align: left">Create a new resource (an instance of an asset, participant, or transaction)</td>
 </tr>
 </tbody></table>
@@ -303,9 +312,9 @@ method instead.</p>
 
 <h2 id="newresource">newResource</h2>
 
-<p><em>common-Resource newResource( string ns, string type, string id )</em></p>
+<p><em>Resource newResource( string ns, string type, string id )</em></p>
 
-<p>Create a new resource (an instance of an asset, participant, or transaction). The properties of the new instance should be set as standard JavaScript object properties. The new instance can then be stored in a registry using the appropriate registry APIs, for example <a href="runtime-assetregistry.html">AssetRegistry</a>.</p>
+<p>Create a new resource (an instance of an asset, participant, or transaction). The properties of the new instance should be set as standard JavaScript object properties. The new instance can then be stored in a registry using the appropriate registry APIs, for example <a href="runtime-assetregistry">AssetRegistry</a>.</p>
 
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the factory.</span>
@@ -318,7 +327,7 @@ method instead.</p>
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="runtime-resource.html">Resource</a></strong> - The new instance of the resource.</p>
+<p><strong><a href="common-resource">Resource</a></strong> - The new instance of the resource.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -363,7 +372,7 @@ method instead.</p>
 </code></pre></div>
 <h2 id="newrelationship">newRelationship</h2>
 
-<p><em>common-Relationship newRelationship( string ns, string type, string id )</em></p>
+<p><em>Relationship newRelationship( string ns, string type, string id )</em></p>
 
 <p>Create a new relationship with a given namespace, type, and identifier. A relationship is a typed pointer to an instance. For example, a new relationship with namespace &#39;org.acme&#39;, type &#39;Vehicle&#39; and identifier &#39;VEHICLE_1&#39; creates` a pointer that points at an existing instance of org.acme.Vehicle with the identifier &#39;VEHICLE_1&#39;.</p>
 
@@ -379,7 +388,7 @@ method instead.</p>
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="runtime-relationship.html">Relationship</a></strong> - The new instance of the relationship.</p>
+<p><strong><a href="common-relationship">Relationship</a></strong> - The new instance of the relationship.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -425,7 +434,7 @@ method instead.</p>
 </code></pre></div>
 <h2 id="newconcept">newConcept</h2>
 
-<p><em>common-Concept newConcept( string ns, string type )</em></p>
+<p><em>Concept newConcept( string ns, string type )</em></p>
 
 <p>Create a new concept with a given namespace, type, and identifier. A concept is an advanced data structure</p>
 
@@ -441,7 +450,7 @@ method instead.</p>
 </code></pre></div>
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="runtime-concept.html">Concept</a></strong> - The new instance of the concept.</p>
+<p><strong><a href="common-concept">Concept</a></strong> - The new instance of the concept.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -481,13 +490,13 @@ method instead.</p>
 </code></pre></div>
 <h2 id="newevent">newEvent</h2>
 
-<p><em>common-Resource newEvent( string ns, string type )</em></p>
+<p><em>Resource newEvent( string ns, string type )</em></p>
 
 <p>Create a new type with a given namespace and type</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="runtime-resource.html">Resource</a></strong> - The new instance of the event.</p>
+<p><strong><a href="common-resource">Resource</a></strong> - The new instance of the event.</p>
 
 <h3 id="see-also">See also</h3>
 

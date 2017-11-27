@@ -197,21 +197,32 @@ ga('send', 'pageview');
 <li><a href="../api/client-query.html">Query (Client API)</a></li>
 <li><a href="../api/client-registry.html">Registry (Client API)</a></li>
 <li><a href="../api/client-transactionregistry.html">TransactionRegistry (Client API)</a></li>
-<li><a href="../api/common-baseexception.html">BaseException (Common API)</a></li>
-<li><a href="../api/common-basefileexception.html">BaseFileException (Common API)</a></li>
+<li><a href="../api/common-assetdeclaration.html">AssetDeclaration (Common API)</a></li>
 <li><a href="../api/common-businessnetworkcardstore.html">BusinessNetworkCardStore (Common API)</a></li>
 <li><a href="../api/common-businessnetworkdefinition.html">BusinessNetworkDefinition (Common API)</a></li>
 <li><a href="../api/common-businessnetworkmetadata.html">BusinessNetworkMetadata (Common API)</a></li>
+<li><a href="../api/common-classdeclaration.html">ClassDeclaration (Common API)</a></li>
+<li><a href="../api/common-conceptdeclaration.html">ConceptDeclaration (Common API)</a></li>
 <li><a href="../api/common-concept.html">Concept (Common API)</a></li>
+<li><a href="../api/common-enumdeclaration.html">EnumDeclaration (Common API)</a></li>
+<li><a href="../api/common-enumvaluedeclaration.html">EnumValueDeclaration (Common API)</a></li>
+<li><a href="../api/common-eventdeclaration.html">EventDeclaration (Common API)</a></li>
 <li><a href="../api/common-factory.html">Factory (Common API)</a></li>
 <li><a href="../api/common-filesystemcardstore.html">FileSystemCardStore (Common API)</a></li>
+<li><a href="../api/common-functiondeclaration.html">FunctionDeclaration (Common API)</a></li>
 <li><a href="../api/common-idcard.html">IdCard (Common API)</a></li>
 <li><a href="../api/common-identifiable.html">Identifiable (Common API)</a></li>
 <li><a href="../api/common-introspector.html">Introspector (Common API)</a></li>
 <li><a href="../api/common-memorycardstore.html">MemoryCardStore (Common API)</a></li>
+<li><a href="../api/common-modelfile.html">ModelFile (Common API)</a></li>
+<li><a href="../api/common-modelmanager.html">ModelManager (Common API)</a></li>
+<li><a href="../api/common-participantdeclaration.html">ParticipantDeclaration (Common API)</a></li>
+<li><a href="../api/common-property.html">Property (Common API)</a></li>
+<li><a href="../api/common-relationshipdeclaration.html">RelationshipDeclaration (Common API)</a></li>
 <li><a href="../api/common-relationship.html">Relationship (Common API)</a></li>
 <li><a href="../api/common-resource.html">Resource (Common API)</a></li>
 <li><a href="../api/common-serializer.html">Serializer (Common API)</a></li>
+<li><a href="../api/common-transactiondeclaration.html">TransactionDeclaration (Common API)</a></li>
 <li><a href="../api/common-typed.html">Typed (Common API)</a></li>
 <li><a href="../api/common-validatedconcept.html">ValidatedConcept (Common API)</a></li>
 <li><a href="../api/common-validatedresource.html">ValidatedResource (Common API)</a></li>
@@ -221,8 +232,6 @@ ga('send', 'pageview');
 <li><a href="../api/runtime-participantregistry.html">ParticipantRegistry (Runtime API)</a></li>
 <li><a href="../api/runtime-query.html">Query (Runtime API)</a></li>
 <li><a href="../api/runtime-serializer.html">Serializer (Runtime API)</a></li>
-<li><a href="../api/undefined-filewallet.html">FileWallet ( API)</a></li>
-<li><a href="../api/undefined-wallet.html">Wallet ( API)</a></li>
 </ul></li>
 </ul>
 
@@ -270,12 +279,8 @@ ga('send', 'pageview');
 </tr>
 </thead><tbody>
 <tr>
-<td style="text-align: left"><a href="common-baseexception.html">BaseException</a></td>
-<td style="text-align: left">A base class for all Composer exceptions</td>
-</tr>
-<tr>
-<td style="text-align: left"><a href="common-basefileexception.html">BaseFileException</a></td>
-<td style="text-align: left">Exception throws when a composer file is semantically invalid</td>
+<td style="text-align: left"><a href="common-assetdeclaration.html">AssetDeclaration</a></td>
+<td style="text-align: left">AssetDeclaration defines the schema (aka model or class) for an Asset</td>
 </tr>
 <tr>
 <td style="text-align: left"><a href="common-businessnetworkcardstore.html">BusinessNetworkCardStore</a></td>
@@ -290,8 +295,28 @@ ga('send', 'pageview');
 <td style="text-align: left">Defines the metadata for a BusinessNeworkDefinition</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="common-classdeclaration.html">ClassDeclaration</a></td>
+<td style="text-align: left">ClassDeclaration defines the structure (model/schema) of composite data</td>
+</tr>
+<tr>
 <td style="text-align: left"><a href="common-concept.html">Concept</a></td>
 <td style="text-align: left">Resource is an instance that has a type</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="common-conceptdeclaration.html">ConceptDeclaration</a></td>
+<td style="text-align: left">ConceptDeclaration defines the schema (aka model or class) for an Concept</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="common-enumdeclaration.html">EnumDeclaration</a></td>
+<td style="text-align: left">EnumDeclaration defines an enumeration of static values</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="common-enumvaluedeclaration.html">EnumValueDeclaration</a></td>
+<td style="text-align: left">Class representing a value from a set of enumerated values</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="common-eventdeclaration.html">EventDeclaration</a></td>
+<td style="text-align: left">Class representing the definition of an Event</td>
 </tr>
 <tr>
 <td style="text-align: left"><a href="common-factory.html">Factory</a></td>
@@ -300,6 +325,10 @@ ga('send', 'pageview');
 <tr>
 <td style="text-align: left"><a href="common-filesystemcardstore.html">FileSystemCardStore</a></td>
 <td style="text-align: left">Manages persistence of business network cards to a Node file system implementation</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="common-functiondeclaration.html">FunctionDeclaration</a></td>
+<td style="text-align: left">FunctionDeclaration defines a function that has been defined in a model file</td>
 </tr>
 <tr>
 <td style="text-align: left"><a href="common-idcard.html">IdCard</a></td>
@@ -318,8 +347,28 @@ ga('send', 'pageview');
 <td style="text-align: left">Transient in-memory storage of business network cards, useful for testing</td>
 </tr>
 <tr>
+<td style="text-align: left"><a href="common-modelfile.html">ModelFile</a></td>
+<td style="text-align: left">Class representing a Model File</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="common-modelmanager.html">ModelManager</a></td>
+<td style="text-align: left">Manages the Composer model files</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="common-participantdeclaration.html">ParticipantDeclaration</a></td>
+<td style="text-align: left">Class representing the definition of a Participant</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="common-property.html">Property</a></td>
+<td style="text-align: left">Property representing an attribute of a class declaration, either a Field or a Relationship</td>
+</tr>
+<tr>
 <td style="text-align: left"><a href="common-relationship.html">Relationship</a></td>
 <td style="text-align: left">A Relationship is a typed pointer to an instance</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="common-relationshipdeclaration.html">RelationshipDeclaration</a></td>
+<td style="text-align: left">Class representing a relationship between model elements</td>
 </tr>
 <tr>
 <td style="text-align: left"><a href="common-resource.html">Resource</a></td>
@@ -328,6 +377,10 @@ ga('send', 'pageview');
 <tr>
 <td style="text-align: left"><a href="common-serializer.html">Serializer</a></td>
 <td style="text-align: left">Serialize Resources instances to/from various formats for long-term storage (e</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="common-transactiondeclaration.html">TransactionDeclaration</a></td>
+<td style="text-align: left">Class representing the definition of an Transaction</td>
 </tr>
 <tr>
 <td style="text-align: left"><a href="common-typed.html">Typed</a></td>

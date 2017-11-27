@@ -197,21 +197,32 @@ ga('send', 'pageview');
 <li><a href="../api/client-query.html">Query (Client API)</a></li>
 <li><a href="../api/client-registry.html">Registry (Client API)</a></li>
 <li><a href="../api/client-transactionregistry.html">TransactionRegistry (Client API)</a></li>
-<li><a href="../api/common-baseexception.html">BaseException (Common API)</a></li>
-<li><a href="../api/common-basefileexception.html">BaseFileException (Common API)</a></li>
+<li><a href="../api/common-assetdeclaration.html">AssetDeclaration (Common API)</a></li>
 <li><a href="../api/common-businessnetworkcardstore.html">BusinessNetworkCardStore (Common API)</a></li>
 <li><a href="../api/common-businessnetworkdefinition.html">BusinessNetworkDefinition (Common API)</a></li>
 <li><a href="../api/common-businessnetworkmetadata.html">BusinessNetworkMetadata (Common API)</a></li>
+<li><a href="../api/common-classdeclaration.html">ClassDeclaration (Common API)</a></li>
+<li><a href="../api/common-conceptdeclaration.html">ConceptDeclaration (Common API)</a></li>
 <li><a href="../api/common-concept.html">Concept (Common API)</a></li>
+<li><a href="../api/common-enumdeclaration.html">EnumDeclaration (Common API)</a></li>
+<li><a href="../api/common-enumvaluedeclaration.html">EnumValueDeclaration (Common API)</a></li>
+<li><a href="../api/common-eventdeclaration.html">EventDeclaration (Common API)</a></li>
 <li><a href="../api/common-factory.html">Factory (Common API)</a></li>
 <li><a href="../api/common-filesystemcardstore.html">FileSystemCardStore (Common API)</a></li>
+<li><a href="../api/common-functiondeclaration.html">FunctionDeclaration (Common API)</a></li>
 <li><a href="../api/common-idcard.html">IdCard (Common API)</a></li>
 <li><a href="../api/common-identifiable.html">Identifiable (Common API)</a></li>
 <li><a href="../api/common-introspector.html">Introspector (Common API)</a></li>
 <li><a href="../api/common-memorycardstore.html">MemoryCardStore (Common API)</a></li>
+<li><a href="../api/common-modelfile.html">ModelFile (Common API)</a></li>
+<li><a href="../api/common-modelmanager.html">ModelManager (Common API)</a></li>
+<li><a href="../api/common-participantdeclaration.html">ParticipantDeclaration (Common API)</a></li>
+<li><a href="../api/common-property.html">Property (Common API)</a></li>
+<li><a href="../api/common-relationshipdeclaration.html">RelationshipDeclaration (Common API)</a></li>
 <li><a href="../api/common-relationship.html">Relationship (Common API)</a></li>
 <li><a href="../api/common-resource.html">Resource (Common API)</a></li>
 <li><a href="../api/common-serializer.html">Serializer (Common API)</a></li>
+<li><a href="../api/common-transactiondeclaration.html">TransactionDeclaration (Common API)</a></li>
 <li><a href="../api/common-typed.html">Typed (Common API)</a></li>
 <li><a href="../api/common-validatedconcept.html">ValidatedConcept (Common API)</a></li>
 <li><a href="../api/common-validatedresource.html">ValidatedResource (Common API)</a></li>
@@ -221,8 +232,6 @@ ga('send', 'pageview');
 <li><a href="../api/runtime-participantregistry.html">ParticipantRegistry (Runtime API)</a></li>
 <li><a href="../api/runtime-query.html">Query (Runtime API)</a></li>
 <li><a href="../api/runtime-serializer.html">Serializer (Runtime API)</a></li>
-<li><a href="../api/undefined-filewallet.html">FileWallet ( API)</a></li>
-<li><a href="../api/undefined-wallet.html">Wallet ( API)</a></li>
 </ul></li>
 </ul>
 
@@ -263,7 +272,7 @@ as adding assets are treated as transactions so are therefore recorded.</p>
 
 <p>Details of these are in the system model.</p>
 
-<p><strong>Applications should retrieve instances from <a href="client-businessnetworkconnection.html">BusinessNetworkConnection</a></strong></p>
+<p><strong>Applications should retrieve instances from <a href="client-businessnetworkconnection">BusinessNetworkConnection</a></strong></p>
 
 <h3 id="details">Details</h3>
 
@@ -275,7 +284,7 @@ as adding assets are treated as transactions so are therefore recorded.</p>
 <h3 id="see-also">See also</h3>
 
 <ul>
-<li>See <a href="client-registry.html">Registry</a></li>
+<li>See <a href="client-registry">Registry</a></li>
 </ul>
 
 <h2 id="method-summary">Method Summary</h2>
@@ -376,7 +385,7 @@ as adding assets are treated as transactions so are therefore recorded.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise that will be resolved with a <a href="client-identityregistry.html">IdentityRegistry</a> instance representing the historian.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise that will be resolved with a <a href="client-identityregistry">IdentityRegistry</a> instance representing the historian.</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -418,7 +427,7 @@ as adding assets are treated as transactions so are therefore recorded.</p>
 
 <h2 id="add">add</h2>
 
-<p><em>void add( Resource resource, string data )</em></p>
+<p>_ add( Resource resource, string data )_</p>
 
 <p>Unsupported operation; you cannot add a historian record to the historian. This method will always throw an exception when called.</p>
 
@@ -450,7 +459,7 @@ as adding assets are treated as transactions so are therefore recorded.</p>
 
 <h2 id="addall">addAll</h2>
 
-<p><em>void addAll(  resources )</em></p>
+<p>_ addAll(  resources )_</p>
 
 <p>Unsupported operation; you cannot add a historian record to the historian. This method will always throw an exception when called.</p>
 
@@ -476,7 +485,7 @@ as adding assets are treated as transactions so are therefore recorded.</p>
 
 <h2 id="update">update</h2>
 
-<p><em>void update( Resource resource )</em></p>
+<p>_ update( Resource resource )_</p>
 
 <p>Unsupported operation; you cannot update a historian record in the historian. This method will always throw an exception when called.</p>
 
@@ -502,7 +511,7 @@ as adding assets are treated as transactions so are therefore recorded.</p>
 
 <h2 id="updateall">updateAll</h2>
 
-<p><em>void updateAll(  resources )</em></p>
+<p>_ updateAll(  resources )_</p>
 
 <p>Unsupported operation; you cannot update a historian record in the historian. This method will always throw an exception when called.</p>
 
@@ -528,7 +537,7 @@ as adding assets are treated as transactions so are therefore recorded.</p>
 
 <h2 id="remove">remove</h2>
 
-<p><em>void remove( Resource; string resource )</em></p>
+<p>_ remove( Resource; string resource )_</p>
 
 <p>Unsupported operation; you cannot remove a historian record from the historian. This method will always throw an exception when called.</p>
 
@@ -554,7 +563,7 @@ as adding assets are treated as transactions so are therefore recorded.</p>
 
 <h2 id="removeall">removeAll</h2>
 
-<p><em>void removeAll( ;  resources )</em></p>
+<p>_ removeAll( ;  resources )_</p>
 
 <p>Unsupported operation; you cannot remove a historian record from the historian. This method will always throw an exception when called.</p>
 
@@ -668,7 +677,7 @@ as adding assets are treated as transactions so are therefore recorded.</p>
 
 <p><strong>Inherited from:</strong>  Registry</p>
 
-<p>Get all of the resources in the registry, and resolve all of their relationships to other assets, participants, and transactions. The result is a JavaScript object, and should only be used for visualization purposes. You cannot use the <a href="#add.html">add</a> or <a href="#update.html">update</a> functions with a resolved resource.</p>
+<p>Get all of the resources in the registry, and resolve all of their relationships to other assets, participants, and transactions. The result is a JavaScript object, and should only be used for visualization purposes. You cannot use the <a href="#add">add</a> or <a href="#update">update</a> functions with a resolved resource.</p>
 
 <h3 id="returns">Returns</h3>
 
@@ -686,7 +695,7 @@ as adding assets are treated as transactions so are therefore recorded.</p>
 
 <p><strong>Inherited from:</strong>  Registry</p>
 
-<p>Get a specific resource in the registry, and resolve all of its relationships to other assets, participants, and transactions. The result is a JavaScript object, and should only be used for visualization purposes. You cannot use the  <a href="#add.html">add</a> or <a href="#update.html">update</a> functions with a resolved resource.</p>
+<p>Get a specific resource in the registry, and resolve all of its relationships to other assets, participants, and transactions. The result is a JavaScript object, and should only be used for visualization purposes. You cannot use the  <a href="#add">add</a> or <a href="#update">update</a> functions with a resolved resource.</p>
 
 <h3 id="returns">Returns</h3>
 

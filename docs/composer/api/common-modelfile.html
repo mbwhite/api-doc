@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
   
-    <title>FileWallet ( API) | Hyperledger Composer</title>
+    <title>ModelFile (Common API) | Hyperledger Composer</title>
   
   <meta name="viewport" content="width=device-width">
   <link rel="icon" type="image/x-icon" href="/api-doc/composer/favicon.ico">
@@ -90,7 +90,7 @@ ga('send', 'pageview');
             </div>
 
           <div class="docs-current-page-grid">
-          <p>FileWallet ( API)</p>
+          <p>ModelFile (Common API)</p>
           </div>
 
           <nav class="context-nav">
@@ -197,21 +197,32 @@ ga('send', 'pageview');
 <li><a href="../api/client-query.html">Query (Client API)</a></li>
 <li><a href="../api/client-registry.html">Registry (Client API)</a></li>
 <li><a href="../api/client-transactionregistry.html">TransactionRegistry (Client API)</a></li>
-<li><a href="../api/common-baseexception.html">BaseException (Common API)</a></li>
-<li><a href="../api/common-basefileexception.html">BaseFileException (Common API)</a></li>
+<li><a href="../api/common-assetdeclaration.html">AssetDeclaration (Common API)</a></li>
 <li><a href="../api/common-businessnetworkcardstore.html">BusinessNetworkCardStore (Common API)</a></li>
 <li><a href="../api/common-businessnetworkdefinition.html">BusinessNetworkDefinition (Common API)</a></li>
 <li><a href="../api/common-businessnetworkmetadata.html">BusinessNetworkMetadata (Common API)</a></li>
+<li><a href="../api/common-classdeclaration.html">ClassDeclaration (Common API)</a></li>
+<li><a href="../api/common-conceptdeclaration.html">ConceptDeclaration (Common API)</a></li>
 <li><a href="../api/common-concept.html">Concept (Common API)</a></li>
+<li><a href="../api/common-enumdeclaration.html">EnumDeclaration (Common API)</a></li>
+<li><a href="../api/common-enumvaluedeclaration.html">EnumValueDeclaration (Common API)</a></li>
+<li><a href="../api/common-eventdeclaration.html">EventDeclaration (Common API)</a></li>
 <li><a href="../api/common-factory.html">Factory (Common API)</a></li>
 <li><a href="../api/common-filesystemcardstore.html">FileSystemCardStore (Common API)</a></li>
+<li><a href="../api/common-functiondeclaration.html">FunctionDeclaration (Common API)</a></li>
 <li><a href="../api/common-idcard.html">IdCard (Common API)</a></li>
 <li><a href="../api/common-identifiable.html">Identifiable (Common API)</a></li>
 <li><a href="../api/common-introspector.html">Introspector (Common API)</a></li>
 <li><a href="../api/common-memorycardstore.html">MemoryCardStore (Common API)</a></li>
+<li><a href="../api/common-modelfile.html">ModelFile (Common API)</a></li>
+<li><a href="../api/common-modelmanager.html">ModelManager (Common API)</a></li>
+<li><a href="../api/common-participantdeclaration.html">ParticipantDeclaration (Common API)</a></li>
+<li><a href="../api/common-property.html">Property (Common API)</a></li>
+<li><a href="../api/common-relationshipdeclaration.html">RelationshipDeclaration (Common API)</a></li>
 <li><a href="../api/common-relationship.html">Relationship (Common API)</a></li>
 <li><a href="../api/common-resource.html">Resource (Common API)</a></li>
 <li><a href="../api/common-serializer.html">Serializer (Common API)</a></li>
+<li><a href="../api/common-transactiondeclaration.html">TransactionDeclaration (Common API)</a></li>
 <li><a href="../api/common-typed.html">Typed (Common API)</a></li>
 <li><a href="../api/common-validatedconcept.html">ValidatedConcept (Common API)</a></li>
 <li><a href="../api/common-validatedresource.html">ValidatedResource (Common API)</a></li>
@@ -221,8 +232,6 @@ ga('send', 'pageview');
 <li><a href="../api/runtime-participantregistry.html">ParticipantRegistry (Runtime API)</a></li>
 <li><a href="../api/runtime-query.html">Query (Runtime API)</a></li>
 <li><a href="../api/runtime-serializer.html">Serializer (Runtime API)</a></li>
-<li><a href="../api/undefined-filewallet.html">FileWallet ( API)</a></li>
-<li><a href="../api/undefined-wallet.html">Wallet ( API)</a></li>
 </ul></li>
 </ul>
 
@@ -252,15 +261,15 @@ ga('send', 'pageview');
             
               <p><a href="api-doc-index">Overview</a>  -  <a href="allData#common-api">Common API</a>  -  <a href="allData#client-api">Client API</a>  -  <a href="allData#admin-api">Admin API</a>  -  <a href="allData#runtime-api">Runtime API</a></p>
 
-<h1 id="filewallet">FileWallet</h1>
+<h1 id="modelfile">ModelFile</h1>
 
-<p>Class implementing a wallet (a container of credentials) that
-stores the credentials on the file system.</p>
+<p>Class representing a Model File. A Model File contains a single namespace
+and a set of model elements: assets, transactions etc.</p>
 
 <h3 id="details">Details</h3>
 
 <ul>
-<li><strong>Module</strong> </li>
+<li><strong>Module</strong> common</li>
 </ul>
 
 <h3 id="see-also">See also</h3>
@@ -275,58 +284,118 @@ stores the credentials on the file system.</p>
 </tr>
 </thead><tbody>
 <tr>
-<td style="text-align: left"><a href="#add">add</a></td>
-<td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left">Add a new credential to the wallet</td>
+<td style="text-align: left"><a href="#getalldeclarations">getAllDeclarations</a></td>
+<td style="text-align: left"><code>ClassDeclaration[]</code></td>
+<td style="text-align: left">Get all declarations in this ModelFile</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#constructor">constructor</a></td>
-<td style="text-align: left"><code>void</code></td>
-<td style="text-align: left">Constructor</td>
+<td style="text-align: left"><a href="#getassetdeclaration">getAssetDeclaration</a></td>
+<td style="text-align: left"><code>AssetDeclaration</code></td>
+<td style="text-align: left">Get the AssetDeclarations defined in this ModelFile or null</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#contains">contains</a></td>
-<td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left">Check to see if the named credentials are in the wallet</td>
+<td style="text-align: left"><a href="#getassetdeclarations">getAssetDeclarations</a></td>
+<td style="text-align: left"><code>AssetDeclaration[]</code></td>
+<td style="text-align: left">Get the AssetDeclarations defined in this ModelFile</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#get">get</a></td>
-<td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left">Get the named credentials from the wallet</td>
+<td style="text-align: left"><a href="#getconceptdeclarations">getConceptDeclarations</a></td>
+<td style="text-align: left"><code>ConceptDeclaration[]</code></td>
+<td style="text-align: left">Get the ConceptDeclarations defined in this ModelFile</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#gethomedirectory">getHomeDirectory</a></td>
+<td style="text-align: left"><a href="#getdeclarations">getDeclarations</a></td>
+<td style="text-align: left"><code>ClassDeclaration[]</code></td>
+<td style="text-align: left">Get the instances of a given type in this ModelFile</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#getdefinitions">getDefinitions</a></td>
 <td style="text-align: left"><code>string</code></td>
-<td style="text-align: left">Get the current home directory</td>
+<td style="text-align: left">Get the definitions for this model</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#list">list</a></td>
-<td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left">List all of the credentials in the wallet</td>
+<td style="text-align: left"><a href="#getenumdeclarations">getEnumDeclarations</a></td>
+<td style="text-align: left"><code>EnumDeclaration[]</code></td>
+<td style="text-align: left">Get the EnumDeclarations defined in this ModelFile</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#remove">remove</a></td>
-<td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left">Remove existing credentials from the wallet</td>
+<td style="text-align: left"><a href="#geteventdeclaration">getEventDeclaration</a></td>
+<td style="text-align: left"><code>EventDeclaration</code></td>
+<td style="text-align: left">Get the EventDeclaration defined in this ModelFile or null</td>
 </tr>
 <tr>
-<td style="text-align: left"><a href="#update">update</a></td>
-<td style="text-align: left"><code>Promise</code></td>
-<td style="text-align: left">Update existing credentials in the wallet</td>
+<td style="text-align: left"><a href="#geteventdeclarations">getEventDeclarations</a></td>
+<td style="text-align: left"><code>EventDeclaration[]</code></td>
+<td style="text-align: left">Get the EventDeclarations defined in this ModelFile</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#getimports">getImports</a></td>
+<td style="text-align: left"><code>string[]</code></td>
+<td style="text-align: left">Returns the types that have been imported into this ModelFile</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#getlocaltype">getLocalType</a></td>
+<td style="text-align: left"><code>ClassDeclaration</code></td>
+<td style="text-align: left">Returns the type with the specified name or null</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#getmodelmanager">getModelManager</a></td>
+<td style="text-align: left"><code>ModelManager</code></td>
+<td style="text-align: left">Returns the ModelManager associated with this ModelFile</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#getname">getName</a></td>
+<td style="text-align: left"><code>string</code></td>
+<td style="text-align: left">Get the filename for this model file</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#getnamespace">getNamespace</a></td>
+<td style="text-align: left"><code>string</code></td>
+<td style="text-align: left">Get the Namespace for this model file</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#getparticipantdeclaration">getParticipantDeclaration</a></td>
+<td style="text-align: left"><code>ParticipantDeclaration</code></td>
+<td style="text-align: left">Get the ParticipantDeclaration defined in this ModelFile or null</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#getparticipantdeclarations">getParticipantDeclarations</a></td>
+<td style="text-align: left"><code>ParticipantDeclaration[]</code></td>
+<td style="text-align: left">Get the ParticipantDeclarations defined in this ModelFile</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#gettransactiondeclaration">getTransactionDeclaration</a></td>
+<td style="text-align: left"><code>TransactionDeclaration</code></td>
+<td style="text-align: left">Get the TransactionDeclaration defined in this ModelFile or null</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#gettransactiondeclarations">getTransactionDeclarations</a></td>
+<td style="text-align: left"><code>TransactionDeclaration[]</code></td>
+<td style="text-align: left">Get the TransactionDeclarations defined in this ModelFile</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#isdefined">isDefined</a></td>
+<td style="text-align: left"><code>boolean</code></td>
+<td style="text-align: left">Returns true if the type is defined in the model file</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#issystemmodelfile">isSystemModelFile</a></td>
+<td style="text-align: left"><code>boolean</code></td>
+<td style="text-align: left">Returns true if this ModelFile is a system model</td>
 </tr>
 </tbody></table>
 
 <h1 id="method-details">Method Details</h1>
 
-<h2 id="gethomedirectory">getHomeDirectory</h2>
+<h2 id="getmodelmanager">getModelManager</h2>
 
-<p><em>string getHomeDirectory(  )</em></p>
+<p><em>ModelManager getModelManager(  )</em></p>
 
-<p>Get the current home directory.</p>
+<p>Returns the ModelManager associated with this ModelFile</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></strong> - The current home directory.</p>
+<p><strong><a href="common-modelmanager">ModelManager</a></strong> - The ModelManager for this ModelFile</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -334,63 +403,15 @@ stores the credentials on the file system.</p>
 
 <p>No parameters</p>
 
-<h2 id="new-filewallet">new FileWallet()</h2>
+<h2 id="getimports">getImports</h2>
 
-<p>Constructor.</p>
+<p><em>string[] getImports(  )</em></p>
 
-<h3 id="see-also">See also</h3>
-
-<h3 id="parameters">Parameters</h3>
-
-<table><thead>
-<tr>
-<th style="text-align: left">Name</th>
-<th style="text-align: left">Type</th>
-<th style="text-align: left">Mandatory</th>
-<th style="text-align: left">Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left"><strong>options</strong></td>
-<td style="text-align: left">Object</td>
-<td style="text-align: left"><em>Yes</em></td>
-<td style="text-align: left">The options to use.</td>
-</tr>
-<tr>
-<td style="text-align: left"><strong>fs</strong></td>
-<td style="text-align: left">Object</td>
-<td style="text-align: left"><em>Yes</em></td>
-<td style="text-align: left">The file system implementation to use.</td>
-</tr>
-</tbody></table>
-
-<h3 id="sub-options">Sub-options</h3>
-
-<table><thead>
-<tr>
-<th style="text-align: left">Name</th>
-<th style="text-align: left">Type</th>
-<th style="text-align: left">Mandatory</th>
-<th style="text-align: left">Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left"><strong>options.directory</strong></td>
-<td style="text-align: left">string</td>
-<td style="text-align: left"><em>Yes</em></td>
-<td style="text-align: left">The directory to store credentials in.</td>
-</tr>
-</tbody></table>
-
-<h2 id="list">list</h2>
-
-<p><em>Promise list(  )</em></p>
-
-<p>List all of the credentials in the wallet.</p>
+<p>Returns the types that have been imported into this ModelFile.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise that is resolved with an array of credential names, or rejected with an error.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></strong> - The array of imports for this ModelFile</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -398,15 +419,75 @@ stores the credentials on the file system.</p>
 
 <p>No parameters</p>
 
-<h2 id="contains">contains</h2>
+<h2 id="isdefined">isDefined</h2>
 
-<p><em>Promise contains( string name )</em></p>
+<p><em>boolean isDefined( string type )</em></p>
 
-<p>Check to see if the named credentials are in the wallet.</p>
+<p>Returns true if the type is defined in the model file</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise that is resolved with a boolean; true if the named credentials are in the wallet, false otherwise.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></strong> - true if the type (asset or transaction) is defined</p>
+
+<h3 id="see-also">See also</h3>
+
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Mandatory</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><strong>type</strong></td>
+<td style="text-align: left">string</td>
+<td style="text-align: left"><em>Yes</em></td>
+<td style="text-align: left">the name of the type</td>
+</tr>
+</tbody></table>
+
+<h2 id="getlocaltype">getLocalType</h2>
+
+<p><em>ClassDeclaration getLocalType( string type )</em></p>
+
+<p>Returns the type with the specified name or null</p>
+
+<h3 id="returns">Returns</h3>
+
+<p><strong><a href="common-classdeclaration">ClassDeclaration</a></strong> - the ClassDeclaration, or null if the type does not exist</p>
+
+<h3 id="see-also">See also</h3>
+
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Mandatory</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><strong>type</strong></td>
+<td style="text-align: left">string</td>
+<td style="text-align: left"><em>Yes</em></td>
+<td style="text-align: left">the short OR FQN name of the type</td>
+</tr>
+</tbody></table>
+
+<h2 id="getassetdeclaration">getAssetDeclaration</h2>
+
+<p><em>AssetDeclaration getAssetDeclaration( string name )</em></p>
+
+<p>Get the AssetDeclarations defined in this ModelFile or null</p>
+
+<h3 id="returns">Returns</h3>
+
+<p><strong><a href="common-assetdeclaration">AssetDeclaration</a></strong> - the AssetDeclaration with the given short name</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -424,19 +505,19 @@ stores the credentials on the file system.</p>
 <td style="text-align: left"><strong>name</strong></td>
 <td style="text-align: left">string</td>
 <td style="text-align: left"><em>Yes</em></td>
-<td style="text-align: left">The name of the credentials.</td>
+<td style="text-align: left">the name of the type</td>
 </tr>
 </tbody></table>
 
-<h2 id="get">get</h2>
+<h2 id="gettransactiondeclaration">getTransactionDeclaration</h2>
 
-<p><em>Promise get( string name )</em></p>
+<p><em>TransactionDeclaration getTransactionDeclaration( string name )</em></p>
 
-<p>Get the named credentials from the wallet.</p>
+<p>Get the TransactionDeclaration defined in this ModelFile or null</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise that is resolved with the named credentials, or rejected with an error.</p>
+<p><strong><a href="common-transactiondeclaration">TransactionDeclaration</a></strong> - the TransactionDeclaration with the given short name</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -454,19 +535,19 @@ stores the credentials on the file system.</p>
 <td style="text-align: left"><strong>name</strong></td>
 <td style="text-align: left">string</td>
 <td style="text-align: left"><em>Yes</em></td>
-<td style="text-align: left">The name of the credentials.</td>
+<td style="text-align: left">the name of the type</td>
 </tr>
 </tbody></table>
 
-<h2 id="add">add</h2>
+<h2 id="geteventdeclaration">getEventDeclaration</h2>
 
-<p><em>Promise add( string name, string value )</em></p>
+<p><em>EventDeclaration getEventDeclaration( string name )</em></p>
 
-<p>Add a new credential to the wallet.</p>
+<p>Get the EventDeclaration defined in this ModelFile or null</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise that is resolved when complete, or rejected with an error.</p>
+<p><strong><a href="common-eventdeclaration">EventDeclaration</a></strong> - the EventDeclaration with the given short name</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -484,25 +565,19 @@ stores the credentials on the file system.</p>
 <td style="text-align: left"><strong>name</strong></td>
 <td style="text-align: left">string</td>
 <td style="text-align: left"><em>Yes</em></td>
-<td style="text-align: left">The name of the credentials.</td>
-</tr>
-<tr>
-<td style="text-align: left"><strong>value</strong></td>
-<td style="text-align: left">string</td>
-<td style="text-align: left"><em>Yes</em></td>
-<td style="text-align: left">The credentials.</td>
+<td style="text-align: left">the name of the type</td>
 </tr>
 </tbody></table>
 
-<h2 id="update">update</h2>
+<h2 id="getparticipantdeclaration">getParticipantDeclaration</h2>
 
-<p><em>Promise update( string name, string value )</em></p>
+<p><em>ParticipantDeclaration getParticipantDeclaration( string name )</em></p>
 
-<p>Update existing credentials in the wallet.</p>
+<p>Get the ParticipantDeclaration defined in this ModelFile or null</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise that is resolved when complete, or rejected with an error.</p>
+<p><strong><a href="common-participantdeclaration">ParticipantDeclaration</a></strong> - the ParticipantDeclaration with the given short name</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -520,25 +595,51 @@ stores the credentials on the file system.</p>
 <td style="text-align: left"><strong>name</strong></td>
 <td style="text-align: left">string</td>
 <td style="text-align: left"><em>Yes</em></td>
-<td style="text-align: left">The name of the credentials.</td>
-</tr>
-<tr>
-<td style="text-align: left"><strong>value</strong></td>
-<td style="text-align: left">string</td>
-<td style="text-align: left"><em>Yes</em></td>
-<td style="text-align: left">The credentials.</td>
+<td style="text-align: left">the name of the type</td>
 </tr>
 </tbody></table>
 
-<h2 id="remove">remove</h2>
+<h2 id="getnamespace">getNamespace</h2>
 
-<p><em>Promise remove( string name )</em></p>
+<p><em>string getNamespace(  )</em></p>
 
-<p>Remove existing credentials from the wallet.</p>
+<p>Get the Namespace for this model file.</p>
 
 <h3 id="returns">Returns</h3>
 
-<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></strong> - A promise that is resolved when complete, or rejected with an error.</p>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></strong> - The Namespace for this model file</p>
+
+<h3 id="see-also">See also</h3>
+
+<h3 id="parameters">Parameters</h3>
+
+<p>No parameters</p>
+
+<h2 id="getname">getName</h2>
+
+<p><em>string getName(  )</em></p>
+
+<p>Get the filename for this model file. Note that this may be null.</p>
+
+<h3 id="returns">Returns</h3>
+
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></strong> - The filename for this model file</p>
+
+<h3 id="see-also">See also</h3>
+
+<h3 id="parameters">Parameters</h3>
+
+<p>No parameters</p>
+
+<h2 id="getassetdeclarations">getAssetDeclarations</h2>
+
+<p><em>AssetDeclaration[] getAssetDeclarations( Boolean includesystemtype )</em></p>
+
+<p>Get the AssetDeclarations defined in this ModelFile</p>
+
+<h3 id="returns">Returns</h3>
+
+<p><strong><a href="common-assetdeclaration">AssetDeclaration</a></strong> - the AssetDeclarations defined in the model file</p>
 
 <h3 id="see-also">See also</h3>
 
@@ -553,12 +654,246 @@ stores the credentials on the file system.</p>
 </tr>
 </thead><tbody>
 <tr>
-<td style="text-align: left"><strong>name</strong></td>
-<td style="text-align: left">string</td>
+<td style="text-align: left"><strong>includeSystemType</strong></td>
+<td style="text-align: left">Boolean</td>
 <td style="text-align: left"><em>Yes</em></td>
-<td style="text-align: left">The name of the credentials.</td>
+<td style="text-align: left">Include the decalarations of system type in returned data</td>
 </tr>
 </tbody></table>
+
+<h2 id="gettransactiondeclarations">getTransactionDeclarations</h2>
+
+<p><em>TransactionDeclaration[] getTransactionDeclarations( Boolean includesystemtype )</em></p>
+
+<p>Get the TransactionDeclarations defined in this ModelFile</p>
+
+<h3 id="returns">Returns</h3>
+
+<p><strong><a href="common-transactiondeclaration">TransactionDeclaration</a></strong> - the TransactionDeclarations defined in the model file</p>
+
+<h3 id="see-also">See also</h3>
+
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Mandatory</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><strong>includeSystemType</strong></td>
+<td style="text-align: left">Boolean</td>
+<td style="text-align: left"><em>Yes</em></td>
+<td style="text-align: left">Include the decalarations of system type in returned data</td>
+</tr>
+</tbody></table>
+
+<h2 id="geteventdeclarations">getEventDeclarations</h2>
+
+<p><em>EventDeclaration[] getEventDeclarations( Boolean includesystemtype )</em></p>
+
+<p>Get the EventDeclarations defined in this ModelFile</p>
+
+<h3 id="returns">Returns</h3>
+
+<p><strong><a href="common-eventdeclaration">EventDeclaration</a></strong> - the EventDeclarations defined in the model file</p>
+
+<h3 id="see-also">See also</h3>
+
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Mandatory</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><strong>includeSystemType</strong></td>
+<td style="text-align: left">Boolean</td>
+<td style="text-align: left"><em>Yes</em></td>
+<td style="text-align: left">Include the decalarations of system type in returned data</td>
+</tr>
+</tbody></table>
+
+<h2 id="getparticipantdeclarations">getParticipantDeclarations</h2>
+
+<p><em>ParticipantDeclaration[] getParticipantDeclarations( Boolean includesystemtype )</em></p>
+
+<p>Get the ParticipantDeclarations defined in this ModelFile</p>
+
+<h3 id="returns">Returns</h3>
+
+<p><strong><a href="common-participantdeclaration">ParticipantDeclaration</a></strong> - the ParticipantDeclaration defined in the model file</p>
+
+<h3 id="see-also">See also</h3>
+
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Mandatory</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><strong>includeSystemType</strong></td>
+<td style="text-align: left">Boolean</td>
+<td style="text-align: left"><em>Yes</em></td>
+<td style="text-align: left">Include the decalarations of system type in returned data</td>
+</tr>
+</tbody></table>
+
+<h2 id="getconceptdeclarations">getConceptDeclarations</h2>
+
+<p><em>ConceptDeclaration[] getConceptDeclarations( Boolean includesystemtype )</em></p>
+
+<p>Get the ConceptDeclarations defined in this ModelFile</p>
+
+<h3 id="returns">Returns</h3>
+
+<p><strong><a href="common-conceptdeclaration">ConceptDeclaration</a></strong> - the ParticipantDeclaration defined in the model file</p>
+
+<h3 id="see-also">See also</h3>
+
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Mandatory</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><strong>includeSystemType</strong></td>
+<td style="text-align: left">Boolean</td>
+<td style="text-align: left"><em>Yes</em></td>
+<td style="text-align: left">Include the decalarations of system type in returned data</td>
+</tr>
+</tbody></table>
+
+<h2 id="getenumdeclarations">getEnumDeclarations</h2>
+
+<p><em>EnumDeclaration[] getEnumDeclarations( Boolean includesystemtype )</em></p>
+
+<p>Get the EnumDeclarations defined in this ModelFile</p>
+
+<h3 id="returns">Returns</h3>
+
+<p><strong><a href="common-enumdeclaration">EnumDeclaration</a></strong> - the EnumDeclaration defined in the model file</p>
+
+<h3 id="see-also">See also</h3>
+
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Mandatory</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><strong>includeSystemType</strong></td>
+<td style="text-align: left">Boolean</td>
+<td style="text-align: left"><em>Yes</em></td>
+<td style="text-align: left">Include the decalarations of system type in returned data</td>
+</tr>
+</tbody></table>
+
+<h2 id="getdeclarations">getDeclarations</h2>
+
+<p><em>ClassDeclaration[] getDeclarations( Function type, Boolean includesystemtype )</em></p>
+
+<p>Get the instances of a given type in this ModelFile</p>
+
+<h3 id="returns">Returns</h3>
+
+<p><strong><a href="common-classdeclaration">ClassDeclaration</a></strong> - the ClassDeclaration defined in the model file</p>
+
+<h3 id="see-also">See also</h3>
+
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Mandatory</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><strong>type</strong></td>
+<td style="text-align: left">Function</td>
+<td style="text-align: left"><em>Yes</em></td>
+<td style="text-align: left">the type of the declaration</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong>includeSystemType</strong></td>
+<td style="text-align: left">Boolean</td>
+<td style="text-align: left"><em>Yes</em></td>
+<td style="text-align: left">Include the decalarations of system type in returned data</td>
+</tr>
+</tbody></table>
+
+<h2 id="getalldeclarations">getAllDeclarations</h2>
+
+<p><em>ClassDeclaration[] getAllDeclarations(  )</em></p>
+
+<p>Get all declarations in this ModelFile</p>
+
+<h3 id="returns">Returns</h3>
+
+<p><strong><a href="common-classdeclaration">ClassDeclaration</a></strong> - the ClassDeclarations defined in the model file</p>
+
+<h3 id="see-also">See also</h3>
+
+<h3 id="parameters">Parameters</h3>
+
+<p>No parameters</p>
+
+<h2 id="getdefinitions">getDefinitions</h2>
+
+<p><em>string getDefinitions(  )</em></p>
+
+<p>Get the definitions for this model.</p>
+
+<h3 id="returns">Returns</h3>
+
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></strong> - The definitions for this model.</p>
+
+<h3 id="see-also">See also</h3>
+
+<h3 id="parameters">Parameters</h3>
+
+<p>No parameters</p>
+
+<h2 id="issystemmodelfile">isSystemModelFile</h2>
+
+<p><em>boolean isSystemModelFile(  )</em></p>
+
+<p>Returns true if this ModelFile is a system model</p>
+
+<h3 id="returns">Returns</h3>
+
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></strong> - true of this ModelFile is a system model</p>
+
+<h3 id="see-also">See also</h3>
+
+<h3 id="parameters">Parameters</h3>
+
+<p>No parameters</p>
 
 <h2 id="inherited-methods">Inherited methods</h2>
 
